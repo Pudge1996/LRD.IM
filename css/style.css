@@ -133,6 +133,7 @@ h1 {
     line-height: 1.8;
     margin: 20px auto 20px ;
     -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
 }
 
 h2{
@@ -913,66 +914,35 @@ footer img {
     height: 40px;
     width: 40px;
     position: fixed;
-    bottom: 20px;
+    bottom: 60px;
     line-height: 40px;
     font-size: 20px;
-    right: 20px;
+    right: 100px;
     text-align: center;
-    color: red;
-    background: #FAFAFA;
-    /*background: rgba(255, 191, 0, 0.8);*/
+    color: #fff;
+    background: #f4f4f4;
     visibility: hidden;
     opacity: 0;
-    transform: translateX(60px);
-/*    -webkit-transition: opacity .3s 0s, visibility 0s .3s;
-    transition: opacity .3s 0s, visibility 0s .3s;*/
-    transition: .3s;
+    -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+    transition: opacity .3s 0s, visibility 0s .3s;
 }
 
 .cd-top.cd-is-visible,
-.cd-top.cd-fade-out,
 .no-touch .cd-top:hover {
-/*    -webkit-transition: opacity .3s 0s, visibility 0s 0s;
-    transition: opacity .3s 0s, visibility 0s 0s;*/
-    transition: .3s;
+    -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+    transition: opacity .3s 0s, visibility 0s 0s;
 }
-
 
 .cd-top.cd-is-visible {
     /* the button becomes visible */
     visibility: visible;
     opacity: 1;
-    transform: translateX(0px);
-}
-/*出现时的强调色*/
-.cd-top.cd-fade-out {
-    /*opacity: .5;*/
-    /*background: #e0e0e0;*/
+    background: #f4f4f4;
 }
 
-.no-touch .cd-top:hover,
-.no-touch .cd-top:focus {
-    background-color: #232323;
-    opacity: 1;
-    /*color: #fff;*/
+.cd-top svg{
+    fill: #232323;
 }
-svg{
-    -webkit-transition: .3s;
-    transition: .3s;
-}
-.cd-top:focus,
-.cd-top:hover svg{
-    fill: white;
-    /*transform: translateY(-2px);*/
-}
-
-.cd-top:hover{
-    transform: translateY(-2px);
-}
-/*svg {
-    fill: red;
-}*/
-
 /* About page
 ==================================================*/
 
@@ -1298,6 +1268,13 @@ textarea:focus {
     }
 }*/
 
+@media (max-width: 1340px){
+    .cd-top {
+        right: 15px;
+        bottom: 30px;
+    }
+}
+
 @media (max-width: 992px) {
 
     /*.col-md-4{
@@ -1343,8 +1320,7 @@ textarea:focus {
 
     .container-fluid{
     padding: 0 20px;
-}
-    
+    }
 }
 
 @media only screen and (max-width: 670px) {
@@ -1408,12 +1384,7 @@ textarea:focus {
         width: 0;
         height: 0;
     }
-/*    .h-30{
-        display: block;
-        overflow: hidden;
-        width: 0;
-        height: 0;
-    }*/
+
     .h-30 {
     height: 10px
     }
@@ -1449,12 +1420,7 @@ textarea:focus {
         width: 0;
         height: 0;
     }
-/*    .h-30{
-    	display: block;
-        overflow: hidden;
-        width: 0;
-        height: 0;
-    }*/
+
     .h-30 {
     height: 10px
     }
