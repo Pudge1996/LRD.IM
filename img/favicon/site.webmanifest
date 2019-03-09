@@ -1,6 +1,6 @@
 {
-    "name": "\u674e\u745e\u4e1c\u7684\u4e2a\u4eba\u7f51\u7ad9",
-    "short_name": "\u674e\u745e\u4e1c\u7684\u4e2a\u4eba\u7f51\u7ad9",
+    "name": "LRD.IM",
+    "short_name": "LRD.IM",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -8,8 +8,8 @@
             "type": "image/png"
         },
         {
-            "src": "/android-chrome-512x512.png",
-            "sizes": "512x512",
+            "src": "/android-chrome-256x256.png",
+            "sizes": "256x256",
             "type": "image/png"
         }
     ],
