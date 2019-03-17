@@ -1,6 +1,6 @@
 # 关于 LRD.IM
 
-网站样式全新改版 | 鞭尸[旧版网站](https://www.pudge1996.com)
+网站样式全新改版 | 鞭尸[旧版](https://www.pudge1996.com)
 
 域名: [Name.com](https://www.name.com/)
 
