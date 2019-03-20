@@ -1312,10 +1312,6 @@ textarea:focus {
 
 @media (max-width: 992px) {
 
-    /*.col-md-4{
-        width: 33.33333333333%;
-    }*/
-
     .portfolio .categories-grid span {
         margin-bottom: 0;
         text-align: center;
@@ -1350,7 +1346,16 @@ textarea:focus {
     }
 
     .box-header {
-        width: auto;
+        position: fixed;
+        background: #fff;
+        width: 100%;
+    }
+    .box-logo{
+        left: 20px;
+    }
+
+    .box-primary-nav-trigger{
+        right: 20px;
     }
 
     .container-fluid{
@@ -1420,10 +1425,6 @@ textarea:focus {
         height: 0;
     }
 
-    .h-30 {
-    height: 10px
-    }
-
     p{
         font-size: 16px;
         margin: 5px 0 20px;
@@ -1455,10 +1456,6 @@ textarea:focus {
         width: 0;
         height: 0;
     }
-
-    .h-30 {
-    height: 10px
-    }
     
     .copyright{
     font-size: 13px;
@@ -1472,5 +1469,16 @@ textarea:focus {
     .imgCaption{
     margin: 5px 0 10px;
     font-size: 13px;
+    }
+
+    .box-header {
+        width: 100%;
+    }
+    .box-logo{
+        left: 15px;
+    }
+
+    .box-primary-nav-trigger{
+        right: 10px;
     }
 }
