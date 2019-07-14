@@ -29,6 +29,7 @@ body {
     color: #999;
     -webkit-cursor: default;
     cursor: default;
+    
 
 }
 
@@ -63,13 +64,15 @@ a {
     border-bottom: 1px solid transparent;
 }
 
+a:hover{
+  text-decoration: none;
+}
+
 p a{
     color: #232323;
     display: inline;  
     /*display: inline-block;*/
     border-bottom: 1px solid currentColor;
-
-
 }
 
 p a::-moz-selection {
@@ -177,6 +180,7 @@ li{
 
 span{
     -webkit-font-smoothing: antialiased;
+
 }
 
 .icon_center{
@@ -645,7 +649,7 @@ span{
 ==================================================*/
 
 footer {
-    padding: 80px 0;
+    padding: 80px 0 40px;
     text-align: center;
     background: white;
 }
@@ -795,6 +799,50 @@ footer img {
 .heroimg{
     width: 1080px;
     margin-bottom: 35px;
+}
+
+.skipbutton{
+  width: 198px;
+  height: 52px;
+  background: #232323;
+  border-radius: 6px;
+  text-align: center;
+  margin-top: -105px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s,transform 0.5s ease-out;
+}
+
+.skipbutton:hover{
+  box-shadow: 0px 12px 40px -12px rgba(0, 0, 0, 0.6);
+}
+
+.skipbutton svg{
+  transform: translateY(1px);
+  transition: all 0.3s,transform 0.5s ease-out;
+  opacity: .75;
+}
+.skipbutton:hover svg{
+  opacity: 1;
+}
+
+.skipbutton span{
+  color: white;
+  font-size: 18px;
+  line-height: 52px;
+  padding-left: 7.68px;
+  transition: all 0.3s,transform 0.5s ease-out;
+  opacity: .75;
+
+}
+.skipbutton:hover span{
+  opacity: 1;
+}
+
+
+.sticky-footer{
+margin-bottom: 40px;
 }
 
 /* Responsive media queries
