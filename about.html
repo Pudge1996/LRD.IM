@@ -32,24 +32,36 @@
     <link href="https://lib.baomitu.com/ionicons/2.0.0/css/ionicons.min.css" rel="stylesheet">
 
     <!-- main css -->
-    <link href="https://lrdim.oss-cn-shenzhen.aliyuncs.com/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/zoom-vanilla.js/dist/zoom.css" rel="stylesheet">
-    
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <style>
+    @media only screen and (max-width: 420px){
+      .col-md-12{
+        padding-right: 20px;
+        padding-left: 20px;
+      }
+      p{
+        padding-right: 0px;
+        padding-left: 0px;
+      }
+    }
+    @media only screen and (max-width: 670px){
+      .col-md-12{
+        padding-right: 20px;
+        padding-left: 20px;
+      }
+    }
+    </style>
 </head>
 
 <body>
     <div class="container-fluid"> 
-       <!-- box-header -->
+        <!-- box-header -->
         <header class="box-header">
-            <div class="box-logo">
-                <a href="index.html"><img src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/logo.png" alt="lrd.im 是设计师李瑞东的个人网站。"></a>
-            </div>
+            <a href="index.html" alt="lrd.im 是设计师李瑞东的个人网站。">
+                <div class="box-logo">
+                </div>
+            </a>
             <!-- box-nav -->
             <a class="box-primary-nav-trigger" href="#0">
                 <span class="box-menu-icon"></span>
@@ -69,27 +81,24 @@
         <!-- end nav -->
     </div>
     
-    <!-- Top bar -->
-    <div class="top-bar">
-        <h1>About</h1>
-        <br>
-    </div>
-    <!-- end Top bar -->
-    
     <!-- Main container -->
     <div class="container main-container clearfix"> 
       <div class="col-md-12">
+        
         <h2>关于我</h2>
-        <p>李瑞东，Pudge。2018 年 6 月毕业于江汉大学现代数字媒体设计专业。职业是 UI 设计师，目前在屈臣氏工作。</p>
+        <p>李瑞东，Pudge。2018 年 6 月毕业于江汉大学现代数字媒体设计专业。职业是 UI 设计师，目前在屈臣氏广州总部工作。</p>
         <p>一些设计和笔记：<a href="https://dribbble.com/Pudge1996" target="_blank">Dribbble</a>、<a href="https://medium.com/@Pudge1996" target="_blank">Medium</a>、<a href="https://www.behance.net/Pudge1996" target="_blank">Behance</a></p>
         <p>电子邮箱：lrdbuff@gmail.com</p>
+        <div style="height: 20px"></div>
         <h2>关于本站</h2>
         <p>
-        LRD.IM 是一个纯静态网站，由 <a href="https://app.netlify.com/">Netlify</a> 托管，部分静态资源托管于阿里云 OSS</a> 。
+        LRD.IM 是一个纯静态网站，由 Netlify 托管，部分静态资源托管于阿里云 OSS</a> 。
         </p>
         
         <p>
-        2019 年重写<a href="https://www.pudge1996.com" target="_blank">旧版网站</a>上的部分 CSS 以提升整体视觉体验。
+        · 2018 年 1 月建站（<a href="https://www.pudge1996.com/" target="_blank">旧版入口</a>） ；<br>
+        · 2019 年 2 月重写样式以提升视觉体验；<br>
+        · 2019 年 10 月适配 iOS/MacOS 深色模式。
         </p>
 
       </div>
