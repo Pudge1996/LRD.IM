@@ -43,6 +43,5 @@ img.zoom-img {
 @media (prefers-color-scheme: dark){
   .zoom-overlay{
   background: #2C2C2E;
-
   }
 }

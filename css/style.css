@@ -219,7 +219,7 @@ span{
 .box-logo{ 
     height: 40px;
     width: 87px;
-    background-image: url(../img/logo.svg);
+    background-image: url(https://lrdim.oss-cn-shenzhen.aliyuncs.com/logo/logo.svg);
     background-size: 87px 40px;
     background-repeat:no-repeat;
 }
@@ -736,13 +736,6 @@ opacity: 1;
 margin-bottom: 40px;
 }
 
-.bg-img{
-
-  background-image: url(../img/blog_preview.png);
-}
-
-
-
 /* Responsive media queries
 ==================================================*/
 
@@ -1092,7 +1085,7 @@ margin-bottom: 40px;
     fill: #FFFFFF;
   } */
   .box-logo{
-    background-image: url(../img/logo_dark.svg);
+    background-image: url(https://lrdim.oss-cn-shenzhen.aliyuncs.com/logo/logo_dark.svg);
   }
 
   .portfolio .categories-grid .categories ul li a {
@@ -1184,12 +1177,15 @@ p a{
   padding-left: 7.68px;
   transition: all 0.3s,transform 0.5s ease-out;
   opacity: 1;
-  
   }
   .skipbutton:hover span{
-  /* opacity: .75; */
   color: #8E8E93;
   }
+
+  .no-touch .box-primary-nav a:hover {
+    text-decoration: none;
+    color: #8E8E93;
+}
 
 }
  
