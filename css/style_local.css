@@ -6,6 +6,7 @@ body {
     color: #999;
     -webkit-cursor: default;
     cursor: default;
+    -webkit-font-smoothing: antialiased;
 }
 
 .container-fluid{
@@ -38,13 +39,16 @@ a {
 }
 
 a:hover{
+  color: currentColor;
   text-decoration: none;
 }
 
 a:focus{
+  color: currentColor;
   text-decoration: none;
 }
 a:active{
+  color: currentColor;
   text-decoration: none;
 }
 
@@ -85,7 +89,6 @@ h1 {
     line-height: 1.8;
     margin: 20px auto 20px ;
     -webkit-font-smoothing: antialiased;
-    font-smoothing: antialiased;
 }
 
 h2{
