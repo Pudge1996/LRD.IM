@@ -2,6 +2,7 @@
 <html lang="zh-cmn-Hans">
 
 <head>
+  
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=devUIice-width, initial-scale=1">
@@ -32,29 +33,45 @@
     <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script>
 
     <!-- main css -->
-    <!-- <link href="css/style.css" rel="stylesheet"> -->
     <link href="https://lrdim.oss-cn-shenzhen.aliyuncs.com/style.css" rel="stylesheet">
+    <!-- <link href="css/style_local.css" rel="stylesheet"> -->
+    
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112191540-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-112191540-2');
+    </script>
 </head>
 
 <body>
 
     <div class="container-fluid">
         <!-- box-header -->
-          <header class="box-header">
-            <div class="vw">
-              <a href="index.html" alt="lrd.im 是设计师李瑞东的个人网站。">
-                <div class="box-logo">
-                </div>
+        <header class="box-header">
+          <div class="vw">
+            <a href="index.html" alt="lrd.im 是设计师李瑞东的个人网站。">
+              <div class="box-logo"></div>
             </a>
+
             <!-- box-nav -->
             <a class="box-primary-nav-trigger" href="#0">
                 <span class="box-menu-icon"></span>
             </a>
+
+            <!-- nav-text -->
+            <div class="nav-text-box">
+              <p><a href="index.html" class="nav-text-active">首页</a></p>
+              <p><a href="blog.html" class="nav-text">文章</a></p>
+              <p><a href="about.html" class="nav-text">关于</a></p>
             </div>
-            <!-- box-primary-nav-trigger -->
-        </header>
-        <!-- end box-header -->
+          </div>
+      </header>
+      <!-- end box-header -->
         
         <!-- nav -->
         <nav>
@@ -87,7 +104,7 @@
                             <li><a href="" class="hover-underline-animation" data-filter=".ui">界面</a></li>
                             <li><a href="" class="hover-underline-animation" data-filter=".graphic">视觉</a></li>
                             <li><a href="" class="hover-underline-animation" data-filter=".motion">动效</a></li>
-                            <li><a href="" class="hover-underline-animation" data-filter=".others">其他</a></li>
+                            <!-- <li><a href="" class="hover-underline-animation" data-filter=".others">其他</a></li> -->
                         </ul>
                     </nav>
                 </div>
@@ -96,13 +113,43 @@
                 <!-- portfolio_container -->
                 <div class="no-padding portfolio_container clearfix">
                 <!-- single work -->
-                <div class="col-md-4 col-sm-6  motion">
-                    <a href="html/LottieFiles.html" class="portfolio_item">
-                        <img src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/FeatureImg/Lottiefiles.jpg" alt="LottieFiles 动态图标设计" class="img-responsive" />
-                        <div class="portfolio_item_hover" style="background-color: #18C8CA">
+                <div class="col-md-4 col-sm-6 ui">
+                  <a href="html/dribbbledark.html" class="portfolio_item">
+                      <img src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/FeatureImg/dribbbledark.png" alt="Dribbble 深色模式" class="img-responsive" />
+                      <div class="portfolio_item_hover" style="background-color: #131314">
+                          <div class="portfolio-border clearfix">
+                              <div class="item_info">
+                                  <span>Dribbble 深色模式</span>
+                              </div>
+                          </div>
+                      </div>
+                  </a>
+                </div>
+                <!-- end single work -->
+
+                <!-- single work -->
+                <div class="col-md-4 col-sm-6 motion">
+                  <a href="html/lottiefiles.html" class="portfolio_item">
+                      <img src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/FeatureImg/Lottiefiles.jpg" alt="LottieFiles 动态图标设计" class="img-responsive" />
+                      <div class="portfolio_item_hover" style="background-color: #04D1D3">
+                          <div class="portfolio-border clearfix">
+                              <div class="item_info">
+                                  <span>LottieFiles 动态图标设计</span>
+                              </div>
+                          </div>
+                      </div>
+                  </a>
+                </div>
+                <!-- end single work -->
+
+                <!-- single work -->
+                <div class="col-md-4 col-sm-6 ui">
+                    <a href="html/todocu.html" class="portfolio_item">
+                        <img src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/FeatureImg/todocu.png" alt="LottieFiles 动态图标设计" class="img-responsive" />
+                        <div class="portfolio_item_hover" style="background-color: #0056FD">
                             <div class="portfolio-border clearfix">
                                 <div class="item_info">
-                                    <span>LottieFiles 动态图标设计</span>
+                                    <span>TODOCU 配送服务网页设计</span>
                                 </div>
                             </div>
                         </div>
@@ -158,11 +205,11 @@
                     <!-- single work -->
                     <div class="col-md-4 col-sm-6  ui">
                         <a href="html/diaojiao.html" class="portfolio_item">
-                            <img src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/FeatureImg/diaojiao.jpg" alt="刁角武汉" class="img-responsive" />
+                            <img src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/FeatureImg/diaojiao.jpg" alt="毕业设计《刁角武汉》" class="img-responsive" />
                             <div class="portfolio_item_hover" style="background-color: #739AE6">
                                 <div class="portfolio-border clearfix">
                                     <div class="item_info">
-                                        <span>刁角武汉</span>
+                                        <span>毕业设计《刁角武汉》</span>
                                     </div>
                                 </div>
                             </div>
@@ -172,7 +219,7 @@
 
                     <!-- single work -->
                     <div class="col-md-4 col-sm-6 ui">
-                        <a href="html/NumberBlast.html" class="portfolio_item">
+                        <a href="html/numberblast.html" class="portfolio_item">
                             <img src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/FeatureImg/NumberBlast.jpg" alt="数字消除" class="img-responsive" />
                             <div class="portfolio_item_hover" style="background-color: #452C2C">
                                 <div class="portfolio-border clearfix">
@@ -189,7 +236,7 @@
 
                     <!-- single work -->
                     <div class="col-md-4 col-sm-6 graphic">
-                        <a href="html/Attractionsillustration.html" class="portfolio_item">
+                        <a href="html/attractionsillustration.html" class="portfolio_item">
                             <img src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/FeatureImg/Attractionsillustration.jpg" alt="武汉景点插图" class="img-responsive" />
                             <div class="portfolio_item_hover" style="background-color: #F65854">
                                 <div class="portfolio-border clearfix">
@@ -209,7 +256,7 @@
                             <div class="portfolio_item_hover" style="background-color: #38D6C6">
                                 <div class="portfolio-border clearfix">
                                     <div class="item_info">
-                                        <span>扁平风格插图</span>
+                                        <span>扁平风格插画练习</span>
                                     </div>
                                 </div>
                             </div>
@@ -247,24 +294,6 @@
                         </a>
                     </div>
                     <!-- end single work -->
-
-                    
-
-                    <!-- single work -->
-                    <div class="col-md-4 col-sm-6 others">
-                        <a href="html/pinocchio.html" class="portfolio_item">
-                            <img src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/FeatureImg/Pinocchio.jpg" alt="皮诺曹 - 皮具品牌VI设计" class="img-responsive" />
-                            <div class="portfolio_item_hover" style="background-color: #5d2410">
-                                <div class="portfolio-border clearfix">
-                                    <div class="item_info">
-                                        <span>皮诺曹-皮具品牌 VI 设计</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- end single work -->
-
                 </div>
                 <!-- end portfolio_container -->
             </div>
@@ -278,7 +307,7 @@
     <!-- footer -->
     <footer  style="padding: 0px 0px 40px;">
         <div class="container-fluid">
-            <p class="copyright">© Pudge 2017-2019</p>
+            <p class="copyright">© Pudge 2017-2021</p>
         </div>
     </footer>
     <!-- end footer -->

@@ -18,33 +18,75 @@
 
     <title>博客 - 李瑞东</title>
     <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
-    
+
     <!-- Bootstrap -->
     <link href="https://lib.baomitu.com/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://lib.baomitu.com/ionicons/2.0.0/css/ionicons.min.css" rel="stylesheet">
 
     <!-- main css -->
     <link href="https://lrdim.oss-cn-shenzhen.aliyuncs.com/style.css" rel="stylesheet">
+    <!-- <link href="css/style_local.css" rel="stylesheet"> -->
+    <style>
+        .container {
+            padding: 0 20px;
+        }
+        
+        @media (min-width: 768px) {
+            .container {
+                width: 100%;
+                padding: 0 28px;
+            }
+        }
+        
+        @media (min-width: 1080px) {
+            .container {
+                width: 1080px;
+            }
+        }
+    </style>
+    <!-- lazyload -->
+    <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112191540-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-112191540-2');
+    </script>
+
+
 </head>
 
 <body>
-    <div class="container-fluid"> 
-       <!-- box-header -->
-       <header class="box-header">
-        <div class="vw">
-          <a href="index.html" alt="lrd.im 是设计师李瑞东的个人网站。">
-            <div class="box-logo">
+    <div class="container-fluid">
+        <!-- box-header -->
+        <header class="box-header">
+            <div class="vw">
+                <a href="index.html" alt="lrd.im 是设计师李瑞东的个人网站。">
+                    <div class="box-logo"></div>
+                </a>
+
+                <!-- box-nav -->
+                <a class="box-primary-nav-trigger" href="#0">
+                    <span class="box-menu-icon"></span>
+                </a>
+
+                <!-- nav-text -->
+                <div class="nav-text-box">
+                    <p><a href="index.html" class="nav-text">首页</a></p>
+                    <p><a href="blog.html" class="nav-text-active">文章</a></p>
+                    <p><a href="about.html" class="nav-text">关于</a></p>
+                </div>
             </div>
-        </a>
-        <!-- box-nav -->
-        <a class="box-primary-nav-trigger" href="#0">
-            <span class="box-menu-icon"></span>
-        </a>
-        </div>
-        <!-- box-primary-nav-trigger -->
-    </header>
-    <!-- end box-header -->
-        
+        </header>
+        <!-- end box-header -->
+
         <!-- nav -->
         <nav>
             <ul class="box-primary-nav">
@@ -55,50 +97,408 @@
         </nav>
         <!-- end nav -->
     </div>
-    
-    <!-- Top bar -->
-    <div class="top-bar">
-        <h1>页面构建中... <br> 请跳转至 Medium 浏览</h1>
-        <br>
-    </div>
-    <!-- end Top bar -->
-    
-    <!-- Main container -->
-    <div class="container main-container clearfix"> 
-      <div class="col-md-12">
-        <a href="https://medium.com/@Pudge1996" class="skipbutton center-block" target="_blank">
-            <svg width="19.31px" height="15.33px" viewBox="0 0 131 104" <g id="mediumicon" fill="#FFFFFF" fill-rule="nonzero" >
-                    <path d="M15.5341,21.2158 C15.6968,19.6077 15.0836,18.0182 13.8828,16.9359 L1.6513,2.2011 L1.6513,0 L39.6302,0 L68.986,64.381 L94.795,0 L131,0 L131,2.2011 L120.542,12.2281 C119.64,12.9153 119.193,14.0449 119.38,15.1628 L119.38,88.837 C119.193,89.955 119.64,91.085 120.542,91.772 L130.755,101.799 L130.755,104 L79.383,104 L79.383,101.799 L89.963,91.527 C91.003,90.488 91.003,90.182 91.003,88.593 L91.003,29.0417 L61.5859,103.755 L57.6106,103.755 L23.3623,29.0417 L23.3623,79.116 C23.0767,81.221 23.7759,83.341 25.2582,84.863 L39.0187,101.554 L39.0187,103.755 L0,103.755 L0,101.554 L13.7605,84.863 C15.232,83.338 15.8904,81.204 15.5341,79.116 L15.5341,21.2158 Z" id="Path"></path>
-                </g>
-        </svg>
-        <span>点我跳转</span>
-        </a>
+    <!-- feature-post -->
 
+    <!-- end feature-post -->
+
+    <!-- Main container -->
+    <div class="container blog-main-container clearfix">
+        <!-- ⬇特色文章⬇ -->
+        <div class="blog-heroimg">
+            <a href="https://pudge1996.medium.com/sketch-tint-text-255af6bda0c2" target="_blank"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAFoEvQfAAAABGdBTUEAALGPC/xhBQAAAA1JREFUCB1j+PDhw38ACXQD0B3tn6cAAAAASUVORK5CYII=" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/FeatureImg/blog-heroimg.png" class="img-responsive heroimg center-block lazyload"
+                    width="765" height="574"></a>
+        </div>
+
+
+        <!-- start-post -->
+        <div class="blog-author">
+            <p>May 30, 2021 · Pudge</p>
+        </div>
+        <h2 class="blog-title"><a href="https://pudge1996.medium.com/sketch-tint-text-255af6bda0c2" target="_blank">在 Sketch 组件外更改文字颜色最简单的方法</a>
+        </h2>
+        <div class="blog-subtitle">
+            <a href="https://pudge1996.medium.com/sketch-tint-text-255af6bda0c2" target="_blank">
+                <p>这篇文章会介绍 Sketch 组件外更改文字颜色最简便的方法，以及探讨其优势和局限性。操作非常简单，所以篇幅很短。</p>
+            </a>
+        </div>
+        <!-- end-post -->
+
+        <!-- start-divider -->
+        <div class="blog-divider">
+            <span class="blog-divider-title">最新文章</span>
+        </div>
+        <!-- start-divider -->
+        <!-- ⬇最新文章⬇ -->
+        <!-- start-post -->
+        <div class="blog-author">
+            <p>May 03, 2021 · Pudge</p>
+          </div>
+          <h2 class="blog-title"><a href="https://pudge1996.medium.com/make-sketch-symbol-with-zero-width-joiner-8264a8e896aa"
+                target="_blank">一个特殊字符，打开 Sketch 组件新世界的大门</a></h2>
+          <div class="blog-subtitle">
+            <a href="https://pudge1996.medium.com/make-sketch-symbol-with-zero-width-joiner-8264a8e896aa"
+                target="_blank">
+                <p>公司内 B 端项目的表单比较多，经常有各种编辑页、功能配置页等。所以最近在做到一个编辑页调整的需求时，也和前端老哥沟通了一波，把公司项目里常用到的表单做成了组件。后续我打算做成 Sketch Symbol，同步到组件库内。这时出现了一些耐人寻味的问题。
+                </p>
+            </a>
+          </div>
+          <!-- end-post -->
+        <!-- start-post -->
+        <div class="blog-author">
+          <p>Apr 9, 2021 · Pudge</p>
+        </div>
+        <h2 class="blog-title"><a href="https://pudge1996.medium.com/accessibility-sharing-meeting-bd7dd0a578c7"
+              target="_blank">信息无障碍与我们的距离 · 分享会记录</a></h2>
+        <div class="blog-subtitle">
+          <a href="https://pudge1996.medium.com/learning-devtools-ee01a2f63afd"
+              target="_blank">
+              <p>公司的设计、产品组一直有分享会的传统，一般是每两周一次（当然如果那段时间特别忙也会延后）。我从去年七月入职到现在，已经大半年了，总共分享过 3 次，这次是 2020 年 4 月 2 日，清明假期前在公司设计组内的一次分享会《信息无障碍与我们的距离》。
+              </p>
+          </a>
+        </div>
+        <!-- end-post -->
+
+        <!-- start-post -->
+        <div class="blog-author">
+          <p>Mar 14, 2021 · Pudge</p>
+        </div>
+        <h2 class="blog-title"><a href="https://pudge1996.medium.com/wrap-rule-on-web-56a375c11043"
+              target="_blank">探索 Web 网页内字符的换行规则</a></h2>
+        <div class="blog-subtitle">
+          <a href="https://pudge1996.medium.com/learning-devtools-ee01a2f63afd"
+              target="_blank">
+              <p>前不久在验收公司项目内一个讨论区相关需求时，看到界面的样式出现这种问题，让从业界面设计两年多的我感到意外和不安...这篇文章将会记录我对 Web 网页内换行规则的理解、实际应用中的解决方案，以及一个突破性新发现。
+              </p>
+          </a>
+        </div>
+        <!-- end-post -->
+
+        <!-- start-post -->
+        <div class="blog-author">
+          <p>Jan 22, 2021 · Pudge</p>
+        </div>
+        <h2 class="blog-title"><a href="https://pudge1996.medium.com/learning-devtools-ee01a2f63afd"
+              target="_blank">维护 Dribbble 深色模式一年，我最大的收获竟然是学会了使用 DevTools</a></h2>
+        <div class="blog-subtitle">
+          <a href="https://pudge1996.medium.com/learning-devtools-ee01a2f63afd"
+              target="_blank">
+              <p>2019年10月份，我在 Medium 发表了一篇文章《关于深色模式的一些发现和思考》，从那时候开始我便着手去找个网站做成深色模式，练练手，于是便开始将 Dribbble.com 进行深色模式的尝试。 
+              </p>
+          </a>
       </div>
-      
+      <!-- end-post -->
+         <!-- start-post -->
+          <div class="blog-author">
+            <p>Dec 25, 2020 · Pudge</p>
+          </div>
+          <h2 class="blog-title"><a href="https://pudge1996.medium.com/how-to-usemonospaced-numbers-e454336ec5b7"
+                target="_blank">等宽数字 Monospaced Numbers 在界面中的使用</a></h2>
+          <div class="blog-subtitle">
+            <a href="https://pudge1996.medium.com/how-to-usemonospaced-numbers-e454336ec5b7"
+                target="_blank">
+                <p>在上一篇文章的3.2章节里，提到了 AntD 组件会全局默认使用等宽数字。这对我来说是比较新的概念，所以也花了点时间观察、总结了等宽数字在界面上的几个使用场景，以及普遍的实现方式，正好也可以作为文章记录下来。</p>
+            </a>
+        </div>
+        <!-- end-post -->
+        <!-- start-post -->
+        <div class="blog-author">
+          <p>Oct 04, 2020 · Pudge</p>
+      </div>
+      <h2 class="blog-title"><a href="https://medium.com/@Pudge1996/antdesign-details-b6d36bd9c25"
+              target="_blank">用 Ant Design 组件做设计，你可能不知道的细节</a></h2>
+      <div class="blog-subtitle">
+          <a href="https://medium.com/@Pudge1996/antdesign-details-b6d36bd9c25"
+              target="_blank">
+              <p>使用 Ant Design 组件做设计一段时间，踩过不少坑。在这里分享一部分出来。如果你也是之前没怎么使用过 AntD 组件来进行设计，那么这篇文章也许会对你有点帮助。</p>
+          </a>
+      </div>
+      <!-- end-post -->
+        <!-- start-post -->
+        <div class="blog-author">
+          <p>Aug 02, 2020 · Pudge</p>
+      </div>
+      <h2 class="blog-title"><a href="https://medium.com/@Pudge1996/designer-tricks-28c915945cd3"
+              target="_blank">互联网设计师白嫖图片和字体的旁门左道</a></h2>
+      <div class="blog-subtitle">
+          <a href="https://medium.com/@Pudge1996/designer-tricks-28c915945cd3"
+              target="_blank">
+              <p>转眼间在互联网行业从事设计工作已经两年多了，工作中发现了几个可以白嫖高清图片、App 图标、收费字体的小技巧，在这里做一番记录，也希望能对正在看文章的你有所帮助。</p>
+          </a>
+      </div>
+      <!-- end-post -->
+
+        <!-- start-post -->
+        <div class="blog-author">
+            <p>Apr 07, 2020 · Pudge</p>
+        </div>
+        <h2 class="blog-title"><a href="https://medium.com/@Pudge1996/dribbble-%E5%A4%A7%E6%94%B9%E7%89%88-%E9%A1%BA%E5%8A%BF%E8%AE%B0%E5%BD%95%E4%B8%8B%E6%88%91%E5%AF%B9%E8%BF%91%E6%9C%9F-ui-%E8%AE%BE%E8%AE%A1%E8%B6%8B%E5%8A%BF%E5%92%8C%E4%B8%80%E4%BA%9B%E7%BB%86%E8%8A%82%E7%9A%84%E8%A7%82%E5%AF%9F-bd9e4a9bd263"
+                target="_blank">Dribbble 大改版，顺势记录下我对近期 UI 设计趋势和一些细节的观察</a></h2>
+        <div class="blog-subtitle">
+            <a href="https://medium.com/@Pudge1996/dribbble-%E5%A4%A7%E6%94%B9%E7%89%88-%E9%A1%BA%E5%8A%BF%E8%AE%B0%E5%BD%95%E4%B8%8B%E6%88%91%E5%AF%B9%E8%BF%91%E6%9C%9F-ui-%E8%AE%BE%E8%AE%A1%E8%B6%8B%E5%8A%BF%E5%92%8C%E4%B8%80%E4%BA%9B%E7%BB%86%E8%8A%82%E7%9A%84%E8%A7%82%E5%AF%9F-bd9e4a9bd263"
+                target="_blank">
+                <p>2020 年 3 月下旬，知名设计网站 Dribbble.com 在过去十年中首次做了彻底的重新设计。借着这次机会，并结合近期其他互联网产品的更新迭代，在此记录一下近半年来我观察到的一些设计趋势变化。</p>
+            </a>
+        </div>
+        <!-- end-post -->
+
+        <!-- start-post -->
+        <div class="blog-author">
+            <p>Jan 19, 2020 · Pudge</p>
+        </div>
+        <h2 class="blog-title"><a href="https://medium.com/@Pudge1996/%E7%94%A8-ae-%E5%88%B6%E4%BD%9C-display-p3-%E5%B9%BF%E8%89%B2%E5%9F%9F%E5%8A%A8%E5%9B%BE%E7%9A%84%E4%B8%89%E4%B8%AA%E6%96%B9%E6%B3%95-b5646615e6ff" target="_blank">用 AE 制作 Display P3 广色域动图的三个方法</a></h2>
+        <div class="blog-subtitle">
+            <a href="https://medium.com/@Pudge1996/%E7%94%A8-ae-%E5%88%B6%E4%BD%9C-display-p3-%E5%B9%BF%E8%89%B2%E5%9F%9F%E5%8A%A8%E5%9B%BE%E7%9A%84%E4%B8%89%E4%B8%AA%E6%96%B9%E6%B3%95-b5646615e6ff" target="_blank">
+                <p>前段时间写了篇文章记录如何导出 P3 广色域静态图片，恰好最近工作上有需求要用到动画来完成，利用这次机会也记录一下制作支持 Display P3 广色域的 PNG 序列帧、CSS 精灵图和 APNG 三种格式动画的方法。</p>
+            </a>
+        </div>
+        <!-- end-post -->
+
+        <!-- star-post -->
+        <div class="blog-author">
+            <p>Nov 17, 2019 · Pudge</p>
+        </div>
+        <h2 class="blog-title"><a href="https://medium.com/@Pudge1996/pingfang-sc-%E6%88%96%E8%AE%B8%E4%B8%8D%E5%BA%94%E8%AF%A5%E4%BD%9C%E4%B8%BA%E7%BD%91%E9%A1%B5%E5%AD%97%E4%BD%93%E7%9A%84%E9%A6%96%E9%80%89%E9%A1%B9-70cc6d2258fa" target="_blank">PingFang SC 不应该作为移动端网页字体的首选项</a></h2>
+        <div class="blog-subtitle">
+            <a href="https://medium.com/@Pudge1996/pingfang-sc-%E6%88%96%E8%AE%B8%E4%B8%8D%E5%BA%94%E8%AF%A5%E4%BD%9C%E4%B8%BA%E7%BD%91%E9%A1%B5%E5%AD%97%E4%BD%93%E7%9A%84%E9%A6%96%E9%80%89%E9%A1%B9-70cc6d2258fa" target="_blank">
+                <p>我在做设计时会经常观察市面上各类应用，途中一个字体使用的问题使我陷入了沉思...</p>
+            </a>
+        </div>
+        <!-- end-post -->
+
+        <!-- star-post -->
+        <div class="blog-author">
+            <p>Oct 4, 2019 · Pudge</p>
+        </div>
+        <h2 class="blog-title"><a href="https://medium.com/@Pudge1996/%E5%85%B3%E4%BA%8E%E6%B7%B1%E8%89%B2%E6%A8%A1%E5%BC%8F%E7%9A%84%E4%B8%80%E4%BA%9B%E6%8E%A2%E7%A9%B6-8639df407000" target="_blank">关于深色模式的一些发现和思考</a></h2>
+        <div class="blog-subtitle">
+            <a href="https://medium.com/@Pudge1996/%E5%85%B3%E4%BA%8E%E6%B7%B1%E8%89%B2%E6%A8%A1%E5%BC%8F%E7%9A%84%E4%B8%80%E4%BA%9B%E6%8E%A2%E7%A9%B6-8639df407000" target="_blank">
+                <p>近期更新的 iOS 13 重磅推出深色模式，作为一名设计师当然也要蹭下热度把个人网站也适配上深色模式。这篇文章记录了我最近为网站做深色模式时的一些发现和思考。</p>
+            </a>
+        </div>
+        <!-- end-post -->
+
+        <!-- star-post -->
+        <div class="blog-author">
+            <p>Jul 3, 2019 · Pudge</p>
+        </div>
+        <h2 class="blog-title"><a href="https://medium.com/@Pudge1996/%E7%94%A8-sketch-%E5%AF%BC%E5%87%BA-display-p3-%E5%B9%BF%E8%89%B2%E5%9F%9F%E5%9B%BE%E7%89%87-1b6d3ee82147" target="_blank">在 Sketch/PS 中导出 Display P3 广色域图片的方法</a></h2>
+        <div class="blog-subtitle">
+            <a href="https://medium.com/@Pudge1996/%E7%94%A8-sketch-%E5%AF%BC%E5%87%BA-display-p3-%E5%B9%BF%E8%89%B2%E5%9F%9F%E5%9B%BE%E7%89%87-1b6d3ee82147" target="_blank">
+                <p>前一段时间换上了 iPhone 之后，我一直对官网上的描述里的 “Display P3” 挺好奇的，然后上网搜了下，发现了里面大有学问。下面放上在 Sketch/PS里导出 Display P3 色域图片的方法，供参考…
+                </p>
+            </a>
+        </div>
+        <!-- end-post -->
+
+        <!-- star-post -->
+        <div class="blog-author">
+            <p>Jun 11, 2019 · Pudge</p>
+        </div>
+        <h2 class="blog-title"><a href="https://medium.com/@Pudge1996/%E6%9C%80%E8%BF%91%E7%94%A8-bodymovin-%E5%AF%BC%E5%87%BA%E5%8A%A8%E7%94%BB%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E5%92%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95-f2599035a378?source" target="_blank">最近用 Bodymovin 导出动画遇到的问题和解决方法</a></h2>
+        <div class="blog-subtitle">
+            <a href="https://medium.com/@Pudge1996/%E6%9C%80%E8%BF%91%E7%94%A8-bodymovin-%E5%AF%BC%E5%87%BA%E5%8A%A8%E7%94%BB%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E5%92%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95-f2599035a378?source" target="_blank">
+                <p>本文记录作者用 Bodymovin 导出动画时遇到的各种各样奇怪问题，并提供可行的解决方案。持续更新</p>
+            </a>
+        </div>
+        <!-- end-post -->
+
+        <!-- star-post -->
+        <div class="blog-author">
+            <p>Apr 15, 2019 · Pudge</p>
+        </div>
+        <h2 class="blog-title"><a href="https://medium.com/@Pudge1996/%E5%9C%A8-iphone-%E4%B8%8A%E5%AE%89%E8%A3%85%E6%97%A7%E7%89%88-dribbble-app-66746628e600" target="_blank">在 iPhone 上安装旧版 Dribbble App</a></h2>
+        <div class="blog-subtitle">
+            <a href="https://medium.com/@Pudge1996/%E5%9C%A8-iphone-%E4%B8%8A%E5%AE%89%E8%A3%85%E6%97%A7%E7%89%88-dribbble-app-66746628e600" target="_blank">
+                <p>Dribbble 官方在今年的 3 月份更新了 iOS 版客户端，但体验并不好，比如没有适配好全面屏、不能切换显示模式、卡等等。</p>
+            </a>
+        </div>
+        <!-- end-post -->
+
+        <!-- star-post -->
+        <div class="blog-author">
+            <p>Mar 31, 2019 · Pudge</p>
+        </div>
+        <h2 class="blog-title"><a href="https://medium.com/@Pudge1996/sketch-tips-2%E4%B8%AA%E6%8A%80%E5%B7%A7%E8%AE%A9%E4%BD%A0%E5%9C%A8-mirror-%E4%B8%8A%E6%9B%B4%E5%A5%BD%E5%9C%B0%E9%A2%84%E8%A7%88%E8%AE%BE%E8%AE%A1%E7%A8%BF-15e000d5832" target="_blank">Sketch Tips — 2个技巧让你在 Mirror 上更好地预览设计稿</a></h2>
+        <div class="blog-subtitle">
+            <a href="https://medium.com/@Pudge1996/sketch-tips-2%E4%B8%AA%E6%8A%80%E5%B7%A7%E8%AE%A9%E4%BD%A0%E5%9C%A8-mirror-%E4%B8%8A%E6%9B%B4%E5%A5%BD%E5%9C%B0%E9%A2%84%E8%A7%88%E8%AE%BE%E8%AE%A1%E7%A8%BF-15e000d5832" target="_blank">
+                <p>用 Sketch 做 UI 设计的小伙伴都会用 Mirror App 来实时预览设计稿，看看设计稿在手机上的显示效果，方便调整设计稿。这里列出小伙伴们在用 Mirror App 时可能遇到的两个问题（起码我遇到过😄），并提供解决方案，让你在 Mirror App 上更好地预览设计稿！</p>
+            </a>
+        </div>
+        <!-- end-post -->
+
+        <!-- star-post -->
+        <div class="blog-author">
+            <p>Feb 7, 2019 · Pudge</p>
+        </div>
+        <h2 class="blog-title"><a href="https://medium.com/@Pudge1996/%E5%88%86%E4%BA%AB%E5%8F%91%E7%8E%B0-ae%E4%B8%AD%E5%88%B6%E4%BD%9C%E7%9F%A2%E9%87%8F%E5%8A%A8%E7%94%BB%E5%9B%BE%E6%A0%87%E7%9A%84%E4%B8%89%E6%AC%BE%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7-90ab380890a3" target="_blank">分享发现：AE中制作矢量动画图标的四款效率工具</a></h2>
+        <div class="blog-subtitle">
+            <a href="https://medium.com/@Pudge1996/%E5%88%86%E4%BA%AB%E5%8F%91%E7%8E%B0-ae%E4%B8%AD%E5%88%B6%E4%BD%9C%E7%9F%A2%E9%87%8F%E5%8A%A8%E7%94%BB%E5%9B%BE%E6%A0%87%E7%9A%84%E4%B8%89%E6%AC%BE%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7-90ab380890a3" target="_blank">
+                <p>最近在做一些动画图标的过程中发现了四款能提高工作效率的AE插件，分别是 Motion2、Flow、Overlord、gifGun，下面为大家逐一介绍。</p>
+            </a>
+        </div>
+        <!-- end-post -->
+
+        <div id="early-post-1" style="display: none;">
+            <!-- star-post -->
+            <div class="blog-author">
+                <p>Dec 9, 2018 · Pudge</p>
+            </div>
+            <h2 class="blog-title"><a href="https://medium.com/@Pudge1996/svg-%E8%B7%AF%E5%BE%84%E4%BB%A3%E7%A0%81%E8%BD%AC%E6%8D%A2%E6%88%90%E5%AF%B9%E5%BA%94%E7%9A%84-svg-%E5%9B%BE%E5%83%8F-429f8053ab12" target="_blank">SVG 路径代码转换成对应的 SVG 图像</a></h2>
+            <div class="blog-subtitle">
+                <a href="https://medium.com/@Pudge1996/svg-%E8%B7%AF%E5%BE%84%E4%BB%A3%E7%A0%81%E8%BD%AC%E6%8D%A2%E6%88%90%E5%AF%B9%E5%BA%94%E7%9A%84-svg-%E5%9B%BE%E5%83%8F-429f8053ab12" target="_blank">
+                    <p>在网页上看到一些精致的图标想要保存下来，但是右键没有另存为选项（如图1），审查元素后发现是嵌入式的 SVG 图标（如图2）。那么如何将这一段代码转换成对应的…
+                    </p>
+                </a>
+            </div>
+            <!-- end-post -->
+
+            <!-- star-post -->
+            <div class="blog-author">
+                <p>Jul 19, 2018 · Pudge</p>
+            </div>
+            <h2 class="blog-title"><a href="https://medium.com/@Pudge1996/%E5%9C%B0%E7%90%83%E4%BA%BA%E9%83%BD%E8%83%BD%E7%9C%8B%E6%87%82%E7%9A%84-transfrom-matrix-%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE%E7%AC%94%E8%AE%B0-70c6038d2ce2" target="_blank">前端笔记：Transfrom: Matrix() 参数配置笔记</a></h2>
+            <div class="blog-subtitle">
+                <a href="https://medium.com/@Pudge1996/%E5%9C%B0%E7%90%83%E4%BA%BA%E9%83%BD%E8%83%BD%E7%9C%8B%E6%87%82%E7%9A%84-transfrom-matrix-%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE%E7%AC%94%E8%AE%B0-70c6038d2ce2" target="_blank">
+                    <p>最近在学一些前端知识，学到 Martrix 可以用一行来将 Transfrom 的所有属性表达出来，就打算在网上找找如何操作，发现大部分都是讲一些高等数学的计算，或者一两个属性的转换，翻了好久才找到讲4个属性同时应用在 Matrix 上的教程。鉴于花了差不多5个小时才勉强弄懂 Matrix 的属性，我决定做一篇 Matrix 参数配置笔记。</p>
+                </a>
+            </div>
+            <!-- end-post -->
+
+            <!-- star-post -->
+            <div class="blog-author">
+                <p>Apr 1, 2018 · Pudge</p>
+            </div>
+            <h2 class="blog-title"><a href="https://medium.com/@Pudge1996/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1-%E5%88%81%E8%A7%92%E6%AD%A6%E6%B1%89-%E6%94%B9%E7%89%88%E8%AE%A1%E5%88%92-bd8cfdac2fa5" target="_blank">毕业设计《刁角武汉》改版计划</a></h2>
+            <div class="blog-subtitle">
+                <a href="https://medium.com/@Pudge1996/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1-%E5%88%81%E8%A7%92%E6%AD%A6%E6%B1%89-%E6%94%B9%E7%89%88%E8%AE%A1%E5%88%92-bd8cfdac2fa5" target="_blank">
+                    <p>寒假与其他朋友交流设计心得，我向他们展示了我的毕业设计《刁角武汉》，他们用了一会儿之后给了一些意见我，我也根据用户容易产生疑惑的地方做了一些总结，接下来会花一段时间进行改版，优化使用体验</p>
+                </a>
+            </div>
+            <!-- end-post -->
+
+            <!-- star-post -->
+            <div class="blog-author">
+                <p>Mar 31, 2018 · Pudge</p>
+            </div>
+            <h2 class="blog-title"><a href="https://medium.com/@Pudge1996/%E5%88%A9%E7%94%A8%E9%A2%84%E7%BD%AE%E5%8A%A8%E7%94%BB%E5%9C%A8-mugeda-%E4%B8%AD%E5%88%B6%E4%BD%9C%E9%A1%BA%E7%95%85%E7%9A%84%E5%B7%A6%E5%8F%B3%E6%BB%91%E5%8A%A8%E5%88%87%E6%8D%A2%E5%8D%A1%E7%89%87%E6%95%88%E6%9E%9C-541a66bede21"
+                    target="_blank">利用预置动画在 Mugeda 中制作顺畅的左右滑动切换卡片效果</a></h2>
+            <div class="blog-subtitle">
+                <a href="https://medium.com/@Pudge1996/%E5%88%A9%E7%94%A8%E9%A2%84%E7%BD%AE%E5%8A%A8%E7%94%BB%E5%9C%A8-mugeda-%E4%B8%AD%E5%88%B6%E4%BD%9C%E9%A1%BA%E7%95%85%E7%9A%84%E5%B7%A6%E5%8F%B3%E6%BB%91%E5%8A%A8%E5%88%87%E6%8D%A2%E5%8D%A1%E7%89%87%E6%95%88%E6%9E%9C-541a66bede21"
+                    target="_blank">
+                    <p>之前在做《刁角武汉》的时候对如何选择景点这个问题做了好几个方案，一个是画一张大地图，另一个是做垂直的列表选择，但我还是选择了左右滑动来切换景点。因为在多次尝试之后发现发现在手机屏上似乎不适合做可以上下左右滑动的…</p>
+                </a>
+            </div>
+            <!-- end-post -->
+
+            <!-- star-post -->
+            <div class="blog-author">
+                <p>Mar 17, 2018 · Pudge</p>
+            </div>
+            <h2 class="blog-title"><a href="https://medium.com/@Pudge1996/mac-%E4%B8%8B%E5%AE%89%E8%A3%85-ae-%E6%8F%92%E4%BB%B6-flow-%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80%E7%9A%84%E4%BF%AE%E5%A4%8D%E6%96%B9%E6%B3%95-4d7ff2bc9cd1">MAC 下安装 AE 插件 Flow 无法打开的修复方法</a></h2>
+            <div class="blog-subtitle">
+                <a href="https://medium.com/@Pudge1996/mac-%E4%B8%8B%E5%AE%89%E8%A3%85-ae-%E6%8F%92%E4%BB%B6-flow-%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80%E7%9A%84%E4%BF%AE%E5%A4%8D%E6%96%B9%E6%B3%95-4d7ff2bc9cd1">
+                    <p>以前一直在 AE2015 里使用 Flow，最近下载了 AE2018，安装好 Flow后点击 Window-Extensions-Flow 却没有任何反应，几经波折找到了解决方法。</p>
+                </a>
+            </div>
+            <!-- end-post -->
+
+            <!-- star-post -->
+            <div class="blog-author">
+                <p>Mar 2, 2018 · Pudge</p>
+            </div>
+            <h2 class="blog-title"><a href="https://medium.com/@Pudge1996/%E5%A4%A7%E5%9B%9B%E4%B8%8B%E5%AD%A6%E6%9C%9F%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92-1fbbd141139b" target="_blank">大四下学期学习计划</a></h2>
+            <div class="blog-subtitle">
+                <a href="https://medium.com/@Pudge1996/%E5%A4%A7%E5%9B%9B%E4%B8%8B%E5%AD%A6%E6%9C%9F%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92-1fbbd141139b" target="_blank">
+                    <p>因为以前选课忽略了一些必要的规则，导致我大四仍然在学校上一些选修课，错过了一些挺好的实习岗位。在此期间要保持学习，利用大学最后一个学期（03/2018~06/2018）提升自己的能力。</p>
+                </a>
+            </div>
+            <!-- end-post -->
+
+            <!-- star-post -->
+            <div class="blog-author">
+                <p>Feb 2, 2018 · Pudge</p>
+            </div>
+            <h2 class="blog-title"><a href="https://medium.com/@Pudge1996/%E5%9C%A8-ai-%E4%B8%AD%E5%AF%BC%E5%87%BA%E6%9B%B4-%E5%B9%B2%E5%87%80-%E7%9A%84-svg-%E5%9B%BE%E5%BD%A2-5f6feede2f21" target="_blank">在 AI 中导出更干净的 SVG 图形！</a></h2>
+            <div class="blog-subtitle">
+                <a href="https://medium.com/@Pudge1996/%E5%9C%A8-ai-%E4%B8%AD%E5%AF%BC%E5%87%BA%E6%9B%B4-%E5%B9%B2%E5%87%80-%E7%9A%84-svg-%E5%9B%BE%E5%BD%A2-5f6feede2f21" target="_blank">
+                    <p>当我们做好一些图标准备导出成 SVG 文件时都要轮廓化描边，但是草率地轮廓化描边经常会产生多余的锚点，我在做相关工作的过程中找到了一些方法，或许可以帮助您导出更干净的 SVG 图形。</p>
+                </a>
+            </div>
+            <!-- end-post -->
+
+            <!-- star-post -->
+            <div class="blog-author">
+                <p>Jan 18, 2018 · Pudge</p>
+            </div>
+            <h2 class="blog-title"><a href="https://medium.com/@Pudge1996/%E9%87%8D%E7%87%83%E5%8A%A8%E6%95%88%E6%BF%80%E6%83%85%E4%B9%8B-ae-%E5%8A%A8%E6%95%88%E5%AF%BC%E5%87%BA%E4%B8%BA-json-5fe20d63f09f" target="_blank">重燃动效激情之 AE 动效导出为 JSON！</a></h2>
+            <div class="blog-subtitle">
+                <a href="https://medium.com/@Pudge1996/%E9%87%8D%E7%87%83%E5%8A%A8%E6%95%88%E6%BF%80%E6%83%85%E4%B9%8B-ae-%E5%8A%A8%E6%95%88%E5%AF%BC%E5%87%BA%E4%B8%BA-json-5fe20d63f09f" target="_blank">
+                    <p>今天正想把毕设的一些图标动效做好，突然间想到可以用 Bodymovin 导出 JSON 还没试过，于是就现场捣鼓了一番。现在发现其实非常方便！</p>
+                </a>
+            </div>
+            <!-- end-post -->
+
+            <!-- star-post -->
+            <div class="blog-author">
+                <p>Jan 2, 2018 · Pudge</p>
+            </div>
+            <h2 class="blog-title"><a href="https://medium.com/@Pudge1996/2018-01-02-7013eddc413c" target="_blank">使用 Netlify 托管个人网站 详细步骤</a></h2>
+            <div class="blog-subtitle">
+                <a href="https://medium.com/@Pudge1996/2018-01-02-7013eddc413c" target="_blank">
+                    <p>最近狠下心把域名买了下来，终于把一直想弄的个人网站正式放上了互联网。一路摸索过来，其实也没多难。</p>
+                </a>
+            </div>
+            <!-- end-post -->
+
+            <!-- star-post -->
+            <div class="blog-author">
+                <p>Dec 17, 2017 · Pudge</p>
+            </div>
+            <h2 class="blog-title"><a href="https://medium.com/@Pudge1996/%E5%88%86%E4%BA%AB-%E5%A6%82%E4%BD%95%E8%AE%A9sketch%E9%BB%98%E8%AE%A4%E5%9C%A8%E5%A4%9A%E6%A0%87%E7%AD%BE%E9%A1%B5%E4%B8%AD%E6%89%93%E5%BC%80%E6%96%B0%E6%96%87%E6%A1%A3-9b16484c5d52" target="_blank">分享：如何让Sketch默认在多标签页中打开新文档</a></h2>
+            <div class="blog-subtitle">
+                <a href="https://medium.com/@Pudge1996/%E5%88%86%E4%BA%AB-%E5%A6%82%E4%BD%95%E8%AE%A9sketch%E9%BB%98%E8%AE%A4%E5%9C%A8%E5%A4%9A%E6%A0%87%E7%AD%BE%E9%A1%B5%E4%B8%AD%E6%89%93%E5%BC%80%E6%96%B0%E6%96%87%E6%A1%A3-9b16484c5d52" target="_blank">
+                    <p>常用Sketch的都知道，窗口模式下的Sketch打开新文档是默认打开一个新窗口，如果要打开的文档比较多，整个桌面就容易乱。</p>
+                </a>
+            </div>
+            <!-- end-post -->
+        </div>
+
+        <!-- start-read-more -->
+        <div class="read-more" id="read-more">
+            <p class="read-more-text">加载更多</p>
+        </div>
+        <!-- end-read-more -->
+
     </div>
-    <div class="bg-img"></div>
     <!-- end Main container -->
 
 
     <!-- footer -->
     <footer>
-        <div class="container-fluid navbar-fixed-bottom sticky-footer">
-            <p class="copyright">© Pudge 2017-2019</p>
+        <div class="container-fluid">
+            <p class="copyright">© Pudge 2017-2021</p>
         </div>
     </footer>
     <!-- end footer -->
     <!-- jQuery -->
     <script src="https://lib.baomitu.com/jquery/2.1.1/jquery.min.js"></script>
-    
+
     <!--  plugins -->
 
     <script src="https://lib.baomitu.com/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/menu.js"></script>
+    <script type="text/javascript">
+        lazyload();
+    </script>
 
     <!--  custom script -->
     <script src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/custom.js"></script>
-
+    <script>
+        $("#read-more").click(function() {
+            $("#early-post-1").show() //显示更多文章
+            $("#read-more").hide() //隐藏按钮
+        });
+    </script>
 </body>
 
 </html>

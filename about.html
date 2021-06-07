@@ -26,11 +26,10 @@
 
     <!-- main css -->
     <link href="https://lrdim.oss-cn-shenzhen.aliyuncs.com/style.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/zoom-vanilla.js/dist/zoom.css" rel="stylesheet">
-
+    <!-- <link href="css/style_local.css" rel="stylesheet"> -->
     <style>
     @media only screen and (max-width: 420px){
-      .col-md-12{
+      .container{
         padding-right: 20px;
         padding-left: 20px;
       }
@@ -40,12 +39,21 @@
       }
     }
     @media only screen and (max-width: 670px){
-      .col-md-12{
+      .container{
         padding-right: 20px;
         padding-left: 20px;
       }
     }
     </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112191540-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-112191540-2');
+    </script>
 </head>
 
 <body>
@@ -54,15 +62,21 @@
         <header class="box-header">
           <div class="vw">
             <a href="index.html" alt="lrd.im 是设计师李瑞东的个人网站。">
-              <div class="box-logo">
-              </div>
-          </a>
-          <!-- box-nav -->
-          <a class="box-primary-nav-trigger" href="#0">
-              <span class="box-menu-icon"></span>
-          </a>
+              <div class="box-logo"></div>
+            </a>
+
+            <!-- box-nav -->
+            <a class="box-primary-nav-trigger" href="#0">
+                <span class="box-menu-icon"></span>
+            </a>
+
+            <!-- nav-text -->
+            <div class="nav-text-box">
+              <p><a href="index.html" class="nav-text">首页</a></p>
+              <p><a href="blog.html" class="nav-text">文章</a></p>
+              <p><a href="about.html" class="nav-text-active">关于</a></p>
+            </div>
           </div>
-          <!-- box-primary-nav-trigger -->
       </header>
       <!-- end box-header -->
         
@@ -82,19 +96,20 @@
       <div class="col-md-12">
         
         <h2>关于我</h2>
-        <p>李瑞东，Pudge。2018 年 6 月毕业于江汉大学现代数字媒体设计专业。职业是 UI 设计师，目前在屈臣氏广州总部工作。</p>
-        <p>一些设计和笔记：<a href="https://dribbble.com/Pudge1996" target="_blank">Dribbble</a>、<a href="https://medium.com/@Pudge1996" target="_blank">Medium</a>、<a href="https://www.behance.net/Pudge1996" target="_blank">Behance</a></p>
+        <p>李瑞东，Pudge。一名在广州工作的 UI 设计师。</p>
+        <p>设计和笔记：<a href="https://dribbble.com/Pudge1996" target="_blank">Dribbble</a>、<a href="https://medium.com/@Pudge1996" target="_blank">Medium</a>
         <p>电子邮箱：lrdbuff@gmail.com</p>
         <div style="height: 20px"></div>
         <h2>关于本站</h2>
         <p>
-        LRD.IM 是一个纯静态网站，由 Netlify 托管，部分静态资源托管于阿里云 OSS</a> 。
+        LRD.IM 是存放我的一些设计作品、文章的静态网站。资源部署在阿里云服务器</a> 。
         </p>
-        
-        <p>
-        · 2018 年 1 月建站（<a href="https://www.pudge1996.com/" target="_blank">旧版入口</a>） ；<br>
+        <h2>更新记录</h2>
+        <p> 
+        · 2018 年 1 月建站（<a href="https://elastic-bassi-02c067.netlify.com/" target="_blank">旧版入口</a>） ；<br>
         · 2019 年 2 月重写样式以提升视觉体验；<br>
-        · 2019 年 10 月适配 iOS/MacOS 深色模式。
+        · 2019 年 10 月适配深色模式；<br>
+        · 2019 年 11 月改进导航栏样式、文章页同步 Medium 文章列表。
         </p>
 
       </div>
@@ -106,7 +121,7 @@
     <!-- footer -->
     <footer>
         <div class="container-fluid">
-            <p class="copyright">© Pudge 2017-2019</p>
+            <p class="copyright">© Pudge 2017-2021</p>
         </div>
     </footer>
     <!-- end footer -->

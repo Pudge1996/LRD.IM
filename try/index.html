@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <title>Document</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/FileSaver.min.js"></script>
+  <script src="js/clipboard.min.js"></script>
+</head>
+<body>
+  
+  <div class="wrap">
+    <div class="alignright">
+
+      <button class="wechat" aria-label="点击查看我的微信二维码"></button>
+      <div class="popover">
+        <div class="scan-qrcode"></div>
+        <div class="scan-text">扫一扫加我微信</div>
+      </div>
+
+      <button class="top" id="top" onclick="backToTop(4);" aria-label="点击返回顶部"></button>
+
+    </div>
+    <div class="title">
+      <div class="title-grid-container">
+        <div class="grid-title"><h1>李瑞东</h1></div>
+        <!-- <a href="#" target="_blank" class="grid-button">查看作品集</a> -->
+      </div>
+    </div>
+    <div class="intro">
+      <strong>个人简介</strong>
+      <p>我是一名 3 年工作经验的 UI 设计师，坐标广州。目前在千聊负责 B 端工具产品的界面设计，包括千聊讲师工具、多个后台管理系统的设计，以及 UI 组件库的搭建和推进等工作。</p>
+      <p>工作以来，一直保持着沉淀设计专业知识的习惯。在 <a href="https://medium.com/@Pudge1996" target="_blank">Medium</a> 平台发布了 24 篇、逾三万字的原创设计文章。同时也对设计 / 前端的前沿动向保持密切关注。</p>
+    </div>
+    <div class="degree">
+      <strong>教育背景</strong>
+      <p>江汉大学 · 现代数字媒体设计（2014 - 2018 艺术学学士）</p>
+    </div>
+
+    <div class="contact">
+      <strong>联系方式</strong>
+      <p>
+        <span class="contact-title">电子邮箱：</span>
+        <a href="javascript:" id="email" data-clipboard-text="lrdbuff@gmail.com" tabindex="0" role="button" >lrdbuff@gmail.com </a>
+        
+        <span id="emailCopied" class="copied">已复制!</span>
+      </p>
+      <p>
+        <span class="contact-title">微信 / 电话：</span>
+        <a href="javascript:" id="number" data-clipboard-text="18925001685" tabindex="0" role="button">189 2500 1685</a>
+        <span id="numberCopied" class="copied">已复制!</span>
+      </p>
+      <p>
+        <span class="contact-title">个人网站：</span>
+        <a href="https://www.lrd.im/" id="site" data-clipboard-text="https://lrd.im/" tabindex="0" target="_blank">
+          LRD.im
+          <span class="iconlink"></span> 
+        </a>
+        <span id="siteCopied" class="copied">已复制!</span>
+      </p>
+    </div>
+
+    <div class="divider"></div>
+    <div class="grid-container">
+      <div class="time time-1">
+        <p>
+          <strong>2020.7 - 至今</strong>
+        </p>
+      </div>
+      <div class="name name-1">
+        <p>
+          <strong>千聊</strong>
+          <span>·</span>知识付费
+          <p>国内领先的在线知识社区</p>
+        </p>
+      </div>
+      <div class="work work-1">
+        <p class="title"><strong>UI设计师</strong></p>
+        <p>1. 负责千聊平台 B 端（讲师端）工具产品的设计和迭代。把控线上效果的质量，协助达成产品目标；制定并推动落实千聊移动端 UI 组件，提升设计/交付效率。</p>
+        <p>2. 负责 SaaS 平台「<a href="https://ytscrm.qianliao.net/" target="_blank">鱼棠SCRM</a>」从 0 到 1 的设计和迭代。在 AntD 的生态下制定并落实设计规范。根据 PC Web 端平台的特性提出设计优化点；</p>  
+        <p>3. 主动跟踪需求上线后的数据，以 wiki 文档或分享会的方式沉淀设计经验。</p>
+      </div>
+
+      <div class="divider-2"></div>
+
+      <div class="time time-2">
+        <p>
+          <strong>2018.3 - 2020.4</strong>
+        </p>
+      </div>
+      <div class="name name-2">
+        <p>
+          <strong>屈臣氏</strong>
+          <span>·</span>新零售
+          <p>全球知名保健美妆零售商</p>
+        </p>
+      </div>
+      <div class="work work-2">
+        <p class="title"><strong>UI 设计师</strong></p>
+        <p>1. 参与屈臣氏 App、小程序的界面设计。包括产品功能迭代、动效设计、深色模式、制定/维护 UI 规范等；</p>
+        <p>2. 参与屈臣氏小店小程序从 0 到 1 的过程。与产品、交互交流探讨优化点。配合前端工程师还原设计稿；</p>
+        <p>3. 负责用户增长线 UI 设计，根据数据表现提出优化方案；负责内部 BI 数据平台的交互 & 界面设计；</p>
+        <p>4. 沉淀设计经验，在团队内开展分享会。</p>
+      </div>
+
+      <div class="divider-3"></div>
+
+      <div class="time time-3">
+        <p>
+          <strong>2017.7 - 2017.9</strong>
+        </p>
+      </div>
+      <div class="name name-3">
+        <p>
+          <strong>华南农业大学</strong>
+          <span>·</span>O2O
+          <p>数信学院研究生团队</p>
+        </p>
+      </div>
+      <div class="work work-3">
+        <p class="title"><strong>UI & 视觉设计师</strong></p>
+        <p>* 实习经历，与华南农业大学数学与信息学院的学生合作完成导师分配的项目</p>
+        <p>1. 负责安卓 App 飞滴送水项目的设计，完成用户端和配送端的原型及界面设计；</p>
+        <p>2. 使用 Element UI 组件库完成后台管理系统界面设计。</p>
+      </div>
+      
+    </div>  
+    <!-- Grid End -->
+    <a href="#" class="a">
+      <div class="portfolio" tabindex="0">
+        查看作品集
+      </div>
+    </a>
+    
+    <footer>
+      <div class="flex">
+        <span class="info">
+          © 2021 Pudge
+          <span class="dot"> · </span>
+          最后更新 2021.04.01
+          <span class="download">
+            <span class="dot"> · </span>
+            <a href="https://lrdim.oss-cn-shenzhen.aliyuncs.com/sample.pdf" download="李瑞东-UI设计师-简历.pdf">下载此简历</a>
+          </span>
+          <span class="dot"> · </span>
+          <a href="#" class="b_top" onclick="backToTop(3);" role="button">回到顶部</a>
+        </span>
+        <span class="links">
+          <a href="https://medium.com/@Pudge1996" target="_blank">Medium</a>
+          <span class="dot"> · </span>
+          <a href="https://dribbble.com/Pudge1996" target="_blank">Dribbble</a>
+          <span class="dot"> · </span>
+          <a href="https://www.lrd.im/" target="_blank">LRD.IM</a>
+        </span>
+      </div>
+    </footer>
+  </div>
+</body>
+<script>
+
+  //点击屏幕区域隐藏「已复制」
+  document.onclick = function() {
+    emailCopied.style.display = "none";
+    numberCopied.style.display = "none";
+    siteCopied.style.display = "none";
+  };
+
+  // 复制 email
+  var email = document.getElementById('email');
+  var emailCopied = document.getElementById('emailCopied');
+  var clipboard = new ClipboardJS(email);
+
+  //复制功能，以及展示「已复制」
+  clipboard.on('success', function (e) { 
+    console.log(e);
+    emailCopied.style.display = "inline-block";
+    numberCopied.style.display = "none";
+    siteCopied.style.display = "none";
+  });
+
+  // 排除自己（阻止事件冒泡）
+  email.onclick = function(email) {
+    email.stopPropagation();
+  };
+
+
+  
+  // 复制电话/微信
+  var number = document.getElementById('number');
+  var numberCopied = document.getElementById('numberCopied');
+  var clipboard = new ClipboardJS(number);
+
+  //复制功能，以及展示「已复制」
+  clipboard.on('success', function (e) {
+    console.log(e);
+    emailCopied.style.display = "none";
+    numberCopied.style.display = "inline-block";
+    siteCopied.style.display = "none";
+    
+  });
+
+  // 排除自己（阻止事件冒泡）
+  number.onclick = function(number) {
+    number.stopPropagation();
+  };
+
+// requestAnimationFrame的兼容处理
+if (!window.requestAnimationFrame) {
+    requestAnimationFrame = function(fn) {
+        setTimeout(fn, 17);
+    };	
+}
+// 滚动到顶部缓动实现
+// rate表示缓动速率，默认是2
+var backToTop = function (rate) {
+    var doc = document.body.scrollTop? document.body : document.documentElement;
+    var scrollTop = doc.scrollTop;
+    
+    var top = function () {
+        scrollTop = scrollTop + (0 - scrollTop) / (rate || 1);
+        
+        // 临界判断，终止动画
+        if (scrollTop <= 1) {
+            doc.scrollTop = 0;
+            return;
+        }
+        doc.scrollTop = scrollTop;
+        // 动画gogogo!
+        requestAnimationFrame(top);    
+    };
+    top();
+};
+
+var isChromium = window.chrome; // 判断是 Chrome 就用回到顶部(0)的动效
+
+if (isChromium) {
+  document.getElementById('top').setAttribute('onclick','backToTop(0)');
+  console.log('Chrome!');
+};
+
+var suck = document.getElementById('suck')
+
+suck.onclick = function(){
+
+}
+
+</script>
+</html>
