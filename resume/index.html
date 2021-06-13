@@ -6,11 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
   <title>Document</title>
   <link rel="stylesheet" href="css/main.css">
-  <script src="js/FileSaver.min.js"></script>
   <script src="js/clipboard.min.js"></script>
 </head>
 <body>
-  
   <div class="wrap">
     <div class="alignright">
 
@@ -20,6 +18,7 @@
         <div class="scan-text">扫一扫加我微信</div>
       </div>
 
+      <button class="theme-toggle" id="themeToggle" aria-label="点击切换颜色主题"></button>
       <button class="top" id="top" onclick="backToTop(4);" aria-label="点击返回顶部"></button>
 
     </div>
@@ -32,15 +31,20 @@
     <div class="intro">
       <strong>个人简介</strong>
       <p>我是一名 3 年工作经验的 UI 设计师，坐标广州。目前在千聊负责 B 端工具产品的界面设计，包括千聊讲师工具、多个后台管理系统的设计，以及 UI 组件库的搭建和推进等工作。</p>
-      <p>工作以来，一直保持着沉淀设计专业知识的习惯。在 <a href="https://medium.com/@Pudge1996" target="_blank">Medium</a> 平台发布了 24 篇、逾三万字的原创设计文章。同时也对设计 / 前端的前沿动向保持密切关注。</p>
+      <p>工作以来，一直保持着沉淀设计专业知识的习惯。在 <a href="https://medium.com/@Pudge1996" target="_blank">Medium</a> 平台发布了 28 篇、逾四万字的原创设计文章。同时也对设计 & 前端的前沿动向保持密切关注。</p>
     </div>
     <div class="degree">
       <strong>教育背景</strong>
-      <p>江汉大学 · 现代数字媒体设计（2014 - 2018 艺术学学士）</p>
+      <p>江汉大学 · 现代数字媒体设计（2014 - 2018 艺术学学士，GPA 3.51）</p>
     </div>
 
     <div class="contact">
       <strong>联系方式</strong>
+      <p>
+        <span class="contact-title">微信 / 电话：</span>
+        <a href="javascript:" id="number" data-clipboard-text="18925001685" tabindex="0" role="button">189 2500 1685</a>
+        <span id="numberCopied" class="copied">已复制!</span>
+      </p>
       <p>
         <span class="contact-title">电子邮箱：</span>
         <a href="javascript:" id="email" data-clipboard-text="lrdbuff@gmail.com" tabindex="0" role="button" >lrdbuff@gmail.com </a>
@@ -48,14 +52,9 @@
         <span id="emailCopied" class="copied">已复制!</span>
       </p>
       <p>
-        <span class="contact-title">微信 / 电话：</span>
-        <a href="javascript:" id="number" data-clipboard-text="18925001685" tabindex="0" role="button">189 2500 1685</a>
-        <span id="numberCopied" class="copied">已复制!</span>
-      </p>
-      <p>
         <span class="contact-title">个人网站：</span>
         <a href="https://www.lrd.im/" id="site" data-clipboard-text="https://lrd.im/" tabindex="0" target="_blank">
-          LRD.im
+          LRD.IM
           <span class="iconlink"></span> 
         </a>
         <span id="siteCopied" class="copied">已复制!</span>
@@ -79,8 +78,8 @@
       <div class="work work-1">
         <p class="title"><strong>UI设计师</strong></p>
         <p>1. 负责千聊平台 B 端（讲师端）工具产品的设计和迭代。把控线上效果的质量，协助达成产品目标；制定并推动落实千聊移动端 UI 组件，提升设计/交付效率。</p>
-        <p>2. 负责 SaaS 平台「<a href="https://ytscrm.qianliao.net/" target="_blank">鱼棠SCRM</a>」从 0 到 1 的设计和迭代。在 AntD 的生态下制定并落实设计规范。根据 PC Web 端平台的特性提出设计优化点；</p>  
-        <p>3. 主动跟踪需求上线后的数据，以 wiki 文档或分享会的方式沉淀设计经验。</p>
+        <p>2. 负责 SaaS 平台「<a href="https://ytscrm.qianliao.net/" target="_blank">鱼棠SCRM</a>」从 0 到 1 设计和迭代。在 AntD 的生态下制定并落实设计规范。根据数据反馈，提出并落地更符合用户预期的设计方案（已验证）；</p>  
+        <p>3. 主动跟踪需求上线后的数据，以 Wiki 文档或分享会的方式沉淀设计经验。</p>
       </div>
 
       <div class="divider-2"></div>
@@ -100,9 +99,10 @@
       <div class="work work-2">
         <p class="title"><strong>UI 设计师</strong></p>
         <p>1. 参与屈臣氏 App、小程序的界面设计。包括产品功能迭代、动效设计、深色模式、制定/维护 UI 规范等；</p>
-        <p>2. 参与屈臣氏小店小程序从 0 到 1 的过程。与产品、交互交流探讨优化点。配合前端工程师还原设计稿；</p>
-        <p>3. 负责用户增长线 UI 设计，根据数据表现提出优化方案；负责内部 BI 数据平台的交互 & 界面设计；</p>
-        <p>4. 沉淀设计经验，在团队内开展分享会。</p>
+        <p>2. 负责用户增长线 UI 设计。主导「试用中心」改版，点击渗透率环比提升 <strong>69.95%</strong>，活动参与率环比提升 <strong>30.53%</strong>。</p>
+        <p>3. 参与屈臣氏小店小程序从 0 到 1 的过程。与产品、交互交流探讨优化点。配合前端工程师还原设计稿；</p>
+        <p>4. 负责内部 BI 数据平台的交互 & 界面设计；</p>
+        <p>5. 沉淀设计经验，在团队内开展分享会。</p>
       </div>
 
       <div class="divider-3"></div>
@@ -121,25 +121,19 @@
       </div>
       <div class="work work-3">
         <p class="title"><strong>UI & 视觉设计师</strong></p>
-        <p>* 实习经历，与华南农业大学数学与信息学院的学生合作完成导师分配的项目</p>
+        <p>* 实习经历，与华南农业大学数学与信息学院的研究生合作完成导师分配的项目</p>
         <p>1. 负责安卓 App 飞滴送水项目的设计，完成用户端和配送端的原型及界面设计；</p>
         <p>2. 使用 Element UI 组件库完成后台管理系统界面设计。</p>
       </div>
       
     </div>  
     <!-- Grid End -->
-    <a href="#" class="a">
-      <div class="portfolio" tabindex="0">
-        查看作品集
-      </div>
-    </a>
-    
     <footer>
       <div class="flex">
         <span class="info">
           © 2021 Pudge
           <span class="dot"> · </span>
-          最后更新 2021.04.01
+          最后更新 2021.07.01
           <span class="download">
             <span class="dot"> · </span>
             <a href="https://lrdim.oss-cn-shenzhen.aliyuncs.com/sample.pdf" download="李瑞东-UI设计师-简历.pdf">下载此简历</a>
@@ -159,7 +153,7 @@
   </div>
 </body>
 <script>
-
+  // ▼▼ 点击复制功能
   //点击屏幕区域隐藏「已复制」
   document.onclick = function() {
     emailCopied.style.display = "none";
@@ -184,8 +178,6 @@
   email.onclick = function(email) {
     email.stopPropagation();
   };
-
-
   
   // 复制电话/微信
   var number = document.getElementById('number');
@@ -205,15 +197,17 @@
   number.onclick = function(number) {
     number.stopPropagation();
   };
+// ▲▲ 点击复制功能
 
-// requestAnimationFrame的兼容处理
+// ▼▼ requestAnimationFrame的兼容处理
 if (!window.requestAnimationFrame) {
     requestAnimationFrame = function(fn) {
         setTimeout(fn, 17);
     };	
 }
-// 滚动到顶部缓动实现
-// rate表示缓动速率，默认是2
+// ▲▲ requestAnimationFrame的兼容处理
+
+// ▼▼ 滚动到顶部缓动实现，rate表示缓动速率，默认是2
 var backToTop = function (rate) {
     var doc = document.body.scrollTop? document.body : document.documentElement;
     var scrollTop = doc.scrollTop;
@@ -232,19 +226,45 @@ var backToTop = function (rate) {
     };
     top();
 };
+// ▲▲ 滚动到顶部缓动实现
 
-var isChromium = window.chrome; // 判断是 Chrome 就用回到顶部(0)的动效
-
+// ▼▼ 判断是 Chrome 就用回到顶部(0)的动效
+var isChromium = window.chrome;
 if (isChromium) {
   document.getElementById('top').setAttribute('onclick','backToTop(0)');
   console.log('Chrome!');
 };
+// ▲▲ 判断是 Chrome 就用回到顶部(0)的动效
 
-var suck = document.getElementById('suck')
 
-suck.onclick = function(){
+// ▼▼ 深色模式
+const darkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)'); 
+// 判断是否匹配深色模式 
+if (darkMode && darkMode.matches) { 
+  document.body.classList.add('dark'); 
+} 
+// 监听主题切换事件 
+darkMode && darkMode.addEventListener('change', e => { 
+  if (e.matches) { 
+    document.body.classList.add('dark'); 
+  } else { 
+    document.body.classList.remove('dark');  
+  } 
+});
+//点击切换按钮
+var themeToggle = document.getElementById('themeToggle');
+  themeToggle.onclick = function(){
+    document.body.classList.toggle("dark");
+  }
 
-}
+
+//判断终端
+// var u = navigator.userAgent;
+// var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+// var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+// alert('是否是Android：'+isAndroid);
+// alert('是否是iOS：'+isiOS);
 
 </script>
+
 </html>
