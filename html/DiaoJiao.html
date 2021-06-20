@@ -7,183 +7,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <meta name="keywords" content="李瑞东,设计,广州,design,视觉设计,UI设计,插图设计,Pudge,设计作品,作品集">
+    <meta name="keywords" content="李瑞东 Pudge 广州 设计 design UI设计 体验设计 B端设计 设计作品 作品集"> 
     <!-- It may be good for SEO -->
     
-    <title> 刁角武汉 - 作品集 - 李瑞东 </title>
+    <title>刁角武汉 · 李瑞东 LRD.IM </title>
   <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
 
-    <!-- Bootstrap -->
-    <link href="https://lib.baomitu.com/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-
     <!-- main css -->
-    <link href="https://lrdim.oss-cn-shenzhen.aliyuncs.com/style.css" rel="stylesheet">
-    <link href="https://lrdim.oss-cn-shenzhen.aliyuncs.com/zoom.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
 
-    <!-- modernizr -->
-    <script src="https://lib.baomitu.com/modernizr/2.8.3/modernizr.min.js"></script>
-
-    <!-- lazyload -->
-    <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112191540-2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-112191540-2');
-    </script>
 </head>
 <body>
-    <div class="container-fluid">
-               <!-- box-header -->
-               <header class="box-header">
-                <div class="vw">
-                  <a href="../index.html" alt="lrd.im 是设计师李瑞东的个人网站。">
-                    <div class="box-logo"></div>
-                  </a>
-      
-                  <!-- box-nav -->
-                  <a class="box-primary-nav-trigger" href="#0">
-                      <span class="box-menu-icon"></span>
-                  </a>
-      
-                  <!-- nav-text -->
-                  <div class="nav-text-box">
-                    <p><a href="../index.html" class="nav-text">首页</a></p>
-                    <p><a href="../blog.html" class="nav-text">文章</a></p>
-                    <p><a href="../about.html" class="nav-text">关于</a></p>
-                  </div>
-                </div>
-            </header>
-            <!-- end box-header -->
-
-        <!-- nav -->
-        <nav>
-            <ul class="box-primary-nav">
-                <li><a href="../index.html">主页</a></li>
-                <li><a href="../blog.html">博客</a></li>
-                <li><a href="../about.html">关于</a></li>
-            </ul>
-        </nav>
-        <!-- end nav -->
+    <!-- 导航栏-->
+    <div class="container-fluid"> 
+        <header class="box-header">
+            <div class="vw">
+            <a href="index.html" alt="lrd.im 是设计师李瑞东的个人网站。">
+                <div class="box-logo"></div>
+            </a>
+            <!-- nav-text -->
+            <div class="nav-text-box">
+                <p><a href="../portfolio.html" class="nav-text">作品</a></p>
+                <p><a href="../blog.html" class="nav-text">博客</a></p>
+                <p><a href="../archive.html" class="nav-text">归档</a></p>
+                <p><a href="../about.html" class="nav-text">关于我</a></p>
+            </div>
+            <div class="icon-menu" id="iconMenu"></div>
+            <div class="icon-close hide" id="iconClose"></div>
+        </div>
+        </header>
     </div>
+    <div class="nav-open hidden nav-transform" id="navOpen">
+        <a href="../portfolio.html">作品</a>
+        <a href="../blog.html">博客</a>
+        <a href="../archive.html">归档</a>
+        <a href="../about.html">关于我</a>
+    </div>
+    <div class="nav-mask hidden" id="navMask"></div>
+    <!-- end 导航栏-->
     
     <!-- top-bar -->
     <div class="top-bar">
         <h1>毕业设计《刁角武汉》</h1>
-        <p class="subtitle">毕业设计 | 2018-04-30</p>  
+        <p class="subtitle">毕业设计 · 2018-04-30</p>  
     </div>
     <!-- end top-bar -->
     
     <!-- main-container -->
 
     <!-- hero-img -->
-    <div class="col-md-12 ">
-            <img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAFoEvQfAAAABGdBTUEAALGPC/xhBQAAAA1JREFUCB1j+PDhw38ACXQD0B3tn6cAAAAASUVORK5CYII=" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/Img/pic_027.jpg"  class="img-responsive heroimg center-block lazyload" width="765" height="574">
-    </div>
+        <img  data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/Img/pic_027.jpg"  class="heroimg lazyload" width="765" height="574">
     <!-- end hero-img -->
 
-    <div class="container main-container">
-        <div class="col-md-12">
+    <div class="container blog-post">
             <p>《刁角武汉》中"刁角"一词是武汉方言，是指不容易找到，隐蔽，很少有人知道的地方。我们打造了一款以介绍旅行景点为主的 H5 多终端交互产品，旅客能在应用里了解到地道的武汉景点。除了能了解到相关景点的介绍、游记、交通以外还可以上传自己拍摄的照片生成一张独一无二的明信片，传播给朋友们，让更多游客爱上武汉。</p>
 
-            <p>在本次项目中，我参与项目前期策划与构思，实地考察景点。独立完成该项目的美术设计。制定美术风格。后期在 Mugeda 上完成 H5 页面的实现。</p>
+            <p>在本次项目中，我参与项目前期策划与构思，实地考察景点。独立完成该项目的美术设计。制定美术风格。后期用在线 H5 制作平台 Mugeda 上完成落地，同时也在 <a href="https://pudge1996.medium.com/541a66bede21" target="_blank" class="underline">Medium</a> 上发表原创经验文章，介绍如何在 Mugeda 上实现左右切换的效果。</p>
 
-            <p class="center"><a href="https://www.behance.net/gallery/65032115/-H5-"  target="_blank" >在 Behance 中浏览该项目</a></p>
+            <img data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/Img/pic_028.jpg" class="lazyload" data-action="zoom" width="765" height="574"/>
 
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAFoEvQfAAAABGdBTUEAALGPC/xhBQAAAA1JREFUCB1j+PDhw38ACXQD0B3tn6cAAAAASUVORK5CYII=" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/Img/pic_028.jpg"  class="img-responsive center-block lazyload" data-action="zoom" width="765" height="574"/>
-
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAFoEvQfAAAABGdBTUEAALGPC/xhBQAAAA1JREFUCB1j+PDhw38ACXQD0B3tn6cAAAAASUVORK5CYII=" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/Img/pic_029.jpg"  class="img-responsive center-block lazyload" data-action="zoom" width="765" height="574"/>
-
-            <p></p>
+            <img data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/Img/pic_029.jpg" class="lazyload" data-action="zoom" width="765" height="574"/>
 
             <p>《刁角武汉》是一款在微信上传播的 H5 产品，所以我希望在视觉上给人一种更轻，更趣味、活跃的感觉，同时考虑到制作成本以及实现方式，我们选择了用较趣味、活泼的线性扁平风格作为整个产品的美术风格。</p>
 
-            <p></p>
-
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAFoEvQfAAAABGdBTUEAALGPC/xhBQAAAA1JREFUCB1j+PDhw38ACXQD0B3tn6cAAAAASUVORK5CYII=" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/Img/pic_030.jpg"  class="img-responsive center-block lazyload" data-action="zoom" width="765" height="574"/>
-
-            <p></p>
+            <img data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/Img/pic_030.jpg" class="lazyload" data-action="zoom" width="765" height="574"/>
 
             <p>在字体选择上，选择了较卡通趣味的造字工房悦圆，这种字体的端点较圆润，符合整个产品的美术风格，如果使用端点、转弯位比较锋利的字体会在产品中显得很突兀。</p>
 
-            <p></p>
-
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAFoEvQfAAAABGdBTUEAALGPC/xhBQAAAA1JREFUCB1j+PDhw38ACXQD0B3tn6cAAAAASUVORK5CYII=" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/Img/pic_031.jpg"  class="img-responsive center-block lazyload" data-action="zoom" width="765" height="574"/>
-
-            <p></p>
+            <img data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/Img/pic_031.jpg" class="lazyload" data-action="zoom" width="765" height="574"/>
 
             <p>因为《刁角武汉》不是纯文字内容的交互产品，丰富的插图仍然占图片的很大比例，我们也挺重视色彩之间的搭配。在色彩的选择上我们使用了明度和纯度都比较高的颜色，使画面更丰富多彩，不会太单调。</p>
 
-            <p></p>
-
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAFoEvQfAAAABGdBTUEAALGPC/xhBQAAAA1JREFUCB1j+PDhw38ACXQD0B3tn6cAAAAASUVORK5CYII=" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/Img/pic_032.jpg"  class="img-responsive center-block lazyload" data-action="zoom" width="765" height="574"/>
-
-            <p></p>
+            <img data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/Img/pic_032.jpg" class="lazyload" data-action="zoom" width="765" height="574"/>
 
             <p>大图标一般用两种邻近色搭配褐色的描边设计，两种颜色的搭配让图标更鲜明、具有活力。适当的断点丰富图标细节。
             小图标用主题色和褐色的描边设计，单色可以让图标更简洁，在小尺寸显示的情况下识别度更高。</p>
 
-            <p></p>
+            <img data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/Img/pic_033.jpg" class="lazyload" data-action="zoom" width="765" height="574"/>
 
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAFoEvQfAAAABGdBTUEAALGPC/xhBQAAAA1JREFUCB1j+PDhw38ACXQD0B3tn6cAAAAASUVORK5CYII=" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/Img/pic_033.jpg"  class="img-responsive center-block lazyload" data-action="zoom" width="765" height="574"/>
+            <img data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/Img/pic_034.jpg" class="lazyload" data-action="zoom" width="765" height="574"/>
 
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAFoEvQfAAAABGdBTUEAALGPC/xhBQAAAA1JREFUCB1j+PDhw38ACXQD0B3tn6cAAAAASUVORK5CYII=" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/Img/pic_034.jpg"  class="img-responsive center-block lazyload" data-action="zoom" width="765" height="574"/>
+            <img data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/Img/pic_035.jpg" class="lazyload" data-action="zoom" width="765" height="574"/>
 
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAFoEvQfAAAABGdBTUEAALGPC/xhBQAAAA1JREFUCB1j+PDhw38ACXQD0B3tn6cAAAAASUVORK5CYII=" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/Img/pic_035.jpg"  class="img-responsive center-block lazyload" data-action="zoom" width="765" height="574"/>
+            <img data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/Img/pic_036.jpg" class="lazyload" data-action="zoom" width="765" height="574"/>
 
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAFoEvQfAAAABGdBTUEAALGPC/xhBQAAAA1JREFUCB1j+PDhw38ACXQD0B3tn6cAAAAASUVORK5CYII=" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/Img/pic_036.jpg"  class="img-responsive center-block lazyload" data-action="zoom" width="765" height="574"/>
+            <img data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/Img/pic_037.jpg" class="lazyload" data-action="zoom" width="765" height="574"/>
 
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAFoEvQfAAAABGdBTUEAALGPC/xhBQAAAA1JREFUCB1j+PDhw38ACXQD0B3tn6cAAAAASUVORK5CYII=" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/Img/pic_037.jpg"  class="img-responsive center-block lazyload" data-action="zoom" width="765" height="574"/>
-
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAFoEvQfAAAABGdBTUEAALGPC/xhBQAAAA1JREFUCB1j+PDhw38ACXQD0B3tn6cAAAAASUVORK5CYII=" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/Img/pic_038.jpg"  class="img-responsive center-block lazyload" data-action="zoom" width="765" height="574"/>
+            <img data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/Img/pic_038.jpg" class="lazyload" data-action="zoom" width="765" height="574"/>
 
             <p class="center imgCaption">素材：线性单色社交旅行图标 24 枚 - <a href="https://www.uplabs.com/posts/24-free-social-icon-set" target="_blank" >下载</a></p>
 
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAFoEvQfAAAABGdBTUEAALGPC/xhBQAAAA1JREFUCB1j+PDhw38ACXQD0B3tn6cAAAAASUVORK5CYII=" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/Img/pic_039.gif"  class="img-responsive center-block lazyload" data-action="zoom" width="765" height="574"/>
+            <img data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/Img/pic_039.gif"  class="lazyload" data-action="zoom" width="765" height="574"/>
 
             <p class="center imgCaption">文章：在 Mugeda 中制作顺畅的滑动切换效果 - <a href="https://medium.com/@Pudge1996/%E5%88%A9%E7%94%A8%E9%A2%84%E7%BD%AE%E5%8A%A8%E7%94%BB%E5%9C%A8-mugeda-%E4%B8%AD%E5%88%B6%E4%BD%9C%E9%A1%BA%E7%95%85%E7%9A%84%E5%B7%A6%E5%8F%B3%E6%BB%91%E5%8A%A8%E5%88%87%E6%8D%A2%E5%8D%A1%E7%89%87%E6%95%88%E6%9E%9C-541a66bede21" target="_blank" >Medium</a></p>
 
-            <p></p>
-
-        </div>
+            <p class="center"><a href="https://www.behance.net/gallery/65032115/-H5-"  target="_blank" class="underline">在 Behance 中浏览该项目</a></p>
     </div>
     <!-- end main-container -->
-
-
     <!-- footer -->
     <footer>
-        <div class="container-fluid">
-            <p class="copyright">© Pudge 2017-2021</p>
-        </div>
+        <p class="copyright">© Pudge 2017-2021</p>
     </footer>
     <!-- end footer -->
     
     <!-- back to top -->
-    <a href="#0" class="cd-top">
+    <div class="to-top" id="toTop" onclick="backToTop(4)">
         <svg style="width:20px; height:40px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#232323">
             <path d="M277.375 427V167.296l119.702 119.702L427 256 256 85 85 256l29.924 29.922 119.701-118.626V427h42.75z"/>
-    </a>
+        </svg>
+    </div>
     <!-- end back to top -->
-
-
-    <!-- jQuery -->
-    <script src="https://lib.baomitu.com/jquery/2.1.1/jquery.min.js"></script>
-    
-    <!--  plugins -->
-
-    <script src="https://lib.baomitu.com/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="https://cdn.bootcss.com/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
-    <script src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/menu.js"></script>
+     
     <script src="https://cdn.jsdelivr.net/npm/zoom-vanilla.js/dist/zoom-vanilla.min.js"></script>
 
-    <!--  custom script -->
-    <script src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/custom.js"></script>
-    <script type="text/javascript">lazyload();</script>
+    <script src="../js/lazysizes.min.js"></script>
 
-</body>
+    <!--  custom script -->
+    <script src="../js/custom.js"></script></body>
 
 </html>

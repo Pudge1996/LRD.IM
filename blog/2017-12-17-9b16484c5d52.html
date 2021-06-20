@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=devUIice-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <meta name="keywords" content="李瑞东 Pudge 广州 设计 design UI设计 体验设计 B端设计 设计作品 作品集"> 
+    <meta name="author" content="李瑞东" />
+    <meta name="robots" content="index,follow" />
+    <meta name="google" content="index,follow" />
+    <meta name="googlebot" content="index,follow" />
+    <meta name="verify" content="index,follow" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <!-- It may be good for SEO -->
+
+    <title>分享：如何让Sketch默认在多标签页中打开新文档 · 李瑞东 LRD.IM</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
+
+    <!-- main css -->
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!-- clipboard js -->
+    <script src="../js/clipboard.min.js"></script>
+</head>
+  <body>
+    <!-- 导航栏-->
+    <div class="container-fluid"> 
+      <header class="box-header">
+          <div class="vw">
+          <a href="index.html" alt="lrd.im 是设计师李瑞东的个人网站。">
+              <div class="box-logo"></div>
+          </a>
+          <!-- nav-text -->
+          <div class="nav-text-box">
+              <p><a href="../portfolio.html" class="nav-text">作品</a></p>
+              <p><a href="../blog.html" class="nav-text">博客</a></p>
+              <p><a href="../archive.html" class="nav-text">归档</a></p>
+              <p><a href="../about.html" class="nav-text">关于我</a></p>
+          </div>
+          <div class="icon-menu" id="iconMenu"></div>
+          <div class="icon-close hide" id="iconClose"></div>
+      </div>
+      </header>
+  </div>
+  <div class="nav-open hidden nav-transform" id="navOpen">
+      <a href="../portfolio.html">作品</a>
+      <a href="../blog.html">博客</a>
+      <a href="../archive.html">归档</a>
+      <a href="../about.html">关于我</a>
+  </div>
+  <div class="nav-mask hidden" id="navMask"></div>
+  <!-- end 导航栏-->
+  <article class="h-entry">
+<header>
+<h1 class="p-name">分享：如何让Sketch默认在多标签页中打开新文档</h1>
+<p class="article-info">Pudge · <time>2017-12-17 </time>首次发布于 <a href="https://pudge1996.medium.com/%E5%88%86%E4%BA%AB-%E5%A6%82%E4%BD%95%E8%AE%A9sketch%E9%BB%98%E8%AE%A4%E5%9C%A8%E5%A4%9A%E6%A0%87%E7%AD%BE%E9%A1%B5%E4%B8%AD%E6%89%93%E5%BC%80%E6%96%B0%E6%96%87%E6%A1%A3-9b16484c5d52" target="_blank">Medium</a></p>
+</header>
+<section data-field="subtitle" class="p-summary">
+常用Sketch的都知道，窗口模式下的Sketch打开新文档是默认打开一个新窗口，如果要打开的文档比较多，整个桌面就容易乱。
+</section>
+<section data-field="body" class="e-content">
+<section class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 class="graf graf--h3 graf--leading graf--title">分享：如何让Sketch默认在多标签页中打开新文档</h3></div><div class="section-inner sectionLayout--outsetColumn"><figure class="graf graf--figure graf--layoutOutsetCenter graf-after--h3"><img class="graf-image lazyload" data-action="zoom" data-image-id="1*FpTMrXdyRM8ctURXtgkjmA.jpeg" width="6000" height="4137" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/blogimg/2017-12-17-9b16484c5d52/01.jpg"><figcaption class="imageCaption">Photo by <a href="https://unsplash.com/photos/MqEUKtGpzqA?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" data-href="https://unsplash.com/photos/MqEUKtGpzqA?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" class="markup--anchor markup--figure-anchor" rel="noopener" target="_blank">rawpixel.com</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" data-href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" class="markup--anchor markup--figure-anchor" rel="noopener" target="_blank">Unsplash</a></figcaption></figure></div><div class="section-inner sectionLayout--insetColumn"><p class="graf graf--p graf-after--figure">常用Sketch的都知道，窗口模式下的Sketch打开新文档是默认打开一个新窗口，如果要打开的文档比较多，整个桌面就容易乱。</p><p class="graf graf--p graf-after--p">我在网上看到 ShetchTogether 的一个<a href="https://www.youtube.com/watch?v=dXb0mEJgJZM" data-href="https://www.youtube.com/watch?v=dXb0mEJgJZM" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">视频教程</a>，让Sketch默认在新标签栏中打开新文档，而不是新窗口。非常实用！</p><p class="graf graf--p graf-after--p">方法如下</p><h3 class="graf graf--h3 graf-after--p">Step 1:</h3><figure class="graf graf--figure graf-after--h3"><img class="graf-image lazyload" data-action="zoom" data-image-id="1*thITLKyCOcbVdNRy26zqRw.png" width="819" height="504" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/blogimg/2017-12-17-9b16484c5d52/02.png"><figcaption class="imageCaption">Sketch中勾选 View — Show Tab Bar</figcaption></figure><h3 class="graf graf--h3 graf-after--figure">Step 2:</h3><figure class="graf graf--figure graf-after--h3"><img class="graf-image lazyload" data-action="zoom" data-image-id="1*YJIRxjlQGK3RxFRNJbg3aA.png" width="695" height="397" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/blogimg/2017-12-17-9b16484c5d52/03.png"><figcaption class="imageCaption">勾选：设置 — Dock — 打开文稿时首选标签页 — 始终</figcaption></figure><h3 class="graf graf--h3 graf-after--figure">完成!</h3><figure class="graf graf--figure graf-after--h3 graf--trailing"><img class="graf-image lazyload" data-action="zoom" data-image-id="1*6ThqR2mEmoDXYOgUc_SEBg.png" width="912" height="530" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/blogimg/2017-12-17-9b16484c5d52/04.png"><figcaption class="imageCaption">回到Sketch，按⌘+N，新的文稿会在新标签栏中显示</figcaption></figure></div></div></section>
+</section>
+
+<!-- 底部功能 -->
+<hr class="end-dividers hr-1" data-content="分隔线">
+
+<div class="article-navigation">
+  <a class="previous no-post">
+      <p>上一篇</p>
+      <p class="title">无</p>
+  </a>
+  <a href="2018-01-02-7013eddc413c.html" class="next">
+    <p>下一篇</p>
+    <p class="title">使用 Netify 托管个人网站 详细步骤</p>
+  </a>
+</div>
+
+<hr class="end-dividers hr-2" data-content="分隔线">
+
+<div class="footer-action">
+  <div class="back-to-article"><a href="../blog.html"><span class="icon-back"></span>博客首页</a></div>
+  <div class="copy-link" id="copyLink"><a href="javascript:" id="blogLink" data-clipboard-text="分享：如何让Sketch默认在多标签页中打开新文档 https://lrd.im/blog/2017-12-17-9b16484c5d52.html" ><span class="icon-link"></span>复制链接</a></div>
+  <div class="copied hide" id="copied"><a href="javascript:" data-clipboard-text="分享：如何让Sketch默认在多标签页中打开新文档 https://lrd.im/blog/2017-12-17-9b16484c5d52.html"><span class="icon-success"></span>复制成功!</a></div>
+  <div class="mobile-top"><a href="#" onclick="backToTop(4)"><span class="icon-top"></span>回到顶部</a></div>
+</div>
+
+<!-- back to top -->
+<div class="to-top" id="toTop" onclick="backToTop(4)">
+  <svg style="width:20px; height:40px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#232323">
+      <path d="M277.375 427V167.296l119.702 119.702L427 256 256 85 85 256l29.924 29.922 119.701-118.626V427h42.75z"/>
+  </svg>
+</div>
+<!-- end back to top -->
+
+<!-- footer -->
+<footer>
+  <p class="copyright">© Pudge 2017-2021</p>
+</footer>
+<!-- end footer -->
+</article>
+<script src="https://cdn.jsdelivr.net/npm/zoom-vanilla.js/dist/zoom-vanilla.min.js"></script>
+<script src="../js/lazysizes.min.js"></script>
+<script src="../js/custom.js"></script>
+</body>
+</html>

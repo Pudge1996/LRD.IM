@@ -108,20 +108,19 @@ body {
   text-rendering: geometricPrecision;
   -webkit-font-smoothing: antialiased; /*chrome、safari*/
   -moz-osx-font-smoothing: grayscale;/*firefox*/
-
-  transform: all .3s;
 }
 
 a{
   text-decoration:none;
   color: inherit;
+  transition: all 0s !important;
 
   &:hover{
     background-color: var(--background-color-hover);
     background-image: linear-gradient(to top, var(--underline-color-hover), var(--underline-color-hover) 2px, transparent 0px);
     font-weight: 500;
     color: var(--primary-text-color);
-    @include mobile {
+  @include mobile {
       background-color: transparent;
     }
   }
@@ -387,7 +386,7 @@ a{
     margin-left: 96px;
     border-radius: 50%;
     transition: all 0s;
-    transition: background .3s;
+    // transition: background .3s;
     &:hover{
       background-color: var(--button-background-color-hover);
     }

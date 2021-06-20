@@ -7,153 +7,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <meta name="keywords" content="李瑞东,设计,广州,design,视觉设计,UI设计,插图设计,Pudge,设计作品,作品集">
+    <meta name="keywords" content="李瑞东 Pudge 广州 设计 design UI设计 体验设计 B端设计 设计作品 作品集"> 
     <!-- It may be good for SEO -->
     
-    <title> 动效练习 - 作品集 - 李瑞东 </title>
-  <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
-
-    <!-- Bootstrap -->
-    <link href="https://lib.baomitu.com/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <title> 动效练习 · 李瑞东 LRD.IM</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
 
     <!-- main css -->
-    <link href="https://lrdim.oss-cn-shenzhen.aliyuncs.com/style.css" rel="stylesheet">
-    <link href="https://lrdim.oss-cn-shenzhen.aliyuncs.com/zoom.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
 
-    <!-- modernizr -->
-    <script src="https://lib.baomitu.com/modernizr/2.8.3/modernizr.min.js"></script>
-
-    <!-- lazyload -->
-    <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112191540-2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-112191540-2');
-    </script>
+    
 </head>
 <body>
-    <div class="container-fluid">
-               <!-- box-header -->
-               <header class="box-header">
-                <div class="vw">
-                  <a href="../index.html" alt="lrd.im 是设计师李瑞东的个人网站。">
-                    <div class="box-logo"></div>
-                  </a>
-      
-                  <!-- box-nav -->
-                  <a class="box-primary-nav-trigger" href="#0">
-                      <span class="box-menu-icon"></span>
-                  </a>
-      
-                  <!-- nav-text -->
-                  <div class="nav-text-box">
-                    <p><a href="../index.html" class="nav-text">首页</a></p>
-                    <p><a href="../blog.html" class="nav-text">文章</a></p>
-                    <p><a href="../about.html" class="nav-text">关于</a></p>
-                  </div>
-                </div>
-            </header>
-            <!-- end box-header -->
-
-        <!-- nav -->
-        <nav>
-            <ul class="box-primary-nav">
-                <li><a href="../index.html">主页</a></li>
-                <li><a href="../blog.html">博客</a></li>
-                <li><a href="../about.html">关于</a></li>
-            </ul>
-        </nav>
-        <!-- end nav -->
+    <!-- 导航栏-->
+    <div class="container-fluid"> 
+        <header class="box-header">
+            <div class="vw">
+            <a href="index.html" alt="lrd.im 是设计师李瑞东的个人网站。">
+                <div class="box-logo"></div>
+            </a>
+            <!-- nav-text -->
+            <div class="nav-text-box">
+                <p><a href="../portfolio.html" class="nav-text">作品</a></p>
+                <p><a href="../blog.html" class="nav-text">博客</a></p>
+                <p><a href="../archive.html" class="nav-text">归档</a></p>
+                <p><a href="../about.html" class="nav-text">关于我</a></p>
+            </div>
+            <div class="icon-menu" id="iconMenu"></div>
+            <div class="icon-close hide" id="iconClose"></div>
+        </div>
+        </header>
     </div>
+    <div class="nav-open hidden nav-transform" id="navOpen">
+        <a href="../portfolio.html">作品</a>
+        <a href="../blog.html">博客</a>
+        <a href="../archive.html">归档</a>
+        <a href="../about.html">关于我</a>
+    </div>
+    <div class="nav-mask hidden" id="navMask"></div>
+    <!-- end 导航栏-->
     
     <!-- top-bar -->
     <div class="top-bar">
         <h1>动效练习</h1>
-        <p class="subtitle">个人练习 | 2018</p>  
+        <p class="subtitle">个人练习 · 2018</p>  
     </div>
     <!-- end top-bar -->
     
     <!-- main-container -->
 
-    <!-- hero-img -->
-    <!-- <div class="col-md-12 ">
-            <img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAFoEvQfAAAABGdBTUEAALGPC/xhBQAAAA1JREFUCB1j+PDhw38ACXQD0B3tn6cAAAAASUVORK5CYII=" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/Img/pic_016.jpg"  class="img-responsive heroimg center-block lazyload" width="765" height="574">
-    </div> -->
-    <!-- end hero-img -->
+    <div class="container blog-post">
+        <p>平常做的动画会放在这里，多数使用 AE 制作。</p>
 
-    <div class="container main-container">
-        <div class="col-md-12">
-            <p>平常做的动画会放在这里，多数使用 AE 制作。</p>
+        <img data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/Img/pic_100_Bus.png"  class="lazyload" data-action="zoom" width="765" height="574"/>
 
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAFoEvQfAAAABGdBTUEAALGPC/xhBQAAAA1JREFUCB1j+PDhw38ACXQD0B3tn6cAAAAASUVORK5CYII=" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/Img/pic_100_Bus.png"  class="img-responsive center-block lazyload" data-action="zoom" width="765" height="574"/>
+        <p class="imgCaption">巴士入站动画 · 雇主：<a href="https://tixora.com/" target="_blank">Tixora.com</a></p>
 
-            <p class="imgCaption"><a href="https://tixora.com/">巴士入站</a></p>
+        <p class="codepen" data-height="500" data-theme-id="light" data-default-tab="result" data-user="pudge1996" data-slug-hash="gdwBQR" data-preview="true" style="height: 500px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="App tabbar in HTML5">
+        <span>See the Pen <a href="https://codepen.io/pudge1996/pen/gdwBQR/"> App tabbar in HTML5</a> by Pudge1996 (<a href="https://codepen.io/pudge1996">@pudge1996</a>) on <a href="https://codepen.io">CodePen</a>.</span></p>
+        <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
-            <p class="codepen" data-height="500" data-theme-id="light" data-default-tab="result" data-user="pudge1996" data-slug-hash="gdwBQR" data-preview="true" style="height: 500px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="App tabbar in HTML5">
-            <span>See the Pen <a href="https://codepen.io/pudge1996/pen/gdwBQR/"> App tabbar in HTML5</a> by Pudge1996 (<a href="https://codepen.io/pudge1996">@pudge1996</a>) on <a href="https://codepen.io">CodePen</a>.</span></p>
-            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+        <p class="imgCaption"><a href="https://dribbble.com/shots/5077611-tabbar-animation">Tabbar 图标动效</a></p>
 
-            <p class="imgCaption"><a href="https://dribbble.com/shots/5077611-tabbar-animation">Tabbar 图标动效</a></p>
+        <img data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/Img/pic_017.gif"  class="lazyload" data-action="zoom" width="765" height="574"/>
 
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAFoEvQfAAAABGdBTUEAALGPC/xhBQAAAA1JREFUCB1j+PDhw38ACXQD0B3tn6cAAAAASUVORK5CYII=" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/Img/pic_017.gif"  class="img-responsive center-block lazyload" data-action="zoom" width="765" height="574"/>
+        <p class="imgCaption"><a href="https://dribbble.com/shots/4943170-Loading-Animation-01">加载动画1</a> - <a href="https://codepen.io/pudge1996/pen/rrPJpm">在 Codepen 查看</a></p>
 
-            <p class="imgCaption"><a href="https://dribbble.com/shots/4943170-Loading-Animation-01">加载动画1</a> - <a href="https://codepen.io/pudge1996/pen/rrPJpm">在 Codepen 查看</a></p>
+        <img data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/Img/pic_018.gif"  class="lazyload" data-action="zoom" width="765" height="574"/>
 
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAFoEvQfAAAABGdBTUEAALGPC/xhBQAAAA1JREFUCB1j+PDhw38ACXQD0B3tn6cAAAAASUVORK5CYII=" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/Img/pic_018.gif"  class="img-responsive center-block lazyload" data-action="zoom" width="765" height="574"/>
+        <p class="imgCaption"><a href="https://dribbble.com/shots/4945544-Loading-Animation-02">加载动画2</a> - <a href="https://codepen.io/pudge1996/pen/GBeKPL">在 Codepen 查看</a></p>
 
-            <p class="imgCaption"><a href="https://dribbble.com/shots/4945544-Loading-Animation-02">加载动画2</a> - <a href="https://codepen.io/pudge1996/pen/GBeKPL">在 Codepen 查看</a></p>
+        <img data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/Img/pic_019.gif"  class="lazyload" data-action="zoom" width="765" height="574"/>
 
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAFoEvQfAAAABGdBTUEAALGPC/xhBQAAAA1JREFUCB1j+PDhw38ACXQD0B3tn6cAAAAASUVORK5CYII=" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/Img/pic_019.gif"  class="img-responsive center-block lazyload" data-action="zoom" width="765" height="574"/>
+        <p class="imgCaption"><a href="https://dribbble.com/shots/4935740-animated-icons">图标动画</a></p>
 
-            <p class="imgCaption"><a href="https://dribbble.com/shots/4935740-animated-icons">图标动画</a></p>
+        <img data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/Img/pic_020.gif"  class="lazyload" data-action="zoom" width="765" height="574"/>
 
-
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAFoEvQfAAAABGdBTUEAALGPC/xhBQAAAA1JREFUCB1j+PDhw38ACXQD0B3tn6cAAAAASUVORK5CYII=" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/Img/pic_020.gif"  class="img-responsive center-block lazyload" data-action="zoom" width="765" height="574"/>
-
-            <p class="imgCaption"><a href="https://dribbble.com/shots/4185150-Interface">Principle 制作简易动效</a></p>
-
-        </div>
-
+        <p class="imgCaption"><a href="https://dribbble.com/shots/4185150-Interface">Principle 制作简易动效</a></p>
     </div>
     <!-- end main-container -->
 
-
     <!-- footer -->
     <footer>
-        <div class="container-fluid">
-            <p class="copyright">© Pudge 2017-2021</p>
-        </div>
+        <p class="copyright">© Pudge 2017-2021</p>
     </footer>
     <!-- end footer -->
     
     <!-- back to top -->
-    <a href="#0" class="cd-top">
+    <div class="to-top" id="toTop" onclick="backToTop(4)">
         <svg style="width:20px; height:40px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#232323">
             <path d="M277.375 427V167.296l119.702 119.702L427 256 256 85 85 256l29.924 29.922 119.701-118.626V427h42.75z"/>
-    </a>
+        </svg>
+    </div>
     <!-- end back to top -->
-
-
-    <!-- jQuery -->
-    <script src="https://lib.baomitu.com/jquery/2.1.1/jquery.min.js"></script>
-    
-    <!--  plugins -->
-
-    <script src="https://lib.baomitu.com/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="https://cdn.bootcss.com/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
-    <script src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/menu.js"></script>
+     
     <script src="https://cdn.jsdelivr.net/npm/zoom-vanilla.js/dist/zoom-vanilla.min.js"></script>
 
+    <script src="../js/lazysizes.min.js"></script>
+
     <!--  custom script -->
-    <script src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/custom.js"></script>
-    <script type="text/javascript">lazyload();</script>
-
-
+    <script src="../js/custom.js"></script>
 </body>
 
 </html>

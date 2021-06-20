@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=devUIice-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <meta name="keywords" content="李瑞东 Pudge 广州 设计 design UI设计 体验设计 B端设计 设计作品 作品集"> 
+    <meta name="author" content="李瑞东" />
+    <meta name="robots" content="index,follow" />
+    <meta name="google" content="index,follow" />
+    <meta name="googlebot" content="index,follow" />
+    <meta name="verify" content="index,follow" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <!-- It may be good for SEO -->
+
+    <title>前端笔记：Transfrom: Matrix() 参数配置笔记 · 李瑞东 LRD.IM</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
+
+    <!-- main css -->
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!-- clipboard js -->
+    <script src="../js/clipboard.min.js"></script>
+</head>
+  <body>
+    <!-- 导航栏-->
+    <div class="container-fluid"> 
+      <header class="box-header">
+          <div class="vw">
+          <a href="index.html" alt="lrd.im 是设计师李瑞东的个人网站。">
+              <div class="box-logo"></div>
+          </a>
+          <!-- nav-text -->
+          <div class="nav-text-box">
+              <p><a href="../portfolio.html" class="nav-text">作品</a></p>
+              <p><a href="../blog.html" class="nav-text">博客</a></p>
+              <p><a href="../archive.html" class="nav-text">归档</a></p>
+              <p><a href="../about.html" class="nav-text">关于我</a></p>
+          </div>
+          <div class="icon-menu" id="iconMenu"></div>
+          <div class="icon-close hide" id="iconClose"></div>
+      </div>
+      </header>
+  </div>
+  <div class="nav-open hidden nav-transform" id="navOpen">
+      <a href="../portfolio.html">作品</a>
+      <a href="../blog.html">博客</a>
+      <a href="../archive.html">归档</a>
+      <a href="../about.html">关于我</a>
+  </div>
+  <div class="nav-mask hidden" id="navMask"></div>
+  <!-- end 导航栏-->
+<article class="h-entry">
+<header>
+<h1 class="p-name">前端笔记：Transfrom: Matrix() 参数配置笔记</h1>
+<p class="article-info">Pudge · <time>2018-07-19 </time>首次发布于 <a href="https://pudge1996.medium.com/%E5%9C%B0%E7%90%83%E4%BA%BA%E9%83%BD%E8%83%BD%E7%9C%8B%E6%87%82%E7%9A%84-transfrom-matrix-%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE%E7%AC%94%E8%AE%B0-70c6038d2ce2" target="_blank">Medium</a></p>
+</header>
+<section data-field="subtitle" class="p-summary">
+最近在学一些前端知识，学到 Martrix 可以用一行来将 Transfrom 的所有属性表达出来，就打算在网上找找如何操作，发现大部分都是讲一些高等数学的计算，或者一两个属性的转换，翻了好久才找到讲4个属性同时应用在 Matrix 上的教程。鉴于花了差不多5个小时才勉强弄懂…
+</section>
+<section data-field="body" class="e-content">
+<section class="section section--body section--first"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 class="graf graf--h3 graf--leading graf--title">前端笔记：Transfrom: Matrix() 参数配置笔记</h3></div><div class="section-inner sectionLayout--outsetColumn"><figure class="graf graf--figure graf--startsWithDoubleQuote graf--layoutOutsetCenter graf-after--h3"><img class="graf-image lazyload" data-action="zoom" data-image-id="0*J57e3UW3eJeyuP9t" width="4430" height="2953" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/blogimg/2018-07-19-70c6038d2ce2/01.jpg"><figcaption class="imageCaption">“Man wearing headphones at desk with window view of sunset in background” by <a href="https://unsplash.com/@flysi3000?utm_source=medium&amp;utm_medium=referral" data-href="https://unsplash.com/@flysi3000?utm_source=medium&amp;utm_medium=referral" class="markup--anchor markup--figure-anchor" rel="photo-creator noopener" target="_blank">Simon Abrams</a> on <a href="https://unsplash.com?utm_source=medium&amp;utm_medium=referral" data-href="https://unsplash.com?utm_source=medium&amp;utm_medium=referral" class="markup--anchor markup--figure-anchor" rel="photo-source noopener" target="_blank">Unsplash</a></figcaption></figure></div><div class="section-inner sectionLayout--insetColumn"><blockquote class="graf graf--blockquote graf-after--figure graf--trailing">最近在学一些前端知识，学到 Martrix 可以用一行来将 Transfrom 的所有属性表达出来，就打算在网上找找如何操作，发现大部分都是讲一些高等数学的计算，或者一两个属性的转换，翻了好久才找到讲4个属性同时应用在 Matrix 上的教程。鉴于花了差不多5个小时才勉强弄懂 Matrix 的属性，我决定做一篇 Matrix 参数配置笔记。</blockquote></div></div></section><section class="section section--body section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 class="graf graf--h3 graf--leading"><strong class="markup--strong markup--h3-strong">目标：同时将 Translate, Rotate, Skew, Scale 属性应用在 Matrix 上。</strong></h3><p class="graf graf--p graf-after--h3">首先在 2D 动画里面 Matrix 有6个参数，先用字母代替：</p><blockquote class="graf graf--pullquote graf-after--p"><em class="markup--em markup--pullquote-em">transform: matrix(A, B, C, D, E, F)</em><strong class="markup--strong markup--pullquote-strong"><em class="markup--em markup--pullquote-em">;</em></strong></blockquote><p class="graf graf--p graf-after--pullquote">然后这6个字母要排列成一个矩阵，在后面属性叠加上要相乘。</p><figure class="graf graf--figure graf-after--p"><img class="graf-image lazyload" data-action="zoom" data-image-id="1*A_Vq_-702R6g3ulF8DnJjw.jpeg" width="854" height="393" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/blogimg/2018-07-19-70c6038d2ce2/02.jpg"></figure><p class="graf graf--p graf-after--figure">矩阵里第一行代表 X 轴的变化，第二行代表 Y 轴的变化，第三行代表 Z 轴的变化，因为是 2D 动画不涉及 Z 轴，所以是默认的 0 0 1。</p><h4 class="graf graf--h4 graf-after--p">1.将位移属性 Translate 应用在 Matrix 上。</h4><p class="graf graf--p graf-after--h4">Translate(X, Y) 中的 X 值和 Y 值与矩阵里的 E 和 F 相等。</p><p class="graf graf--p graf-after--p">假如我有属性 Translate(10px, 20px)，那么应该这样转换：</p><figure class="graf graf--figure graf-after--p"><img class="graf-image lazyload" data-action="zoom" data-image-id="1*53mBxzG8ezz_0otruymN0Q.jpeg" width="626" height="793" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/blogimg/2018-07-19-70c6038d2ce2/03.jpg"></figure><p class="graf graf--p graf-after--figure">得到 transform: matrix(1, 0, 0, 1, 10, 20);</p><ul class="postList"><li class="graf graf--li graf-after--p">注意 A 和 D不能为0，没有数值时要填1。</li></ul><h4 class="graf graf--h4 graf-after--li">2.将旋转属性 Rotate 应用在 Matrix 上。</h4><p class="graf graf--p graf-after--h4">Rotate(θ) 的角度与矩阵中 A, B, C, D 是 cosθ, sinθ, -sinθ, cosθ 的关系，计算后代入即可。</p><p class="graf graf--p graf-after--p">假如我有属性 Rotate(45deg)，那么应该这样转换：</p><figure class="graf graf--figure graf-after--p"><img class="graf-image lazyload" data-action="zoom" data-image-id="1*2TCIdOVhfIEoAAF5W4qS5A.jpeg" width="626" height="793" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/blogimg/2018-07-19-70c6038d2ce2/04.jpg"></figure><p class="graf graf--p graf-after--figure">得到 transform: matrix(0.7, 0.7, -0.7, 0.7, 0, 0);</p><h4 class="graf graf--h4 graf-after--p">3.将斜切属性 Skew 应用在 Matrix 上。</h4><p class="graf graf--p graf-after--h4">Skew 中的 α 和 β 值与矩阵中 B和 C 是 tanβ, tanα 的关系，计算后代入即可。</p><p class="graf graf--p graf-after--p">假如我有属性 Skew (30deg, 0deg)，那么应该这样转换：</p><figure class="graf graf--figure graf-after--p"><img class="graf-image lazyload" data-action="zoom" data-image-id="1*rp3tVjd-yBmkWQk3tyjpqg.jpeg" width="626" height="793" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/blogimg/2018-07-19-70c6038d2ce2/05.jpg"></figure><p class="graf graf--p graf-after--figure">得到 transform: matrix(1, 0, 0.57, 1, 0, 0);</p><ul class="postList"><li class="graf graf--li graf-after--p">之前提到矩阵里第一行是 X 轴变换，第二行是 Y 轴变换，所以要注意 SkewX(α)对应的是矩阵第一行里的 C，而 SkewY(β) 对应的是矩阵第二行的 B。</li></ul><h4 class="graf graf--h4 graf-after--li">4.将缩放属性 Scale 应用在 Matrix 上。</h4><p class="graf graf--p graf-after--h4">Scale(X, Y) 中的 X 值和 Y 值与矩阵里的 A 和 D 相等。</p><p class="graf graf--p graf-after--p">假如我有属性 Scale (1, 0.5)，那么应该这样转换：</p><figure class="graf graf--figure graf-after--p"><img class="graf-image lazyload" data-action="zoom" data-image-id="1*awy0PnGHskjvzKe5Hh-eNA.jpeg" width="626" height="793" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/blogimg/2018-07-19-70c6038d2ce2/06.jpg"></figure><p class="graf graf--p graf-after--figure">得到 transform: matrix(1, 0, 0, 0.5 0, 0);</p><h4 class="graf graf--h4 graf-after--p">5.同时将4个属性转换应用在 Matrix 上。</h4><p class="graf graf--p graf-after--h4">使用<a href="https://matrixcalc.org/zh/" data-href="https://matrixcalc.org/zh/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">矩阵计算器</a>，按 Translate, Rotate, Skew, Scale 的顺序将这四个矩阵相乘，得到的矩阵写进 Transform: matrix() 里即可。</p><figure class="graf graf--figure graf-after--p"><img class="graf-image lazyload" data-action="zoom" data-image-id="1*dDZnSl5a4mfUrfH5Lca8cA.jpeg" width="1138" height="1196" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/blogimg/2018-07-19-70c6038d2ce2/07.jpg"></figure><p class="graf graf--p graf-after--figure">得到 transform: matrix(0.7, 0.35, -0.3, 0.55, 10, 20)<strong class="markup--strong markup--p-strong">;</strong></p><blockquote class="graf graf--blockquote graf-after--p"><em class="markup--em markup--blockquote-em">参考</em></blockquote><blockquote class="graf graf--blockquote graf-after--blockquote"><a href="https://segmentfault.com/a/1190000011942578" data-href="https://segmentfault.com/a/1190000011942578" class="markup--anchor markup--blockquote-anchor" rel="noopener" target="_blank"><em class="markup--em markup--blockquote-em">transform与Matrix矩阵</em></a><em class="markup--em markup--blockquote-em"> - robin</em></blockquote><blockquote class="graf graf--blockquote graf-after--blockquote graf--trailing"><a href="https://fanmingfei.com/posts/CSS3_Transform_Matrix_Intro.html" data-href="https://fanmingfei.com/posts/CSS3_Transform_Matrix_Intro.html" class="markup--anchor markup--blockquote-anchor" rel="noopener" target="_blank"><em class="markup--em markup--blockquote-em">大学没学过数学也要理解 CSS3 transform 中的 matrix</em></a><em class="markup--em markup--blockquote-em"> - 范明非</em></blockquote></div></div></section>
+</section>
+
+<!-- 底部功能 -->
+<hr class="end-dividers hr-1" data-content="分隔线">
+
+<div class="article-navigation">
+  <a href="2018-04-01-bd8cfdac2fa5.html" class="previous">
+      <p>上一篇</p>
+      <p class="title">毕业设计《刁角武汉》改版计划</p>
+  </a>
+  <a href="2018-12-09-429f8053ab12.html" class="next">
+    <p>下一篇</p>
+    <p class="title">SVG 路径代码转换成对应的 SVG 图像</p>
+  </a>
+</div>
+
+<hr class="end-dividers hr-2" data-content="分隔线">
+
+<div class="footer-action">
+  <div class="back-to-article"><a href="../blog.html"><span class="icon-back"></span>博客首页</a></div>
+  <div class="copy-link" id="copyLink"><a href="javascript:" id="blogLink" data-clipboard-text="前端笔记：Transfrom: Matrix() 参数配置笔记 https://lrd.im/blog/2018-07-19-70c6038d2ce2.html" ><span class="icon-link"></span>复制链接</a></div>
+  <div class="copied hide" id="copied"><a href="javascript:" data-clipboard-text="前端笔记：Transfrom: Matrix() 参数配置笔记 https://lrd.im/blog/2018-07-19-70c6038d2ce2.html"><span class="icon-success"></span>复制成功!</a></div>
+  <div class="mobile-top"><a href="#" onclick="backToTop(4)"><span class="icon-top"></span>回到顶部</a></div>
+</div>
+
+<!-- back to top -->
+<div class="to-top" id="toTop" onclick="backToTop(4)">
+  <svg style="width:20px; height:40px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#232323">
+      <path d="M277.375 427V167.296l119.702 119.702L427 256 256 85 85 256l29.924 29.922 119.701-118.626V427h42.75z"/>
+  </svg>
+</div>
+<!-- end back to top -->
+
+<!-- footer -->
+<footer>
+  <p class="copyright">© Pudge 2017-2021</p>
+</footer>
+<!-- end footer -->
+</article>
+<script src="https://cdn.jsdelivr.net/npm/zoom-vanilla.js/dist/zoom-vanilla.min.js"></script>
+<script src="../js/lazysizes.min.js"></script>
+<script src="../js/custom.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=devUIice-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <meta name="keywords" content="李瑞东 Pudge 广州 设计 design UI设计 体验设计 B端设计 设计作品 作品集"> 
+    <meta name="author" content="李瑞东" />
+    <meta name="robots" content="index,follow" />
+    <meta name="google" content="index,follow" />
+    <meta name="googlebot" content="index,follow" />
+    <meta name="verify" content="index,follow" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <!-- It may be good for SEO -->
+
+    <title>Sketch 组件外更改文字颜色最简便的方法 · 李瑞东 LRD.IM</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
+
+    <!-- main css -->
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!-- clipboard js -->
+    <script src="../js/clipboard.min.js"></script>
+</head>
+  <body>
+    <!-- 导航栏-->
+    <div class="container-fluid"> 
+      <header class="box-header">
+          <div class="vw">
+          <a href="index.html" alt="lrd.im 是设计师李瑞东的个人网站。">
+              <div class="box-logo"></div>
+          </a>
+          <!-- nav-text -->
+          <div class="nav-text-box">
+              <p><a href="../portfolio.html" class="nav-text">作品</a></p>
+              <p><a href="../blog.html" class="nav-text">博客</a></p>
+              <p><a href="../archive.html" class="nav-text">归档</a></p>
+              <p><a href="../about.html" class="nav-text">关于我</a></p>
+          </div>
+          <div class="icon-menu" id="iconMenu"></div>
+          <div class="icon-close hide" id="iconClose"></div>
+      </div>
+      </header>
+  </div>
+  <div class="nav-open hidden nav-transform" id="navOpen">
+      <a href="../portfolio.html">作品</a>
+      <a href="../blog.html">博客</a>
+      <a href="../archive.html">归档</a>
+      <a href="../about.html">关于我</a>
+  </div>
+  <div class="nav-mask hidden" id="navMask"></div>
+  <!-- end 导航栏-->
+<article class="h-entry">
+<header>
+<h1 class="p-name">Sketch 组件外更改文字颜色最简便的方法</h1>
+<p class="article-info">Pudge · <time>2021-05-30 </time>首次发布于 <a href="https://pudge1996.medium.com/sketch-tint-text-255af6bda0c2" target="_blank">Medium</a></p>
+</header>
+<section data-field="subtitle" class="p-summary">
+这篇文章会介绍 Sketch 组件外更改文字颜色最简便的方法，以及探讨其优势和局限性。操作非常简单，所以篇幅很短。
+</section>
+<section data-field="body" class="e-content">
+<section class="section section--body section--first"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 class="graf graf--h3 graf--leading graf--title">在 Sketch 组件外更改文字颜色最简单的方法</h3><figure class="graf graf--figure graf-after--h3"><img class="graf-image lazyload" data-action="zoom" data-image-id="1*PNBcVdz8E3gNL9FIIvcSKw.png" data-width="1400" data-height="722" data-is-featured="true" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/blogimg/2021-05-30-255af6bda0c2/01.png"></figure><h3 class="graf graf--h3 graf-after--figure">一、简介</h3><p class="graf graf--p graf-after--h3"><a href="2021-05-03-8264a8e896aa.html" data-href="2021-05-03-8264a8e896aa.html" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">上一篇文章</a>有介绍用连字空格的特殊手段来做 Sketch 组件的利与弊，其弊端是不能支持所有颜色。当需要做通用的组件，支持自定义任意颜色时，得用另一种做法。</p><p class="graf graf--p graf-after--p">这篇文章会介绍 Sketch 组件外更改文字颜色最简便的方法，以及探讨其优势和局限性。操作非常简单，所以篇幅很短。</p><p class="graf graf--p graf-after--p">Sketch 64 及以上版本提供了一个名为「Tint」的功能，可以在 Symbol 或 Group 外覆盖颜色，有点像 Photoshop 里图层样式的填充。</p><figure class="graf graf--figure graf-after--p"><img class="graf-image lazyload" data-action="zoom" data-image-id="1*Ihfrt1k_xKu9xYXZQIshiA.gif" data-width="800" data-height="521" alt="Tint官方介绍" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/blogimg/2021-05-30-255af6bda0c2/02.gif"></figure><h3 class="graf graf--h3 graf-after--figure">二、制作方法</h3><p class="graf graf--p graf-after--h3">在组件内，我们把需要调整颜色的文本图层，都做成组。然后用 Tint 为该组覆盖一个颜色，这时就能在组件外部的 Overrides 面板就可以实现快捷的更改任意颜色了。</p><figure class="graf graf--figure graf-after--p"><img class="graf-image lazyload" data-action="zoom" data-image-id="1*WbOz2yDDI32h8f2jOTjNRg.png" data-width="1400" data-height="760" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/blogimg/2021-05-30-255af6bda0c2/03.png"></figure><p class="graf graf--p graf-after--figure">关于 Tint 功能详细的介绍，可以参考官方文档：<a href="https://www.sketch.com/docs/designing/styling/tints/" data-href="https://www.sketch.com/docs/designing/styling/tints/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">Tints · Sketch</a></p><h3 class="graf graf--h3 graf-after--p">三、优势与局限</h3><p class="graf graf--p graf-after--h3">与<a href="2021-05-03-8264a8e896aa.html" data-href="2021-05-03-8264a8e896aa.html" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">上一篇文章</a>联动，我分别用两种不同方式来实现组件外改文本颜色，也各有利弊。这次的方法适合需要支持任意颜色的组件；而上一篇文章的方法做出来的组件则更贴近使用场景，限定只能用某几种颜色。</p><p class="graf graf--p graf-after--p">用 Tint 的做法来实现组件外改文本颜色，自由度极高，可以将文本调成任意颜色，包括 Color Variables 但在我看来有两个缺陷，其中一个还很致命。</p><ol class="postList"><li class="graf graf--li graf-after--p">这篇文章介绍的方法，需要给每个文本都做成组，无疑会造成许多冗余的组图层。有设计洁癖的伙伴们可能会不太乐意看到大量冗余图层的出现。</li><li class="graf graf--li graf-after--li">蓝湖标注 (3.0.10) 目前无法读取到 Tint 的颜色，所以即使你在设计稿内用 Tint 修改了颜色，在蓝湖标注也只能读取到组件内文本图层原本的颜色。</li></ol><figure class="graf graf--figure graf-after--li"><img class="graf-image lazyload" data-action="zoom" data-image-id="1*ZF3HsUqM56iNU9u04NouzA.png" data-width="1400" data-height="760" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/blogimg/2021-05-30-255af6bda0c2/04.png"></figure><p class="graf graf--p graf-after--figure">而上一篇文章所介绍用连字空格的方式来做组件，则没有上述问题。因为组件内也是文本图层，所以蓝湖标注自然可以读取到文本颜色。</p><p class="graf graf--p graf-after--p graf--trailing">各位看官可根据自己需要，在工作中选择最适合自己以及团队的方式来做组件。</p></div></div></section><section class="section section--body section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h4 class="graf graf--h4 graf--leading">我的上一篇文章，用连字空格来做组件：</h4><div class="graf graf--mixtapeEmbed graf-after--h4 graf--trailing"><a href="2021-05-03-8264a8e896aa.html" data-href="2021-05-03-8264a8e896aa.html" class="markup--anchor markup--mixtapeEmbed-anchor" title="2021-05-03-8264a8e896aa.html"><strong class="markup--strong markup--mixtapeEmbed-strong">一个特殊字符，打开 Sketch 组件新世界的大门</strong><br><em class="markup--em markup--mixtapeEmbed-em">最近和前端老哥沟通把公司项目里常用到的表单做成了组件。后续我打算做成 Sketch Symbol，同步到组件库内，这时出现了一些耐人寻味的问题…</em>pudge1996.medium.com</a><a href="2021-05-03-8264a8e896aa.html" class="js-mixtapeImage mixtapeImage u-ignoreBlock" data-media-id="c677e4f6acacd0f4f8dac28665c208b3" data-thumbnail-img-id="1*0I3RoBN610DiRMtBNuGhdw.png" style="background-image: url(https://cdn-images-1.medium.com/fit/c/160/160/1*0I3RoBN610DiRMtBNuGhdw.png);"></a></div></div></div></section>
+</section>
+<hr class="end-dividers hr-1" data-content="分隔线">
+
+<div class="article-navigation">
+  <a href="2021-05-03-8264a8e896aa.html" class="previous">
+      <p>上一篇</p>
+      <p class="title">一个特殊字符，打开 Sketch 组件新世界的大门</p>
+  </a>
+  <a class="next no-post">
+    <p>下一篇</p>
+    <p class="title">无</p>
+  </a>
+</div>
+
+<hr class="end-dividers hr-2" data-content="分隔线">
+
+<div class="footer-action">
+  <div class="back-to-article"><a href="../blog.html"><span class="icon-back"></span>博客首页</a></div>
+  <div class="copy-link" id="copyLink"><a href="javascript:" id="blogLink" data-clipboard-text="Sketch 组件外更改文字颜色最简便的方法 https://lrd.im/blog/2021-05-30-255af6bda0c2.html" ><span class="icon-link"></span>复制链接</a></div>
+  <div class="copied hide" id="copied"><a href="javascript:" data-clipboard-text="Sketch 组件外更改文字颜色最简便的方法 https://lrd.im/blog/2021-05-30-255af6bda0c2.html"><span class="icon-success"></span>复制成功!</a></div>
+  <div class="mobile-top"><a href="#" onclick="backToTop(4)"><span class="icon-top"></span>回到顶部</a></div>
+</div>
+
+
+
+<!-- back to top -->
+<div class="to-top" id="toTop" onclick="backToTop(4)">
+  <svg style="width:20px; height:40px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#232323">
+      <path d="M277.375 427V167.296l119.702 119.702L427 256 256 85 85 256l29.924 29.922 119.701-118.626V427h42.75z"/>
+  </svg>
+</div>
+<!-- end back to top -->
+<!-- footer -->
+<footer>
+  <p class="copyright">© Pudge 2017-2021</p>
+</footer>
+
+<!-- end footer -->
+</article>
+<script src="https://cdn.jsdelivr.net/npm/zoom-vanilla.js/dist/zoom-vanilla.min.js"></script>
+<script src="../js/lazysizes.min.js"></script>
+<script src="../js/custom.js"></script>
+</body>
+</html>

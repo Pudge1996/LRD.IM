@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=devUIice-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <meta name="keywords" content="李瑞东,设计,广州,design,视觉设计,UI设计,插图设计,Pudge,设计作品,作品集">
+    <meta name="keywords" content="李瑞东 Pudge 广州 设计 design UI设计 体验设计 B端设计 设计作品 作品集"> 
     <meta name="author" content="李瑞东" />
     <meta name="robots" content="index,follow" />
     <meta name="google" content="index,follow" />
@@ -16,135 +16,90 @@
     <meta name="format-detection" content="telephone=no, email=no" />
     <!-- It may be good for SEO -->
 
-    <title> 关于我 - 李瑞东 </title>
+    <title>关于我 · 李瑞东 LRD.IM</title>
     <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
-    
-    <!-- Bootstrap -->
-    <link href="https://lib.baomitu.com/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://lib.baomitu.com/ionicons/2.0.0/css/ionicons.min.css" rel="stylesheet">
-    
 
     <!-- main css -->
-    <link href="https://lrdim.oss-cn-shenzhen.aliyuncs.com/style.css" rel="stylesheet">
-    <!-- <link href="css/style_local.css" rel="stylesheet"> -->
-    <style>
-    @media only screen and (max-width: 420px){
-      .container{
-        padding-right: 20px;
-        padding-left: 20px;
-      }
-      p{
-        padding-right: 0px;
-        padding-left: 0px;
-      }
-    }
-    @media only screen and (max-width: 670px){
-      .container{
-        padding-right: 20px;
-        padding-left: 20px;
-      }
-    }
-    </style>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112191540-2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    <link href="css/main.css" rel="stylesheet">
 
-      gtag('config', 'UA-112191540-2');
-    </script>
 </head>
 
 <body>
+    <!-- 导航栏-->
     <div class="container-fluid"> 
-        <!-- box-header -->
         <header class="box-header">
           <div class="vw">
             <a href="index.html" alt="lrd.im 是设计师李瑞东的个人网站。">
               <div class="box-logo"></div>
             </a>
-
-            <!-- box-nav -->
-            <a class="box-primary-nav-trigger" href="#0">
-                <span class="box-menu-icon"></span>
-            </a>
-
             <!-- nav-text -->
             <div class="nav-text-box">
-              <p><a href="index.html" class="nav-text">首页</a></p>
-              <p><a href="blog.html" class="nav-text">文章</a></p>
-              <p><a href="about.html" class="nav-text-active">关于</a></p>
+                <p><a href="portfolio.html" class="nav-text">作品</a></p>
+                <p><a href="blog.html" class="nav-text">博客</a></p>
+                <p><a href="archive.html" class="nav-text">归档</a></p>
+                <p><a href="about.html" class="nav-text active">关于我</a></p>
             </div>
-          </div>
-      </header>
-      <!-- end box-header -->
-        
-        <!-- nav -->
-        <nav>
-            <ul class="box-primary-nav">
-                <li><a href="index.html">主页</a></li>
-                <li><a href="blog.html">博客</a></li>
-                <li><a href="about.html">关于</a></li>
-            </ul>
-        </nav>
-        <!-- end nav -->
+          <div class="icon-menu" id="iconMenu"></div>
+          <div class="icon-close hide" id="iconClose"></div>
+        </div>
+        </header>
     </div>
-    
+    <!-- end 导航栏-->
+    <div class="nav-open hidden nav-transform" id="navOpen">
+        <a href="portfolio.html">作品</a>
+        <a href="blog.html">博客</a>
+        <a href="archive.html">归档</a>
+        <a href="about.html">关于我</a>
+    </div>
+    <div class="nav-mask hidden" id="navMask"></div>
+
     <!-- Main container -->
-    <div class="container main-container clearfix"> 
-      <div class="col-md-12">
-        
-        <h2>关于我</h2>
-        <p>李瑞东，Pudge。一名在广州工作的 UI 设计师。</p>
-        <p>设计和笔记：<a href="https://dribbble.com/Pudge1996" target="_blank">Dribbble</a>、<a href="https://medium.com/@Pudge1996" target="_blank">Medium</a>
-        <p>电子邮箱：lrdbuff@gmail.com</p>
-        <div style="height: 20px"></div>
-        <h2>关于本站</h2>
-        <p>
-        LRD.IM 是存放我的一些设计作品、文章的静态网站。资源部署在阿里云服务器</a> 。
-        </p>
-        <h2>更新记录</h2>
-        <p> 
-        · 2018 年 1 月建站（<a href="https://elastic-bassi-02c067.netlify.com/" target="_blank">旧版入口</a>） ；<br>
-        · 2019 年 2 月重写样式以提升视觉体验；<br>
-        · 2019 年 10 月适配深色模式；<br>
-        · 2019 年 11 月改进导航栏样式、文章页同步 Medium 文章列表。
-        </p>
+    <div class="container spacing">
+        <section>
+            <h2>李瑞东</h2>
+            <!-- <p>我是一名 3 年工作经验的 UI 设计师，坐标广州。目前在千聊负责 B 端工具线（讲师端）相关产品设计。</p> -->
+            <p>我是一名 3 年工作经验的 UI 设计师，坐标广州。我是千聊 B 端工具线产品的主设计师，负责 <a href="https://pc.qlchat.com/" class="underline" target="_blank">千聊</a> Web&H5 端课程管理工具以及 <a href="https://ytscrm.qianliao.net/" class="underline" target="_blank">鱼棠SCRM</a> 的产品设计。</p>
+            <p>从大学开始就有写设计博客的习惯，内容主要是设计中积累的一些心得&经验，或者其他新的发现，以记录在设计路上的成长。一些零碎小设计也会在 <a href="https://dribbble.com/Pudge1996" target="_blank" class="underline">Dribbble</a> 发布。
+            <p>电子邮箱：lrdbuff@gmail.com</p>
+            <!-- <p>工作经历、联系方式等更多信息，请直接去我的 <a href="resume/index.html" target="_blank" class="underline">个人简历</a> 里了解。</p> -->
+        </section>
 
-      </div>
+        <section>
+            <h2>关于本站</h2>
+            <p>LRD.IM 是用来放我一些设计作品、文章的静态网站，也是我对外展示的一个窗口。</p>
+        </section>
 
+        <section>
+            <h2>更新记录</h2>
+                <ul class="changelog"> 
+                    <!-- <li>2021-07 键盘可访问性优化；</li> -->
+                    <li>2021-06 全面重构，脱离 Bootstrap 和 jQuery，同步所有 Medium 文章到本站；</li>
+                    <li>2019-11 博客页支持跳转到 Medium 文章了；</li>
+                    <li>2019-02 重写部分样式以提升视觉体验；</li>
+                    <li>2019-10 适配深色模式；</li>
+                    <li>2018-01 建站，在  Netlify <a href="https://elastic-bassi-02c067.netlify.com/" target="_blank"  class="underline">部署</a></li>
+                </ul>
+        </section>
     </div>
     <!-- end Main container -->
 
 
     <!-- footer -->
     <footer>
-        <div class="container-fluid">
-            <p class="copyright">© Pudge 2017-2021</p>
-        </div>
+        <p class="copyright">© Pudge 2017-2021</p>
     </footer>
     <!-- end footer -->
 
     <!-- back to top -->
-    <a href="#0" class="cd-top">
+    <div class="to-top" id="toTop" onclick="backToTop(4)">
         <svg style="width:20px; height:40px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#232323">
             <path d="M277.375 427V167.296l119.702 119.702L427 256 256 85 85 256l29.924 29.922 119.701-118.626V427h42.75z"/>
-    </a>
+        </svg>
+    </div>
     <!-- end back to top -->
 
-
-
-    <!-- jQuery -->
-    <script src="https://lib.baomitu.com/jquery/2.1.1/jquery.min.js"></script>
-    
-    <!--  plugins -->
-
-    <script src="https://lib.baomitu.com/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/menu.js"></script>
-
     <!--  custom script -->
-    <script src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/custom.js"></script>
+    <script src="js/custom.js"></script>
 
 </body>
 

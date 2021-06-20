@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=devUIice-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <meta name="keywords" content="李瑞东 Pudge 广州 设计 design UI设计 体验设计 B端设计 设计作品 作品集"> 
+    <meta name="author" content="李瑞东" />
+    <meta name="robots" content="index,follow" />
+    <meta name="google" content="index,follow" />
+    <meta name="googlebot" content="index,follow" />
+    <meta name="verify" content="index,follow" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <!-- It may be good for SEO -->
+
+    <title>使用 Netlify 托管个人网站 详细步骤 · 李瑞东 LRD.IM</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
+
+    <!-- main css -->
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!-- clipboard js -->
+    <script src="../js/clipboard.min.js"></script>
+</head>
+  <body>
+    <!-- 导航栏-->
+    <div class="container-fluid"> 
+      <header class="box-header">
+          <div class="vw">
+          <a href="index.html" alt="lrd.im 是设计师李瑞东的个人网站。">
+              <div class="box-logo"></div>
+          </a>
+          <!-- nav-text -->
+          <div class="nav-text-box">
+              <p><a href="../portfolio.html" class="nav-text">作品</a></p>
+              <p><a href="../blog.html" class="nav-text">博客</a></p>
+              <p><a href="../archive.html" class="nav-text">归档</a></p>
+              <p><a href="../about.html" class="nav-text">关于我</a></p>
+          </div>
+          <div class="icon-menu" id="iconMenu"></div>
+          <div class="icon-close hide" id="iconClose"></div>
+      </div>
+      </header>
+  </div>
+  <div class="nav-open hidden nav-transform" id="navOpen">
+      <a href="../portfolio.html">作品</a>
+      <a href="../blog.html">博客</a>
+      <a href="../archive.html">归档</a>
+      <a href="../about.html">关于我</a>
+  </div>
+  <div class="nav-mask hidden" id="navMask"></div>
+  <!-- end 导航栏-->
+  <article class="h-entry">
+<header>
+<h1 class="p-name">使用 Netify 托管个人网站 详细步骤</h1>
+<p class="article-info">Pudge · <time>2018-01-02 </time>首次发布于 <a href="https://pudge1996.medium.com/2018-01-02-7013eddc413c" target="_blank">Medium</a></p>
+</header>
+<section data-field="subtitle" class="p-summary">
+最近狠下心把域名买了，终于把一直想弄的个人网站正式放上了互联网。一路摸索过来，其实也没多难。
+</section>
+<section data-field="description" class="p-summary">
+通过 Netify 托管个人网站需要准备材料： 域名 — — 建议在 Namesilo(aff) 购买，提供免费 WHOIS 隐私保护，而且使用优惠码 zs1np 可获得1美刀的优惠。 Github Repositories — — 在仓库中准备好网站的文件 Netify 账号 — — 我们会通过 Netlify 托管 Github 中的文件以及绑定域名。
+</section>
+<section data-field="body" class="e-content">
+<section class="section section--body section--first"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 class="graf graf--h3 graf--leading graf--title">使用 Netlify 托管个人网站 详细步骤</h3></div><div class="section-inner sectionLayout--outsetColumn"><figure class="graf graf--figure graf--layoutOutsetCenter graf-after--h3"><img class="graf-image lazyload" data-action="zoom" data-image-id="1*W5vbBi1Nah40KGMRIE1GJw.jpeg" width="4076" height="2712" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/blogimg/2018-01-02-7013eddc413c/01.jpg"></figure></div><div class="section-inner sectionLayout--insetColumn"><blockquote class="graf graf--blockquote graf-after--figure"><em class="markup--em markup--blockquote-em">最近狠下心把域名买了下来，终于把一直想弄的</em><a href="https://www.Pudge1996.com" data-href="https://www.Pudge1996.com" class="markup--anchor markup--blockquote-anchor" rel="noopener" target="_blank"><em class="markup--em markup--blockquote-em">个人网站</em></a><em class="markup--em markup--blockquote-em">正式放上了互联网。一路摸索过来，其实也没多难。</em></blockquote><p class="graf graf--p graf-after--blockquote">通过 Netlify 托管个人网站需要准备材料：</p><p class="graf graf--p graf-after--p">域名 —— 建议在 <a href="https://www.namesilo.com/?rid=a13a698xg" data-href="https://www.namesilo.com/?rid=a13a698xg" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">Namesilo(aff)</a> 购买，提供免费 WHOIS 隐私保护，而且使用优惠码 zs1np 可获得1美刀的优惠。</p><p class="graf graf--p graf-after--p">Github Repositories —— 在仓库中准备好网站的文件</p><p class="graf graf--p graf-after--p">Neltify 账号 —— 我们会通过 <a href="https://app.netlify.com/" data-href="https://app.netlify.com/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">Netlify</a> 托管 Github 中的文件以及绑定域名。</p><h3 class="graf graf--h3 graf-after--p">开始：</h3><p class="graf graf--p graf-after--h3">首先用 Github 账号注册好 <a href="https://app.netlify.com/" data-href="https://app.netlify.com/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">Netlify</a> 之后点击 “New site from git” 开始：</p><figure class="graf graf--figure graf-after--p"><img class="graf-image lazyload" data-action="zoom" data-image-id="1*guspuluGGxMRUv3552LWGQ.png" width="1277" height="573" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/blogimg/2018-01-02-7013eddc413c/02.png"></figure><p class="graf graf--p graf-after--figure">点击最左边的 “Github” 按钮，从 Github 中导入：</p><figure class="graf graf--figure graf-after--p"><img class="graf-image lazyload" data-action="zoom" data-image-id="1*IGaDO64RDOCZF8N-aGHp-Q.png" width="1287" height="687" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/blogimg/2018-01-02-7013eddc413c/03.png"></figure><p class="graf graf--p graf-after--figure">然后选择相应的的仓库：</p><figure class="graf graf--figure graf-after--p"><img class="graf-image lazyload" data-action="zoom" data-image-id="1*bUdfcNq6ZIq_CHr8Z7lhag.png" width="1300" height="830" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/blogimg/2018-01-02-7013eddc413c/04.png"></figure><p class="graf graf--p graf-after--figure">点击 “Deploy site” 按钮：</p><figure class="graf graf--figure graf-after--p"><img class="graf-image lazyload" data-action="zoom" data-image-id="1*Q0YQO-w2kMf48oWd8ie98Q.png" width="1263" height="917" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/blogimg/2018-01-02-7013eddc413c/05.png"></figure><p class="graf graf--p graf-after--figure">之后来到网站的控制面板，现在我们的网页已经可以在网上浏览了（点击上方绿色的网址），下一步我们要绑定域名，点击 “Domain settings”：</p><figure class="graf graf--figure graf-after--p"><img class="graf-image lazyload" data-action="zoom" data-image-id="1*uAywoeoJkXZaF_mE3gu2pA.png" width="1268" height="944" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/blogimg/2018-01-02-7013eddc413c/06.png"></figure><p class="graf graf--p graf-after--figure">进入 Domain settings 页面，点击 “Add custom domain” 按钮：</p><figure class="graf graf--figure graf-after--p"><img class="graf-image lazyload" data-action="zoom" data-image-id="1*qmsnTHGfnghsmG4KVFO9Rw.png" width="1268" height="478" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/blogimg/2018-01-02-7013eddc413c/07.png"></figure><p class="graf graf--p graf-after--figure">输入自己的域名：</p><figure class="graf graf--figure graf-after--p"><img class="graf-image lazyload" data-action="zoom" data-image-id="1*pPCwzR9BLJtJHtcZsw-5Ow.png" width="731" height="373" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/blogimg/2018-01-02-7013eddc413c/08.png"></figure><p class="graf graf--p graf-after--figure">点击 “Save” 之后，系统已经自动为你添加有 A 和 CNAME 的记录：</p><figure class="graf graf--figure graf-after--p"><img class="graf-image lazyload" data-action="zoom" data-image-id="1*3GrQuTvc-DLvZLR3ZOQ8gg.png" width="946" height="583" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/blogimg/2018-01-02-7013eddc413c/09.png"></figure><p class="graf graf--p graf-after--figure">开始进行 DNS 配置。开一个域名的 “Check DNS configuration”，点击下方的 “Set up Netlify DNS for …”，使用他们的 DNS 服务。</p><figure class="graf graf--figure graf-after--p"><img class="graf-image lazyload" data-action="zoom" data-image-id="1*gsUlKyrXvwhB4-xI4PkTMg.png" width="800" height="706" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/blogimg/2018-01-02-7013eddc413c/10.png"></figure><p class="graf graf--p graf-after--figure">然后按照提示复制这四个地址，</p><figure class="graf graf--figure graf-after--p"><img class="graf-image lazyload" data-action="zoom" data-image-id="1*kfg9_E7urhwATE-2ZYGT-Q.png" width="769" height="515" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/blogimg/2018-01-02-7013eddc413c/11.png"></figure><p class="graf graf--p graf-after--figure">在Namesilo 的 NameServers 上点击 Change，把原有的删除，替换成 Netlify 提供的地址</p><figure class="graf graf--figure graf-after--p"><img class="graf-image lazyload" data-action="zoom" data-image-id="1*Mm9nTIw1WY8VlrHrd23Lmg.png" width="412" height="152" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/blogimg/2018-01-02-7013eddc413c/12.png"></figure><figure class="graf graf--figure graf-after--figure"><img class="graf-image lazyload" data-action="zoom" data-image-id="1*uVnArlp03z2P11y7CO03Ew.png" width="688" height="740" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/blogimg/2018-01-02-7013eddc413c/13.png"></figure><p class="graf graf--p graf-after--figure">至此使用 Netlify 托管个人网站已经完成，这些更改很快就会生效。到时候就可以直接用我们的域名访问网站了。</p><p class="graf graf--p graf-after--p">然后我们可以愉快地通过 Github 来更新网站内容了！</p><figure class="graf graf--figure graf-after--p graf--trailing"><img class="graf-image lazyload" data-action="zoom" data-image-id="1*DnojNkl47aZIYf4fxnxs2w.png" width="1072" height="772" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/blogimg/2018-01-02-7013eddc413c/14.png"></figure></div></div></section><section class="section section--body section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 class="graf graf--h3 graf--leading"><strong class="markup--strong markup--h3-strong">开启 HTTPS</strong></h3><p class="graf graf--p graf-after--h3">Netlify 还提供一件开启 HTTPS 功能，用的是免费的 Let’s Encrypt 证书，DNS 生效后下面的按钮会变成绿色，点击根据提示会帮你开启 HTTPS，非常方便。</p><figure class="graf graf--figure graf-after--p graf--trailing"><img class="graf-image lazyload" data-action="zoom" data-image-id="1*6RPpW3HQPsonmLDbIIfPAg.png" width="950" height="406" data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/blogimg/2018-01-02-7013eddc413c/15.png"></figure></div></div></section>
+</section>
+
+<!-- 底部功能 -->
+<hr class="end-dividers hr-1" data-content="分隔线">
+
+<div class="article-navigation">
+  <a href="2017-12-17-9b16484c5d52.html" class="previous">
+      <p>上一篇</p>
+      <p class="title">分享：如何让Sketch默认在多标签页中打开新文档</p>
+  </a>
+  <a href="2018-01-18-5fe20d63f09f.html" class="next">
+    <p>下一篇</p>
+    <p class="title">重燃动效激情之 AE 动效导出为 JSON！</p>
+  </a>
+</div>
+
+<hr class="end-dividers hr-2" data-content="分隔线">
+
+<div class="footer-action">
+  <div class="back-to-article"><a href="../blog.html"><span class="icon-back"></span>博客首页</a></div>
+  <div class="copy-link" id="copyLink"><a href="javascript:" id="blogLink" data-clipboard-text="使用 Netify 托管个人网站 详细步骤
+ https://lrd.im/blog/2018-01-02-7013eddc413c.html" ><span class="icon-link"></span>复制链接</a></div>
+  <div class="copied hide" id="copied"><a href="javascript:" data-clipboard-text="使用 Netify 托管个人网站 详细步骤
+ https://lrd.im/blog/2018-01-02-7013eddc413c.html"><span class="icon-success"></span>复制成功!</a></div>
+  <div class="mobile-top"><a href="#" onclick="backToTop(4)"><span class="icon-top"></span>回到顶部</a></div>
+</div>
+
+<!-- back to top -->
+<div class="to-top" id="toTop" onclick="backToTop(4)">
+  <svg style="width:20px; height:40px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#232323">
+      <path d="M277.375 427V167.296l119.702 119.702L427 256 256 85 85 256l29.924 29.922 119.701-118.626V427h42.75z"/>
+  </svg>
+</div>
+<!-- end back to top -->
+
+<!-- footer -->
+<footer>
+  <p class="copyright">© Pudge 2017-2021</p>
+</footer>
+<!-- end footer -->
+</article>
+<script src="https://cdn.jsdelivr.net/npm/zoom-vanilla.js/dist/zoom-vanilla.min.js"></script>
+<script src="../js/lazysizes.min.js"></script>
+<script src="../js/custom.js"></script>
+</body>
+</html>

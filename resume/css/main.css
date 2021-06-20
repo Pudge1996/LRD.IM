@@ -76,13 +76,13 @@ body {
   /*chrome、safari*/
   -moz-osx-font-smoothing: grayscale;
   /*firefox*/
-  -webkit-transform: all .3s;
-          transform: all .3s;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+  -webkit-transition: all 0s !important;
+  transition: all 0s !important;
 }
 
 a:hover {
@@ -443,8 +443,6 @@ a {
   border-radius: 50%;
   -webkit-transition: all 0s;
   transition: all 0s;
-  -webkit-transition: background .3s;
-  transition: background .3s;
 }
 
 .alignright button:hover {
