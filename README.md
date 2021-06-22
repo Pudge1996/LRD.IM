@@ -1,8 +1,7 @@
 # 关于 LRD.IM
 
-域名购买: [Name.com](https://www.name.com/)
+这个网站用来存放我的原创博客、设计作品等，之后还会做一个 Playground，用来放一些可能有意思的东西。
 
-托管资源: [阿里云OSS](https://www.aliyun.com/product/oss)
 
 # 时间线
 - 2021-06 全面重构，脱离 Bootstrap 和 jQuery，同步所有 Medium 文章到本站；
@@ -11,6 +10,9 @@
 - 2019-10 适配深色模式；
 - 2018-01 用 HTML 模板 [BOX Theme](https://www.behance.net/gallery/36389511/Box-portfolio-Free-html-template) 建站。在 Netlify 部署，[查看旧版](https://elastic-bassi-02c067.netlify.com/)
 
+# To-do
+- 完善键盘可访问性
+- 支持 Avif/Webp 格式的图片资源
 
 # 技术方案
 
@@ -154,3 +156,8 @@ Medium 平台支持导出文章，而且是带有标签和 Class 的 HTML 文件
 3. 添加 `data-action="zoom"`
 4. 图片上载到阿里云OSS
 
+# 其他
+
+域名购买: [Name.com](https://www.name.com/)
+
+托管资源: [阿里云OSS](https://www.aliyun.com/product/oss)
