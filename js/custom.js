@@ -107,7 +107,7 @@ window.onscroll = function(){
   }
 }
 
-if (document.documentElement.scrollTop < 500) { // 刚进网页 静止时检测距离
+if (document.documentElement.scrollTop < 200) { // 刚进网页 静止时检测距离
   toTop.classList.add("hidden");
 } else {
   toTop.classList.remove("hidden");
