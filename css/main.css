@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *, ::after, ::before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -252,6 +253,11 @@ a.underline {
 
 a.underline:hover {
   color: var(--primary-text-color);
+}
+
+.vpn:hover::after,
+.vpn:focus::after {
+  content: ' (需要科学上网)';
 }
 
 .changelog {

@@ -200,6 +200,13 @@ a.underline{ //需要加下划线的class
   }
 }
 
+
+.vpn:hover::after,
+.vpn:focus::after{
+  content: ' (需要科学上网)';
+  // font-size: var(--font-size-footer);
+}
+
 .changelog{
   font-variant-numeric: tabular-nums;
   font-size: var(--font-size-p);
