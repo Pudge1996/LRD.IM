@@ -6,21 +6,52 @@
 
 
 # 技术方案
-#### 同步 Medium 文章
+### 同步 Medium 文章
 
-#### 回到顶部
+### 回到顶部
 
-#### 复制功能
-
-#### 自适应/切换深色模式
-
-#### 图片懒加载
+### 复制链接/邮箱
 ```html
+<!-- HTML -->
 <script src="clipboard.min.js"></script>
+<div>
+  <a href="javascript:" id="btn" data-clipboard-text="要复制的内容">
+ 复制链接
+  </a>
+</div>
+```
+
+```javascript
+// JavaScript
+var clipboard = new ClipboardJS(btn);
+```
+
+### 自适应/切换深色模式
+```javascript
+const darkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)'); 
+
+// 判断是否匹配深色模式 
+if (darkMode && darkMode.matches) { 
+  document.body.classList.add('dark'); 
+} 
+
+// 监听主题切换事件 
+darkMode && darkMode.addEventListener('change', e => { 
+if (e.matches) { 
+    document.body.classList.add('dark'); 
+} else { 
+    document.body.classList.remove('dark');  
+} 
+});
+```
+
+### 图片懒加载
+```html
+<script src="lazysizes.min.js"></script>
 <img data-src="image.png" class="lazyload" width="765" height="574"/>
 ```
 
-#### 图片放大
+### 图片放大
 ```html
 <link href="zoom.css" rel="stylesheet">
 <img src="image.png" data-action="zoom"/>
