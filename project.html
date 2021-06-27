@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=devUIice-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <meta name="keywords" content="李瑞东 Pudge 广州 设计 design UI设计 体验设计 B端设计 设计作品 作品集"> 
+    <meta name="author" content="李瑞东" />
+    <meta name="robots" content="index,follow" />
+    <meta name="google" content="index,follow" />
+    <meta name="googlebot" content="index,follow" />
+    <meta name="verify" content="index,follow" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <!-- It may be good for SEO -->
+
+    <title>作品 · 李瑞东 LRD.IM</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
+
+    <!-- main css -->
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112191540-2"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-112191540-2');
+    </script>
+</head>
+
+<body>
+    <!-- 导航栏-->
+    <div class="container-fluid"> 
+        <header class="box-header">
+          <div class="vw">
+            <a href="index.html" alt="lrd.im 是设计师李瑞东的个人网站。">
+              <div class="box-logo"></div>
+            </a>
+            <!-- nav-text -->
+            <div class="nav-text-box">
+                <p><a href="project.html" class="nav-text active">作品</a></p>
+                <p><a href="blog.html" class="nav-text">博客</a></p>
+                <p><a href="archive.html" class="nav-text">归档</a></p>
+                <p><a href="about.html" class="nav-text">关于我</a></p>
+            </div>
+          <div class="icon-menu" id="iconMenu"></div>
+          <div class="icon-close hide" id="iconClose"></div>
+        </div>
+        </header>
+    </div>
+    <!-- end 导航栏-->
+    <div class="nav-open hidden nav-transform" id="navOpen">
+        <a href="project.html">作品</a>
+        <a href="blog.html">博客</a>
+        <a href="archive.html">归档</a>
+        <a href="about.html">关于我</a>
+    </div>
+    <div class="nav-mask hidden" id="navMask"></div>
+    <!-- Main container -->
+    <div class="spacing project">
+      
+      <!-- ▼▼ 千聊讲师工具 ▼▼ -->
+      <section class="project-card project-qlchat" id="sectionQlchat">
+        <div class="desc">
+          <h2>千聊讲师工具</h2>
+          <p class="project-subtitle">千聊工具千聊工具</p>
+          <div class="project-tags">
+            <span>千聊 · 2020 - 2021</span><span>客户关系管理</span><span>SaaS 工具</span>
+          </div>
+          <a class="ql-btn" tabindex="1">查看详情<span class="icon-forward"></span></a>
+        </div>
+        <div class="project-img">
+          <img src="http://ss.bdimg.com/static/superman/img/qrcode/qrcode@2x-daf987ad02.png" alt="">
+        </div>
+      </section>
+      <!-- ▲▲ 千聊讲师工具 ▲▲ -->
+
+      <!-- ▼▼ 鱼棠 SCRM ▼▼ -->
+      <section class="project-card project-ytscrm" onclick="openYtscrmLink()">
+        <div class="desc">
+          <h2>鱼棠 SCRM</h2>
+          <p class="project-subtitle">基于企业微信的免费私域流量运营工具。项目中本人深入到 Ant Design 生态内，积累了宝贵的管理后台设计经验。</p>
+          <div class="project-tags">
+              <span>千聊 · 2020 - 2021</span><span>客户关系管理</span><span>SaaS 工具</span>
+          </div>
+          <a class="yt-btn" tabindex="1" href="project/ytscrm.html" target="_blank">查看详情<span class="icon-forward"></span></a>
+        </div>
+        <div class="project-img">
+          <img src="img/projectimg/ytscrm/ytscrm.png" alt="" onclick="window.open('project/ytscrm.html');">
+        </div>
+      </section>
+      <!-- ▲▲ 鱼棠 SCRM ▲▲ -->
+
+      <!-- ▼▼ 个人创新项目 ▼▼ -->
+      <section class="project-card project-self" onclick="openSelfLink()">
+        <div class="desc">
+          <h2>个人创新项目</h2>
+          <p class="project-subtitle">公司内部流程较多，经常同时做多个项目，需要频繁在多个协同工具中切换，所以我做了一个插件来提升工作效率。</p>
+          <div class="project-tags">
+            <span>2019 & 2021</span><span>Chrome 插件</span><span>效率工具</span>
+          </div>
+          <a class="self-btn" tabindex="1" href="project/self.html" target="_blank">查看详情<span class="icon-forward"></span></a>
+        </div>
+        <div class="project-img">
+          <img src="img/projectimg/self/self.png" alt="" onclick="window.open('project/self.html');">
+        </div>
+      </section>
+      <!-- ▲▲ 个人创新项目 ▲▲ -->
+
+      <!-- ▼▼ 屈臣氏 App ▼▼ -->
+      <section class="project-card project-watsons" id="sectionWatsons"  onclick="openWatsonsLink()">
+        <div class="desc">
+          <h2>屈臣氏 App</h2>
+          <p class="project-subtitle">在屈臣氏的两年时间，我主要负责用户增长线的 UI 和部分视觉设计，主导适配深色模式。以及负责内部取数平台的 UI&UX 设计。</p>
+          <div class="project-tags">
+            <span>屈臣氏 · 2018 - 2020</span><span>用户增长</span><span>改版方案</span>
+          </div>
+          <a class="watsons-btn" tabindex="1" href="project/watsons.html" target="_blank">查看详情<span class="icon-forward"></span></a>
+        </div>
+        <div class="project-img">
+          <img src="img/projectimg/watsons/watsons.png" alt="" onclick="window.open('project/watsons.html');">
+        </div>
+      </section>
+      <!-- ▲▲ 屈臣氏 App ▲▲ -->
+      
+    </div>
+    
+    <!-- footer -->
+    <footer>
+        <p class="copyright">© Pudge 2017-2021</p>
+    </footer>
+    <!-- end footer -->
+    
+    <!-- back to top -->
+    <div class="to-top" id="toTop" onclick="backToTop(4)">
+      <svg style="width:20px; height:40px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#232323">
+          <path d="M277.375 427V167.296l119.702 119.702L427 256 256 85 85 256l29.924 29.922 119.701-118.626V427h42.75z"/>
+      </svg>
+    </div>
+  <!-- end back to top -->
+
+    <script src="js/custom.js"></script>
+    <script>
+      静态
+    const mql = window.matchMedia("(max-width:576px)");
+    
+    if (mql.matches){
+      function openYtscrmLink () {window.open('project/ytscrm.html');}
+      function openSelfLink () {window.open('project/self.html');}
+      function openWatsonsLink () {window.open('project/watsons.html');}
+    }else {};
+   
+
+    // 动态
+    mql.addEventListener('change', e => { 
+      if (e.matches) { 
+        function openYtscrmLink () {window.open('project/ytscrm.html');}
+        function openSelfLink () {window.open('project/self.html');}
+        function openWatsonsLink () {window.open('project/watsons.html');}
+    } else { 
+      console.log("屏幕宽度大于576px");
+    } 
+    });
+
+    </script>
+</body>
+
+</html>

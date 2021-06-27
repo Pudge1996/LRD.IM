@@ -515,11 +515,6 @@ a {
   }
 }
 
-.wechat:focus:not(:focus-visible) {
-  visibility: hidden;
-  opacity: 0;
-}
-
 .popover {
   position: fixed;
   display: inline-block;

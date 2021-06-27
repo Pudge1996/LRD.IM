@@ -441,11 +441,6 @@ a{
       right: 128px;
     }
   }
-    &:focus:not(:focus-visible){
-    visibility: hidden;
-    opacity: 0;
-    
-  }
 }
 
 .popover{
