@@ -173,7 +173,7 @@ Medium 平台支持导出文章，而且是带有标签和 Class 的 HTML 文件
 </picture>
 ```
 
-### 八、作品页图片放大（Viewer.js 的使用）
+### 九、作品页图片放大（Viewer.js 的使用）
 ```HTML
 <!-- HTML -->
 <link href="viewer.min.css" rel="stylesheet">
@@ -212,7 +212,7 @@ window.addEventListener('DOMContentLoaded', function () {
 }
 ```
 
-### 九、作品页，移动端可以点击整个卡片跳转
+### 十、作品页，移动端可以点击整个卡片跳转
 ```HTML
 <section class="project-ytscrm" onclick="openYtscrmLink()">
   ...
