@@ -4,9 +4,9 @@
 
 毕业后在工作中也一点点积累前端知识，而且也会偶尔询问下公司的前端老哥一点技术问题，解决方案。直到在20-21年间读了张鑫旭大神的两本书，也在油管里看了不少 [DesignCourse](https://www.youtube.com/c/DesignCourse/featured) 和 [Kevin Powell](https://www.youtube.com/kepowob/featured) 频道的视频，同时也有 Dribbble Dark 以及 PureTab 这两个项目的实践，觉得技术开始有点像样了，便开始动手重构整个网站。
 
-抛弃 Boostrap 框架之后用上了 SaaS，以及大量使用 Flex 和 Grid 布局，起码自己看起来舒服多了。现在不管是访问速度、网站易用性、代码可读性等各方面均比以往更出色。Boostrap 那套 “col-md-12” 布局实在是难以接受，自己做的网站，不需要遵循第三方平台的规则，拥抱原生！
+抛弃 Boostrap 框架之后用上了 SaaS，以及大量使用 Flex 和 Grid 布局，起码自己看起来舒服多了。现在不管是访问速度、网站易用性、代码可读性等各方面均比以往更出色。
 
-现在这个网站用来存放我的博客、设计作品等。之后还会做一个 Playground 页面，下一次技术进步的时候，会放上一些有意思的东西。比如一些动效，DEMO 等，反正是花里胡哨的东西。
+现在这个网站用来存放我的博客、设计作品等。下一次技术进步的时候,还会做一个 Playground 页面，放上一些有意思的东西。比如一些动效，DEMO 等，反正是花里胡哨的东西。
 
 # 时间线
 - 2021-06 全面重构，脱离 Bootstrap 和 jQuery，同步所有 Medium 文章内容到本站；
@@ -163,6 +163,65 @@ Medium 平台支持导出文章，而且是带有标签和 Class 的 HTML 文件
 2. class 添加 `lazyload`;
 3. 添加 `data-action="zoom"`
 4. 图片上载到阿里云OSS
+
+### 八、移动端加载小尺寸图片
+```HTML
+<!-- HTML -->
+<picture>
+  <source media="(max-width: 576px)" srcset="w_960.png">
+  <img src="w_1920.png"/>
+</picture>
+```
+
+### 八、作品页图片放大（Viewer.js 的使用）
+```HTML
+<!-- HTML -->
+<link href="viewer.min.css" rel="stylesheet">
+<div id="galley">
+<picture>
+  <source media="(max-width: 576px)" data-srcset="w_960.png">
+  <img data-src="w_1920.png"/>
+</picture>
+<picture> ... </picture>
+<picture> ... </picture>
+<picture> ... </picture>
+</div>
+<script src="viewer.min.js"></script>
+```
+
+```JavaScript
+// JavaScript
+window.addEventListener('DOMContentLoaded', function () {
+  var galley = document.getElementById('galley'); // 绑定图片组
+  var viewer = new Viewer(galley, {
+    url: 'data-src', // 定义图片来源
+    title: function (image) {
+        return (this.index + 1) + ' / ' + this.length; // 显示页码
+    },
+  });
+});
+```
+
+
+```CSS
+#galley img{
+  cursor: zoom-in;
+}
+.viewer-canvas{
+  cursor: zoom-out;
+}
+```
+
+### 九、作品页，移动端可以点击整个卡片跳转
+```HTML
+<section class="project-ytscrm" onclick="openYtscrmLink()">
+  ...
+</section>
+```
+
+```JavaScript
+// 待补充
+```
 
 # 其他
 
