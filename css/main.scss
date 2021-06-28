@@ -136,10 +136,6 @@ img{
   height: auto;
 }
 
-#galley img{
-  cursor: zoom-in;
-}
-
 .elis-1{
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -1246,6 +1242,10 @@ img.zoom-img {
 }
 
 // Modify Viewer.js
+#galley img{
+  cursor: zoom-in;
+}
+
 .viewer-title{
   font-feature-settings: "tnum" !important;
 }

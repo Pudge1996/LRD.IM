@@ -180,11 +180,6 @@ img {
   height: auto;
 }
 
-#galley img {
-  cursor: -webkit-zoom-in;
-  cursor: zoom-in;
-}
-
 .elis-1, article .graf--mixtapeEmbed strong, article .graf--mixtapeEmbed em, .article-navigation .title {
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -1570,6 +1565,11 @@ img.zoom-img {
 
 .hide {
   display: none;
+}
+
+#galley img {
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
 }
 
 .viewer-title {
