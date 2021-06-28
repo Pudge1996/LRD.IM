@@ -146,7 +146,7 @@
 
     <script src="js/custom.js"></script>
     <script>
-      静态
+    // 实现手机浏览时点击整个卡片都可以跳转（静态）
     const mql = window.matchMedia("(max-width:576px)");
     
     if (mql.matches){
@@ -156,7 +156,7 @@
     }else {};
    
 
-    // 动态
+    // 实现手机浏览时点击整个卡片都可以跳转（动态）
     mql.addEventListener('change', e => { 
       if (e.matches) { 
         function openYtscrmLink () {window.open('project/ytscrm.html');}
@@ -166,7 +166,6 @@
       console.log("屏幕宽度大于576px");
     } 
     });
-
     </script>
 </body>
 

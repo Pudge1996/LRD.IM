@@ -136,6 +136,10 @@ img{
   height: auto;
 }
 
+#galley img{
+  cursor: zoom-in;
+}
+
 .elis-1{
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -1103,7 +1107,7 @@ article{
       }
       &:active, &:focus-visible{
         background-color: #079AB0;
-        box-shadow: 0 0 0 2px #FFFFFF,0 0 0 4px #079AB0;
+        box-shadow: 0 0 0 2px var(--project-bg-color),0 0 0 4px #079AB0;
         outline: none;
       }
     }
@@ -1241,11 +1245,12 @@ img.zoom-img {
   display: none;
 }
 
+// Modify Viewer.js
 .viewer-title{
   font-feature-settings: "tnum" !important;
 }
 .viewer-backdrop{
-  background-color: rgba(0,0,0,.8) !important;
+  background-color: rgba(0,0,0,98) !important;
 }
 
 .viewer-list{
@@ -1263,5 +1268,9 @@ img.zoom-img {
 }
 
 .viewer-navbar{
-  padding-bottom: 10px !important;
+  padding: 10px !important;
+}
+
+.viewer-canvas{
+  cursor: zoom-out;
 }

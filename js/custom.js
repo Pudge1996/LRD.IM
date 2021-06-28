@@ -132,3 +132,18 @@ copied.onclick = function() {
   copied.classList.toggle('hide');
 }
 // ▲▲ 博客 - 复制链接
+
+// ▼▼ Viewer.js
+window.addEventListener('DOMContentLoaded', function () {
+  var galley = document.getElementById('galley'); // 绑定图片组
+  var viewer = new Viewer(galley, {
+    url: 'data-src',  // 定义图片来源
+    title: function (image) {
+        return (this.index + 1) + ' / ' + this.length; // 显示当前/总数
+    },
+    toolbar: 0,
+    transition: 0,
+    zoomRatio: 0.2, // 每次缩放多少
+  });
+});
+// ▲▲ Viewer.js
