@@ -1268,12 +1268,6 @@ article figure .imageCaption a:hover {
   }
 }
 
-@media (min-width: 1200px) {
-  .project section .desc p {
-    font-size: 20px;
-  }
-}
-
 .project section .project-tags {
   margin-top: var(--spacing-xxs);
   font-size: var(--font-size-sub);

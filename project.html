@@ -81,7 +81,7 @@
       <!-- ▲▲ 千聊讲师工具 ▲▲ -->
 
       <!-- ▼▼ 鱼棠 SCRM ▼▼ -->
-      <section class="project-card project-ytscrm" onclick="openYtscrmLink()">
+      <section class="project-card project-ytscrm" id="sectionYtscrm">
         <div class="desc">
           <h2>鱼棠 SCRM</h2>
           <p class="project-subtitle">基于企业微信的免费私域流量运营工具。项目中本人深入到 Ant Design 生态内，积累了宝贵的管理后台设计经验。</p>
@@ -97,7 +97,7 @@
       <!-- ▲▲ 鱼棠 SCRM ▲▲ -->
 
       <!-- ▼▼ 个人创新项目 ▼▼ -->
-      <section class="project-card project-self" onclick="openSelfLink()">
+      <section class="project-card project-self" id="sectionSelf">
         <div class="desc">
           <h2>个人创新项目</h2>
           <p class="project-subtitle">公司内部流程较多，经常同时做多个项目，需要频繁在多个协同工具中切换，所以我做了一个插件来提升工作效率。</p>
@@ -113,7 +113,7 @@
       <!-- ▲▲ 个人创新项目 ▲▲ -->
 
       <!-- ▼▼ 屈臣氏 App ▼▼ -->
-      <section class="project-card project-watsons" id="sectionWatsons"  onclick="openWatsonsLink()">
+      <section class="project-card project-watsons" id="sectionWatsons">
         <div class="desc">
           <h2>屈臣氏 App</h2>
           <p class="project-subtitle">在屈臣氏的两年时间，我主要负责用户增长线的 UI 和部分视觉设计，主导适配深色模式。以及负责内部取数平台的 UI&UX 设计。</p>
@@ -145,27 +145,19 @@
   <!-- end back to top -->
 
     <script src="js/custom.js"></script>
-    <script>
-    // 实现手机浏览时点击整个卡片都可以跳转（静态）
-    const mql = window.matchMedia("(max-width:576px)");
     
-    if (mql.matches){
-      function openYtscrmLink () {window.open('project/ytscrm.html');}
-      function openSelfLink () {window.open('project/self.html');}
-      function openWatsonsLink () {window.open('project/watsons.html');}
-    }else {};
-   
+    <script>
+    // 屏幕宽度小于768时点击整个 section 都可以跳转
+    const mql = window.matchMedia("(max-width:768px)");
+    var sectionQlchat = document.getElementById('sectionQlchat')
+    var sectionYtscrm = document.getElementById('sectionYtscrm')
+    var sectionYtscrm = document.getElementById('sectionSelf')
+    var sectionYtscrm = document.getElementById('sectionWatsons')
 
-    // 实现手机浏览时点击整个卡片都可以跳转（动态）
-    mql.addEventListener('change', e => { 
-      if (e.matches) { 
-        function openYtscrmLink () {window.open('project/ytscrm.html');}
-        function openSelfLink () {window.open('project/self.html');}
-        function openWatsonsLink () {window.open('project/watsons.html');}
-    } else { 
-      console.log("屏幕宽度大于576px");
-    } 
-    });
+    sectionQlchat.onclick = function(){if (mql.matches){window.open('project/qlchat.html');}}
+    sectionYtscrm.onclick = function(){if (mql.matches){window.open('project/ytscrm.html');}}
+    sectionSelf.onclick = function(){if (mql.matches){window.open('project/self.html');}}
+    sectionWatsons.onclick = function(){if (mql.matches){window.open('project/watsons.html');}}
     </script>
 </body>
 
