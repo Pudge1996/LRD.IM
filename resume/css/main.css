@@ -51,8 +51,14 @@
 }
 
 html {
-  font-size: 18px;
+  font-size: 20px;
   scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 18px;
+  }
 }
 
 body {
@@ -92,7 +98,7 @@ a:hover {
   color: var(--primary-text-color);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   a:hover {
     background-color: transparent;
   }
@@ -122,17 +128,25 @@ p {
   font-weight: normal;
   margin: .5rem 0 1.5rem 0;
   color: var(--secondary-text-color);
-  font-size: 16px;
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  p {
+    font-size: 18px;
+  }
 }
 
 .wrap {
-  max-width: 768px;
-  margin: 6rem auto 0;
+  max-width: 960px;
+  margin: 5rem auto 0;
+  padding: 20px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   .wrap {
-    margin: 24px;
+    padding: 30px;
+    margin: 1rem auto 0;
   }
 }
 
@@ -172,7 +186,7 @@ p {
   margin-top: 0;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   .title h1 {
     font-size: 40px;
     margin: .5rem 0 1rem;
@@ -184,7 +198,7 @@ p {
   margin: 0 0 2rem;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   .title p {
     font-size: 20px;
     margin: 0 0 2rem;
@@ -192,10 +206,10 @@ p {
 }
 
 .intro {
-  width: 512px;
+  width: 600px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   .intro {
     width: auto;
   }
@@ -205,7 +219,7 @@ p {
   margin: 2rem 0;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   .degree {
     margin: 1rem 0;
   }
@@ -255,7 +269,7 @@ a:focus .link {
   margin: 4rem 0;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   .divider {
     margin: 2rem 0;
   }
@@ -265,7 +279,7 @@ a:focus .link {
   display: none;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   .divider-2, .divider-3 {
     display: block;
     width: 100%;
@@ -286,7 +300,7 @@ a:focus .link {
       grid-template-areas: "time-1 name-1 work-1" "time-2 name-2 work-2" "time-3 name-3 work-3";
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   .grid-container {
     display: -ms-grid;
     display: grid;
@@ -299,19 +313,15 @@ a:focus .link {
   }
 }
 
-.grid-container div p:first-child {
-  font-size: 18px;
-}
-
 .grid-container p {
-  margin: .5rem 0 1rem 0;
+  margin: .5rem 0 .8rem 0;
 }
 
 .grid-container p:first-child {
   margin: .5rem 0 .5rem 0;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   .grid-container p:first-child {
     margin: 0;
   }
@@ -388,19 +398,19 @@ strong {
   color: var(--primary-text-color);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   .time p, .name p, .work .title {
     margin: 0;
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   .time:not(:first-child) {
     margin-top: 1rem;
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   .time p {
     font-size: 20px;
   }
@@ -475,7 +485,7 @@ a {
   cursor: default;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   .alignright {
     display: none;
   }
@@ -604,7 +614,7 @@ footer .flex .info .b_top, footer .flex .info .dot:nth-child(3) {
   visibility: hidden;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   footer .flex .info .b_top, footer .flex .info .dot:nth-child(3) {
     visibility: visible;
   }
@@ -617,13 +627,13 @@ footer .flex .links {
           flex: 1;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   footer .flex .links {
     display: none;
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   footer {
     text-align: center;
     margin-bottom: 0;
@@ -634,7 +644,7 @@ footer .dot {
   margin: 0 .25rem;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   footer .download {
     display: none;
   }

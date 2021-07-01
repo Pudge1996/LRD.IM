@@ -1061,7 +1061,7 @@ article{
       }
       &:active, &:focus-visible{
         background-color: #E32243;
-        box-shadow: 0 0 0 2px var(--project-bg-color),0 0 0 4px #E32243;
+        // box-shadow: 0 0 0 2px var(--project-bg-color),0 0 0 4px #E32243;
         outline: none;
       }
     }
@@ -1075,20 +1075,20 @@ article{
         }
         &:active, &:focus-visible{
           background-color: #0F65E5;
-          box-shadow: 0 0 0 2px var(--project-bg-color),0 0 0 4px #0F65E5;
+          // box-shadow: 0 0 0 2px var(--project-bg-color),0 0 0 4px #0F65E5;
           outline: none;
         }
       }
     }
     .self-btn{
       @extend .project-enter;
-      background-color: #0A0A0A;
+      background-color: #111111;
       &:hover{
-        background-color: #1A1A1A;
+        background-color: #0A0A0A;
       }
       &:active, &:focus-visible{
         background-color: #000000;
-        box-shadow: 0 0 0 2px var(--project-bg-color),0 0 0 4px #000000;
+        // box-shadow: 0 0 0 2px var(--project-bg-color),0 0 0 4px #000000;
         outline: none;
       }
     }
@@ -1100,7 +1100,7 @@ article{
       }
       &:active, &:focus-visible{
         background-color: #079AB0;
-        box-shadow: 0 0 0 2px var(--project-bg-color),0 0 0 4px #079AB0;
+        // box-shadow: 0 0 0 2px #FFFFFF,0 0 0 4px #079AB0;
         outline: none;
       }
     }

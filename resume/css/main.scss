@@ -1,4 +1,4 @@
-$mobile: 800px;
+$mobile: 768px;
 $ipad: 1200px;
 
 @mixin mobile {
@@ -85,8 +85,11 @@ $ipad: 1200px;
 // 加粗分设备处理
 
 html{
-  font-size: 18px;
+  font-size: 20px;
   scroll-behavior: smooth;
+  @include mobile() {
+    font-size: 18px;
+  }
 }
 
 body {
@@ -149,15 +152,19 @@ p{
   font-weight: normal;
   margin: .5rem 0 1.5rem 0;
   color: var(--secondary-text-color);
-  font-size: 16px;
+  font-size: 20px;
+  @include mobile() {
+    font-size: 18px;
+  }
 }
 
 .wrap{
-  max-width: 768px;
-  margin: 6rem auto 0;
-  // overflow: visible;
+  max-width: 960px;
+  margin: 5rem auto 0;
+  padding: 20px;
   @include mobile {
-    margin: 24px;
+    padding: 30px;
+    margin: 1rem auto 0;
   }
 }
 
@@ -207,7 +214,7 @@ p{
   }
 }
 .intro{
-  width: 512px;
+  width: 600px;
 
   @include mobile {
     width: auto;
@@ -308,12 +315,9 @@ p{
       "name-3"
       "work-3";
   }
-  div p:first-child{
-    font-size: 18px;
-  }
 
   p{
-    margin: .5rem 0 1rem 0;
+    margin: .5rem 0 .8rem 0;
   }
 
   p:first-child{
@@ -386,7 +390,6 @@ a{
     margin-left: 96px;
     border-radius: 50%;
     transition: all 0s;
-    // transition: background .3s;
     &:hover{
       background-color: var(--button-background-color-hover);
     }

@@ -21,6 +21,7 @@
 
     <!-- main css -->
     <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">    
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112191540-2"></script>
@@ -145,14 +146,14 @@
   <!-- end back to top -->
 
     <script src="js/custom.js"></script>
-    
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"> </script>
     <script>
     // 屏幕宽度小于768时点击整个 section 都可以跳转
     const mql = window.matchMedia("(max-width:768px)");
     var sectionQlchat = document.getElementById('sectionQlchat')
     var sectionYtscrm = document.getElementById('sectionYtscrm')
-    var sectionYtscrm = document.getElementById('sectionSelf')
-    var sectionYtscrm = document.getElementById('sectionWatsons')
+    var sectionSelf = document.getElementById('sectionSelf')
+    var sectionWatsons = document.getElementById('sectionWatsons')
 
     sectionQlchat.onclick = function(){if (mql.matches){window.open('project/qlchat.html');}}
     sectionYtscrm.onclick = function(){if (mql.matches){window.open('project/ytscrm.html');}}
