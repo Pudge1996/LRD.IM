@@ -193,11 +193,14 @@ a {
   text-decoration: none;
   &:hover {
     color: var(--primary-text-color);
-    text-decoration: none;
   }
-  &:focus{
-    text-decoration: none;
+  @media (prefers-reduced-motion: no-preference) {
+  &:focus-visible {
+    transition: outline-offset .2s ease;
+    outline-offset: 4px;
   }
+}
+  
 }
 
 a.underline{ //需要加下划线的class
@@ -338,6 +341,7 @@ a.underline{ //需要加下划线的class
 .icon-menu{
   background: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M0 0h48v48H0z'/%3E%3Cpath d='M0 8h48v4H0V8zm0 14h48v4H0v-4zm0 14h48v4H0v-4z' fill='rgba(34,34,34,1)' fill-rule='nonzero'/%3E%3C/g%3E%3C/svg%3E") no-repeat center/50%;
   width: 40px;
+  cursor: pointer;
   @include sm {
     display: none;
   }
@@ -345,6 +349,7 @@ a.underline{ //需要加下划线的class
 .icon-close{
   background: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M0 0h48v48H0z'/%3E%3Cpath fill-rule='nonzero' d='M24 21.172l14.9-14.9L41.728 9.1 26.828 24l14.9 14.9-2.828 2.828-14.9-14.9-14.9 14.9L6.272 38.9l14.9-14.9-14.9-14.9L9.1 6.272z' fill='rgba(34,34,34,1)' /%3E%3C/g%3E%3C/svg%3E") no-repeat center/50%;
   width: 40px;
+  cursor: pointer;
   @include sm {
     display: none;
   }
@@ -1059,25 +1064,30 @@ article{
       &:hover{
         background-color: #F32F50;
       }
-      &:active, &:focus-visible{
+      &:active{
         background-color: #E32243;
-        // box-shadow: 0 0 0 2px var(--project-bg-color),0 0 0 4px #E32243;
+      }
+      &:focus-visible{
+        background-color: #F32F50;
+        box-shadow: 0 0 0 3px var(--project-bg-color),0 0 0 5px #F32F50;
+        transition: box-shadow .2s ease;
         outline: none;
       }
     }
     .yt-btn{
       @extend .project-enter;
-      background-color: transparent;
-      @include md {
-        background-color: #1E86FF;
-        &:hover{
-          background-color: #0C6EFF;
-        }
-        &:active, &:focus-visible{
-          background-color: #0F65E5;
-          // box-shadow: 0 0 0 2px var(--project-bg-color),0 0 0 4px #0F65E5;
-          outline: none;
-        }
+      background-color: #1E86FF;
+      &:hover{
+        background-color: #0C6EFF;
+      }
+      &:active{
+        background-color: #0F65E5;
+      }
+      &:focus-visible{
+        background-color: #0C6EFF;
+        box-shadow: 0 0 0 3px var(--project-bg-color),0 0 0 5px #0C6EFF;
+        transition: box-shadow .2s ease;
+        outline: none;
       }
     }
     .self-btn{
@@ -1086,9 +1096,13 @@ article{
       &:hover{
         background-color: #0A0A0A;
       }
-      &:active, &:focus-visible{
+      &:active{
         background-color: #000000;
-        // box-shadow: 0 0 0 2px var(--project-bg-color),0 0 0 4px #000000;
+      }
+      &:focus-visible{
+        background-color: #0A0A0A;
+        box-shadow: 0 0 0 3px var(--project-bg-color),0 0 0 5px #0A0A0A;
+        transition: box-shadow .2s ease;
         outline: none;
       }
     }
@@ -1098,9 +1112,13 @@ article{
       &:hover{
         background-color: #0BA7BE;
       }
-      &:active, &:focus-visible{
+      &:active{
         background-color: #079AB0;
-        // box-shadow: 0 0 0 2px #FFFFFF,0 0 0 4px #079AB0;
+      }
+      &:focus-visible{
+        background-color: #0BA7BE;
+        box-shadow: 0 0 0 3px var(--project-bg-color),0 0 0 5px #0BA7BE;
+        transition: box-shadow .2s ease;
         outline: none;
       }
     }
