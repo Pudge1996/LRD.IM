@@ -228,3 +228,7 @@ window.addEventListener('DOMContentLoaded', function () {
 域名购买: [Name.com](https://www.name.com/)
 
 托管资源: [阿里云OSS](https://www.aliyun.com/product/oss)
+
+# 待处理
+
+防镜像。现在已经找到一个镜像网站 https://zhoucaixia.cn
