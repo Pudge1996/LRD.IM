@@ -227,12 +227,6 @@ var sectionYtscrm = document.getElementById('sectionYtscrm') // 绑定卡片
 sectionYtscrm.onclick = function(){if (mql.matches){window.open('project/ytscrm.html');}} // 点击卡片时判断屏幕宽度
 ```
 
-# 被引用
-
-「从 Medium 上一位作者 Pudge 给出的对比图来看，在 Twitter 纯黑背景的深色模式下的界面下...」
-[做一个引起极度舒适的「深色模式」，到底有多难？ ———— 少数派](https://www.ifanr.com/1319834)
-
-
 # 其他
 
 域名购买: [Name.com](https://www.name.com/)
@@ -241,4 +235,4 @@ sectionYtscrm.onclick = function(){if (mql.matches){window.open('project/ytscrm.
 
 # 待处理
 
-防镜像。现在已经找到一个镜像网站 https://zhoucaixia.cn
+防镜像。现在已经找到一个镜像网站：https://zhoucaixia.cn
