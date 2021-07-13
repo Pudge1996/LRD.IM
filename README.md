@@ -214,16 +214,24 @@ window.addEventListener('DOMContentLoaded', function () {
 
 ### 十、作品页，移动端可以点击整个卡片跳转
 ```HTML
+<!-- HTML -->
 <section class="project-ytscrm" onclick="openYtscrmLink()">
   ...
 </section>
 ```
 
 ```JavaScript
+// JavaScript
 const mql = window.matchMedia("(max-width:768px)"); // 定义宽度
 var sectionYtscrm = document.getElementById('sectionYtscrm') // 绑定卡片
 sectionYtscrm.onclick = function(){if (mql.matches){window.open('project/ytscrm.html');}} // 点击卡片时判断屏幕宽度
 ```
+
+# 被引用
+
+「从 Medium 上一位作者 Pudge 给出的对比图来看，在 Twitter 纯黑背景的深色模式下的界面下...」
+[做一个引起极度舒适的「深色模式」，到底有多难？ ———— 少数派](https://www.ifanr.com/1319834)
+
 
 # 其他
 
