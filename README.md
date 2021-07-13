@@ -177,14 +177,12 @@ Medium 平台支持导出文章，而且是带有标签和 Class 的 HTML 文件
 ```HTML
 <!-- HTML -->
 <link href="viewer.min.css" rel="stylesheet">
-<div id="galley">
-<picture>
-  <source media="(max-width: 576px)" data-srcset="w_960.png">
-  <img data-src="w_1920.png"/>
-</picture>
-<picture> ... </picture>
-<picture> ... </picture>
-<picture> ... </picture>
+<div id="galley"> // 让 JS 找到图片列表
+  <picture>
+    <source media="(max-width: 576px)" data-srcset="w_960.png"> // 移动端使用低质量图片
+    <img data-src="w_1920.png"/>
+  </picture>
+  <picture> ... </picture>
 </div>
 <script src="viewer.min.js"></script>
 ```
@@ -192,7 +190,7 @@ Medium 平台支持导出文章，而且是带有标签和 Class 的 HTML 文件
 ```JavaScript
 // JavaScript
 window.addEventListener('DOMContentLoaded', function () {
-  var galley = document.getElementById('galley'); // 绑定图片组
+  var galley = document.getElementById('galley'); // 绑定图片列表
   var viewer = new Viewer(galley, {
     url: 'data-src', // 定义图片来源
     title: function (image) {
