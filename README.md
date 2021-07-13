@@ -220,7 +220,9 @@ window.addEventListener('DOMContentLoaded', function () {
 ```
 
 ```JavaScript
-// 待补充
+const mql = window.matchMedia("(max-width:768px)"); // 定义宽度
+var sectionYtscrm = document.getElementById('sectionYtscrm') // 绑定卡片
+sectionYtscrm.onclick = function(){if (mql.matches){window.open('project/ytscrm.html');}} // 点击卡片时判断屏幕宽度
 ```
 
 # 其他
