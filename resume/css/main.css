@@ -64,7 +64,7 @@ html {
 body {
   font-family: SF Pro Display,-apple-system,BlinkMacSystemFont,HarmonyOS Sans,Roboto,Helvetica Neue,Helvetica,Segoe UI,Arial,PingFang SC,Hiragino Sans GB,Microsoft Yahei,sans-serif;
   word-spacing: -.1rem;
-  line-height: 1.75;
+  line-height: 1.6;
   overflow-wrap: break-word;
   color: var(--primary-text-color);
   background-color: var(--background-color);
@@ -206,7 +206,7 @@ p {
 }
 
 .intro {
-  width: 600px;
+  width: 640px;
 }
 
 @media (max-width: 768px) {
@@ -244,8 +244,9 @@ p {
 
 .contact .contact-title {
   display: inline-block;
-  width: 5rem;
+  width: 5.5rem;
   white-space: nowrap;
+  text-align: left;
 }
 
 .iconlink {
@@ -548,6 +549,7 @@ a {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
   opacity: 0;
+  will-change: transform;
 }
 
 .popover:hover, .popover:focus {
