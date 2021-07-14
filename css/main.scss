@@ -881,6 +881,61 @@ article{
   }
 }
 
+.series{
+  display: flex;
+  flex-direction: column;
+    @include md {
+    flex-direction: row;
+  }
+  
+  a{
+    padding: var(--spacing-xxs) var(--spacing-xs);
+    cursor: pointer;
+    flex-grow: 1;
+    border-radius: var(--border-radius-md);
+    background-color: var(--button-color);
+    transition: background-color .3s;
+    display: flex;
+    @include md {
+      padding: var(--spacing-xs);
+      flex-direction: column;
+    }
+    p{
+      margin: 0;
+      font-weight: bold;
+      display: inline;
+      @include md {
+        display: block;
+      }
+    }
+    p:not(:first-child){ // 选择非标题的文案
+      color: var(--tertiary-text-color);
+      font-weight: normal;
+      font-size: var(--font-size-sub);
+      text-align: right;
+      margin-left: auto;
+      @include md {
+        text-align: left;
+        margin-left: 0;
+      }
+    }
+  }
+  a:hover, a:focus-visible{
+    background-color: var(--button-hover-color);
+  }
+  a:active{
+    background-color: var(--button-active-color);
+  }
+  a:not(:last-child){
+    // background-color: red;
+    margin-bottom: var(--spacing-xxs);
+    @include md {
+      margin-right: var(--spacing-xxs);
+      margin-bottom: 0;
+    }
+  }
+}
+
 .blog-divider {
   margin: var(--spacing-sm) 0;
   position: relative;
