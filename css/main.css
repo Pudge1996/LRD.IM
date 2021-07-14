@@ -67,8 +67,8 @@ button, input, select, textarea {
   --pre-bg-color: #EEEEEE;
   --copied-text-color: green;
   --project-bg-color: #FFFFFF;
-  --project-tags-color: #F7F7F7;
-  --background-color: #F7F7F7;
+  --project-tags-color: #FAFAFA;
+  --background-color: #FAFAFA;
   --font-size-h1: 60px;
   --font-size-blog-title: 48px;
   --font-size-h2: 32px;
@@ -1197,16 +1197,14 @@ article figure .imageCaption a:hover {
 .project section {
   position: relative;
   overflow: hidden;
-  margin-bottom: var(--spacing-xs);
+  margin-bottom: var(--spacing-xxs);
   -ms-touch-action: pan-y pinch-zoom;
       touch-action: pan-y pinch-zoom;
-  cursor: pointer;
 }
 
 @media (min-width: 768px) {
   .project section {
     margin-bottom: var(--spacing-sm);
-    cursor: auto;
   }
 }
 
@@ -1336,17 +1334,17 @@ article figure .imageCaption a:hover {
 }
 
 .project section .ql-btn:hover {
-  background-color: #e92b4b;
+  background-color: #F32F50;
 }
 
 .project section .ql-btn:active {
-  background-color: #dc1e3e;
+  background-color: #E32243;
 }
 
 .project section .ql-btn:focus-visible {
-  background-color: #dc1e3e;
-  -webkit-box-shadow: 0 0 0 3px var(--project-bg-color), 0 0 0 5px #dc1e3e;
-          box-shadow: 0 0 0 3px var(--project-bg-color), 0 0 0 5px #dc1e3e;
+  background-color: #F32F50;
+  -webkit-box-shadow: 0 0 0 3px var(--project-bg-color), 0 0 0 5px #F32F50;
+          box-shadow: 0 0 0 3px var(--project-bg-color), 0 0 0 5px #F32F50;
   -webkit-transition: -webkit-box-shadow .2s ease;
   transition: -webkit-box-shadow .2s ease;
   transition: box-shadow .2s ease;
@@ -1405,17 +1403,17 @@ article figure .imageCaption a:hover {
 }
 
 .project section .watsons-btn:hover {
-  background-color: #099ab1;
+  background-color: #0BA7BE;
 }
 
 .project section .watsons-btn:active {
-  background-color: #06889c;
+  background-color: #079AB0;
 }
 
 .project section .watsons-btn:focus-visible {
-  background-color: #06889c;
-  -webkit-box-shadow: 0 0 0 3px var(--project-bg-color), 0 0 0 5px #06889c;
-          box-shadow: 0 0 0 3px var(--project-bg-color), 0 0 0 5px #06889c;
+  background-color: #0BA7BE;
+  -webkit-box-shadow: 0 0 0 3px var(--project-bg-color), 0 0 0 5px #0BA7BE;
+          box-shadow: 0 0 0 3px var(--project-bg-color), 0 0 0 5px #0BA7BE;
   -webkit-transition: -webkit-box-shadow .2s ease;
   transition: -webkit-box-shadow .2s ease;
   transition: box-shadow .2s ease;
@@ -1448,7 +1446,6 @@ article figure .imageCaption a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border: 1px solid var(--divider-color);
 }
 
 @media (min-width: 768px) {
@@ -1520,26 +1517,6 @@ article figure .imageCaption a:hover {
 
 .project-container img, .project-container picture {
   margin-bottom: var(--spacing-xxs);
-}
-
-@media (min-width: 1920px) {
-  .project-container {
-    max-width: 1600px;
-  }
-}
-
-.project-container hr {
-  width: 100%;
-  margin: var(--spacing-xs) auto;
-  border: none;
-  height: 1px;
-  background-color: var(--divider-color);
-}
-
-@media (min-width: 768px) {
-  .project-container hr {
-    margin: var(--spacing-md) auto;
-  }
 }
 
 .lazyload,

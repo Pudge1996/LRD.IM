@@ -95,7 +95,7 @@ html{
 body {
   font-family: SF Pro Display,-apple-system,BlinkMacSystemFont,HarmonyOS Sans,Roboto,Helvetica Neue,Helvetica,Segoe UI,Arial,PingFang SC,Hiragino Sans GB,Microsoft Yahei,sans-serif;
   word-spacing: -.1rem;
-  line-height: 1.6;
+  line-height: 1.75;
   overflow-wrap: break-word;
   color: var(--primary-text-color);
   background-color: var(--background-color);
@@ -214,7 +214,7 @@ p{
   }
 }
 .intro{
-  width: 640px;
+  width: 600px;
 
   @include mobile {
     width: auto;
@@ -249,12 +249,10 @@ p{
 
   .contact-title{
     display: inline-block;
-    width: 5.5rem;
+    width: 5rem;
     white-space: nowrap;
-    text-align: left;
-
   }
-}
+  }
 
   .iconlink{
     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='16' height='16'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M10 3v2H5v14h14v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h6zm7.707 4.707L12 13.414 10.586 12l5.707-5.707L13 3h8v8l-3.293-3.293z' fill='rgba(119,119,119,1)' /%3E%3C/svg%3E") no-repeat center;
@@ -469,8 +467,6 @@ a{
   transform-origin: bottom right;
   transform: scale(.9);
   opacity: 0;
-
-  will-change: transform;
 
     &:hover,
     &:focus{

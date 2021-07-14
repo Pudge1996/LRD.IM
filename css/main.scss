@@ -6,7 +6,8 @@
 @mixin md {@media (min-width: 768px) {@content;}} //tablets
 @mixin lg {@media (min-width: 992px) {@content;}} //desktops
 @mixin xl {@media (min-width: 1200px) {@content;}} //large desktops
-@mixin xxl {@media (min-width: 1920px) {@content;}} //larger desktops
+@mixin xxl {@media (min-width: 1400px) {@content;}} //larger desktops
+
 
 // :root *{
   // transition: color, background-color .3s cubic-bezier(0.11, 0, 0.5, 0);
@@ -24,8 +25,8 @@
   --pre-bg-color: #EEEEEE;
   --copied-text-color: green;
   --project-bg-color: #FFFFFF;
-  --project-tags-color: #F7F7F7;
-  --background-color: #F7F7F7;
+  --project-tags-color: #FAFAFA;
+  --background-color: #FAFAFA;
 
   //字体相关
   --font-size-h1: 60px;
@@ -973,12 +974,10 @@ article{
   section{
     position: relative;
     overflow: hidden;
-    margin-bottom: var(--spacing-xs);
+    margin-bottom: var(--spacing-xxs);
     touch-action: pan-y pinch-zoom;
-    cursor: pointer;
     @include md {
       margin-bottom: var(--spacing-sm);
-      cursor: auto;
     }
     .desc{
       display: flex;
@@ -1063,14 +1062,14 @@ article{
       @extend .project-enter;
       background-color: #FD3759;
       &:hover{
-        background-color: #e92b4b;
+        background-color: #F32F50;
       }
       &:active{
-        background-color: #dc1e3e;
+        background-color: #E32243;
       }
       &:focus-visible{
-        background-color: #dc1e3e;
-        box-shadow: 0 0 0 3px var(--project-bg-color),0 0 0 5px #dc1e3e;
+        background-color: #F32F50;
+        box-shadow: 0 0 0 3px var(--project-bg-color),0 0 0 5px #F32F50;
         transition: box-shadow .2s ease;
         outline: none;
       }
@@ -1111,14 +1110,14 @@ article{
       @extend .project-enter;
       background-color: #15B1C5;
       &:hover{
-        background-color: #099ab1;
+        background-color: #0BA7BE;
       }
       &:active{
-        background-color: #06889c;
+        background-color: #079AB0;
       }
       &:focus-visible{
-        background-color: #06889c;
-        box-shadow: 0 0 0 3px var(--project-bg-color),0 0 0 5px #06889c;
+        background-color: #0BA7BE;
+        box-shadow: 0 0 0 3px var(--project-bg-color),0 0 0 5px #0BA7BE;
         transition: box-shadow .2s ease;
         outline: none;
       }
@@ -1141,7 +1140,6 @@ article{
     border-radius: var(--border-radius-md);
     background-color: var(--project-bg-color);
     flex-direction: column;
-    border: 1px solid var(--divider-color);
     @include md {
       padding: var(--spacing-sm) var(--spacing-md);
       flex-direction: row;
@@ -1190,19 +1188,6 @@ article{
   margin: 0 auto;
   img, picture{
     margin-bottom: var(--spacing-xxs);
-  }
-  @include xxl {
-    max-width: 1600px;
-  }
-  hr{
-    width: 100%;
-    margin: var(--spacing-xs) auto;
-    border: none;
-    height: 1px;
-    background-color: var(--divider-color);
-    @include md {
-      margin: var(--spacing-md) auto;
-    }
   }
 }
 
