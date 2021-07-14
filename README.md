@@ -1,10 +1,10 @@
 # LRD.IM 背后的故事
 
-17 年底，大四下学期的时候技术尚未成熟，所以在网上找了一个当时觉得还挺好看的 HTML 模板来做网页，我也没仔细了解，只是简单的替换文字、图片素材，部署在国外的一个平台就一直用了。
+2017 年底，大四下学期的时候技术尚未成熟，所以在网上找了一个当时觉得还挺好看的 HTML 模板来做网页，我也没仔细了解，只是简单的替换文字、图片素材，部署在国外的一个平台就一直用了。
 
 毕业后在工作中也一点点积累前端知识，而且也会偶尔询问下公司的前端老哥一点技术问题，解决方案。直到在20-21年间读了张鑫旭大神的两本书，也在油管里看了不少 [DesignCourse](https://www.youtube.com/c/DesignCourse/featured) 和 [Kevin Powell](https://www.youtube.com/kepowob/featured) 频道的视频，同时也有 Dribbble Dark 以及 PureTab 这两个项目的实践，觉得技术开始有点像样了，便开始动手重构整个网站。
 
-抛弃 Boostrap 框架之后用上了 SaaS，以及大量使用 Flex 和 Grid 布局，起码自己看起来舒服多了。现在不管是访问速度、网站易用性、代码可读性等各方面均比以往更出色。
+抛弃 Boostrap 框架之后用上了 SaaS，完全使用 JS 代替 jQ，以及大量使用 Flex 和 Grid 布局，起码自己看起来舒服多了。现在不管是访问速度、网站易用性、代码可读性等各方面均比以往更出色。
 
 现在这个网站用来存放我的博客、设计作品等。下一次技术进步的时候,还会做一个 Playground 页面，放上一些有意思的东西。比如一些动效，DEMO 等，反正是花里胡哨的东西。
 
@@ -16,6 +16,7 @@
 - 2018-01 用 HTML 模板 [BOX Theme](https://www.behance.net/gallery/36389511/Box-portfolio-Free-html-template) 建站。在 Netlify 部署，[查看旧版](https://elastic-bassi-02c067.netlify.com/)
 
 # To-do
+- 移动端看图片用用 Swipe.js
 - 完善键盘可访问性
 - 支持 Avif/Webp 格式的图片资源
 - 代码优化
@@ -200,16 +201,6 @@ window.addEventListener('DOMContentLoaded', function () {
 });
 ```
 
-
-```CSS
-#galley img{
-  cursor: zoom-in;
-}
-.viewer-canvas{
-  cursor: zoom-out;
-}
-```
-
 ### 十、作品页，移动端可以点击整个卡片跳转
 ```HTML
 <!-- HTML -->
@@ -225,12 +216,22 @@ var sectionYtscrm = document.getElementById('sectionYtscrm') // 绑定卡片
 sectionYtscrm.onclick = function(){if (mql.matches){window.open('project/ytscrm.html');}} // 点击卡片时判断屏幕宽度
 ```
 
+
+### 十一、防镜像
+
+现在已经找到一个镜像网站：https://zhoucaixia.cn
+
+```JavaScript
+<script>
+  if (window.location.host.search('lrd.im') == -1) {
+      window.location.href = 'https://lrd.im';
+  }
+</script>
+```
+
 # 其他
 
 域名购买: [Name.com](https://www.name.com/)
 
 托管资源: [阿里云OSS](https://www.aliyun.com/product/oss)
 
-# 待处理
-
-防镜像。现在已经找到一个镜像网站：https://zhoucaixia.cn
