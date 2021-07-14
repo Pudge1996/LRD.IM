@@ -228,6 +228,7 @@ sectionYtscrm.onclick = function(){if (mql.matches){window.open('project/ytscrm.
   }
 </script>
 ```
+已经过[JS混淆加密](https://www.sojson.com/js.html)
 
 # 其他
 
