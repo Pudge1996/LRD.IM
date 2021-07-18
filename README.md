@@ -148,11 +148,11 @@ navOpen.addEventListener('touchmove', e => {  //禁止在导航菜单滚动
 
 ### 七、同步 Medium 文章
 
-Medium 平台支持导出文章，而且是带有标签和 Class 的 HTML 文件，所以可以在其基础上覆盖一套自己做的样式。
+Medium 平台支持导出文章，而且是带有标签和 Class 的 HTML 文件，可以在其基础上覆盖一套自己做的样式。
 所以，当要转换一篇文章时，需要做的事：
 
 ###### 1.处理文档
-1. 替换 `<body>` 之前的内容；
+1. 将 `<body>` 之前的内容替换成自己网站的；
 2. `<h1>`之后增加文章信息`<p>`；
 3. 替换`</section>`后的内容；
 4. 底部文章导航需要更新上一篇、下一篇、复制链接；
@@ -201,7 +201,7 @@ window.addEventListener('DOMContentLoaded', function () {
 });
 ```
 
-### 十、作品页，移动端可以点击整个卡片跳转
+### 十、作品页，在移动端可以点击整个卡片跳转
 ```HTML
 <!-- HTML -->
 <section class="project-ytscrm" onclick="openYtscrmLink()">
@@ -229,6 +229,14 @@ sectionYtscrm.onclick = function(){if (mql.matches){window.open('project/ytscrm.
 </script>
 ```
 已经过[JS混淆加密](https://www.sojson.com/js.html)
+
+### 十二、HTTP 头下载简历.pdf
+
+Content-Type: `application/pdf`
+Content-Disposition: `attachment; filename="文件名.pdf"`
+
+HTML 里用 `<a>` 标签跳转到 OSS 链接即可
+
 
 # 其他
 
