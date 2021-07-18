@@ -29,7 +29,7 @@ $ipad: 1200px;
   --secondary-text-color: #444444;
   --tertiary-text-color: #757575;
   --copied-text-color: green;
-  --divider-color: #EEEEEE;
+  --divider-color: #E6E6E6;
   --background-color: #F7F7F7;
 
   //a
@@ -54,7 +54,7 @@ $ipad: 1200px;
   --secondary-text-color: #D9D9D9;
   --tertiary-text-color: #999999;
   --copied-text-color: #64A838;
-  --divider-color: #222222;
+  --divider-color: #333333;
   --background-color: #1C1C1C;
 
   // button
@@ -94,7 +94,7 @@ html{
 
 body {
   font-family: SF Pro Display,-apple-system,BlinkMacSystemFont,HarmonyOS Sans,Roboto,Helvetica Neue,Helvetica,Segoe UI,Arial,PingFang SC,Hiragino Sans GB,Microsoft Yahei,sans-serif;
-  word-spacing: -.1rem;
+  word-spacing: -.05rem;
   line-height: 1.75;
   overflow-wrap: break-word;
   color: var(--primary-text-color);
@@ -123,6 +123,7 @@ a{
     background-image: linear-gradient(to top, var(--underline-color-hover), var(--underline-color-hover) 2px, transparent 0px);
     font-weight: 500;
     color: var(--primary-text-color);
+
   @include mobile {
       background-color: transparent;
     }
@@ -138,7 +139,7 @@ a{
 
   &:focus{
     outline: 2px solid var(--outline-color-focus);
-    outline-offset: 3px 6px;
+    outline-offset: 3px;
     font-weight: 500;      
     color: var(--primary-text-color);
   }
@@ -163,7 +164,7 @@ p{
   margin: 5rem auto 0;
   padding: 20px;
   @include mobile {
-    padding: 30px;
+    padding: 25px;
     margin: 1rem auto 0;
   }
 }
@@ -270,7 +271,7 @@ p{
 .divider{
   width: 100%; height: 1px;
   background-color: var(--divider-color);
-  margin: 4rem 0;
+  margin: 3rem 0;
   @include mobile {
     margin: 2rem 0;
   }
@@ -378,7 +379,7 @@ a{
     content: "\2002";
   }
 
-  
+
 
   button{
     @include button-reset;
@@ -416,6 +417,41 @@ a{
   @include mobile{
     display: none;
   }
+}
+
+.skill{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-auto-columns: 1fr;
+    gap: 0px 20px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". ."
+      ". .";
+    div p:first-child{ //技能标题
+      margin-bottom: 0;
+      
+    }
+    div p:not(:first-child){
+      margin-top: 0;
+    }
+    @include mobile{
+      grid-auto-columns: 1fr; 
+      grid-template-columns: 1fr; 
+      grid-template-rows: auto auto auto auto; 
+      gap: 0; 
+      grid-template-areas: 
+        "."
+        "."
+        "."
+        "."; 
+    }
+    p{
+      @include mobile {
+        margin: .5rem 0 .8rem 0;
+      }
+    }
 }
 
 .top{
@@ -500,8 +536,8 @@ footer {
   margin-top: 100px;
   margin-bottom: 2rem;
   font-variant-numeric: tabular-nums;
-  user-select: none;
-  cursor: default;
+  // user-select: none;
+  // cursor: default;
   .flex{
     display: flex;
     justify-content: space-between;
