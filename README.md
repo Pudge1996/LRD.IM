@@ -233,6 +233,7 @@ sectionYtscrm.onclick = function(){if (mql.matches){window.open('project/ytscrm.
 ### 十二、HTTP 头下载简历.pdf
 
 Content-Type: `application/pdf`
+
 Content-Disposition: `attachment; filename="文件名.pdf"`
 
 HTML 里用 `<a>` 标签跳转到 OSS 链接即可
