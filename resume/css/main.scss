@@ -85,7 +85,7 @@ $ipad: 1200px;
 // 加粗分设备处理
 
 html{
-  font-size: 20px;
+  font-size: 18px;
   scroll-behavior: smooth;
   @include mobile() {
     font-size: 18px;
@@ -95,7 +95,7 @@ html{
 body {
   font-family: SF Pro Display,-apple-system,BlinkMacSystemFont,HarmonyOS Sans,Roboto,Helvetica Neue,Helvetica,Segoe UI,Arial,PingFang SC,Hiragino Sans GB,Microsoft Yahei,sans-serif;
   word-spacing: -.05rem;
-  line-height: 1.75;
+  line-height: 1.7;
   overflow-wrap: break-word;
   color: var(--primary-text-color);
   background-color: var(--background-color);
@@ -153,16 +153,20 @@ p{
   font-weight: normal;
   margin: .5rem 0 1.5rem 0;
   color: var(--secondary-text-color);
-  font-size: 20px;
+  font-size: 16px;
   @include mobile() {
     font-size: 18px;
   }
 }
 
+.nowrap{
+  white-space: nowrap;
+}
+
 .wrap{
-  max-width: 960px;
+  max-width: 880px;
   margin: 5rem auto 0;
-  padding: 20px;
+  padding: 18px;
   @include mobile {
     padding: 25px;
     margin: 1rem auto 0;
@@ -250,7 +254,7 @@ p{
 
   .contact-title{
     display: inline-block;
-    width: 5.5rem;
+    width: 5.5em;
     white-space: nowrap;
   }
   }
@@ -290,7 +294,7 @@ p{
 .grid-container {
   margin-top: 2rem;
   display: grid;
-  grid-template-columns: 13ch 2fr 4fr;
+  grid-template-columns: 12ch 2fr 4fr;
   grid-template-rows: auto auto auto;
   gap: 2rem 1rem;
   grid-template-areas:
@@ -328,10 +332,21 @@ p{
     }
   }
 
-  span{
-    margin: 0 .25rem;
+  p:last-child{
+    margin-bottom: 0;
   }
+
+  strong{
+    white-space: nowrap;
+  }
+  .name{
+    p{
+      white-space: nowrap;
+    }
+  }
+  
 }
+
 
 
 .time-1 { grid-area: time-1; } .name-1 { grid-area: name-1; } .work-1 { grid-area: work-1; } .divider-2 { grid-area: divider-2; } .time-2 { grid-area: time-2; } .name-2 { grid-area: name-2; } .work-2 { grid-area: work-2; } .divider-3 { grid-area: divider-3; } .time-3 { grid-area: time-3; } .name-3 { grid-area: name-3; } .work-3 { grid-area: work-3; }
@@ -501,15 +516,23 @@ a{
   transition: all .15s ease-out;
   transition-delay: .15s;
   transform-origin: bottom right;
-  transform: scale(.9);
+  // transform: scale(.99);
   opacity: 0;
-
+  &::after{ // 扩大卡片的hover停留区域
+    content: '';
+    position: absolute;
+    right: -30px; bottom: 0;
+    width: 30px;
+    height: 60px;
+    background-color: red;
+  }
     &:hover,
     &:focus{
     visibility: visible;
     margin-left: -192px;
     transform: scale(1);
     opacity: 1;
+    
     @include ipad{
       right: 128px;
     }

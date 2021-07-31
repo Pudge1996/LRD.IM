@@ -51,7 +51,7 @@
 }
 
 html {
-  font-size: 20px;
+  font-size: 18px;
   scroll-behavior: smooth;
 }
 
@@ -64,7 +64,7 @@ html {
 body {
   font-family: SF Pro Display,-apple-system,BlinkMacSystemFont,HarmonyOS Sans,Roboto,Helvetica Neue,Helvetica,Segoe UI,Arial,PingFang SC,Hiragino Sans GB,Microsoft Yahei,sans-serif;
   word-spacing: -.05rem;
-  line-height: 1.75;
+  line-height: 1.7;
   overflow-wrap: break-word;
   color: var(--primary-text-color);
   background-color: var(--background-color);
@@ -128,7 +128,7 @@ p {
   font-weight: normal;
   margin: .5rem 0 1.5rem 0;
   color: var(--secondary-text-color);
-  font-size: 20px;
+  font-size: 16px;
 }
 
 @media (max-width: 768px) {
@@ -137,10 +137,14 @@ p {
   }
 }
 
+.nowrap {
+  white-space: nowrap;
+}
+
 .wrap {
-  max-width: 960px;
+  max-width: 880px;
   margin: 5rem auto 0;
-  padding: 20px;
+  padding: 18px;
 }
 
 @media (max-width: 768px) {
@@ -244,7 +248,7 @@ p {
 
 .contact .contact-title {
   display: inline-block;
-  width: 5.5rem;
+  width: 5.5em;
   white-space: nowrap;
 }
 
@@ -292,8 +296,8 @@ a:focus .link {
   margin-top: 2rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 13ch 2fr 4fr;
-      grid-template-columns: 13ch 2fr 4fr;
+  -ms-grid-columns: 12ch 2fr 4fr;
+      grid-template-columns: 12ch 2fr 4fr;
   -ms-grid-rows: auto auto auto;
       grid-template-rows: auto auto auto;
   gap: 2rem 1rem;
@@ -327,8 +331,16 @@ a:focus .link {
   }
 }
 
-.grid-container span {
-  margin: 0 .25rem;
+.grid-container p:last-child {
+  margin-bottom: 0;
+}
+
+.grid-container strong {
+  white-space: nowrap;
+}
+
+.grid-container .name p {
+  white-space: nowrap;
 }
 
 .time-1 {
@@ -584,9 +596,17 @@ a {
           transition-delay: .15s;
   -webkit-transform-origin: bottom right;
           transform-origin: bottom right;
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
   opacity: 0;
+}
+
+.popover::after {
+  content: '';
+  position: absolute;
+  right: -30px;
+  bottom: 0;
+  width: 30px;
+  height: 60px;
+  background-color: red;
 }
 
 .popover:hover, .popover:focus {
