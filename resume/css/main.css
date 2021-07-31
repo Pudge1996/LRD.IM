@@ -606,7 +606,7 @@ a {
   bottom: 0;
   width: 30px;
   height: 60px;
-  background-color: red;
+  background-color: transparent;
 }
 
 .popover:hover, .popover:focus {
