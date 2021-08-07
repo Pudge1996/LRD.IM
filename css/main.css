@@ -67,8 +67,8 @@ button, input, select, textarea {
   --pre-bg-color: #EEEEEE;
   --copied-text-color: green;
   --project-bg-color: #FFFFFF;
-  --project-tags-color: #FAFAFA;
-  --background-color: #FAFAFA;
+  --project-tags-color: #F7F7F7;
+  --background-color: #F7F7F7;
   --font-size-h1: 60px;
   --font-size-blog-title: 48px;
   --font-size-h2: 32px;
@@ -244,6 +244,7 @@ a {
   color: var(--primary-text-color);
   display: inline;
   text-decoration: none;
+  cursor: pointer;
 }
 
 a:hover {
@@ -301,11 +302,17 @@ a.underline:hover {
           justify-content: center;
   margin: 0 auto;
   background: var(--background-color);
-  height: 72px;
+  height: 64px;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   -webkit-box-shadow: 0 2px 2px -2px var(--nav-shadow);
           box-shadow: 0 2px 2px -2px var(--nav-shadow);
+}
+
+@media (min-width: 768px) {
+  .container-fluid .box-header {
+    height: 72px;
+  }
 }
 
 .container-fluid .box-header .vw {
@@ -325,7 +332,7 @@ a.underline:hover {
   width: 100%;
   -webkit-transform: translateY(0);
           transform: translateY(0);
-  top: 72px;
+  top: 64px;
   -webkit-box-shadow: 0 -2px 2px -2px var(--nav-shadow), 0 2px 2px -2px var(--nav-shadow);
           box-shadow: 0 -2px 2px -2px var(--nav-shadow), 0 2px 2px -2px var(--nav-shadow);
   -webkit-user-select: none;
@@ -1287,7 +1294,7 @@ article figure .imageCaption a:hover {
 .project section {
   position: relative;
   overflow: hidden;
-  margin-bottom: var(--spacing-xxs);
+  margin-bottom: var(--spacing-xs);
   -ms-touch-action: pan-y pinch-zoom;
       touch-action: pan-y pinch-zoom;
 }
@@ -1397,6 +1404,7 @@ article figure .imageCaption a:hover {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  cursor: pointer;
   display: none;
 }
 
@@ -1596,6 +1604,75 @@ article figure .imageCaption a:hover {
     max-width: 600px;
     right: -160px;
     top: 72px;
+  }
+}
+
+.toast {
+  position: fixed;
+  margin: auto;
+  top: 50%;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  font-size: var(--font-size-p);
+  font-weight: bold;
+  text-align: center;
+  color: #FFFFFF;
+  -webkit-animation: 1.2s toastShow forwards ease-in-out;
+          animation: 1.2s toastShow forwards ease-in-out;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+
+.toast span {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 16px 20px;
+  border-radius: var(--border-radius-md);
+}
+
+@-webkit-keyframes toastShow {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(10px) scale(0.98);
+            transform: translateY(10px) scale(0.98);
+  }
+  12% {
+    opacity: 1;
+    -webkit-transform: translateY(0px) scale(1);
+            transform: translateY(0px) scale(1);
+  }
+  76% {
+    opacity: 1;
+    -webkit-transform: translateY(0px) scale(1);
+            transform: translateY(0px) scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(10px) scale(0.98);
+            transform: translateY(10px) scale(0.98);
+  }
+}
+
+@keyframes toastShow {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(10px) scale(0.98);
+            transform: translateY(10px) scale(0.98);
+  }
+  12% {
+    opacity: 1;
+    -webkit-transform: translateY(0px) scale(1);
+            transform: translateY(0px) scale(1);
+  }
+  76% {
+    opacity: 1;
+    -webkit-transform: translateY(0px) scale(1);
+            transform: translateY(0px) scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(10px) scale(0.98);
+            transform: translateY(10px) scale(0.98);
   }
 }
 

@@ -25,8 +25,8 @@
   --pre-bg-color: #EEEEEE;
   --copied-text-color: green;
   --project-bg-color: #FFFFFF;
-  --project-tags-color: #FAFAFA;
-  --background-color: #FAFAFA;
+  --project-tags-color: #F7F7F7;
+  --background-color: #F7F7F7;
 
   //字体相关
   --font-size-h1: 60px;
@@ -191,6 +191,7 @@ a {
   color: var(--primary-text-color);
   display: inline;
   text-decoration: none;
+  cursor: pointer;
   &:hover {
     color: var(--primary-text-color);
   }
@@ -241,9 +242,12 @@ a.underline{ //需要加下划线的class
     justify-content: center;
     margin: 0 auto;
     background: var(--background-color);
-    height: 72px;
+    height: 64px;
     backface-visibility: hidden;
     box-shadow: 0 2px 2px -2px var(--nav-shadow);
+    @include md {
+    height: 72px;
+    }
     .vw {
       display: flex;
       justify-content: space-between;
@@ -258,7 +262,7 @@ a.underline{ //需要加下划线的class
   z-index: 98;
   width: 100%;
   transform: translateY(0); 
-  top: 72px;
+  top: 64px;
   box-shadow:0 -2px 2px -2px var(--nav-shadow), 0 2px 2px -2px var(--nav-shadow);
   user-select: none;
   background-color: var(--background-color);
@@ -1026,10 +1030,11 @@ article{
   @include xl {
     width: var(--container-width-xl);
   }
+  
   section{
     position: relative;
     overflow: hidden;
-    margin-bottom: var(--spacing-xxs);
+    margin-bottom: var(--spacing-xs);
     touch-action: pan-y pinch-zoom;
     @include md {
       margin-bottom: var(--spacing-sm);
@@ -1098,6 +1103,7 @@ article{
       margin-top: var(--spacing-xs);
       font-weight: 500;
       user-select: none;
+      cursor: pointer;
       display: none;
       @include md {
         padding: 10px 0px;
@@ -1204,6 +1210,7 @@ article{
       min-height: 400px;
     }
   }
+
   .project-img{ 
     transition: all .3s ease-in-out;  // 离开动画
     cursor: pointer;
@@ -1231,6 +1238,35 @@ article{
       top: 72px;
     }
   }
+}
+
+.toast{
+  position: fixed;
+  margin: auto;
+  top: 50%;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  
+  font-size: var(--font-size-p);
+  font-weight: bold;
+  text-align: center;
+  color: #FFFFFF;
+
+  animation: 1.2s toastShow forwards ease-in-out;
+  transform-origin: 50% 50%;
+  span{
+    background-color: rgba(0,0,0,.8);
+    padding: 16px 20px;
+    border-radius: var(--border-radius-md);
+  }
+}
+
+@keyframes toastShow {
+  0% { opacity: 0; transform: translateY(10px) scale(.98);}
+  12% { opacity: 1; transform: translateY(0px) scale(1);}
+  76% { opacity: 1; transform: translateY(0px) scale(1);}
+  100% { opacity: 0; transform: translateY(10px) scale(.98);}
 }
 
 // ▲▲ 作品首页
