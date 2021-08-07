@@ -250,11 +250,16 @@ HTML 里用 `<a>` 标签跳转到 OSS 链接即可
 ```JavaScript
 // JavaScript
 var projectCard = document.getElementsByClassName('project-card') // 获取数组
+var projectBtn = document.getElementsByClassName('project-btn')
 
 var ToastNode = `<div id="toast"> <span>文字提示</span> </div>`; // 定义 Toast
 
 for(var i=0;i<projectCard.length;i++){  // 通过循环获取数组内的元素           
-  projectCard[i].addEventListener('click',showToast,false); // 监听到 click 后执行 showToast 动作
+  projectCard[i].addEventListener('click',showToast,false); // 监听到 click 后，执行 showToast 动作
+  projectBtn[i].addEventListener('keydown', (event) => {  // 监听聚焦到按钮后回车，执行 showToast 动作
+    var name = event.key; 
+      if (name === 'Enter') { showToast(); }
+  }, false);
 }; 
 
 function showToast(e){  // 定义 showToast 行为
