@@ -652,6 +652,7 @@ article ol li {
 article blockquote {
   font-size: var(--font-size-p);
   margin: var(--article-margin-md) 0;
+  margin-left: -20px;
 }
 
 article blockquote.graf--blockquote {
@@ -691,12 +692,13 @@ article pre {
 }
 
 article code {
-  padding: 2px 8px;
+  padding: 0px 4px;
+  line-height: 1.2;
   margin: 4px;
   border: 1px solid var(--button-active-color);
   white-space: pre-wrap;
   line-break: anywhere;
-  display: inline;
+  display: inline-block;
   border-radius: var(--border-radius-sm);
   color: var(--code-text-color);
 }
