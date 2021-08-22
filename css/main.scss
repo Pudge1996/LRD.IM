@@ -205,7 +205,8 @@ a {
 }
 
 a.underline{ //需要加下划线的class
-  box-shadow: 0 1px; 
+  text-decoration: underline;
+  text-underline-position: under;
   &:hover{
     color: var(--primary-text-color);
   }
@@ -523,7 +524,6 @@ article{
   blockquote{
     font-size: var(--font-size-p);
     margin: var(--article-margin-md) 0;
-    margin-left: -20px;
   
     &.graf--blockquote{
       box-shadow: inset 3px 0 0 0 var(--primary-text-color);
@@ -550,7 +550,6 @@ article{
   // ▼ 代码块 / 引用外链 ▼
   code,
   pre{
-    // background-color: var(--button-color);
     background-color: var(--pre-bg-color);
     font-size: var(--font-size-sub);
     font-family: SF Mono, "Source Code Pro", Monaco, Menlo, Consolas, "Courier New", Courier, monospace;
@@ -673,17 +672,13 @@ article{
     color: var(--tertiary-text-color);
     margin-top: 0;
     a{
-      box-shadow: none;
       color: inherit;
       &:hover{
-        box-shadow: 0 1px;
+        text-decoration: underline;
+        text-underline-position: under;
         color: var(--primary-text-color);
       }
     }
-  }
-  
-  a{
-      box-shadow: 0 1px;
   }
 
   p{
@@ -711,7 +706,18 @@ article{
     }
   }
   // ▲ 文本 ▲
-}
+
+  // ▼ 媒体处理 ▼
+  figure{
+    &.graf-after--h4{
+      margin: var(--article-margin-md) auto;
+    }
+  }
+  // ▲ 媒体处理 ▲
+
+} // article
+
+
   // ▼ 底部导航 ▼
   .end-dividers{  
     display: block;

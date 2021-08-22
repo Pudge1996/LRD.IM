@@ -260,8 +260,8 @@ a:hover {
 }
 
 a.underline {
-  -webkit-box-shadow: 0 1px;
-          box-shadow: 0 1px;
+  text-decoration: underline;
+  text-underline-position: under;
 }
 
 a.underline:hover {
@@ -652,7 +652,6 @@ article ol li {
 article blockquote {
   font-size: var(--font-size-p);
   margin: var(--article-margin-md) 0;
-  margin-left: -20px;
 }
 
 article blockquote.graf--blockquote {
@@ -818,20 +817,13 @@ article .article-info {
 }
 
 article .article-info a {
-  -webkit-box-shadow: none;
-          box-shadow: none;
   color: inherit;
 }
 
 article .article-info a:hover {
-  -webkit-box-shadow: 0 1px;
-          box-shadow: 0 1px;
+  text-decoration: underline;
+  text-underline-position: under;
   color: var(--primary-text-color);
-}
-
-article a {
-  -webkit-box-shadow: 0 1px;
-          box-shadow: 0 1px;
 }
 
 article p {
@@ -863,6 +855,10 @@ article figure .imageCaption a:hover {
   color: var(--primary-text-color);
   -webkit-box-shadow: 0 1px;
           box-shadow: 0 1px;
+}
+
+article figure.graf-after--h4 {
+  margin: var(--article-margin-md) auto;
 }
 
 .end-dividers {
