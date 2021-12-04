@@ -160,10 +160,16 @@ Medium 平台支持导出文章，而且是带有标签和 Class 的 HTML 文件
 6. 匹配正则表达式`name="[0-9a-f]{4}"`，删除多余的`name`和`id`，注意不能删除有锚点的`id`
 
 ###### 2.处理图片
-1. `data-width`和`data-height`改为`widht`和`height`;
-2. class 添加 `lazyload`;
-3. 添加 `data-action="zoom"`
+1. `data-width`和`data-height`改为`widht`和`height`；
+2. class 添加 `lazyload`；
+3. 添加 `data-action="zoom"`；
 4. 图片上载到阿里云OSS
+
+###### 3.使文章能被抓取到目录
+1. 确保文章内只有一个 `section-inner`;
+2. 搜索并删除多余的 `/section` 标签;
+3. 让类名 `section--last` 跟在 `section--last` 的后面
+4. 确保至少有一个 `h3`
 
 ### 八、移动端加载小尺寸图片
 ```HTML
