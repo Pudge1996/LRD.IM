@@ -14,6 +14,69 @@ if (e.matches) {
 });
 // ▲▲ 深色模式
 
+// ▼▼ 博客 - 右侧导航菜单 // https://www.rainng.com/js-wordpress-catalog/
+
+var div = document.createElement('div');
+div.id = 'blogCatalog';
+div.setAttribute('class','blogCatalog');
+document.body.appendChild(div);
+
+// 目录
+let catalogData = getArticleCatalog();
+if (catalogData != null) {
+    // blogCatalog换成你的目录容器
+    let wrapper = document.getElementById('blogCatalog');
+    wrapper.innerHTML = generateCatalog(catalogData);
+}
+
+function getArticleCatalog(){
+let articleContent = document.getElementsByClassName('section-inner');
+console.log(articleContent)
+
+if (articleContent.length !== 1) {
+  // alert('not found');
+  return null;
+}
+let catalog = [];
+let header = {};
+let elements = articleContent[0].childNodes; // 获取文章容器的子节点
+// 遍历所有元素 
+for (let i = 0; i < elements.length; i++) {
+  if (elements[i].nodeName === 'H3') {
+    elements[i].id = 'h3-' + catalog.length;
+    header = {
+        name: elements[i].innerText,
+        childHeaders: []
+    };
+    catalog.push(header);
+  } else if (elements[i].nodeName === 'H4') {
+    elements[i].id = 'h3-' + (catalog.length - 1) + '-h4-' + header.childHeaders.length;
+    header.childHeaders.push(elements[i].innerText);
+    } 
+  }
+  return catalog;
+}
+
+function generateCatalog(catalogData) { // 添加目录标签
+  let catalog = '<div style="font-weight: 600;font-size: 16px; padding-left: 8px;">文章目录</div>';
+  for (let i = 0; i < catalogData.length; i++) {
+    let target = '#h3-' + i; // 跳转目标
+    // let index = (i + 0) + '. '; // 标题索引
+    let name = catalogData[i].name; // 标题
+    catalog += '<a href="' + target + '">' + name + '</a>';
+
+    for (let i2 = 0; i2 < catalogData[i].childHeaders.length; i2++) {
+      target = '#h3-' + i + '-h4-' + i2; // 跳转目标
+      // index = (i + 0) + '.' + (i2 + 1) + '. '; // 标题索引
+      name = catalogData[i].childHeaders[i2]; // 标题
+      catalog += '  <a href="' + target + '" class="catalog-h4">' + name + '</a>'
+    }
+  }
+  return catalog;
+}
+
+// ▲▲ 博客 - 右侧导航菜单
+
 // ▼▼ 导航栏
 
  var iconMenu = document.getElementById('iconMenu');
@@ -147,3 +210,14 @@ window.addEventListener('DOMContentLoaded', function () {
   });
 });
 // ▲▲ Viewer.js
+
+
+
+
+  // 匹配域名
+  // var url =  window.location.href
+  // if (url.indexOf('blog') == '-1'){ //非博客页面
+  //   alert('not blog')
+  // } else {  //博客页面
+  //   alert('is blog')
+  // }
