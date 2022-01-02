@@ -257,6 +257,11 @@ a {
   }
 }
 
+a .nowrap {
+  white-space: nowrap;
+  display: inline-block;
+}
+
 a.underline {
   text-decoration: underline;
   text-underline-position: under;
@@ -675,7 +680,7 @@ article .section--first > .section-divider {
   display: none;
 }
 
-article ol li {
+article li {
   list-style: decimal;
   font-size: var(--font-size-p);
 }
@@ -758,6 +763,9 @@ article .graf--mixtapeEmbed {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   font-size: var(--font-size-footer);
   border: 1px solid var(--divider-color);
   -webkit-transition: all .2s;

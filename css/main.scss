@@ -208,6 +208,11 @@ a {
     outline-offset: 4px;
   }
 }
+
+.nowrap{ // 不会被断开的文本
+  white-space: nowrap;
+  display: inline-block;
+}
   
 }
 
@@ -552,13 +557,12 @@ article{
   // ▲ 隐藏不必要 ▲
 
   // ▼ 格式文本 ▼
-  ol{
+  // ol{ // 2022-01-02
     li{
       list-style: decimal;
       font-size: var(--font-size-p);
     }
-  }
-
+  // }
   blockquote{
     font-size: var(--font-size-p);
     margin: var(--article-margin-md) 0;
@@ -637,6 +641,7 @@ article{
     border: 1px solid var(--divider-color);
     margin: var(--article-margin-sm) 0;
     display: flex;
+    justify-content: space-between;
     font-size: var(--font-size-footer); // 选择到最下面的网址
     border: 1px solid var(--divider-color);
     transition: all .2s;
