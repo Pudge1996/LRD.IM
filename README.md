@@ -9,6 +9,7 @@
 现在这个网站用来存放我的博客、设计作品等。下一次技术进步的时候,还会做一个 Playground 页面，放上一些有意思的东西。比如一些动效，DEMO 等，反正是花里胡哨的东西。
 
 # 时间线
+- 2021-12 博客文章支持了目录功能；
 - 2021-06 全面重构，脱离 Bootstrap 和 jQuery，同步所有 Medium 文章内容到本站；
 - 2019-11 博客页支持跳转到 Medium 文章了；
 - 2019-02 重写部分样式以提升视觉体验；
@@ -16,9 +17,9 @@
 - 2018-01 用 HTML 模板 [BOX Theme](https://www.behance.net/gallery/36389511/Box-portfolio-Free-html-template) 建站。在 Netlify 部署，[查看旧版](https://elastic-bassi-02c067.netlify.com/)
 
 # To-do
-- 移动端看图片用用 Swipe.js
+- 移动端看图片用 Swipe.js
 - 完善键盘可访问性
-- 支持 Avif/Webp 格式的图片资源
+- Blog选中可复制链接，复制 H3/H4 标题链接
 - 代码优化
 
 # 技术方案
