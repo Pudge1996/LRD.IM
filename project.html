@@ -64,70 +64,71 @@
     <!-- Main container -->
     <div class="spacing project">
       <!-- ▼▼ 鱼棠 SCRM ▼▼ -->
-      <section class="project-card project-ytscrm">
+      <section class="project-card project-ytscrm" id="sectionYtscrm">
         <div class="desc">
           <h2>鱼棠 SCRM</h2>
           <p class="project-subtitle">基于企业微信的免费私域流量运营工具。项目中本人深入到 Ant Design 生态内，积累了宝贵的管理后台设计经验。</p>
           <div class="project-tags">
               <span>千聊 · 2020 - 2021</span><span>客户关系管理</span><span>SaaS 工具</span>
           </div>
-          <a class="project-btn yt-btn" tabindex="1">查看详情<span class="icon-forward"></span></a>
+          <a class="yt-btn" tabindex="1" href="project/ytscrm.html">查看详情<span class="icon-forward"></span></a>
         </div>
         <div class="project-img">
-          <img src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/ytscrm/ytscrm.png" alt="">
+          <img src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/ytscrm/ytscrm.png" alt="" onclick="window.location.href='project/ytscrm.html';">
         </div>
       </section>
       <!-- ▲▲ 鱼棠 SCRM ▲▲ -->
 
       <!-- ▼▼ 千聊讲师工具 ▼▼ -->
-      <section class="project-card project-qlchat">
+      <section class="project-card project-qlchat" id="sectionQlchat">
         <div class="desc">
           <h2>千聊讲师工具</h2>
           <p class="project-subtitle">千聊为讲师们知识服务解决方案，与 180+ 万讲师机构共同服务超 3 亿用户。我担任工具线的主设计师，主要工作是针对核心业务场景的优化迭代，以及内部工作流程规范化等。</p>
           <div class="project-tags">
             <span>千聊 · 2020 - 2021</span><span>移动端</span><span>组件化</span>
           </div>
-          <a class="project-btn ql-btn" tabindex="1">查看详情<span class="icon-forward"></span></a>
+          <a class="ql-btn" tabindex="1" href="project/qlchat.html">查看详情<span class="icon-forward"></span></a>
         </div>
         <div class="project-img">
-          <img src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/qlchat/qlchat.png" alt="">
+          <img src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/qlchat/qlchat.png" alt="" onclick="window.location.href='project/qlchat.html';">
         </div>
       </section>
       <!-- ▲▲ 千聊讲师工具 ▲▲ -->
 
       <!-- ▼▼ 个人创新项目 ▼▼ -->
-      <section class="project-card project-self">
+      <section class="project-card project-self" id="sectionSelf">
         <div class="desc">
           <h2>个人创新项目</h2>
           <p class="project-subtitle">公司内部流程较多，经常同时做多个项目，需要频繁在多个协同工具中切换，所以我做了一个插件来提升工作效率。</p>
           <div class="project-tags">
             <span>2019 & 2021</span><span>Chrome 插件</span><span>效率工具</span>
           </div>
-          <a class="project-btn self-btn" tabindex="1">查看详情<span class="icon-forward"></span></a>
+          <a class="self-btn" tabindex="1" href="project/self.html">查看详情<span class="icon-forward"></span></a>
         </div>
         <div class="project-img">
-          <img src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/self/self.png" alt="">
+          <img src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/self/self.png" alt="" onclick="window.location.href='project/self.html';">
         </div>
       </section>
       <!-- ▲▲ 个人创新项目 ▲▲ -->
 
       <!-- ▼▼ 屈臣氏 App ▼▼ -->
-      <section class="project-card project-watsons">
+      <section class="project-card project-watsons" id="sectionWatsons">
         <div class="desc">
           <h2>屈臣氏 App</h2>
           <p class="project-subtitle">在屈臣氏的两年时间，我主要负责用户增长线的 UI 和部分视觉设计，主导适配深色模式。以及负责内部取数平台的 UI&UX 设计。</p>
           <div class="project-tags">
             <span>屈臣氏 · 2018 - 2020</span><span>用户增长</span><span>改版方案</span>
           </div>
-          <a class="project-btn watsons-btn" tabindex="1">查看详情<span class="icon-forward"></span></a>
+          <a class="watsons-btn" tabindex="1" href="project/watsons.html">查看详情<span class="icon-forward"></span></a>
         </div>
         <div class="project-img">
-          <img src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/watsons/watsons.png" alt="">
+          <img src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/watsons/watsons.png" alt="" onclick="window.location.href='project/watsons.html';">
         </div>
       </section>
       <!-- ▲▲ 屈臣氏 App ▲▲ -->
+      
     </div>
-
+    
     <!-- footer -->
     <footer>
         <p class="copyright">© Pudge 2017-2022</p>
@@ -144,27 +145,17 @@
 
     <script src="js/custom.js"></script>
     <script>
-    var projectCard = document.getElementsByClassName('project-card')
-    var projectBtn = document.getElementsByClassName('project-btn')
-    var toast = document.getElementById('toast')
-    var ToastNode = `<div id="toast" class="toast"><span>敬请期待</span></div>`;
+    // 屏幕宽度小于768时点击整个 section 都可以跳转
+    const mql = window.matchMedia("(max-width:768px)");
+    var sectionQlchat = document.getElementById('sectionQlchat')
+    var sectionYtscrm = document.getElementById('sectionYtscrm')
+    var sectionSelf = document.getElementById('sectionSelf')
+    var sectionWatsons = document.getElementById('sectionWatsons')
 
-    for(var i=0;i<projectCard.length;i++){                          
-      projectCard[i].addEventListener('click',showToast,false);
-      projectBtn[i].addEventListener('keydown', (event) => {
-        var name = event.key; 
-        if (name === 'Enter') {
-          showToast();
-        }
-      }, false);
-    };
-
-    function showToast(e){
-      document.body.insertAdjacentHTML('beforeend', ToastNode);
-      window.setTimeout(function(clearToast){
-        document.getElementById("toast").remove();
-      }, 1000);
-    };
+    sectionQlchat.onclick = function(){if (mql.matches){window.location.href='project/qlchat.html';}}
+    sectionYtscrm.onclick = function(){if (mql.matches){window.location.href='project/ytscrm.html';}}
+    sectionSelf.onclick = function(){if (mql.matches){window.location.href='project/self.html';}}
+    sectionWatsons.onclick = function(){if (mql.matches){window.location.href='project/watsons.html';}}
     </script>
 </body>
 
