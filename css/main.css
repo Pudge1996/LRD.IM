@@ -314,7 +314,7 @@ a.underline:hover {
 
 @media (min-width: 768px) {
   .container-fluid .box-header {
-    height: 72px;
+    height: 56px;
   }
 }
 

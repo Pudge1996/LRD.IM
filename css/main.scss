@@ -259,7 +259,7 @@ a.underline{ //需要加下划线的class
     backface-visibility: hidden;
     box-shadow: 0 2px 2px -2px var(--nav-shadow);
     @include md {
-    height: 72px;
+    height: 56px;
     }
     .vw {
       display: flex;
