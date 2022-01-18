@@ -162,7 +162,7 @@ Medium 平台支持导出文章，而且是带有标签和 Class 的 HTML 文件
 
 ###### 2.处理图片
 1. `data-width`和`data-height`改为`width`和`height`；
-2. class 添加 `lazyload`；
+2. `class="graf-image"` 添加 `lazyload`；
 3. 添加 `data-action="zoom"`；
 4. 图片上载到阿里云OSS
 
