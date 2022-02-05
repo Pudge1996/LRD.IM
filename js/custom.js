@@ -205,8 +205,8 @@ window.addEventListener('DOMContentLoaded', function () {
         return (this.index + 1) + ' / ' + this.length; // 显示当前/总数
     },
     toolbar: 0,
-    transition: 1,
-    zoomRatio: 0.2, // 每次缩放多少
+    transition: 0,
+    zoomable: 0, // 每次缩放多少
   });
 });
 // ▲▲ Viewer.js

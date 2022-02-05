@@ -116,6 +116,7 @@ body {
   scroll-behavior: smooth;
   position: relative;
   scroll-padding-top: 104px;
+  scrollbar-width: thin;
 }
 .no-padding {
   padding-left: 0;
@@ -207,13 +208,11 @@ a {
     transition: outline-offset .2s ease;
     outline-offset: 4px;
   }
+  }
 }
-
 .nowrap{ // 不会被断开的文本
   white-space: nowrap;
   display: inline-block;
-}
-  
 }
 
 a.underline{ //需要加下划线的class
@@ -288,6 +287,9 @@ a.underline{ //需要加下划线的class
   @include sm {
     display: none !important;
   }
+  a:nth-child(3){ // 隐藏归档（移动端）
+    display: none;
+  }
   a{
     padding: 20px 20px;
     box-shadow: 0 2px 2px -2px var(--nav-shadow);
@@ -333,6 +335,9 @@ a.underline{ //需要加下划线的class
   @include sm {
     display: flex;
     align-items: center;
+  }
+  p:nth-child(3){ // 隐藏归档（PC端）
+    display: none;
   }
   p {
     margin: 0px 20px;
@@ -453,7 +458,6 @@ footer {
   background-color: var(--button-color);
   border-radius: var(--border-radius-md);
   transform: translateY(0px);
-  // transition: all .2s;
   visibility: hidden;
   @include sm {
     visibility: visible;
@@ -1086,17 +1090,71 @@ article{
   @include md {
     width: var(--container-width-md);
   }
-  @include xl {
+  @include xl { // 网格布局
     width: var(--container-width-xl);
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto auto auto; 
+    gap: 0px var(--spacing-xs); 
+    grid-template-areas: 
+      "project-hero project-hero"
+      "project-ytscrm project-qlchat"
+      "project-self project-watsons"; 
   }
+
+  .project-hero { 
+    grid-area: project-hero;
+    align-items: center !important; // 封面作品的文案垂直居中
+
+    @include xl{
+      .desc {
+        h2{
+          font-size: var(--font-size-h2); 
+        }
+      }
+      .project-img{
+        max-width: 600px;
+        right: -168px;
+        top: 72px;
+      }
+      img{
+        animation: .8s showHero forwards cubic-bezier(0.33, 1, 0.68, 1);
+        animation-delay: .4s;
+        visibility: hidden;
+        @keyframes showHero {
+          from { visibility: visible; opacity: 0; transform: translate(200px, 280px); }
+          to { visibility: visible; opacity: 1; transform: translate(0px, 0px); }
+      }
+      }
+    }
+    
+   }
+  .project-ytscrm { grid-area: project-ytscrm; }
+  .project-qlchat { grid-area: project-qlchat; }
+  .project-self { grid-area: project-self; }
+  .project-watsons { grid-area: project-watsons; }
   
   section{
     position: relative;
     overflow: hidden;
     margin-bottom: var(--spacing-xs);
     touch-action: pan-y pinch-zoom;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 1s cubic-bezier(0.19,1,0.22,1);
+    
     @include md {
-      margin-bottom: var(--spacing-sm);
+      margin-bottom: var(--spacing-xs);
+      &:hover > .project-img{
+        transition: all 1s cubic-bezier(0.19,1,0.22,1); // 图片放大动画
+        transform: scale(1.01);
+      }
+      &:active{
+        background-color: transparent;
+        border: 1px solid var(--divider-color);
+        transition: all 1s cubic-bezier(0.19,1,0.22,1); // 图片放大动画
+      }
     }
     .desc{
       display: flex;
@@ -1115,19 +1173,20 @@ article{
         max-width: 484px;
       }
       h2{ // 标题
-        font-size: 24px;
+        font-size: var(--font-size-h3);
         margin: 0;
         font-weight: 600;
         word-spacing: -.1em;
         @include md {
-          font-size: 40px;
+          font-size: var(--font-size-h2); 
         }
         @include xl {
-          font-size: 48px;
+          font-size: var(--font-size-h4); 
         }
       }
+
       p{  
-        font-size: var(--font-size-p);
+        font-size: var(--font-size-sub);
         margin: 0;
         margin-top: var(--spacing-xxs);
         color: var(--secondary-text-color);
@@ -1138,7 +1197,7 @@ article{
     }
     .project-tags{
       margin-top: var(--spacing-xxs);
-      font-size: var(--font-size-sub);
+      font-size: 14px;
       display: none;
         span{
         color: var(--tertiary-text-color);
@@ -1154,93 +1213,112 @@ article{
     }
     .project-enter{ // 按钮
       color: #FFFFFF;
-      font-size: var(--font-size-p);
-      padding: 0;
+      font-size: var(--font-size-sub);
       text-align: center;
       border-radius: var(--border-radius-sm);
       cursor: pointer;
       margin-top: var(--spacing-xs);
       font-weight: 500;
       user-select: none;
-      cursor: pointer;
       display: none;
+      line-height: 1;
+      
       @include md {
-        padding: 10px 0px;
-        width: 156px;
+        // padding: var(--spacing-xxs);
+        // width: 156px;
         margin-top: var(--spacing-sm);
-        font-size: var(--font-size-p);
-        display: block;
+        display: none;
       }
       @include xl {
-        padding: 12px 0px;
-        width: 188px;
+        padding: 16px 32px;
         margin-top: var(--spacing-sm);
-        font-size: 20px;
+        // font-size: 20px;
+        display: none;
+      }
+    }
+    .analytics-btn{
+      @extend .project-enter;
+      display: none;
+      background-color: #356DFF;
+      @include xl {
+        display: block;
+      }
+      &:hover{
+        background-color: #2350d9;
+      }
+      &:active{
+        background-color: #2350d9;
+      }
+      &:focus-visible{
+        background-color: #2350d9;
+        box-shadow: 0 0 0 3px var(--project-bg-color),0 0 0 5px #2350d9;
+        transition: box-shadow .2s ease;
+        outline: none;
       }
     }
     .ql-btn{
       @extend .project-enter;
-      background-color: #FD3759;
-      &:hover{
-        background-color: #F32F50;
-      }
-      &:active{
-        background-color: #E32243;
-      }
-      &:focus-visible{
-        background-color: #F32F50;
-        box-shadow: 0 0 0 3px var(--project-bg-color),0 0 0 5px #F32F50;
-        transition: box-shadow .2s ease;
-        outline: none;
-      }
+      // background-color: #FD3759;
+      // &:hover{
+      //   background-color: #F32F50;
+      // }
+      // &:active{
+      //   background-color: #E32243;
+      // }
+      // &:focus-visible{
+      //   background-color: #F32F50;
+      //   box-shadow: 0 0 0 3px var(--project-bg-color),0 0 0 5px #F32F50;
+      //   transition: box-shadow .2s ease;
+      //   outline: none;
+      // }
     }
     .yt-btn{
       @extend .project-enter;
-      background-color: #1E86FF;
-      &:hover{
-        background-color: #0C6EFF;
-      }
-      &:active{
-        background-color: #0F65E5;
-      }
-      &:focus-visible{
-        background-color: #0C6EFF;
-        box-shadow: 0 0 0 3px var(--project-bg-color),0 0 0 5px #0C6EFF;
-        transition: box-shadow .2s ease;
-        outline: none;
-      }
+      // background-color: #1E86FF;
+      // &:hover{
+      //   background-color: #0C6EFF;
+      // }
+      // &:active{
+      //   background-color: #0F65E5;
+      // }
+      // &:focus-visible{
+      //   background-color: #0C6EFF;
+      //   box-shadow: 0 0 0 3px var(--project-bg-color),0 0 0 5px #0C6EFF;
+      //   transition: box-shadow .2s ease;
+      //   outline: none;
+      // }
     }
     .self-btn{
       @extend .project-enter;
-      background-color: #111111;
-      &:hover{
-        background-color: #0A0A0A;
-      }
-      &:active{
-        background-color: #000000;
-      }
-      &:focus-visible{
-        background-color: #0A0A0A;
-        box-shadow: 0 0 0 3px var(--project-bg-color),0 0 0 5px #0A0A0A;
-        transition: box-shadow .2s ease;
-        outline: none;
-      }
+      // background-color: #111111;
+      // &:hover{
+      //   background-color: #0A0A0A;
+      // }
+      // &:active{
+      //   background-color: #000000;
+      // }
+      // &:focus-visible{
+      //   background-color: #0A0A0A;
+      //   box-shadow: 0 0 0 3px var(--project-bg-color),0 0 0 5px #0A0A0A;
+      //   transition: box-shadow .2s ease;
+      //   outline: none;
+      // }
     }
     .watsons-btn{
       @extend .project-enter;
-      background-color: #15B1C5;
-      &:hover{
-        background-color: #0BA7BE;
-      }
-      &:active{
-        background-color: #079AB0;
-      }
-      &:focus-visible{
-        background-color: #0BA7BE;
-        box-shadow: 0 0 0 3px var(--project-bg-color),0 0 0 5px #0BA7BE;
-        transition: box-shadow .2s ease;
-        outline: none;
-      }
+      // background-color: #15B1C5;
+      // &:hover{
+      //   background-color: #0BA7BE;
+      // }
+      // &:active{
+      //   background-color: #079AB0;
+      // }
+      // &:focus-visible{
+      //   background-color: #0BA7BE;
+      //   box-shadow: 0 0 0 3px var(--project-bg-color),0 0 0 5px #0BA7BE;
+      //   transition: box-shadow .2s ease;
+      //   outline: none;
+      // }
     }
     .icon-forward{
       background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='20' height='20'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M10 3v2H5v14h14v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h6zm7.707 4.707L12 13.414 10.586 12l5.707-5.707L13 3h8v8l-3.293-3.293z' fill='rgba(255,255,255,1)' /%3E%3C/svg%3E") no-repeat center;
@@ -1263,10 +1341,13 @@ article{
     @include md {
       padding: var(--spacing-sm) var(--spacing-md);
       flex-direction: row;
+      min-height: 280px;
     }
     @include xl {
-      padding: var(--spacing-md) var(--spacing-lg);
-      min-height: 400px;
+      padding: var(--spacing-md);
+      align-items: flex-start;
+      min-height: 440px;
+      
     }
   }
 
@@ -1286,15 +1367,17 @@ article{
       top: 56px;
       transform: none;
       filter: drop-shadow(0px 25px 20px rgba(0,0,0,.2));
-      &:hover{
-        transition: all 1s cubic-bezier(0.19,1,0.22,1); // 图片放大动画
-        transform: scale(1.01);
-      }
+      // &:hover{
+      //   transition: all 1s cubic-bezier(0.19,1,0.22,1); // 图片放大动画
+      //   transform: scale(1.01);
+      // }
     }
     @include xl {
-      max-width: 600px;
-      right: -160px;
-      top: 72px;
+      max-width: 512px;
+      // right: 48px;
+      right: -54px;
+      top: 220px;
+      // display: none;
     }
   }
 }
@@ -1434,6 +1517,8 @@ img.zoom-img {
 
 .viewer-navbar{
   padding: 10px !important;
+  overflow-x: scroll !important;
+  scroll-behavior: smooth !important;
 }
 
 .viewer-canvas{

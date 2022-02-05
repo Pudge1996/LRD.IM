@@ -146,6 +146,7 @@ body {
   scroll-behavior: smooth;
   position: relative;
   scroll-padding-top: 104px;
+  scrollbar-width: thin;
 }
 
 .no-padding {
@@ -257,7 +258,7 @@ a {
   }
 }
 
-a .nowrap {
+.nowrap {
   white-space: nowrap;
   display: inline-block;
 }
@@ -363,6 +364,10 @@ a.underline:hover {
   }
 }
 
+.nav-open a:nth-child(3) {
+  display: none;
+}
+
 .nav-open a {
   padding: 20px 20px;
   -webkit-box-shadow: 0 2px 2px -2px var(--nav-shadow);
@@ -430,6 +435,10 @@ a.underline:hover {
         -ms-flex-align: center;
             align-items: center;
   }
+}
+
+.nav-text-box p:nth-child(3) {
+  display: none;
 }
 
 .nav-text-box p {
@@ -1336,7 +1345,85 @@ article figure.graf-after--h4 {
 @media (min-width: 1200px) {
   .project {
     width: var(--container-width-xl);
+    display: -ms-grid;
+    display: grid;
+    grid-auto-columns: 1fr;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto auto auto;
+        grid-template-rows: auto auto auto;
+    gap: 0px var(--spacing-xs);
+        grid-template-areas: "project-hero project-hero" "project-ytscrm project-qlchat" "project-self project-watsons";
   }
+}
+
+.project .project-hero {
+  grid-area: project-hero;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+}
+
+@media (min-width: 1200px) {
+  .project .project-hero .desc h2 {
+    font-size: var(--font-size-h2);
+  }
+  .project .project-hero .project-img {
+    max-width: 600px;
+    right: -168px;
+    top: 72px;
+  }
+  .project .project-hero img {
+    -webkit-animation: 0.8s showHero forwards cubic-bezier(0.33, 1, 0.68, 1);
+            animation: 0.8s showHero forwards cubic-bezier(0.33, 1, 0.68, 1);
+    -webkit-animation-delay: .4s;
+            animation-delay: .4s;
+    visibility: hidden;
+  }
+  @-webkit-keyframes showHero {
+    from {
+      visibility: visible;
+      opacity: 0;
+      -webkit-transform: translate(200px, 280px);
+              transform: translate(200px, 280px);
+    }
+    to {
+      visibility: visible;
+      opacity: 1;
+      -webkit-transform: translate(0px, 0px);
+              transform: translate(0px, 0px);
+    }
+  }
+  @keyframes showHero {
+    from {
+      visibility: visible;
+      opacity: 0;
+      -webkit-transform: translate(200px, 280px);
+              transform: translate(200px, 280px);
+    }
+    to {
+      visibility: visible;
+      opacity: 1;
+      -webkit-transform: translate(0px, 0px);
+              transform: translate(0px, 0px);
+    }
+  }
+}
+
+.project .project-ytscrm {
+  grid-area: project-ytscrm;
+}
+
+.project .project-qlchat {
+  grid-area: project-qlchat;
+}
+
+.project .project-self {
+  grid-area: project-self;
+}
+
+.project .project-watsons {
+  grid-area: project-watsons;
 }
 
 .project section {
@@ -1345,11 +1432,27 @@ article figure.graf-after--h4 {
   margin-bottom: var(--spacing-xs);
   -ms-touch-action: pan-y pinch-zoom;
       touch-action: pan-y pinch-zoom;
+  cursor: pointer;
+  border: 1px solid transparent;
+  -webkit-transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 @media (min-width: 768px) {
   .project section {
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-xs);
+  }
+  .project section:hover > .project-img {
+    -webkit-transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+    -webkit-transform: scale(1.01);
+            transform: scale(1.01);
+  }
+  .project section:active {
+    background-color: transparent;
+    border: 1px solid var(--divider-color);
+    -webkit-transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
   }
 }
 
@@ -1387,7 +1490,7 @@ article figure.graf-after--h4 {
 }
 
 .project section .desc h2 {
-  font-size: 24px;
+  font-size: var(--font-size-h3);
   margin: 0;
   font-weight: 600;
   word-spacing: -.1em;
@@ -1395,18 +1498,18 @@ article figure.graf-after--h4 {
 
 @media (min-width: 768px) {
   .project section .desc h2 {
-    font-size: 40px;
+    font-size: var(--font-size-h2);
   }
 }
 
 @media (min-width: 1200px) {
   .project section .desc h2 {
-    font-size: 48px;
+    font-size: var(--font-size-h4);
   }
 }
 
 .project section .desc p {
-  font-size: var(--font-size-p);
+  font-size: var(--font-size-sub);
   margin: 0;
   margin-top: var(--spacing-xxs);
   color: var(--secondary-text-color);
@@ -1420,7 +1523,7 @@ article figure.graf-after--h4 {
 
 .project section .project-tags {
   margin-top: var(--spacing-xxs);
-  font-size: var(--font-size-sub);
+  font-size: 14px;
   display: none;
 }
 
@@ -1439,10 +1542,9 @@ article figure.graf-after--h4 {
   }
 }
 
-.project section .project-enter, .project section .ql-btn, .project section .yt-btn, .project section .self-btn, .project section .watsons-btn {
+.project section .project-enter, .project section .analytics-btn, .project section .ql-btn, .project section .yt-btn, .project section .self-btn, .project section .watsons-btn {
   color: #FFFFFF;
-  font-size: var(--font-size-p);
-  padding: 0;
+  font-size: var(--font-size-sub);
   text-align: center;
   border-radius: var(--border-radius-sm);
   cursor: pointer;
@@ -1452,114 +1554,48 @@ article figure.graf-after--h4 {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  cursor: pointer;
   display: none;
+  line-height: 1;
 }
 
 @media (min-width: 768px) {
-  .project section .project-enter, .project section .ql-btn, .project section .yt-btn, .project section .self-btn, .project section .watsons-btn {
-    padding: 10px 0px;
-    width: 156px;
+  .project section .project-enter, .project section .analytics-btn, .project section .ql-btn, .project section .yt-btn, .project section .self-btn, .project section .watsons-btn {
     margin-top: var(--spacing-sm);
-    font-size: var(--font-size-p);
-    display: block;
+    display: none;
   }
 }
 
 @media (min-width: 1200px) {
-  .project section .project-enter, .project section .ql-btn, .project section .yt-btn, .project section .self-btn, .project section .watsons-btn {
-    padding: 12px 0px;
-    width: 188px;
+  .project section .project-enter, .project section .analytics-btn, .project section .ql-btn, .project section .yt-btn, .project section .self-btn, .project section .watsons-btn {
+    padding: 16px 32px;
     margin-top: var(--spacing-sm);
-    font-size: 20px;
+    display: none;
   }
 }
 
-.project section .ql-btn {
-  background-color: #FD3759;
+.project section .analytics-btn {
+  display: none;
+  background-color: #356DFF;
 }
 
-.project section .ql-btn:hover {
-  background-color: #F32F50;
+@media (min-width: 1200px) {
+  .project section .analytics-btn {
+    display: block;
+  }
 }
 
-.project section .ql-btn:active {
-  background-color: #E32243;
+.project section .analytics-btn:hover {
+  background-color: #2350d9;
 }
 
-.project section .ql-btn:focus-visible {
-  background-color: #F32F50;
-  -webkit-box-shadow: 0 0 0 3px var(--project-bg-color), 0 0 0 5px #F32F50;
-          box-shadow: 0 0 0 3px var(--project-bg-color), 0 0 0 5px #F32F50;
-  -webkit-transition: -webkit-box-shadow .2s ease;
-  transition: -webkit-box-shadow .2s ease;
-  transition: box-shadow .2s ease;
-  transition: box-shadow .2s ease, -webkit-box-shadow .2s ease;
-  outline: none;
+.project section .analytics-btn:active {
+  background-color: #2350d9;
 }
 
-.project section .yt-btn {
-  background-color: #1E86FF;
-}
-
-.project section .yt-btn:hover {
-  background-color: #0C6EFF;
-}
-
-.project section .yt-btn:active {
-  background-color: #0F65E5;
-}
-
-.project section .yt-btn:focus-visible {
-  background-color: #0C6EFF;
-  -webkit-box-shadow: 0 0 0 3px var(--project-bg-color), 0 0 0 5px #0C6EFF;
-          box-shadow: 0 0 0 3px var(--project-bg-color), 0 0 0 5px #0C6EFF;
-  -webkit-transition: -webkit-box-shadow .2s ease;
-  transition: -webkit-box-shadow .2s ease;
-  transition: box-shadow .2s ease;
-  transition: box-shadow .2s ease, -webkit-box-shadow .2s ease;
-  outline: none;
-}
-
-.project section .self-btn {
-  background-color: #111111;
-}
-
-.project section .self-btn:hover {
-  background-color: #0A0A0A;
-}
-
-.project section .self-btn:active {
-  background-color: #000000;
-}
-
-.project section .self-btn:focus-visible {
-  background-color: #0A0A0A;
-  -webkit-box-shadow: 0 0 0 3px var(--project-bg-color), 0 0 0 5px #0A0A0A;
-          box-shadow: 0 0 0 3px var(--project-bg-color), 0 0 0 5px #0A0A0A;
-  -webkit-transition: -webkit-box-shadow .2s ease;
-  transition: -webkit-box-shadow .2s ease;
-  transition: box-shadow .2s ease;
-  transition: box-shadow .2s ease, -webkit-box-shadow .2s ease;
-  outline: none;
-}
-
-.project section .watsons-btn {
-  background-color: #15B1C5;
-}
-
-.project section .watsons-btn:hover {
-  background-color: #0BA7BE;
-}
-
-.project section .watsons-btn:active {
-  background-color: #079AB0;
-}
-
-.project section .watsons-btn:focus-visible {
-  background-color: #0BA7BE;
-  -webkit-box-shadow: 0 0 0 3px var(--project-bg-color), 0 0 0 5px #0BA7BE;
-          box-shadow: 0 0 0 3px var(--project-bg-color), 0 0 0 5px #0BA7BE;
+.project section .analytics-btn:focus-visible {
+  background-color: #2350d9;
+  -webkit-box-shadow: 0 0 0 3px var(--project-bg-color), 0 0 0 5px #2350d9;
+          box-shadow: 0 0 0 3px var(--project-bg-color), 0 0 0 5px #2350d9;
   -webkit-transition: -webkit-box-shadow .2s ease;
   transition: -webkit-box-shadow .2s ease;
   transition: box-shadow .2s ease;
@@ -1601,13 +1637,17 @@ article figure.graf-after--h4 {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    min-height: 280px;
   }
 }
 
 @media (min-width: 1200px) {
   .project .project-card {
-    padding: var(--spacing-md) var(--spacing-lg);
-    min-height: 400px;
+    padding: var(--spacing-md);
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    min-height: 440px;
   }
 }
 
@@ -1639,19 +1679,13 @@ article figure.graf-after--h4 {
     -webkit-filter: drop-shadow(0px 25px 20px rgba(0, 0, 0, 0.2));
             filter: drop-shadow(0px 25px 20px rgba(0, 0, 0, 0.2));
   }
-  .project .project-img:hover {
-    -webkit-transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
-    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
-    -webkit-transform: scale(1.01);
-            transform: scale(1.01);
-  }
 }
 
 @media (min-width: 1200px) {
   .project .project-img {
-    max-width: 600px;
-    right: -160px;
-    top: 72px;
+    max-width: 512px;
+    right: -54px;
+    top: 220px;
   }
 }
 
@@ -1845,6 +1879,8 @@ img.zoom-img {
 
 .viewer-navbar {
   padding: 10px !important;
+  overflow-x: scroll !important;
+  scroll-behavior: smooth !important;
 }
 
 .viewer-canvas {
