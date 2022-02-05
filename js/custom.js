@@ -159,24 +159,43 @@ if (isChromium) {
 
 
 // ▼▼ 滚动出现返回顶部
-var toTop = document.getElementById('toTop');
+var sideButton = document.getElementById('sideButton');
 window.onscroll = function(){
-  if (document.documentElement.scrollTop < 200){  // 滚动时动态检测距离
-    toTop.classList.add("hidden");
-    console.log('<200');
+  if (document.documentElement.scrollTop < 150){  // 滚动时动态检测距离
+    sideButton.classList.add("hidden");
+    console.log('<150');
   } else {
-    toTop.classList.remove("hidden");
-    console.log('>200');
+    sideButton.classList.remove("hidden");
+    console.log('>150');
   }
 }
 
-if (document.documentElement.scrollTop < 200) { // 刚进网页 静止时检测距离
-  toTop.classList.add("hidden");
+if (document.documentElement.scrollTop < 150) { // 刚进网页 静止时检测距离
+  sideButton.classList.add("hidden");
 } else {
-  toTop.classList.remove("hidden");
+  sideButton.classList.remove("hidden");
 }
 // ▲▲ 滚动出现返回顶部
 
+// ▼▼ 作品内页 - 宽度扩展按钮
+var projectContainer = document.getElementsByClassName('project-container')[0]
+var fullWidthIcon = document.getElementById('fullWidthIcon');
+
+var fullWidthMode = function (){
+  console.log(projectContainer)  
+  console.log('projectContainer')  
+  projectContainer.classList.toggle('extra-width');
+
+  // 判断到宽度被扩展时，切换图标
+  if (projectContainer.classList.contains("extra-width")){
+    console.log('extra-width') 
+    fullWidthIcon.setAttribute( "d", "M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15zM7 10h8v2H7v-2z");
+  } else {
+    console.log('no') 
+    fullWidthIcon.setAttribute( "d", "M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15zM10 10V7h2v3h3v2h-3v3h-2v-3H7v-2h3z");
+  }
+}
+// ▲▲ 作品内页 - 宽度扩展按钮
 
 // ▼▼ 博客 - 复制链接
 var blogLink = document.getElementById('blogLink');

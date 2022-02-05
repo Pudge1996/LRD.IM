@@ -575,12 +575,9 @@ footer p {
   padding: 0;
 }
 
-.to-top {
+.side-button, .to-top, .full-width {
   position: fixed;
-  height: 40px;
-  width: 40px;
-  bottom: 30px;
-  right: 30px;
+  visibility: hidden;
   cursor: pointer;
   display: -ms-grid;
   display: grid;
@@ -589,34 +586,59 @@ footer p {
   border-radius: var(--border-radius-md);
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
-  visibility: hidden;
 }
 
 @media (min-width: 576px) {
-  .to-top {
+  .side-button, .to-top, .full-width {
     visibility: visible;
   }
 }
 
-.to-top svg {
+.side-button svg, .to-top svg, .full-width svg {
   width: 20px;
   height: 20px;
 }
 
-.to-top:hover {
+.side-button:hover, .to-top:hover, .full-width:hover {
   background: var(--button-hover-color);
 }
 
-.to-top:active {
+.side-button:active, .to-top:active, .full-width:active {
   background: var(--button-active-color);
 }
 
-.to-top svg {
+.side-button svg, .to-top svg, .full-width svg {
   fill: var(--secondary-text-color);
 }
 
-.to-top:hover > svg {
+.side-button:hover > svg, .to-top:hover > svg, .full-width:hover > svg {
   fill: var(--primary-text-color);
+}
+
+.to-top {
+  height: 40px;
+  width: 40px;
+  bottom: 30px;
+  right: 30px;
+}
+
+.full-width {
+  height: 40px;
+  width: 40px;
+  bottom: 82px;
+  right: 30px;
+  display: none;
+}
+
+@media (min-width: 1400px) {
+  .full-width {
+    display: -ms-grid;
+    display: grid;
+  }
+}
+
+.full-width-icon {
+  background-image: url("");
 }
 
 .blog-post p {
@@ -1333,7 +1355,7 @@ article figure.graf-after--h4 {
 .project {
   width: var(--container-width-sm);
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 15px;
 }
 
 @media (min-width: 768px) {
@@ -1759,13 +1781,19 @@ article figure.graf-after--h4 {
 }
 
 .project-container {
-  padding: 0 20px;
+  padding: 0 15px;
   max-width: 1200px;
   margin: 0 auto;
+  -webkit-transition: max-width 0.3s cubic-bezier(0.45, 0, 0.55, 1);
+  transition: max-width 0.3s cubic-bezier(0.45, 0, 0.55, 1);
 }
 
 .project-container img, .project-container picture {
   margin-bottom: var(--spacing-xxs);
+}
+
+.extra-width {
+  max-width: 1720px;
 }
 
 .lazyload,

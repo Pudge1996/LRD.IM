@@ -445,20 +445,16 @@ footer {
 // ▲▲ FOOTER
 
 
-// ▼▼ 返回顶部
-.to-top {
+// ▼▼ 侧边按钮
+.side-button {
   position: fixed;
-  height: 40px;
-  width: 40px;
-  bottom: 30px;
-  right: 30px;
+  visibility: hidden;
   cursor: pointer;
   display: grid;
   place-items: center;
   background-color: var(--button-color);
   border-radius: var(--border-radius-md);
   transform: translateY(0px);
-  visibility: hidden;
   @include sm {
     visibility: visible;
   }
@@ -479,7 +475,34 @@ footer {
     fill: var(--primary-text-color);
   }
 }
-// ▲▲ 返回顶部
+
+.to-top{
+  @extend .side-button;
+  height: 40px;
+  width: 40px;
+  bottom: 30px;
+  right: 30px;
+  
+}
+
+.full-width{
+  @extend .side-button;
+  height: 40px;
+  width: 40px;
+  bottom: 82px;
+  right: 30px;
+  display: none;
+
+  @include xxl {
+    display: grid;
+  }
+}
+
+.full-width-icon{
+  background-image: url('')
+}
+
+// ▲▲ 侧边按钮
 
 // ▼▼ 博客页 blog
 .blog{
@@ -1086,7 +1109,7 @@ article{
 .project{
   width: var(--container-width-sm);
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 15px;
   @include md {
     width: var(--container-width-md);
   }
@@ -1416,12 +1439,17 @@ article{
 // ▼▼ 作品详情页
 
 .project-container{
-  padding: 0 20px;
+  padding: 0 15px;
   max-width: 1200px;
   margin: 0 auto;
+  transition: max-width .3s cubic-bezier(0.45, 0, 0.55, 1);
   img, picture{
     margin-bottom: var(--spacing-xxs);
   }
+}
+
+.extra-width{
+  max-width: 1720px;
 }
 
 // ▲▲ 作品详情页
