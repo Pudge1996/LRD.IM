@@ -1392,7 +1392,7 @@ article figure.graf-after--h4 {
   }
   .project .project-hero .project-img {
     max-width: 600px;
-    right: -168px;
+    right: -142px;
     top: 72px;
   }
   .project .project-hero img {
@@ -1698,8 +1698,8 @@ article figure.graf-after--h4 {
     top: 56px;
     -webkit-transform: none;
             transform: none;
-    -webkit-filter: drop-shadow(0px 25px 20px rgba(0, 0, 0, 0.2));
-            filter: drop-shadow(0px 25px 20px rgba(0, 0, 0, 0.2));
+    -webkit-filter: drop-shadow(0px 25px 20px rgba(0, 0, 0, 0.1));
+            filter: drop-shadow(0px 25px 20px rgba(0, 0, 0, 0.1));
   }
 }
 
