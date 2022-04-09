@@ -1140,6 +1140,7 @@ article{
         max-width: 600px;
         right: -142px;
         top: 72px;
+        
       }
       img{
         animation: .8s showHero forwards cubic-bezier(0.33, 1, 0.68, 1);
@@ -1382,6 +1383,9 @@ article{
     transform: translateY(20px);
     filter: drop-shadow(0px 12px 12px rgba(0,0,0,.06));
     max-width: 520px;
+    aspect-ratio: attr(width) / attr(height);
+    height: auto;
+    width: 100%;
 
     @include md {
       max-width: 460px;
