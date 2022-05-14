@@ -152,6 +152,7 @@ img{
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
   overflow: hidden;
+  line-break: anywhere;
 }
 .elis-2{
   display: -webkit-box;
@@ -568,11 +569,11 @@ footer {
 article{
 
   // ▼ 隐藏不必要 ▼
-  .section--first{
-    h3.graf--leading{ // 隐藏原有标题
-      // display: none;
-    }
-  }
+  // .section--first{
+  //   h3.graf--leading{ // 隐藏原有标题
+  //     // display: none;
+  //   }
+  // }
   section[data-field="subtitle"],
   section[data-field="description"] { // 隐藏描述
     display: none;

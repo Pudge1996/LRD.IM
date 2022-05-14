@@ -188,6 +188,7 @@ img {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
   overflow: hidden;
+  line-break: anywhere;
 }
 
 .elis-2, .blog h2, .blog-subtitle {
