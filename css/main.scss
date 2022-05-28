@@ -216,6 +216,10 @@ a {
   display: inline-block;
 }
 
+.case{
+  font-feature-settings: 'case', 'tnum';
+}
+
 a.underline{ //需要加下划线的class
   text-decoration: underline;
   text-underline-position: under;
@@ -509,6 +513,7 @@ footer {
 .blog{
   h2{
     @extend .elis-2;
+    @extend .case;
   }
 }
 
@@ -724,6 +729,7 @@ article{
     font-size: var(--font-size-h2);
     margin-bottom: 10px;
     line-height: var(--line-height-md);
+    @extend .case;
     @include sm {
       font-size: var(--font-size-blog-title);
       padding-top: var(--spacing-lg);
@@ -814,6 +820,7 @@ article{
     line-height: var(--line-height-md);
     margin: var(--article-margin-sm) 0;
     flex-direction: column-reverse;
+    @extend .case;
     a{
       text-decoration: none;
       &:nth-child(1){
@@ -987,6 +994,7 @@ article{
     background-color: var(--button-color);
     transition: background-color .3s;
     display: flex;
+    flex: 1;
     @include md {
       padding: var(--spacing-xs);
       flex-direction: column;
@@ -1077,7 +1085,8 @@ article{
   }
   p{
     font-weight: 500;
-    margin: 20px 0;
+    margin: 20px;
+    text-align: center;
   }
 }
 // ▲▲ 博客页 blog

@@ -264,6 +264,11 @@ a {
   display: inline-block;
 }
 
+.case, .blog h2, article h1, .article-navigation {
+  -webkit-font-feature-settings: 'case', 'tnum';
+          font-feature-settings: 'case', 'tnum';
+}
+
 a.underline {
   text-decoration: underline;
   text-underline-position: under;
@@ -1193,6 +1198,8 @@ article figure.graf-after--h4 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex: 1;
+      flex: 1;
 }
 
 @media (min-width: 768px) {
@@ -1324,7 +1331,8 @@ article figure.graf-after--h4 {
 
 .load-more p {
   font-weight: 500;
-  margin: 20px 0;
+  margin: 20px;
+  text-align: center;
 }
 
 .top-bar {
