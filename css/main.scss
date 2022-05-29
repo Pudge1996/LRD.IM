@@ -779,6 +779,8 @@ article{
       color: var(--secondary-text-color);
       a{
         box-shadow: none;
+        text-decoration: none;
+        color: var(--secondary-text-color);
         &:hover{
           color: var(--primary-text-color);
           box-shadow: 0 1px;

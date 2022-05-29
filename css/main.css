@@ -931,6 +931,8 @@ article figure .imageCaption {
 article figure .imageCaption a {
   -webkit-box-shadow: none;
           box-shadow: none;
+  text-decoration: none;
+  color: var(--secondary-text-color);
 }
 
 article figure .imageCaption a:hover {
