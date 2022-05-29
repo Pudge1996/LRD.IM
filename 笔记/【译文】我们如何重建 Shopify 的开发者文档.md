@@ -1,4 +1,4 @@
-# [译文] 我们如何重建 Shopify 的开发者文档
+# 【译文】我们如何重建 Shopify 的开发者文档
 详细了解我们为开发者提供更好体验做了哪些工作。
 
 ![](https://miro.medium.com/max/1400/1*kYeRhf6utAKtOf327S02sA.jpeg)
