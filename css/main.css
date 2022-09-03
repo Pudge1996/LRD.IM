@@ -105,7 +105,7 @@ button, input, select, textarea {
   --divider-color: #333333;
   --button-color: #1A1A1A;
   --button-hover-color: #333333;
-  --button-active-color: #262626;
+  --button-active-color: #121212;
   --pre-bg-color: #262626;
   --copied-text-color: #64A838;
   --project-bg-color: #262626;
@@ -186,21 +186,6 @@ img {
   height: auto;
 }
 
-.elis-1, article .graf--mixtapeEmbed strong, article .graf--mixtapeEmbed em, .project-navigation .title, .project-navigation .desc, .article-navigation .title {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
-  overflow: hidden;
-  line-break: anywhere;
-}
-
-.elis-2, .blog h2, .blog-subtitle {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  overflow: hidden;
-}
-
 h1 {
   margin: 20px auto 20px;
   font-weight: 700;
@@ -226,7 +211,7 @@ h2 {
 @media (min-width: 576px) {
   h2 {
     font-size: var(--font-size-h3);
-    margin-top: var(--spacing-lg);
+    margin-top: var(--spacing-sm);
   }
 }
 
@@ -280,11 +265,6 @@ a.underline:hover {
   text-decoration: underline;
   text-underline-position: under;
   text-underline-offset: -0.8px;
-}
-
-a.underline:active {
-  outline: 2px solid var(--button-hover-color);
-  background-color: var(--button-hover-color);
 }
 
 .vpn:hover::after,
@@ -656,6 +636,13 @@ footer p {
   background-image: url("");
 }
 
+.blog section:hover > a h2 {
+  color: var(--link-text-color);
+  text-decoration: underline;
+  text-underline-position: under;
+  text-underline-offset: -0.8px;
+}
+
 .blog-post p {
   margin: 30px 0;
 }
@@ -821,8 +808,6 @@ article .graf--mixtapeEmbed {
           justify-content: space-between;
   font-size: var(--font-size-footer);
   border: 1px solid var(--divider-color);
-  -webkit-transition: all .2s;
-  transition: all .2s;
   -ms-touch-action: pan-y pinch-zoom;
       touch-action: pan-y pinch-zoom;
 }
@@ -861,6 +846,10 @@ article .graf--mixtapeEmbed a:hover, article .graf--mixtapeEmbed a:active {
   outline: none;
 }
 
+article .graf--mixtapeEmbed a:active {
+  background-color: var(--button-active-color);
+}
+
 article .graf--mixtapeEmbed > a {
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -891,11 +880,6 @@ article a:hover {
   text-decoration: underline;
   text-underline-position: under;
   text-underline-offset: -0.8px;
-}
-
-article a:active {
-  outline: 2px solid var(--button-hover-color);
-  background-color: var(--button-hover-color);
 }
 
 article h1 {
@@ -1036,12 +1020,10 @@ article figure.graf-after--h4 {
           align-items: center;
   padding: var(--spacing-xxs);
   border-radius: var(--border-radius-sm);
-  -webkit-transition: all .2s;
-  transition: all .2s;
 }
 
 .project-navigation:hover {
-  background-color: var(--button-color);
+  background-color: var(--button-hover-color);
 }
 
 .project-navigation:active {
@@ -1161,7 +1143,7 @@ article figure.graf-after--h4 {
 }
 
 .article-navigation a:hover {
-  background-color: var(--button-color);
+  background-color: var(--button-hover-color);
 }
 
 .article-navigation a:active {
@@ -1291,11 +1273,12 @@ article figure.graf-after--h4 {
      object-fit: cover;
   margin-bottom: var(--spacing-xs);
   border-radius: var(--border-radius-sm);
+  background-color: var(--divider-color);
 }
 
 @media (min-width: 576px) {
   .blog-heroimg {
-    height: 330px;
+    height: 280px;
     margin-bottom: var(--spacing-xs);
   }
 }
@@ -1346,8 +1329,6 @@ article figure.graf-after--h4 {
           flex-grow: 1;
   border-radius: var(--border-radius-md);
   background-color: var(--button-color);
-  -webkit-transition: background-color .3s;
-  transition: background-color .3s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1418,7 +1399,7 @@ article figure.graf-after--h4 {
 
 @media (min-width: 576px) {
   .blog-divider {
-    margin: var(--spacing-md) 0;
+    margin: var(--spacing-md) 0 var(--spacing-sm);
   }
 }
 
@@ -1457,8 +1438,6 @@ article figure.graf-after--h4 {
 
 .load-more {
   background-color: var(--button-color);
-  -webkit-transition: all .3s;
-  transition: all .3s;
   cursor: pointer;
   border-radius: var(--border-radius-md);
   display: -webkit-box;
@@ -1480,12 +1459,6 @@ article figure.graf-after--h4 {
 
 .load-more:hover {
   background-color: var(--button-hover-color);
-}
-
-.load-more:hover > .load-more-text {
-  color: var(--primary-text-color);
-  -webkit-transition: all .2s;
-  transition: all .2s;
 }
 
 .load-more:active {
@@ -1628,8 +1601,6 @@ article figure.graf-after--h4 {
       touch-action: pan-y pinch-zoom;
   cursor: pointer;
   border: 1px solid transparent;
-  -webkit-transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
-  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 @media (min-width: 768px) {
@@ -1645,8 +1616,6 @@ article figure.graf-after--h4 {
   .project section:active {
     background-color: transparent;
     border: 1px solid var(--divider-color);
-    -webkit-transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
-    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
   }
 }
 
@@ -2089,5 +2058,20 @@ img.zoom-img {
 .viewer-canvas {
   cursor: -webkit-zoom-out;
   cursor: zoom-out;
+}
+
+.elis-1, article .graf--mixtapeEmbed strong, article .graf--mixtapeEmbed em, .project-navigation .title, .project-navigation .desc, .article-navigation .title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  line-break: anywhere;
+}
+
+.elis-2, .blog h2, .blog-subtitle {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 /*# sourceMappingURL=main.css.map */
