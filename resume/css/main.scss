@@ -34,28 +34,31 @@ $ipad: 1200px;
 
   //a
   --background-color-hover: rgba(0,0,0,.04);
-  --underline-color-hover: rgba(0,0,0,.24);
+  --underline-color-hover: rgba(0,0,0,.18);
   --background-color-active: rgba(0,0,0,.08);
   --underline-color-active: rgba(0,0,0,.48);
   --outline-color-focus: rgba(0,0,0,.48);
+  --link-text-color: #0052cc;
+  --link-text-active-color: #063F93;
 
   //popover
   --button-background-color: #EDEDED;
   --button-background-color-hover: #E3E3E3;
   --button-background-color-active: #EDEDED;
   --popover-background-color: #FFFFFF;
-
-  //特殊
-
 }
 
 :root .dark {
-  --primary-text-color: #EEEEEE;
-  --secondary-text-color: #D9D9D9;
+  --primary-text-color: #F7F7F7;
+  --secondary-text-color: #EBEBEB;
   --tertiary-text-color: #999999;
   --copied-text-color: #64A838;
   --divider-color: #333333;
-  --background-color: #1C1C1C;
+  --background-color: #111111;
+
+  //a
+  --link-text-color: #58a6ff;
+  --link-text-active-color: #2385F6;
 
   // button
   --button-background-color: #EDEDED;
@@ -77,18 +80,6 @@ $ipad: 1200px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z' fill='rgba(153,153,153,.9)'/%3E%3C/svg%3E");
     bottom: 136px;
   }
-
-  a {
-    &[target="_blank"]:hover::after{ //外链加符号示意（浅色模式）
-      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='12' height='12'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M10 3v2H5v14h14v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h6zm7.707 4.707L12 13.414 10.586 12l5.707-5.707L13 3h8v8l-3.293-3.293z' fill='rgba(238,238,238,1)' /%3E%3C/svg%3E") no-repeat center;
-    }
-  } 
-
-  #number:hover::after,
-  #email:hover::after{ //可复制内容加符号示意（深色模式）
-    content: '';
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='12' height='12'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M7 6V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-3v3c0 .552-.45 1-1.007 1H4.007A1.001 1.001 0 0 1 3 21l.003-14c0-.552.45-1 1.007-1H7zM5.003 8L5 20h10V8H5.003zM9 6h8v10h2V4H9v2z' fill='rgba(238,238,238,1)'/%3E%3C/svg%3E") no-repeat center;
-  }
   
 }
 
@@ -97,6 +88,7 @@ $ipad: 1200px;
 html{
   font-size: 18px;
   scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent; //移除 iOS 按下时灰色
   @include mobile() {
     font-size: 18px;
   }
@@ -128,45 +120,40 @@ body {
 a{
   text-decoration:none;
   color: inherit;
-  transition: all 0s !important;
-
+  transition: outline 0.1s !important;
   &:hover{
-    background-color: var(--background-color-hover);
-    background-image: linear-gradient(to top, var(--underline-color-hover), var(--underline-color-hover) 2px, transparent 0px);
-    font-weight: 500;
-    color: var(--primary-text-color);
-
-  @include mobile {
-      background-color: transparent;
-    }
+    color: var(--link-text-color);
+    text-decoration-color: unset;
   }
 
   &:active{
-    background-color: var(--background-color-active);
-    background-image: linear-gradient(to top, var(--underline-color-active), var(--underline-color-active) 2px, transparent 0px);
-    outline: 2px solid var(--underline-color-active);
-    font-weight: 500;
-    color: var(--primary-text-color);
+    color: var(--link-text-active-color);
+
   }
 
   &:focus{
-    outline: 2px solid var(--outline-color-focus);
-    outline-offset: 3px;
-    font-weight: 500;      
-    color: var(--primary-text-color);
+    outline: 3px solid var(--link-text-active-color);
+    color: var(--link-text-active-color);
+    text-decoration: none;
+    font-weight: 600;
   }
-
+ 
   &:focus:not(:focus-visible){ //鼠标点击不出现描边
-    outline: 0;
+    outline: none;
+    font-weight: 400;
+    text-decoration: 1px underline var(--underline-color-hover);
+    text-decoration: none;
   }
 
-  &[target="_blank"]:hover::after{ //外链加符号示意（浅色模式）
-    content: '';
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='12' height='12'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M10 3v2H5v14h14v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h6zm7.707 4.707L12 13.414 10.586 12l5.707-5.707L13 3h8v8l-3.293-3.293z' fill='rgba(68,68,68,1)' /%3E%3C/svg%3E") no-repeat center;
+  &[target="_blank"]:hover::after, &[target="_blank"]:focus::after{ //外链加符号示意
+    content: "";
     width: 1em;
     height: 1em;
     display: inline-block;
-    border-left: 2px solid transparent;
+    mask: url(arrow.svg) no-repeat 50% 50%;
+    background-color: currentColor;
+    padding-left: 6px;
+    vertical-align: -2.5px;
   }
 }
 
@@ -195,7 +182,11 @@ p{
 }
 
 .underline{
-  border-bottom: 1.5px solid var(--underline-color-hover);
+  text-decoration: 1px underline var(--underline-color-hover);
+  text-decoration-line: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: unset;
+
 }
 
 .title-grid-container {
@@ -264,7 +255,7 @@ p{
   margin: .25rem 0; 
     .copied{
       font-size: 14px;
-      padding: 0 .5rem;
+      padding: 0 .2rem;
       color: var(--copied-text-color);
       font-weight: 600;
       display: none;
@@ -282,29 +273,30 @@ p{
   }
   
   #number:hover::after,
-  #email:hover::after{ //可复制内容加符号示意（浅色模式）
-    content: '';
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='12' height='12'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M7 6V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-3v3c0 .552-.45 1-1.007 1H4.007A1.001 1.001 0 0 1 3 21l.003-14c0-.552.45-1 1.007-1H7zM5.003 8L5 20h10V8H5.003zM9 6h8v10h2V4H9v2z' fill='rgba(68,68,68,1)'/%3E%3C/svg%3E") no-repeat center;
+  #email:hover::after{ //可复制内容加符号示意
+    content: "";
     width: 1em;
     height: 1em;
     display: inline-block;
-    border-left: 2px solid transparent;
+    mask: url(copied.svg) no-repeat 50% 50%;
+    background-color: currentColor;
+    padding-left: 6px;
+    vertical-align: -3px;
+    @include mobile(){
+      display: none;
+    }
   }
+  #number:focus:not(:focus-visible), #email:focus:not(:focus-visible){
+    outline: none;
+  }
+// #number:hover, #email:hover{
+//   @include mobile(){
+//     color: var(--secondary-text-color);
+//   }
+// } 
+  
 
   }
-
-  // .iconlink{
-  //   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='16' height='16'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M10 3v2H5v14h14v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h6zm7.707 4.707L12 13.414 10.586 12l5.707-5.707L13 3h8v8l-3.293-3.293z' fill='rgba(119,119,119,1)' /%3E%3C/svg%3E") no-repeat center;
-  //   width: 1rem;
-  //   height: 1rem;
-  //   display: inline-block;
-  //   vertical-align: -2.5px;
-  //   padding-left: 4px;
-  // }
-  // a:hover .link,
-  // a:focus .link{
-  //   display: inline-block;
-  // } 
 
 .divider{
   width: 100%; height: 1px;
@@ -616,7 +608,9 @@ footer {
   .flex{
     display: flex;
     justify-content: space-between;
-    
+    a:hover{
+      text-decoration: none;
+    }
     .info{
       flex: 1;
       .b_top, .dot:nth-child(3){
@@ -629,6 +623,7 @@ footer {
     .links{
       text-align: right;
       flex: 1;
+      
       @include mobile{
         display: none;
       }
@@ -648,4 +643,17 @@ footer {
       display: none;
     }
   }
+}
+
+.hidden-elemen-1{
+  content: "";
+  width: 0em;
+  height: 0em;
+  mask: url(arrow.svg) no-repeat 50% 50%;
+}
+.hidden-elemen-2{
+  content: "";
+  width: 0em;
+  height: 0em;
+  mask: url(copied.svg) no-repeat 50% 50%;
 }
