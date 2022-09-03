@@ -926,7 +926,8 @@ article{
     }
     img{
       height: 56px;
-      object-fit: contain;
+      object-fit: cover;
+      background-color: var(--divider-color);
       border-radius: var(--border-radius-sm);
     }
   }
@@ -1364,7 +1365,8 @@ article{
     }
     .project-enter{ // 按钮
       color: #FFFFFF;
-      font-size: var(--font-size-sub);
+      font-size: var(--font-size-p);
+      letter-spacing: .02em;
       text-align: center;
       border-radius: var(--border-radius-sm);
       cursor: pointer;
@@ -1514,6 +1516,10 @@ article{
     aspect-ratio: attr(width) / attr(height);
     height: auto;
     width: 100%;
+    img{
+      background-color: var(--divider-color);
+      border-radius: var(--border-radius-sm);
+    }
 
     @include md {
       max-width: 460px;

@@ -1121,8 +1121,9 @@ article figure.graf-after--h4 {
 
 .project-navigation img {
   height: 56px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-color: var(--divider-color);
   border-radius: var(--border-radius-sm);
 }
 
@@ -1739,7 +1740,8 @@ article figure.graf-after--h4 {
 
 .project section .project-enter, .project section .analytics-btn, .project section .ql-btn, .project section .yt-btn, .project section .self-btn, .project section .watsons-btn {
   color: #FFFFFF;
-  font-size: var(--font-size-sub);
+  font-size: var(--font-size-p);
+  letter-spacing: .02em;
   text-align: center;
   border-radius: var(--border-radius-sm);
   cursor: pointer;
@@ -1865,6 +1867,11 @@ article figure.graf-after--h4 {
   aspect-ratio: attr(width)/attr(height);
   height: auto;
   width: 100%;
+}
+
+.project .project-img img {
+  background-color: var(--divider-color);
+  border-radius: var(--border-radius-sm);
 }
 
 @media (min-width: 768px) {
