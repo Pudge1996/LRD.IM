@@ -77,7 +77,7 @@
   --copied-text-color: #64A838;
   --project-bg-color: #262626;
   --project-tags-color: #333333;
-  --background-color: #1A1A1A;
+  --background-color: #0d0d0d;
   --link-text-color: #58a6ff;
 
   //样式
@@ -703,6 +703,11 @@ article{
     }
     a{
       color: var(--tertiary-text-color);
+      text-decoration: none;
+      &:hover, &:active{
+        text-decoration: none;
+        outline: none;
+      }
     }
     & > a{
       box-shadow: none;

@@ -110,7 +110,7 @@ button, input, select, textarea {
   --copied-text-color: #64A838;
   --project-bg-color: #262626;
   --project-tags-color: #333333;
-  --background-color: #1A1A1A;
+  --background-color: #0d0d0d;
   --link-text-color: #58a6ff;
   --nav-shadow: rgba(255,255,255,.15);
 }
@@ -847,6 +847,12 @@ article .graf--mixtapeEmbed:active {
 
 article .graf--mixtapeEmbed a {
   color: var(--tertiary-text-color);
+  text-decoration: none;
+}
+
+article .graf--mixtapeEmbed a:hover, article .graf--mixtapeEmbed a:active {
+  text-decoration: none;
+  outline: none;
 }
 
 article .graf--mixtapeEmbed > a {
