@@ -216,8 +216,10 @@ a.underline{ //需要加下划线的class
   color: var(--link-text-color);
   &:hover{
     text-decoration: underline;
+    @include sm {
     text-underline-position: under;
-    text-underline-offset: -0.8px;
+    text-underline-offset: -.8px;
+    }
   }
   &:active{
     color: var(--link-text-active-color);
@@ -515,8 +517,11 @@ footer {
   section a:hover > h2{
     color: var(--link-text-color);
     text-decoration: underline;
+
+    @include sm {
     text-underline-position: under;
     text-underline-offset: -0.8px;
+    }
   }
   section a:active > h2{
     color: var(--link-text-active-color);
@@ -744,8 +749,10 @@ article{
     color: var(--link-text-color);
     &:hover{
       text-decoration: underline;
+      @include sm {
       text-underline-position: under;
-      text-underline-offset: -0.8px;
+      text-underline-offset: -.8px;
+      }
     }
     &:active{
       color: var(--link-text-active-color);
@@ -898,15 +905,19 @@ article{
       gap: 8px;
     }
     .project-navigation-tag{
-      font-size: 14px;
+      font-size: 12px;
+      padding: 5px 6px;
       color: var(--code-text-color);
-      // padding: 6px 10px;
       line-height: 1;
-      // background-color: rgba($color: #EB5757, $alpha: .15);
+      background-color: rgba($color: #EB5757, $alpha: .15);
       margin-right: var(--spacing-xxs);
       font-weight: 500;
-      // border-radius: var(--border-radius-sm);
+      border-radius: var(--border-radius-sm);
       white-space: nowrap;
+      @include sm{
+        font-size: 14px;
+        padding: 6px 8px;
+      }
     }
     .project-navigation-img{
       flex-shrink: 0;

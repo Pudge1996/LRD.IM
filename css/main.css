@@ -265,8 +265,13 @@ a.underline {
 
 a.underline:hover {
   text-decoration: underline;
-  text-underline-position: under;
-  text-underline-offset: -0.8px;
+}
+
+@media (min-width: 576px) {
+  a.underline:hover {
+    text-underline-position: under;
+    text-underline-offset: -.8px;
+  }
 }
 
 a.underline:active {
@@ -645,8 +650,13 @@ footer p {
 .blog section a:hover > h2 {
   color: var(--link-text-color);
   text-decoration: underline;
-  text-underline-position: under;
-  text-underline-offset: -0.8px;
+}
+
+@media (min-width: 576px) {
+  .blog section a:hover > h2 {
+    text-underline-position: under;
+    text-underline-offset: -0.8px;
+  }
 }
 
 .blog section a:active > h2 {
@@ -888,8 +898,13 @@ article a {
 
 article a:hover {
   text-decoration: underline;
-  text-underline-position: under;
-  text-underline-offset: -0.8px;
+}
+
+@media (min-width: 576px) {
+  article a:hover {
+    text-underline-position: under;
+    text-underline-offset: -.8px;
+  }
 }
 
 article a:active {
@@ -1079,12 +1094,22 @@ article figure.graf-after--h4 {
 }
 
 .project-navigation .project-navigation-tag {
-  font-size: 14px;
+  font-size: 12px;
+  padding: 5px 6px;
   color: var(--code-text-color);
   line-height: 1;
+  background-color: rgba(235, 87, 87, 0.15);
   margin-right: var(--spacing-xxs);
   font-weight: 500;
+  border-radius: var(--border-radius-sm);
   white-space: nowrap;
+}
+
+@media (min-width: 576px) {
+  .project-navigation .project-navigation-tag {
+    font-size: 14px;
+    padding: 6px 8px;
+  }
 }
 
 .project-navigation .project-navigation-img {
