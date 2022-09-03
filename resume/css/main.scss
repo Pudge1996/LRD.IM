@@ -194,6 +194,10 @@ p{
   }
 }
 
+.underline{
+  border-bottom: 1.5px solid var(--underline-color-hover);
+}
+
 .title-grid-container {
   display: grid;
   grid-template-columns: 1fr 180px;
