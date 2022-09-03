@@ -69,6 +69,7 @@ button, input, select, textarea {
   --project-tags-color: #F7F7F7;
   --background-color: #F7F7F7;
   --link-text-color: #0052cc;
+  --link-text-active-color: #063F93;
   --font-size-h1: 60px;
   --font-size-blog-title: 48px;
   --font-size-h2: 32px;
@@ -112,6 +113,7 @@ button, input, select, textarea {
   --project-tags-color: #333333;
   --background-color: #000000;
   --link-text-color: #58a6ff;
+  --link-text-active-color: #2385F6;
   --nav-shadow: rgba(255,255,255,.15);
 }
 
@@ -265,6 +267,10 @@ a.underline:hover {
   text-decoration: underline;
   text-underline-position: under;
   text-underline-offset: -0.8px;
+}
+
+a.underline:active {
+  color: var(--link-text-active-color);
 }
 
 .vpn:hover::after,
@@ -636,11 +642,15 @@ footer p {
   background-image: url("");
 }
 
-.blog section:hover > a h2 {
+.blog section a:hover > h2 {
   color: var(--link-text-color);
   text-decoration: underline;
   text-underline-position: under;
   text-underline-offset: -0.8px;
+}
+
+.blog section a:active > h2 {
+  color: var(--link-text-active-color);
 }
 
 .blog-post p {
@@ -882,6 +892,10 @@ article a:hover {
   text-underline-offset: -0.8px;
 }
 
+article a:active {
+  color: var(--link-text-active-color);
+}
+
 article h1 {
   text-align: left;
   padding-top: var(--spacing-sm);
@@ -1067,12 +1081,9 @@ article figure.graf-after--h4 {
 .project-navigation .project-navigation-tag {
   font-size: 14px;
   color: var(--code-text-color);
-  padding: 6px 10px;
   line-height: 1;
-  background-color: rgba(235, 87, 87, 0.1);
   margin-right: var(--spacing-xxs);
   font-weight: 500;
-  border-radius: var(--border-radius-sm);
   white-space: nowrap;
 }
 
@@ -1613,10 +1624,6 @@ article figure.graf-after--h4 {
     -webkit-transform: scale(1.01);
             transform: scale(1.01);
   }
-  .project section:active {
-    background-color: transparent;
-    border: 1px solid var(--divider-color);
-  }
 }
 
 .project section .desc {
@@ -1787,6 +1794,7 @@ article figure.graf-after--h4 {
   background-size: cover;
   border-radius: var(--border-radius-md);
   background-color: var(--project-bg-color);
+  background-color: var(--button-color);
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;

@@ -29,6 +29,7 @@
   --project-tags-color: #F7F7F7;
   --background-color: #F7F7F7;
   --link-text-color: #0052cc;
+  --link-text-active-color: #063F93;
 
   //字体相关
   --font-size-h1: 60px;
@@ -79,6 +80,7 @@
   --project-tags-color: #333333;
   --background-color: #000000;
   --link-text-color: #58a6ff;
+  --link-text-active-color: #2385F6;
 
   //样式
   --nav-shadow: rgba(255,255,255,.15);
@@ -212,11 +214,15 @@ a {
 
 a.underline{ //需要加下划线的class
   color: var(--link-text-color);
-    &:hover{
-      text-decoration: underline;
-      text-underline-position: under;
-      text-underline-offset: -0.8px;
-    }
+  &:hover{
+    text-decoration: underline;
+    text-underline-position: under;
+    text-underline-offset: -0.8px;
+  }
+  &:active{
+    color: var(--link-text-active-color);
+  }
+  
 }
 
 
@@ -506,11 +512,14 @@ footer {
     @extend .elis-2;
     @extend .case;
   }
-  section:hover > a h2{
+  section a:hover > h2{
     color: var(--link-text-color);
     text-decoration: underline;
     text-underline-position: under;
     text-underline-offset: -0.8px;
+  }
+  section a:active > h2{
+    color: var(--link-text-active-color);
   }
 
 }
@@ -738,6 +747,9 @@ article{
       text-underline-position: under;
       text-underline-offset: -0.8px;
     }
+    &:active{
+      color: var(--link-text-active-color);
+    }
   }
   h1{ // 文章标题
     text-align: left;
@@ -888,12 +900,12 @@ article{
     .project-navigation-tag{
       font-size: 14px;
       color: var(--code-text-color);
-      padding: 6px 10px;
+      // padding: 6px 10px;
       line-height: 1;
-      background-color: rgba($color: #EB5757, $alpha: .1);
+      // background-color: rgba($color: #EB5757, $alpha: .15);
       margin-right: var(--spacing-xxs);
       font-weight: 500;
-      border-radius: var(--border-radius-sm);
+      // border-radius: var(--border-radius-sm);
       white-space: nowrap;
     }
     .project-navigation-img{
@@ -1283,11 +1295,6 @@ article{
         transition: all 1s cubic-bezier(0.19,1,0.22,1); // 图片放大动画
         transform: scale(1.01);
       }
-      &:active{
-        background-color: transparent;
-        border: 1px solid var(--divider-color);
-        // transition: all 1s cubic-bezier(0.19,1,0.22,1);
-      }
     }
     .desc{
       display: flex;
@@ -1470,6 +1477,7 @@ article{
     background-size: cover;
     border-radius: var(--border-radius-md);
     background-color: var(--project-bg-color);
+    background-color: var(--button-color);
     flex-direction: column;
     @include md {
       padding: var(--spacing-sm) var(--spacing-md);
