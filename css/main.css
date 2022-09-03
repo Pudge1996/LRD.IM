@@ -103,14 +103,14 @@ button, input, select, textarea {
   --tertiary-text-color: #999999;
   --code-text-color: #f05656;
   --divider-color: #333333;
-  --button-color: #292929;
+  --button-color: #1A1A1A;
   --button-hover-color: #333333;
   --button-active-color: #262626;
   --pre-bg-color: #262626;
   --copied-text-color: #64A838;
   --project-bg-color: #262626;
   --project-tags-color: #333333;
-  --background-color: #0d0d0d;
+  --background-color: #000000;
   --link-text-color: #58a6ff;
   --nav-shadow: rgba(255,255,255,.15);
 }
@@ -225,7 +225,7 @@ h2 {
 
 @media (min-width: 576px) {
   h2 {
-    font-size: var(--font-size-h2);
+    font-size: var(--font-size-h3);
     margin-top: var(--spacing-lg);
   }
 }
@@ -273,12 +273,18 @@ a {
 }
 
 a.underline {
-  text-decoration: underline;
-  text-underline-position: under;
+  color: var(--link-text-color);
 }
 
 a.underline:hover {
-  color: var(--primary-text-color);
+  text-decoration: underline;
+  text-underline-position: under;
+  text-underline-offset: -0.8px;
+}
+
+a.underline:active {
+  outline: 2px solid var(--button-hover-color);
+  background-color: var(--button-hover-color);
 }
 
 .vpn:hover::after,
@@ -1351,7 +1357,7 @@ article figure.graf-after--h4 {
 
 @media (min-width: 768px) {
   .series a {
-    padding: var(--spacing-xs);
+    padding: var(--spacing-xxs) var(--spacing-xs);
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;

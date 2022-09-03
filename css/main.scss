@@ -70,14 +70,14 @@
   --tertiary-text-color: #999999;
   --code-text-color: #f05656;
   --divider-color: #333333;
-  --button-color: #292929;
+  --button-color: #1A1A1A;
   --button-hover-color: #333333;
   --button-active-color: #262626;
   --pre-bg-color: #262626;
   --copied-text-color: #64A838;
   --project-bg-color: #262626;
   --project-tags-color: #333333;
-  --background-color: #0d0d0d;
+  --background-color: #000000;
   --link-text-color: #58a6ff;
 
   //样式
@@ -182,7 +182,7 @@ h2 {
   color: var(--primary-text-color);
   margin-top: var(--spacing-md);
   @include sm {
-    font-size: var(--font-size-h2);
+    font-size: var(--font-size-h3);
     margin-top: var(--spacing-lg);
   }
 }
@@ -224,11 +224,16 @@ a {
 }
 
 a.underline{ //需要加下划线的class
-  text-decoration: underline;
-  text-underline-position: under;
-  &:hover{
-    color: var(--primary-text-color);
-  }
+  color: var(--link-text-color);
+    &:hover{
+      text-decoration: underline;
+      text-underline-position: under;
+      text-underline-offset: -0.8px;
+    }
+    &:active{
+      outline: 2px solid var(--button-hover-color);
+      background-color: var(--button-hover-color);
+    }
 }
 
 
@@ -742,7 +747,6 @@ article{
     &:active{
       outline: 2px solid var(--button-hover-color);
       background-color: var(--button-hover-color);
-
     }
   }
   h1{ // 文章标题
@@ -1099,7 +1103,7 @@ article{
     display: flex;
     flex: 1;
     @include md {
-      padding: var(--spacing-xs);
+      padding: var(--spacing-xxs) var(--spacing-xs);
       flex-direction: column;
     }
     p{
