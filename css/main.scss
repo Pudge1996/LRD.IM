@@ -28,6 +28,7 @@
   --project-bg-color: #FFFFFF;
   --project-tags-color: #F7F7F7;
   --background-color: #F7F7F7;
+  --link-text-color: #0052cc;
 
   //字体相关
   --font-size-h1: 60px;
@@ -77,6 +78,7 @@
   --project-bg-color: #262626;
   --project-tags-color: #333333;
   --background-color: #1A1A1A;
+  --link-text-color: #58a6ff;
 
   //样式
   --nav-shadow: rgba(255,255,255,.15);
@@ -725,8 +727,18 @@ article{
 
   // ▼ 文本 ▼
   a{
-    text-decoration: underline;
-    text-underline-position: under;
+    text-decoration: none;
+    color: var(--link-text-color);
+    &:hover{
+      text-decoration: underline;
+      text-underline-position: under;
+      text-underline-offset: -0.8px;
+    }
+    &:active{
+      outline: 2px solid var(--button-hover-color);
+      background-color: var(--button-hover-color);
+
+    }
   }
   h1{ // 文章标题
     text-align: left;
@@ -909,6 +921,11 @@ article{
       }
       &:nth-child(2){
         flex: 1;
+      }
+      &:hover, &:active{
+        text-decoration: none;
+        background-color: none;
+        outline: none;
       }
     }
     @include sm {

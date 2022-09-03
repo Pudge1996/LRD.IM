@@ -68,6 +68,7 @@ button, input, select, textarea {
   --project-bg-color: #FFFFFF;
   --project-tags-color: #F7F7F7;
   --background-color: #F7F7F7;
+  --link-text-color: #0052cc;
   --font-size-h1: 60px;
   --font-size-blog-title: 48px;
   --font-size-h2: 32px;
@@ -110,6 +111,7 @@ button, input, select, textarea {
   --project-bg-color: #262626;
   --project-tags-color: #333333;
   --background-color: #1A1A1A;
+  --link-text-color: #58a6ff;
   --nav-shadow: rgba(255,255,255,.15);
 }
 
@@ -869,8 +871,19 @@ article .graf--mixtapeEmbed br {
 }
 
 article a {
+  text-decoration: none;
+  color: var(--link-text-color);
+}
+
+article a:hover {
   text-decoration: underline;
   text-underline-position: under;
+  text-underline-offset: -0.8px;
+}
+
+article a:active {
+  outline: 2px solid var(--button-hover-color);
+  background-color: var(--button-hover-color);
 }
 
 article h1 {
@@ -1109,6 +1122,12 @@ article figure.graf-after--h4 {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+
+.article-navigation a:hover, .article-navigation a:active {
+  text-decoration: none;
+  background-color: none;
+  outline: none;
 }
 
 @media (min-width: 576px) {
