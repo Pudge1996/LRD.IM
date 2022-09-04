@@ -6,16 +6,13 @@
 
 :root {
   --primary-text-color: #222222;
-  --secondary-text-color: #444444;
+  --secondary-text-color: #333333;
   --tertiary-text-color: #757575;
   --copied-text-color: green;
   --divider-color: #E6E6E6;
   --background-color: #F7F7F7;
   --background-color-hover: rgba(0,0,0,.04);
   --underline-color-hover: rgba(0,0,0,.18);
-  --background-color-active: rgba(0,0,0,.08);
-  --underline-color-active: rgba(0,0,0,.48);
-  --outline-color-focus: rgba(0,0,0,.48);
   --link-text-color: #0052cc;
   --link-text-active-color: #063F93;
   --button-background-color: #EDEDED;
@@ -36,9 +33,6 @@
   --button-background-color: #EDEDED;
   --background-color-hover: rgba(255,255,255,.12);
   --underline-color-hover: rgba(255,255,255,.24);
-  --background-color-active: rgba(255,255,255,.16);
-  --underline-color-active: rgba(255,255,255,.56);
-  --outline-color-focus: rgba(255,255,255,.72);
   --button-background-color: hsl(0, 0%, 20%);
   --button-background-color-hover:hsl(0, 0%, 30%);
   --button-background-color-active:hsl(0, 0%, 20%);
@@ -113,7 +107,7 @@ a:focus {
 
 a:focus:not(:focus-visible) {
   outline: none;
-  font-weight: 400;
+  font-weight: inherit;
   -webkit-text-decoration: 1px underline var(--underline-color-hover);
           text-decoration: 1px underline var(--underline-color-hover);
   text-decoration: none;
@@ -162,8 +156,8 @@ p {
 }
 
 .underline {
-  -webkit-text-decoration: 1px underline var(--underline-color-hover);
-          text-decoration: 1px underline var(--underline-color-hover);
+  -webkit-text-decoration: 1px underline;
+          text-decoration: 1px underline;
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
   text-underline-offset: 3px;
@@ -367,6 +361,10 @@ p {
 
 .grid-container .name p {
   white-space: nowrap;
+}
+
+.grid-container .name p strong a {
+  display: block;
 }
 
 .time-1 {
@@ -755,6 +753,18 @@ footer .dot {
   }
 }
 
+footer .download .file:hover::after {
+  content: "";
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  -webkit-mask: url(file.svg) no-repeat 50% 50%;
+          mask: url(file.svg) no-repeat 50% 50%;
+  background-color: currentColor;
+  padding-left: 6px;
+  vertical-align: -2.5px;
+}
+
 .hidden-elemen-1 {
   content: "";
   width: 0em;
@@ -769,5 +779,13 @@ footer .dot {
   height: 0em;
   -webkit-mask: url(copied.svg) no-repeat 50% 50%;
           mask: url(copied.svg) no-repeat 50% 50%;
+}
+
+.hidden-elemen-3 {
+  content: "";
+  width: 0em;
+  height: 0em;
+  -webkit-mask: url(file.svg) no-repeat 50% 50%;
+          mask: url(file.svg) no-repeat 50% 50%;
 }
 /*# sourceMappingURL=main.css.map */

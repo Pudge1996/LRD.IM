@@ -26,7 +26,7 @@ $ipad: 1200px;
 }
 :root {
   --primary-text-color: #222222;
-  --secondary-text-color: #444444;
+  --secondary-text-color: #333333;
   --tertiary-text-color: #757575;
   --copied-text-color: green;
   --divider-color: #E6E6E6;
@@ -35,9 +35,6 @@ $ipad: 1200px;
   //a
   --background-color-hover: rgba(0,0,0,.04);
   --underline-color-hover: rgba(0,0,0,.18);
-  --background-color-active: rgba(0,0,0,.08);
-  --underline-color-active: rgba(0,0,0,.48);
-  --outline-color-focus: rgba(0,0,0,.48);
   --link-text-color: #0052cc;
   --link-text-active-color: #063F93;
 
@@ -64,9 +61,6 @@ $ipad: 1200px;
   --button-background-color: #EDEDED;
   --background-color-hover: rgba(255,255,255,.12);
   --underline-color-hover: rgba(255,255,255,.24);
-  --background-color-active: rgba(255,255,255,.16);
-  --underline-color-active: rgba(255,255,255,.56);
-  --outline-color-focus: rgba(255,255,255,.72);
 
   // popover
   --button-background-color: hsl(0, 0%, 20%);
@@ -140,7 +134,7 @@ a{
  
   &:focus:not(:focus-visible){ //鼠标点击不出现描边
     outline: none;
-    font-weight: 400;
+    font-weight: inherit;
     text-decoration: 1px underline var(--underline-color-hover);
     text-decoration: none;
   }
@@ -182,7 +176,7 @@ p{
 }
 
 .underline{
-  text-decoration: 1px underline var(--underline-color-hover);
+  text-decoration: 1px underline;
   text-decoration-line: underline;
   text-underline-offset: 3px;
   text-decoration-color: unset;
@@ -289,11 +283,6 @@ p{
   #number:focus:not(:focus-visible), #email:focus:not(:focus-visible){
     outline: none;
   }
-// #number:hover, #email:hover{
-//   @include mobile(){
-//     color: var(--secondary-text-color);
-//   }
-// } 
   
 
   }
@@ -374,7 +363,11 @@ p{
   .name{
     p{
       white-space: nowrap;
+      strong a{
+        display: block;
+      }
     }
+
   }
   
 }
@@ -642,6 +635,16 @@ footer {
     @include mobile{
       display: none;
     }
+    .file:hover::after{
+      content: "";
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    mask: url(file.svg) no-repeat 50% 50%;
+    background-color: currentColor;
+    padding-left: 6px;
+    vertical-align: -2.5px;
+    }
   }
 }
 
@@ -656,4 +659,10 @@ footer {
   width: 0em;
   height: 0em;
   mask: url(copied.svg) no-repeat 50% 50%;
+}
+.hidden-elemen-3{
+  content: "";
+  width: 0em;
+  height: 0em;
+  mask: url(file.svg) no-repeat 50% 50%;
 }
