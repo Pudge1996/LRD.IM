@@ -8,7 +8,7 @@
   <title>李瑞东 · 个人简历</title>
 
   <!-- main css -->
-  <link rel="stylesheet" href="css/main.min.css">
+  <link rel="stylesheet" href="css/main.css">
 
   <!-- clipboard js -->
   <script src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/js/clipboard.min.js"></script>
@@ -211,7 +211,109 @@
 </body>
 
 <script>
-  ;eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('2.d=5(){f.6.7="8";g.6.7="8";p.6.7="8"};3 9=2.a(\'9\');3 f=2.a(\'f\');3 k=u v(9);k.w(\'x\',5(e){q.r(e);f.6.7="y-z";g.6.7="8";p.6.7="8"});9.d=5(9){9.A()};3 b=2.a(\'b\');3 g=2.a(\'g\');3 k=u v(b);k.w(\'x\',5(e){q.r(e);f.6.7="8";g.6.7="y-z";p.6.7="8"});b.d=5(b){b.A()};h(!l.s){s=5(B){I(B,J)}}3 C=5(D){3 m=2.c.4?2.c:2.K;3 4=m.4;3 n=5(){4=4+(0-4)/(D||1);h(4<=1){m.4=0;L}m.4=4;s(n)};n()};3 E=l.M;h(E){2.a(\'n\').N(\'d\',\'C(0)\');q.r(\'O!\')};P i=l.F&&l.F(\'(Q-R-S: j)\');h(i&&i.G){2.c.o.H(\'j\')}i&&i.T(\'U\',e=>{h(e.G){2.c.o.H(\'j\')}V{2.c.o.W(\'j\')}});3 t=2.a(\'t\');t.d=5(){2.c.o.X("j")}',60,60,'||document|var|scrollTop|function|style|display|none|email|getElementById|number|body|onclick||emailCopied|numberCopied|if|darkMode|dark|clipboard|window|doc|top|classList|siteCopied|console|log|requestAnimationFrame|themeToggle|new|ClipboardJS|on|success|inline|block|stopPropagation|fn|backToTop|rate|isChromium|matchMedia|matches|add|setTimeout|17|documentElement|return|chrome|setAttribute|Chrome|const|prefers|color|scheme|addEventListener|change|else|remove|toggle'.split('|'),0,{}));
+  // ▼▼ 点击复制功能
+  //点击屏幕区域隐藏「已复制」
+  document.onclick = function() {
+    emailCopied.style.display = "none";
+    numberCopied.style.display = "none";
+    siteCopied.style.display = "none";
+  };
+
+  // 复制 email
+  var email = document.getElementById('email');
+  var emailCopied = document.getElementById('emailCopied');
+  var clipboard = new ClipboardJS(email);
+
+  //复制功能，以及展示「已复制」
+  clipboard.on('success', function (e) { 
+    console.log(e);
+    emailCopied.style.display = "inline-block";
+    numberCopied.style.display = "none";
+    siteCopied.style.display = "none";
+  });
+
+  // 排除自己（阻止事件冒泡）
+  email.onclick = function(email) {
+    email.stopPropagation();
+  };
+  
+  // 复制电话/微信
+  var number = document.getElementById('number');
+  var numberCopied = document.getElementById('numberCopied');
+  var clipboard = new ClipboardJS(number);
+
+  //复制功能，以及展示「已复制」
+  clipboard.on('success', function (e) {
+    console.log(e);
+    emailCopied.style.display = "none";
+    numberCopied.style.display = "inline-block";
+    siteCopied.style.display = "none";
+    
+  });
+
+  // 排除自己（阻止事件冒泡）
+  number.onclick = function(number) {
+    number.stopPropagation();
+  };
+// ▲▲ 点击复制功能
+
+// ▼▼ requestAnimationFrame的兼容处理
+if (!window.requestAnimationFrame) {
+    requestAnimationFrame = function(fn) {
+        setTimeout(fn, 17);
+    };	
+}
+// ▲▲ requestAnimationFrame的兼容处理
+
+// ▼▼ 滚动到顶部缓动实现，rate表示缓动速率，默认是2
+var backToTop = function (rate) {
+    var doc = document.body.scrollTop? document.body : document.documentElement;
+    var scrollTop = doc.scrollTop;
+    
+    var top = function () {
+        scrollTop = scrollTop + (0 - scrollTop) / (rate || 1);
+        
+        // 临界判断，终止动画
+        if (scrollTop <= 1) {
+            doc.scrollTop = 0;
+            return;
+        }
+        doc.scrollTop = scrollTop;
+        // 动画gogogo!
+        requestAnimationFrame(top);    
+    };
+    top();
+};
+// ▲▲ 滚动到顶部缓动实现
+
+// ▼▼ 判断是 Chrome 就用回到顶部(0)的动效
+var isChromium = window.chrome;
+if (isChromium) {
+  document.getElementById('top').setAttribute('onclick','backToTop(0)');
+  console.log('Chrome!');
+};
+// ▲▲ 判断是 Chrome 就用回到顶部(0)的动效
+
+
+// ▼▼ 深色模式
+const darkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)'); 
+// 判断是否匹配深色模式 
+if (darkMode && darkMode.matches) { 
+  document.body.classList.add('dark'); 
+} 
+// 监听主题切换事件 
+darkMode && darkMode.addEventListener('change', e => { 
+  if (e.matches) { 
+    document.body.classList.add('dark'); 
+  } else { 
+    document.body.classList.remove('dark');  
+  } 
+});
+//点击切换按钮
+var themeToggle = document.getElementById('themeToggle');
+  themeToggle.onclick = function(){
+    document.body.classList.toggle("dark");
+  }
 </script>
 
 </html>

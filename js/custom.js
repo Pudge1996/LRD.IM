@@ -77,6 +77,7 @@ function generateCatalog(catalogData) { // 添加目录标签
 
 // ▲▲ 博客 - 右侧导航菜单
 
+
 // ▼▼ 导航栏
 
  var iconMenu = document.getElementById('iconMenu');
@@ -90,13 +91,26 @@ function generateCatalog(catalogData) { // 添加目录标签
     navMask.classList.toggle('hidden');
     iconClose.classList.toggle('hide');
     iconMenu.classList.toggle('hide');
-    
-    navMask.addEventListener('touchmove', e => {
+    //屏蔽滚动
+    document.body.classList.add("stop-scrolling");
+    //屏蔽滚动（Safari）
+    navMask.addEventListener('touchmove', e => { 
         e.preventDefault()
       }, false)
     navOpen.addEventListener('touchmove', e => {
     e.preventDefault()
     }, false)
+    // ESC 关闭弹窗
+    document.onkeydown = function(e){ //对整个页面监听  
+      if (27 == e.keyCode){  
+        navOpen.classList.toggle('hidden');
+        navOpen.classList.toggle('nav-transform');
+        navMask.classList.toggle('hidden');
+        iconClose.classList.toggle('hide');
+        iconMenu.classList.toggle('hide');
+        document.body.classList.remove("stop-scrolling");
+      }
+    }
  }
  iconClose.onclick = function(){
     navOpen.classList.toggle('hidden');
@@ -105,23 +119,22 @@ function generateCatalog(catalogData) { // 添加目录标签
     //图标切换
     iconClose.classList.toggle('hide');
     iconMenu.classList.toggle('hide');
-    
-    navMask.addEventListener('touchmove', e => {  //禁止在遮罩层滚动
-        e.preventDefault()
-      }, false)
-    navOpen.addEventListener('touchmove', e => {  //禁止在导航菜单滚动
-    e.preventDefault()
-    }, false)
+    //屏蔽滚动
+    document.body.classList.remove("stop-scrolling");
  }
 
  navMask.onclick = function(){ 
     navOpen.classList.toggle('hidden');
     navOpen.classList.toggle('nav-transform');
     navMask.classList.toggle('hidden');
+    document.body.classList.remove("stop-scrolling");
+
     //图标切换
     iconClose.classList.toggle('hide');
     iconMenu.classList.toggle('hide');
  }
+
+
 
 // ▲▲ 导航栏
 
