@@ -36,6 +36,11 @@ button{
   --negative-color: #000;
   --link-text-color: #0052cc;
   --link-text-active-color: #063F93;
+  //用于blog页面的banner颜色
+  --banner-bg-color: #824DE5;
+  --banner-text-color: #FFF;
+  --banner-bg-color-faded: #F9E8FF;
+  --banner-text-color-faded: #6D2DE3;
 
   //字体相关
   --font-size-h1: 48px;
@@ -88,6 +93,11 @@ button{
   --negative-color: #FFF;
   --link-text-color: #58a6ff;
   --link-text-active-color: #2385F6;
+  //用于暗色blog页面的banner颜色
+  --banner-bg-color: #8250df;
+  --banner-text-color: #FFF;
+  --banner-bg-color-faded: #1A1A1A;
+  --banner-text-color-faded: #FFF;
 
   //样式
   --nav-shadow: rgba(255,255,255,.15);
@@ -517,7 +527,6 @@ footer {
   section a:hover > h2{
     color: var(--link-text-color);
     text-decoration: underline;
-
     @include sm {
     text-underline-position: under;
     text-underline-offset: -0.8px;
@@ -527,8 +536,46 @@ footer {
     color: var(--link-text-active-color);
     text-decoration: none;
   }
-
 }
+  // 博客页顶部 Banner
+  .blog-notification{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-xxs);
+    background-color: var(--banner-bg-color);
+    animation: 1s bannerFadeOut forwards 4s cubic-bezier(0.22, 1, 0.36, 1);
+    @keyframes bannerFadeOut {
+      from { background: var(--banner-bg-color); }
+      to { background: var(--banner-bg-color-faded); }
+    }
+    
+    p{
+      font-size: var(--font-size-sub);
+      line-height: var(--line-height-md);
+      margin: 0;
+      color: var(--banner-text-color);
+      text-align: center;
+      animation: 1s bannerTextFadeOut forwards 4s cubic-bezier(0.22, 1, 0.36, 1);
+      @keyframes bannerTextFadeOut {
+        from { color: var(--banner-text-color); }
+        to { color: var(--banner-text-color-faded); }
+      }
+      @include md{
+      line-height: var(--line-height-sm);
+      }
+      a{
+        color: inherit;
+        border-bottom: 1px solid;
+        &:hover{
+          border: none;
+        }
+      }
+  }
+  }
+  
+  
+  
 
 .blog-post{
   p{
@@ -578,7 +625,7 @@ footer {
     }
   }
   .catalog-h4{
-    padding-left: 1em;
+    padding-left: 1.5em;
   }
   
   @include xl {

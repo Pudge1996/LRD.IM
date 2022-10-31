@@ -83,6 +83,10 @@ button {
   --negative-color: #000;
   --link-text-color: #0052cc;
   --link-text-active-color: #063F93;
+  --banner-bg-color: #824DE5;
+  --banner-text-color: #FFF;
+  --banner-bg-color-faded: #F9E8FF;
+  --banner-text-color-faded: #6D2DE3;
   --font-size-h1: 48px;
   --font-size-blog-title: 48px;
   --font-size-h2: 32px;
@@ -128,6 +132,10 @@ button {
   --negative-color: #FFF;
   --link-text-color: #58a6ff;
   --link-text-active-color: #2385F6;
+  --banner-bg-color: #8250df;
+  --banner-text-color: #FFF;
+  --banner-bg-color-faded: #1A1A1A;
+  --banner-text-color-faded: #FFF;
   --nav-shadow: rgba(255,255,255,.15);
 }
 
@@ -675,6 +683,83 @@ footer p {
   text-decoration: none;
 }
 
+.blog-notification {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: var(--spacing-xxs);
+  background-color: var(--banner-bg-color);
+  -webkit-animation: 1s bannerFadeOut forwards 4s cubic-bezier(0.22, 1, 0.36, 1);
+          animation: 1s bannerFadeOut forwards 4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@-webkit-keyframes bannerFadeOut {
+  from {
+    background: var(--banner-bg-color);
+  }
+  to {
+    background: var(--banner-bg-color-faded);
+  }
+}
+
+@keyframes bannerFadeOut {
+  from {
+    background: var(--banner-bg-color);
+  }
+  to {
+    background: var(--banner-bg-color-faded);
+  }
+}
+
+.blog-notification p {
+  font-size: var(--font-size-sub);
+  line-height: var(--line-height-md);
+  margin: 0;
+  color: var(--banner-text-color);
+  text-align: center;
+  -webkit-animation: 1s bannerTextFadeOut forwards 4s cubic-bezier(0.22, 1, 0.36, 1);
+          animation: 1s bannerTextFadeOut forwards 4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@-webkit-keyframes bannerTextFadeOut {
+  from {
+    color: var(--banner-text-color);
+  }
+  to {
+    color: var(--banner-text-color-faded);
+  }
+}
+
+@keyframes bannerTextFadeOut {
+  from {
+    color: var(--banner-text-color);
+  }
+  to {
+    color: var(--banner-text-color-faded);
+  }
+}
+
+@media (min-width: 768px) {
+  .blog-notification p {
+    line-height: var(--line-height-sm);
+  }
+}
+
+.blog-notification p a {
+  color: inherit;
+  border-bottom: 1px solid;
+}
+
+.blog-notification p a:hover {
+  border: none;
+}
+
 .blog-post p {
   margin: 30px 0;
 }
@@ -731,7 +816,7 @@ footer p {
 }
 
 .blogCatalog .catalog-h4 {
-  padding-left: 1em;
+  padding-left: 1.5em;
 }
 
 @media (min-width: 1200px) {
