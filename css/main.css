@@ -83,10 +83,10 @@ button {
   --negative-color: #000;
   --link-text-color: #0052cc;
   --link-text-active-color: #063F93;
-  --banner-bg-color: #824DE5;
+  --banner-bg-color: #0052cc;
   --banner-text-color: #FFF;
-  --banner-bg-color-faded: #F9E8FF;
-  --banner-text-color-faded: #6D2DE3;
+  --banner-bg-color-faded: #EEEEEE;
+  --banner-text-color-faded: #444444;
   --font-size-h1: 48px;
   --font-size-blog-title: 48px;
   --font-size-h2: 32px;
@@ -132,7 +132,7 @@ button {
   --negative-color: #FFF;
   --link-text-color: #58a6ff;
   --link-text-active-color: #2385F6;
-  --banner-bg-color: #8250df;
+  --banner-bg-color: #0c5cd5;
   --banner-text-color: #FFF;
   --banner-bg-color-faded: #1A1A1A;
   --banner-text-color-faded: #FFF;
@@ -694,8 +694,8 @@ footer p {
           align-items: center;
   padding: var(--spacing-xxs);
   background-color: var(--banner-bg-color);
-  -webkit-animation: 1s bannerFadeOut forwards 4s cubic-bezier(0.22, 1, 0.36, 1);
-          animation: 1s bannerFadeOut forwards 4s cubic-bezier(0.22, 1, 0.36, 1);
+  -webkit-animation: 1s bannerFadeOut forwards 1s cubic-bezier(0.22, 1, 0.36, 1);
+          animation: 1s bannerFadeOut forwards 1s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 @-webkit-keyframes bannerFadeOut {
@@ -722,8 +722,9 @@ footer p {
   margin: 0;
   color: var(--banner-text-color);
   text-align: center;
-  -webkit-animation: 1s bannerTextFadeOut forwards 4s cubic-bezier(0.22, 1, 0.36, 1);
-          animation: 1s bannerTextFadeOut forwards 4s cubic-bezier(0.22, 1, 0.36, 1);
+  -webkit-animation: 1s bannerTextFadeOut forwards 1s cubic-bezier(0.22, 1, 0.36, 1);
+          animation: 1s bannerTextFadeOut forwards 1s cubic-bezier(0.22, 1, 0.36, 1);
+  width: 100%;
 }
 
 @-webkit-keyframes bannerTextFadeOut {
@@ -748,6 +749,19 @@ footer p {
   .blog-notification p {
     line-height: var(--line-height-sm);
   }
+}
+
+.blog-notification p::before {
+  content: "";
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  -webkit-mask: url(rss.svg) no-repeat 50% 50%;
+          mask: url(rss.svg) no-repeat 50% 50%;
+  background-color: currentColor;
+  -webkit-margin-end: 4px;
+          margin-inline-end: 4px;
+  vertical-align: -2.5px;
 }
 
 .blog-notification p a {

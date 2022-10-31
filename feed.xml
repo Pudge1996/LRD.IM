@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+<channel>
+  <title>李瑞东的设计博客</title>
+  <link>https://lrd.im/blog.html</link>
+  <description>原创的设计实践经验，翻译大厂文章，日常设计迷思...</description>
+  <category>设计</category>
+  <category>UI 设计</category>
+  <category>设计师</category>
+  <copyright>©李瑞东 2017-2023 </copyright>
+  <image>
+    <url>http://www.runoob.com/images/logo.png</url>
+    <title>菜鸟教程</title>
+    <link>http://www.runoob.com</link>
+  </image>
+  <language>zh-cn</language>
+  <!--  Feed 内容的最后修改日期 -->
+  <lastBuildDate>2022-10-26</lastBuildDate>
+  <!--  内容编辑邮箱 -->   
+  <managingEditor>lrdbuff@gmail.com</managingEditor>
+  <!--  缓存分钟数 -->     
+  <ttl>1</ttl>
+  <!--  网络管理员的电子邮件地址 --> 
+  <webMaster>lrdbuff@gmail.com</webMaster>
+  <item>
+    <title>网页布局设计和适配（分享会文稿）</title>
+    <link>https://lrd.im/blog/2022-10-31-95606a08fc44.html</link>
+    <description>我在最近的工作中发现表单的校验时机通常是在三种方式内取舍：输入中、失焦后、提交时。这其中的差异还是挺耐人寻味的，有必要探索三者之间的各自优劣势和适用场景，于是乎就有了这篇文章。</description>
+    <guid>https://lrd.im/blog/2022-10-31-95606a08fc44.html</guid>
+    <pubDate>2022-10-31 12:00:00 +0800</pubDate>
+  </item>
+  <item>
+    <title>App 表单校验时机探索</title>
+    <link>https://lrd.im/blog/2022-08-17-f2c1f5bfbb8d.html</link>
+    <description>我在最近的工作中发现表单的校验时机通常是在三种方式内取舍：输入中、失焦后、提交时。这其中的差异还是挺耐人寻味的，有必要探索三者之间的各自优劣势和适用场景，于是乎就有了这篇文章。</description>
+    <guid>https://lrd.im/blog/2022-08-17-f2c1f5bfbb8d.html</guid>
+    <pubDate>2022-08-17 12:00:00 +0800</pubDate>
+  </item>
+  <item>
+    <title>如何冲破设计系统的界限 · 翻译自 Shopify UX</title>
+    <link>https://lrd.im/blog/2022-08-12-aafdf4e6ca0e.html</link>
+    <description>为了跟上需求，设计系统需要不断发展。讽刺的是，设计系统的进化似乎有点像先有鸡还是先有蛋的问题。如果不知道产品业务需要什么，专门负责设计系统迭代的团队就无法进一步发展。另一方面，大多数业务设计团队只在系统的现有规范和组件内完成工作，这不利于进一步推动系统的发展。这样看上去像是僵住了。</description>
+    <guid>https://lrd.im/blog/2022-08-12-aafdf4e6ca0e.html</guid>
+    <pubDate>2022-08-12 12:00:00 +0800</pubDate>
+  </item>
+  <item>
+    <title>SL 图标库改良实践</title>
+    <link>https://lrd.im/blog/2022-07-16-6ecdd6a483bb.html</link>
+    <description>现在的图标库已经年久失修（虽然才一两年），我需要基于「日益发展的业务」和「不同职位设计师的诉求」来改良图标库的做法，以及优化更新图标的流程。 这篇文章主要是记录我是如何确定要做哪些改良，以及怎么落地实施的。</description>
+    <guid>https://lrd.im/blog/2022-07-16-6ecdd6a483bb.html</guid>
+    <pubDate>2022-07-16 12:00:00 +0800</pubDate>
+  </item>
+  <item>
+    <title>下一代主题设计：我们如何让 Dawn 主题变得响应快、可扩展和更美观 · 翻译自 Shopify UX</title>
+    <link>https://lrd.im/blog/2022-06-15-830dcd7a3892.html</link>
+    <description>我们在线商店的默认主题 Debut 在五年前发布时是一个很棒的主题，但经过 Web 标准和 UX 最佳实践这几年的发展，Debut 的缺点开始显现。我们需要一个不仅能满足最新的 Web 和 UX 标准，还要能促进在线商店进入下一个世代的解决方案。</description>
+    <guid>https://lrd.im/blog/2022-06-15-830dcd7a3892.html</guid>
+    <pubDate>2022-06-15 12:00:00 +0800</pubDate>
+  </item>
+  <item>
+    <title>在技术与产品设计的合作中寻求像素完美 · 翻译自 Shopify UX</title>
+    <link>https://lrd.im/blog/2022-05-28-9177f6a70570.html</link>
+    <description>在前几年，设计和开发一个主题最多需要六个月的时间。今天，我们平均只需要 8~10 周。我们如何做到的呢？作为 Shopfiy 标杆性的主题团队高级用户体验经理，我将分享我们团队中网页设计和跨专业协作方法中的秘密。</description>
+    <guid>https://lrd.im/blog/2022-05-28-9177f6a70570.html</guid>
+    <pubDate>2022-05-28 12:00:00 +0800</pubDate>
+  </item>
+  <item>
+    <title>我们如何重新设计 Shopify 的开发者文档 · 翻译自 Shopify UX</title>
+    <link>https://lrd.im/blog/2022-05-24-8b7b70ae1621.html</link>
+    <description>今天，Shopify 重新发布了开发者文档。这是一个漫长而复杂的项目，需要与公司内多个 UX 和开发部门的合作，很高兴看到这个项目的成功上线。我有幸从头到尾参与了这个项目，所以跟大家分享一下我们在这个过程中所积累到的一些经验。</description>
+    <guid>https://lrd.im/blog/2022-05-24-8b7b70ae1621.html</guid>
+    <pubDate>2022-05-24 12:00:00 +0800</pubDate>
+  </item>
+  <item>
+    <title>高级排版功能：Case-Sensitive Forms 是什么？</title>
+    <link>https://lrd.im/blog/2022-05-14-e0efbeed2ca0.html</link>
+    <description>自从转换到 Figma 工作后，我发现在部分字体下的字体设置里，有一个选项叫「Case-Sensitive Forms」，来回切换后，发现了一些有意思的现象。经过一段时间的查阅资料和实践后，获得了新的认识，遂写下这篇笔记来记录这有趣的现象。</description>
+    <guid>https://lrd.im/blog/2022-05-14-e0efbeed2ca0.html</guid>
+    <pubDate>2022-05-14 12:00:00 +0800</pubDate>
+  </item>
+  <item>
+    <title>笔记：表格宽度的计算规则</title>
+    <link>https://lrd.im/blog/2022-02-09-d1d7e8f8e3f2.html</link>
+    <description>自从 2020 年下半年我在千聊做 B 端设计师开始，我就开始了与 Table 组件打交道。从那时候我就发现了，表格的布局，好像永远都跟我的设想不符，也很难判断到造成这个后果的原因是我提出的设计需求太奇葩，还是前端老哥压根没按我说的去还原。</description>
+    <guid>https://lrd.im/blog/2022-02-09-d1d7e8f8e3f2.html</guid>
+    <pubDate>2022-02-09 12:00:00 +0800</pubDate>
+  </item>
+  <item>
+    <title>细数 Pingfang SC 的七宗罪</title>
+    <link>https://lrd.im/blog/2022-01-17-8a5738fc2340.html</link>
+    <description>2019年11月17日，我发布了一篇名为《PingFang SC 不应该作为移动端网页字体的首选项》的文章，这是我目前为止阅读量最大的文章。还记得那时候我刚毕业在屈臣氏的移动电商部门工作，发现了网上流传的 “字体用苹方” 的说法并不靠谱，并写下了自己的看法。</description>
+    <guid>https://lrd.im/blog/2022-01-17-8a5738fc2340.html</guid>
+    <pubDate>2022-01-17 12:00:00 +0800</pubDate>
+  </item>
+  <item>
+    <title>多语言设计分享（分享会记录）</title>
+    <link>https://lrd.im/blog/2022-01-02-e09640baf33b.html</link>
+    <description>公司项目最近要接入东南亚的相关业务，Admin 后台里需要支持到 7 种语言。我负责了这次多语言适配专项的设计规范更新、设计指南的整理输出以及团队内设计经验分享。</description>
+    <guid>https://lrd.im/blog/2022-01-02-e09640baf33b.html</guid>
+    <pubDate>2022-01-02 12:00:00 +0800</pubDate>
+  </item>
+  <item>
+    <title>keep-all 断词换行规则的两个使用案例分享（含实践）</title>
+    <link>https://lrd.im/blog/2021-11-07-febd605dbf50.html</link>
+    <description>前段时间我对网页的断词换行规则做了一次深入的学习，当时我对一个不常见的规则 word-break: kepp-all; 感到疑惑，想象不到什么情况下该使用它。 这几个月以来我一直带着这个问题来工作，刚好发现了这个规则的两个适用场景，于是写下这篇文章来做记录。</description>
+    <guid>https://lrd.im/blog/2021-11-07-febd605dbf50.html</guid>
+    <pubDate>2021-11-07 12:00:00 +0800</pubDate>
+  </item>
+  <item>
+    <title>在千聊成功实践移动端 UI 组件库</title>
+    <link>https://lrd.im/blog/2021-09-11-824e317216cf.html</link>
+    <description>一转眼来到千聊已经一年多了，对比起上一份工作，千聊UED更有挑战性，也确实让我有了一些进步和突破。得益于前人们的努力，千聊的设计师们在流程内还是颇有话语权的。在迭代过程中，UI 设计师完全可以提出更好的方案，并推动它落地，甚至由设计来主导某些改版项目，只要方案有理有据，能带来正面影响。</description>
+    <guid>https://lrd.im/blog/2021-09-11-824e317216cf.html</guid>
+    <pubDate>2021-09-11 12:00:00 +0800</pubDate>
+  </item>
+  <item>
+    <title>Apple 官网里三个令我惊叹的中文排版细节</title>
+    <link>https://lrd.im/blog/2021-08-15-a5705d31417.html</link>
+    <description>无论是软件还是硬件，Apple 公司对于细节上面的执着程度可以说无人能出其右。我作为一名设计师，时常也会翻阅 Apple 的官网，拜读、细品，每次都会有点新发现。</description>
+    <guid>https://lrd.im/blog/2021-08-15-a5705d31417.html</guid>
+    <pubDate>2021-08-15 12:00:00 +0800</pubDate>
+  </item>
+  <item>
+    <title>SF Pro SC 是什么字体？</title>
+    <link>https://lrd.im/blog/2021-07-28-b903b828bb50.html</link>
+    <description>苹果悄悄地在官网上用了一款名为 "SF Pro SC" 的中文字体。下图是在苹果官网截下来图片，你能发现它与我们平常在设计软件中使用的 PingFang SC 或者 SF Pro Display 有什么区别吗？如果想知道其中的差别，请看下文。</description>
+    <guid>https://lrd.im/blog/2021-07-28-b903b828bb50.html</guid>
+    <pubDate>2021-07-28 12:00:00 +0800</pubDate>
+  </item>
+  <item>
+    <title>在 Sketch 组件外更改文字颜色最简单的方法</title>
+    <link>https://lrd.im/blog/2021-05-30-255af6bda0c2.html</link>
+    <description>这篇博客会介绍 Sketch 组件外更改文字颜色最简便的方法，以及探讨其优势和局限性。操作非常简单，所以篇幅很短。</description>
+    <guid>https://lrd.im/blog/2021-05-30-255af6bda0c2.html</guid>
+    <pubDate>2021-05-30 12:00:00 +0800</pubDate>
+  </item>
+  <item>
+    <title>一个特殊字符，打开 Sketch 组件新世界的大门</title>
+    <link>https://lrd.im/blog/2021-05-03-8264a8e896aa.html</link>
+    <description>公司内 B 端项目的表单比较多，经常有各种编辑页、功能配置页等。所以最近在做到一个编辑页调整的需求时，也和前端老哥沟通了一波，把公司项目里常用到的表单做成了组件。后续我打算做成 Sketch Symbol，同步到组件库内。这时出现了一些耐人寻味的问题。</description>
+    <guid>https://lrd.im/blog/2021-05-03-8264a8e896aa.html</guid>
+    <pubDate>2021-05-03 12:00:00 +0800</pubDate>
+  </item>
+  <item>
+    <title>信息无障碍与我们的距离 · 分享会记录</title>
+    <link>https://lrd.im/blog/2021-04-09-bd7dd0a578c7.html</link>
+    <description>公司的设计、产品组一直有分享会的传统，一般是每两周一次（当然如果那段时间特别忙也会延后）。我从去年七月入职到现在，已经大半年了，总共分享过 3 次，这次是 2020 年 4 月 2 日，清明假期前在公司设计组内的一次分享会《信息无障碍与我们的距离》。</description>
+    <guid>https://lrd.im/blog/2021-04-09-bd7dd0a578c7.html</guid>
+    <pubDate>2021-04-09 12:00:00 +0800</pubDate>
+  </item>
+  <item>
+    <title>探索 Web 网页内字符的换行规则</title>
+    <link>https://lrd.im/blog/2021-03-14-56a375c11043.html</link>
+    <description>前不久在验收公司项目内一个讨论区相关需求时，看到界面的样式出现这种问题，让从业界面设计两年多的我感到意外和不安...这篇文章将会记录我对 Web 网页内换行规则的理解、实际应用中的解决方案，以及一个突破性新发现。</description>
+    <guid>https://lrd.im/blog/2021-03-14-56a375c11043.html</guid>
+    <pubDate>2021-03-14 12:00:00 +0800</pubDate>
+  </item>
+  <item>
+    <title>维护 Dribbble 深色模式一年，我最大的收获竟然是学会了使用 DevTools</title>
+    <link>https://lrd.im/blog/2021-01-21-ee01a2f63afd.html</link>
+    <description>2019年10月份，我在 Medium 发表了一篇文章《关于深色模式的一些发现和思考》，从那时候开始我便着手去找个网站做成深色模式，练练手，于是便开始将 Dribbble.com 进行深色模式的尝试。</description>
+    <guid>https://lrd.im/blog/2021-01-21-ee01a2f63afd.html</guid>
+    <pubDate>2021-01-21 12:00:00 +0800</pubDate>
+  </item>
+  <item>
+    <title>等宽数字 Monospaced Numbers 在界面中的使用</title>
+    <link>https://lrd.im/blog/2020-12-25-e454336ec5b7.html</link>
+    <description>在上一篇文章的3.2章节里，提到了 AntD 组件会全局默认使用等宽数字。这对我来说是比较新的概念，所以也花了点时间观察、总结了等宽数字在界面上的几个使用场景，以及普遍的实现方式，正好也可以作为文章记录下来。</description>
+    <guid>https://lrd.im/blog/2020-12-25-e454336ec5b7.html</guid>
+    <pubDate>2020-12-25 12:00:00 +0800</pubDate>
+  </item>
+  <item>
+    <title>用 Ant Design 组件做设计，你可能不知道的细节</title>
+    <link>https://lrd.im/blog/2020-10-04-b6d36bd9c25.html</link>
+    <description>使用 Ant Design 组件做设计一段时间，踩过不少坑。在这里分享一部分出来。如果你也是之前没怎么使用过 AntD 组件来进行设计，那么这篇文章也许会对你有点帮助。</description>
+    <guid>https://lrd.im/blog/2020-10-04-b6d36bd9c25.html</guid>
+    <pubDate>2020-10-04 12:00:00 +0800</pubDate>
+  </item>
+  <item>
+    <title>互联网设计师白嫖图片和字体的旁门左道</title>
+    <link>https://lrd.im/blog/2020-08-02-28c915945cd3.html</link>
+    <description>转眼间在互联网行业从事设计工作已经两年多了，工作中发现了几个可以白嫖高清图片、App 图标、收费字体的小技巧，在这里做一番记录，也希望能对正在看文章的你有所帮助。</description>
+    <guid>https://lrd.im/blog/2020-08-02-28c915945cd3.html</guid>
+    <pubDate>2020-08-02 12:00:00 +0800</pubDate>
+  </item>
+  <item>
+    <title>Dribbble 大改版，顺势记录下我对近期 UI 设计趋势和一些细节的观察</title>
+    <link>https://lrd.im/blog/2020-04-07-bd9e4a9bd263.html</link>
+    <description>2020 年 3 月下旬，知名设计网站 Dribbble.com 在过去十年中首次做了彻底的重新设计。借着这次机会，并结合近期其他互联网产品的更新迭代，在此记录一下近半年来我观察到的一些设计趋势变化。</description>
+    <guid>https://lrd.im/blog/2020-04-07-bd9e4a9bd263.html</guid>
+    <pubDate>2020-04-07 12:00:00 +0800</pubDate>
+  </item>
+  <item>
+    <title>用 AE 制作 Display P3 广色域动图的三个方法</title>
+    <link>https://lrd.im/blog/2020-01-18-b5646615e6ff.html</link>
+    <description>前段时间写了篇文章记录如何导出 P3 广色域静态图片，恰好最近工作上有需求要用到动画来完成，利用这次机会也记录一下制作支持 Display P3 广色域的 PNG 序列帧、CSS 精灵图和 APNG 三种格式动画的方法。</description>
+    <guid>https://lrd.im/blog/2020-01-18-b5646615e6ff.html</guid>
+    <pubDate>2020-01-18 12:00:00 +0800</pubDate>
+  </item>
+  <item>
+    <title>PingFang SC 不应该作为移动端网页字体的首选项</title>
+    <link>https://lrd.im/blog/2019-11-17-70cc6d2258fa.html</link>
+    <description>我在做设计时会经常观察市面上各类应用，途中一个字体使用的问题使我陷入了沉思...</description>
+    <guid>https://lrd.im/blog/2019-11-17-70cc6d2258fa.html</guid>
+    <pubDate>2019-11-17 12:00:00 +0800</pubDate>
+  </item>
+  <item>
+    <title>关于深色模式的一些发现和思考</title>
+    <link>https://lrd.im/blog/2019-10-04-8639df407000.html</link>
+    <description>近期更新的 iOS 13 重磅推出深色模式，作为一名设计师当然也要蹭下热度把个人网站也适配上深色模式。这篇文章记录了我最近为网站做深色模式时的一些发现和思考。</description>
+    <guid>https://lrd.im/blog/2019-10-04-8639df407000.html</guid>
+    <pubDate>2019-10-04 12:00:00 +0800</pubDate>
+  </item>
+  <item>
+    <title>在 Sketch/PS 中导出 Display P3 广色域图片的方法</title>
+    <link>https://lrd.im/blog/2019-07-02-1b6d3ee82147.html</link>
+    <description>前一段时间换上了 iPhone 之后，我一直对官网上的描述里的 “Display P3” 挺好奇的，然后上网搜了下，发现了里面大有学问。下面放上在 Sketch/PS里导出 Display P3 色域图片的方法，供参考</description>
+    <guid>https://lrd.im/blog/2019-07-02-1b6d3ee82147.html</guid>
+    <pubDate>2019-07-02 12:00:00 +0800</pubDate>
+  </item>
+  <item>
+    <title>最近用 Bodymovin 导出动画遇到的问题和解决方法</title>
+    <link>https://lrd.im/blog/2019-06-11-f2599035a378.html</link>
+    <description>本文记录作者用 Bodymovin 导出动画时遇到的各种各样奇怪问题，并提供可行的解决方案。持续更新</description>
+    <guid>https://lrd.im/blog/2019-06-11-f2599035a378.html</guid>
+    <pubDate>2019-06-11 12:00:00 +0800</pubDate>
+  </item>
+  <item>
+    <title>在 iPhone 上安装旧版 Dribbble App</title>
+    <link>https://lrd.im/blog/2019-04-14-66746628e600.html</link>
+    <description>Dribbble 官方在今年的 3 月份更新了 iOS 版客户端，但体验并不好，比如没有适配好全面屏、不能切换显示模式、卡等等。</description>
+    <guid>https://lrd.im/blog/2019-04-14-66746628e600.html</guid>
+    <pubDate>2019-04-14 12:00:00 +0800</pubDate>
+  </item>
+  <item>
+    <title>Sketch Tips — 2个技巧让你在 Mirror 上更好地预览设计稿</title>
+    <link>https://lrd.im/blog/2019-03-31-15e000d5832.html</link>
+    <description>用 Sketch 做 UI 设计的小伙伴都会用 Mirror App 来实时预览设计稿，看看设计稿在手机上的显示效果，方便调整设计稿。这里列出小伙伴们在用 Mirror App 时可能遇到的两个问题（起码我遇到过😄），并提供解决方案，让你在 Mirror App 上更好地预览设计稿！</description>
+    <guid>https://lrd.im/blog/2019-03-31-15e000d5832.html</guid>
+    <pubDate>2019-03-31 12:00:00 +0800</pubDate>
+  </item>
+  <item>
+    <title>分享发现：AE中制作矢量动画图标的四款效率工具</title>
+    <link>https://lrd.im/blog/2019-02-07-90ab380890a3.html</link>
+    <description>最近在做一些动画图标的过程中发现了四款能提高工作效率的AE插件，分别是 Motion2、Flow、Overlord、gifGun，下面为大家逐一介绍。</description>
+    <guid>https://lrd.im/blog/2019-02-07-90ab380890a3.html</guid>
+    <pubDate>2019-02-07 12:00:00 +0800</pubDate>
+  </item>
+  <item>
+    <title>SVG 路径代码转换成对应的 SVG 图像</title>
+    <link>https://lrd.im/blog/2018-12-09-429f8053ab12.html</link>
+    <description>在网页上看到一些精致的图标想要保存下来，但是右键没有另存为选项（如图1），审查元素后发现是嵌入式的 SVG 图标（如图2）。那么如何将这一段代码转换成对应的 svg 图片？</description>
+    <guid>https://lrd.im/blog/2018-12-09-429f8053ab12.html</guid>
+    <pubDate>2018-12-09 12:00:00 +0800</pubDate>
+  </item>
+  <item>
+    <title>前端笔记：Transfrom: Matrix() 参数配置笔记</title>
+    <link>https://lrd.im/blog/2018-07-19-70c6038d2ce2.html</link>
+    <description>最近在学一些前端知识，学到 Martrix 可以用一行来将 Transfrom 的所有属性表达出来，就打算在网上找找如何操作，发现大部分都是讲一些高等数学的计算，或者一两个属性的转换，翻了好久才找到讲4个属性同时应用在 Matrix 上的教程。鉴于花了差不多5个小时才勉强弄懂 Matrix 的属性，我决定做一篇 Matrix 参数配置笔记。</description>
+    <guid>https://lrd.im/blog/2018-07-19-70c6038d2ce2.html</guid>
+    <pubDate>2018-07-19 12:00:00 +0800</pubDate>
+  </item>
+  <item>
+    <title>利用预置动画在 Mugeda 中制作顺畅的左右滑动切换卡片效果</title>
+    <link>https://lrd.im/blog/2018-03-31-541a66bede21.html</link>
+    <description>前在做《刁角武汉》的时候对如何选择景点这个问题做了好几个方案，一个是画一张大地图，另一个是做垂直的列表选择，但我还是选择了左右滑动来切换景点。因为在多次尝试之后发现发现在手机屏上似乎不适合做可以上下左右滑动的大地图</description>
+    <guid>https://lrd.im/blog/2018-03-31-541a66bede21.html</guid>
+    <pubDate>2018-05-31 12:00:00 +0800</pubDate>
+  </item>
+  <item>
+    <title>macOS 安装 AE 插件 Flow 无法打开的修复方法</title>
+    <link>https://lrd.im/blog/2018-03-17-4d7ff2bc9cd1.html</link>
+    <description>以前一直在 AE2015 里使用 Flow，最近下载了 AE2018，安装好 Flow后点击 Window-Extensions-Flow 却没有任何反应，几经波折找到了解决方法。</description>
+    <guid>https://lrd.im/blog/2018-03-17-4d7ff2bc9cd1.html</guid>
+    <pubDate>2018-03-17 12:00:00 +0800</pubDate>
+  </item>
+  <item>
+    <title>大四下学期学习计划</title>
+    <link>https://lrd.im/blog/2018-03-02-1fbbd141139b.html</link>
+    <description>因为以前选课忽略了一些必要的规则，导致我大四仍然在学校上一些选修课，错过了一些挺好的实习岗位。在此期间要保持学习，利用大学最后一个学期（03/2018~06/2018）提升自己的能力。</description>
+    <guid>https://lrd.im/blog/2018-03-02-1fbbd141139b.html</guid>
+    <pubDate>2018-03-02 12:00:00 +0800</pubDate>
+  </item>
+  <item>
+    <title>在 AI 中导出更干净的 SVG 图形！</title>
+    <link>https://lrd.im/blog/2018-02-01-5f6feede2f21.html</link>
+    <description>当我们做好一些图标准备导出成 SVG 文件时都要轮廓化描边，但是草率地轮廓化描边经常会产生多余的锚点，我在做相关工作的过程中找到了一些方法，或许可以帮助您导出更干净的 SVG 图形。</description>
+    <guid>https://lrd.im/blog/2018-02-01-5f6feede2f21.html</guid>
+    <pubDate>2018-02-01 12:00:00 +0800</pubDate>
+  </item>
+  <item>
+    <title>重燃动效激情之 AE 动效导出为 JSON！</title>
+    <link>https://lrd.im/blog/2018-01-18-5fe20d63f09f.html</link>
+    <description>今天正想把毕设的一些图标动效做好，突然间想到可以用 Bodymovin 导出 JSON 还没试过，于是就现场捣鼓了一番。现在发现其实非常方便！</description>
+    <guid>https://lrd.im/blog/2018-01-18-5fe20d63f09f.html</guid>
+    <pubDate>2018-01-18 12:00:00 +0800</pubDate>
+  </item>
+  <item>
+    <title>使用 Netlify 托管个人网站 详细步骤</title>
+    <link>https://lrd.im/blog/2018-01-02-7013eddc413c.html</link>
+    <description>最近狠下心把域名买了下来，终于把一直想弄的个人网站正式放上了互联网。一路摸索过来，其实也没多难。</description>
+    <guid>https://lrd.im/blog/2018-01-02-7013eddc413c.html</guid>
+    <pubDate>2018-01-02 12:00:00 +0800</pubDate>
+  </item>
+  <item>
+    <title>分享：如何让Sketch默认在多标签页中打开新文档</title>
+    <link>https://lrd.im/blog/2017-12-17-9b16484c5d52.html</link>
+    <description>常用Sketch的都知道，窗口模式下的Sketch打开新文档是默认打开一个新窗口，如果要打开的文档比较多，整个桌面就容易乱。</description>
+    <guid>https://lrd.im/blog/2017-12-17-9b16484c5d52.html</guid>
+    <pubDate>2017-12-17 12:00:00 +0800</pubDate>
+  </item>
+</channel>
+
+</rss>
