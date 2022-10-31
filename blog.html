@@ -514,7 +514,14 @@
 
     <!--  custom script -->
     <script src="js/custom.js"></script>
-    
+    <script>
+        var loadMore = document.getElementById('loadMore');
+        var earlyblog = document.getElementById('earlyblog');
+        loadMore.onclick = function(){
+            earlyblog.classList.toggle('hide')
+            loadMore.classList.toggle('hide')
+        }
+    </script>
 </body>
 
 </html>
