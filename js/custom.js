@@ -14,6 +14,109 @@ if (e.matches) {
 });
 // ▲▲ 深色模式
 
+// ▼▼ Viewer.js
+window.addEventListener('DOMContentLoaded', function () {
+  var galley = document.getElementById('galley'); // 绑定图片组
+  var viewer = new Viewer(galley, {
+    url: 'data-src',  // 定义图片来源
+    title: function (image) {
+        return (this.index + 1) + ' / ' + this.length; // 显示当前/总数
+    },
+    toolbar: 0,
+    transition: 0,
+    zoomable: 0, // 每次缩放多少
+  });
+});
+// ▲▲ Viewer.js
+
+// ▼▼ 作品内页 - 宽度扩展按钮
+var projectContainer = document.getElementsByClassName('project-container')[0]
+var fullWidthIcon = document.getElementById('fullWidthIcon');
+
+var fullWidthMode = function (){
+  console.log(projectContainer)  
+  console.log('projectContainer')  
+  projectContainer.classList.toggle('extra-width');
+
+  // 判断到宽度被扩展时，切换图标
+  if (projectContainer.classList.contains("extra-width")){
+    console.log('extra-width') 
+    fullWidthIcon.setAttribute( "d", "M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15zM7 10h8v2H7v-2z");
+  } else {
+    console.log('no') 
+    fullWidthIcon.setAttribute( "d", "M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15zM10 10V7h2v3h3v2h-3v3h-2v-3H7v-2h3z");
+  }
+}
+// ▲▲ 作品内页 - 宽度扩展按钮
+
+// ▼▼ 首页联系卡片
+
+// ▼▼ 创建 DOM
+var popContactPopover = document.createElement('div');
+popContactPopover.setAttribute('id','popover');
+popContactPopover.setAttribute('class','contact-popover');
+document.body.appendChild(popContactPopover);
+
+var popPopoverContent = document.createElement('div');
+popPopoverContent.setAttribute('id','popoverContent');
+popPopoverContent.setAttribute('class','popover-content hidden');
+popContactPopover.appendChild(popPopoverContent);
+
+var popPopoverMask = document.createElement('div');
+popPopoverMask.setAttribute('id','popoverMask');
+popPopoverMask.setAttribute('class','popover-mask hidden');
+popContactPopover.appendChild(popPopoverMask);
+
+var popImg = document.createElement('img');
+popImg.setAttribute('width','240');
+popImg.setAttribute('height','240');
+popImg.setAttribute('src','../resume/qr-code.png');
+popImg.setAttribute('alt','李瑞东的微信二维码');
+popPopoverContent.appendChild(popImg);
+
+var popText = document.createElement('p');
+popText.setAttribute('class', 'scan-desc-pc');
+popText.innerHTML='扫一扫加我微信';
+popPopoverContent.appendChild(popText);
+
+var popText2 = document.createElement('p');
+popText2.setAttribute('class', 'scan-desc-mobile');
+popText2.innerHTML='长按识别加我微信';
+popPopoverContent.appendChild(popText2);
+// ▲▲ 创建 DOM
+
+var popover = document.getElementById('popover');
+var popoverContent = document.getElementById('popoverContent');
+var contactBtn = document.getElementById('contactBtn');
+var popoverMask = document.getElementById('popoverMask');
+contactBtn.onclick = function(){
+  popoverContent.classList.toggle("hidden");
+  popoverMask.classList.toggle("hidden");
+  document.body.classList.add("stop-scrolling");
+  //屏蔽滚动（Safari）
+  popoverContent.addEventListener('touchmove', e => { 
+      e.preventDefault()
+  }, false)
+  popoverMask.addEventListener('touchmove', e => {
+    e.preventDefault()
+  }, false)
+}
+popoverMask.onclick = function(){
+  popoverContent.classList.toggle("hidden");
+  popoverMask.classList.toggle("hidden");
+  document.body.classList.remove("stop-scrolling");
+}
+
+document.onkeydown = function(e){ //对整个页面监听  
+    if (27 == e.keyCode){  // ESC 关闭弹窗
+      popoverContent.classList.add('hidden');
+      popoverMask.classList.add('hidden');
+      document.body.classList.remove("stop-scrolling");
+    }
+  };
+// ▲▲ 首页联系卡片
+
+
 // ▼▼ 博客 - 右侧导航菜单 // https://www.rainng.com/js-wordpress-catalog/
 
 var div = document.createElement('div');
@@ -77,7 +180,6 @@ function generateCatalog(catalogData) { // 添加目录标签
 
 // ▲▲ 博客 - 右侧导航菜单
 
-
 // ▼▼ 导航栏
 
  var iconMenu = document.getElementById('iconMenu');
@@ -134,8 +236,6 @@ function generateCatalog(catalogData) { // 添加目录标签
     iconMenu.classList.toggle('hide');
  }
 
-
-
 // ▲▲ 导航栏
 
 
@@ -190,27 +290,23 @@ if (document.documentElement.scrollTop < 150) { // 刚进网页 静止时检测�
 }
 // ▲▲ 滚动出现返回顶部
 
-// ▼▼ 作品内页 - 宽度扩展按钮
-var projectContainer = document.getElementsByClassName('project-container')[0]
-var fullWidthIcon = document.getElementById('fullWidthIcon');
 
-var fullWidthMode = function (){
-  console.log(projectContainer)  
-  console.log('projectContainer')  
-  projectContainer.classList.toggle('extra-width');
-
-  // 判断到宽度被扩展时，切换图标
-  if (projectContainer.classList.contains("extra-width")){
-    console.log('extra-width') 
-    fullWidthIcon.setAttribute( "d", "M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15zM7 10h8v2H7v-2z");
-  } else {
-    console.log('no') 
-    fullWidthIcon.setAttribute( "d", "M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15zM10 10V7h2v3h3v2h-3v3h-2v-3H7v-2h3z");
-  }
-}
-// ▲▲ 作品内页 - 宽度扩展按钮
 
 // ▼▼ 博客 - 复制链接
+var blogLinkTop = document.getElementById('blogLinkTop'); //复制前图标
+var copiedLinkTop = document.getElementById('copiedLinkTop'); //复制成功图标
+var clipboard2 = new ClipboardJS(blogLinkTop);
+var clipboard3 = new ClipboardJS(copiedLinkTop);
+clipboard2.on('success', function (e) { 
+  console.log(e);
+  blogLinkTop.classList.toggle('hide');
+  copiedLinkTop.classList.toggle('hide');
+});
+copiedLinkTop.onclick = function() {
+  blogLinkTop.classList.toggle('hide');
+  copiedLinkTop.classList.toggle('hide');
+}
+
 var blogLink = document.getElementById('blogLink');
 var copyLink = document.getElementById('copyLink');
 var copied = document.getElementById('copied');
@@ -228,28 +324,5 @@ copied.onclick = function() {
 }
 // ▲▲ 博客 - 复制链接
 
-// ▼▼ Viewer.js
-window.addEventListener('DOMContentLoaded', function () {
-  var galley = document.getElementById('galley'); // 绑定图片组
-  var viewer = new Viewer(galley, {
-    url: 'data-src',  // 定义图片来源
-    title: function (image) {
-        return (this.index + 1) + ' / ' + this.length; // 显示当前/总数
-    },
-    toolbar: 0,
-    transition: 0,
-    zoomable: 0, // 每次缩放多少
-  });
-});
-// ▲▲ Viewer.js
 
 
-
-
-  // 匹配域名
-  // var url =  window.location.href
-  // if (url.indexOf('blog') == '-1'){ //非博客页面
-  //   alert('not blog')
-  // } else {  //博客页面
-  //   alert('is blog')
-  // }

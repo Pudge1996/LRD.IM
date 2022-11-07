@@ -63,16 +63,6 @@
     <div class="nav-mask hidden" id="navMask"></div>
     <!-- Main container -->
     <div class="container spacing project">
-
-      <div id="popover" class="contact-popover">
-        <div id="popoverContent" class="popover-content hidden">
-          <img width="240" height="240" src="resume/qr-code.png" alt="">
-          <p class="scan-desc-pc">扫一扫加我微信</p>
-          <p class="scan-desc-mobile">长按识别加我微信</p>
-        </div> 
-        <div id="popoverMask" class="popover-mask hidden"></div> 
-      </div>
-
       <div class="intro">
         <h1>李瑞东</h1>
         <p class="desc">4 年工作经验的 UI 设计师，目前在欢聚集团参与 SHOPLINE 商家管理后台的设计。拥有国际化、数据可视化、设计系统搭建和体验度量等实践<span class="nowrap">经验。</span></p>
@@ -94,7 +84,7 @@
             <div class="icon"></div>
             <div class="company">
               <h2 class="name"><a href="https://joyy.com/" rel="noreferrer nofollow" target="_blank">欢聚集团</a></h2>
-              <div class="year">2021 - <span class="highlight">NOW</span></div>
+              <div class="year">2021 - 2022</div>
             </div>
           </div>
           <div class="showcase">
@@ -156,7 +146,7 @@
     
     <!-- footer -->
     <footer>
-        <p class="copyright">© Pudge 2017-2022</p>
+      <span>© Pudge 2017-<script>document.write(new Date().getFullYear());</script></span>
     </footer>
     <!-- end footer -->
     
@@ -171,39 +161,6 @@
     <!-- end back to top -->
 
     <script src="js/custom.js"></script>
-    <script>
-    // ▼▼ 首页联系卡片
-      var popover = document.getElementById('popover');
-      var popoverContent = document.getElementById('popoverContent');
-      var contactBtn = document.getElementById('contactBtn');
-      var popoverMask = document.getElementById('popoverMask');
-      contactBtn.onclick = function(){
-        popoverContent.classList.toggle("hidden");
-        popoverMask.classList.toggle("hidden");
-        document.body.classList.add("stop-scrolling");
-        //屏蔽滚动（Safari）
-        popoverContent.addEventListener('touchmove', e => { 
-            e.preventDefault()
-        }, false)
-        popoverMask.addEventListener('touchmove', e => {
-          e.preventDefault()
-        }, false)
-      }
-      popoverMask.onclick = function(){
-        popoverContent.classList.toggle("hidden");
-        popoverMask.classList.toggle("hidden");
-        document.body.classList.remove("stop-scrolling");
-      }
-    
-      document.onkeydown = function(e){ //对整个页面监听  
-          if (27 == e.keyCode){  // ESC 关闭弹窗
-            popoverContent.classList.add('hidden');
-            popoverMask.classList.add('hidden');
-            document.body.classList.remove("stop-scrolling");
-          }
-        }
-      // ▲▲ 首页联系卡片
-      </script>
 </body>
 
 </html>

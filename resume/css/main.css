@@ -46,7 +46,6 @@
 
 html {
   font-size: 18px;
-  scroll-behavior: smooth;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -58,7 +57,6 @@ html {
 
 body {
   font-family: -apple-system,BlinkMacSystemFont,HarmonyOS Sans,Roboto,Helvetica Neue,Helvetica,Segoe UI,Arial,PingFang SC,Hiragino Sans GB,Microsoft Yahei,sans-serif;
-  word-spacing: -.05rem;
   line-height: 1.7;
   overflow-wrap: break-word;
   color: var(--primary-text-color);
@@ -81,6 +79,20 @@ body {
           font-feature-settings: 'case' on;
 }
 
+.general-svg-icon, a[target="_blank"]:hover::after, a[target="_blank"]:focus::after, .contact #number:hover::after,
+.contact #email:hover::after, footer .download .file:hover::after {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  position: relative;
+  height: 1em;
+  width: 1em;
+  background-color: currentColor;
+  vertical-align: -0.125em;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -92,17 +104,19 @@ a:hover {
   color: var(--link-text-color);
   -webkit-text-decoration-color: unset;
           text-decoration-color: unset;
+  font-weight: 500;
 }
 
 a:active {
   color: var(--link-text-active-color);
+  font-weight: 500;
 }
 
 a:focus {
   outline: 3px solid var(--link-text-active-color);
   color: var(--link-text-active-color);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 a:focus:not(:focus-visible) {
@@ -111,18 +125,14 @@ a:focus:not(:focus-visible) {
   -webkit-text-decoration: 1px underline var(--underline-color-hover);
           text-decoration: 1px underline var(--underline-color-hover);
   text-decoration: none;
+  font-weight: 500;
 }
 
 a[target="_blank"]:hover::after, a[target="_blank"]:focus::after {
   content: "";
-  width: 1em;
-  height: 1em;
-  display: inline-block;
-  -webkit-mask: url(arrow.svg) no-repeat 50% 50%;
-          mask: url(arrow.svg) no-repeat 50% 50%;
-  background-color: currentColor;
   padding-left: 6px;
-  vertical-align: -2.5px;
+  -webkit-mask: url(../../img/icon/arrow.svg) no-repeat 50% 50%/1em 1em;
+          mask: url(../../img/icon/arrow.svg) no-repeat 50% 50%/1em 1em;
 }
 
 p {
@@ -265,14 +275,9 @@ p {
 .contact #number:hover::after,
 .contact #email:hover::after {
   content: "";
-  width: 1em;
-  height: 1em;
-  display: inline-block;
-  -webkit-mask: url(copied.svg) no-repeat 50% 50%;
-          mask: url(copied.svg) no-repeat 50% 50%;
-  background-color: currentColor;
+  -webkit-mask: url(../../img/icon/copied.svg) no-repeat 50% 50%/1em 1em;
+          mask: url(../../img/icon/copied.svg) no-repeat 50% 50%/1em 1em;
   padding-left: 6px;
-  vertical-align: -3px;
 }
 
 @media (max-width: 768px) {
@@ -284,6 +289,7 @@ p {
 
 .contact #number:focus:not(:focus-visible), .contact #email:focus:not(:focus-visible) {
   outline: none;
+  font-weight: 500;
 }
 
 .divider {
@@ -525,6 +531,7 @@ a {
   outline: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
+  font-weight: 500;
 }
 
 .alignright button:focus {
@@ -705,6 +712,11 @@ footer .flex {
 
 footer .flex a:hover {
   text-decoration: none;
+  font-weight: 500;
+}
+
+footer .flex a:active {
+  font-weight: 500;
 }
 
 footer .flex .info {
@@ -755,37 +767,32 @@ footer .dot {
 
 footer .download .file:hover::after {
   content: "";
-  width: 1em;
-  height: 1em;
-  display: inline-block;
-  -webkit-mask: url(file.svg) no-repeat 50% 50%;
-          mask: url(file.svg) no-repeat 50% 50%;
-  background-color: currentColor;
+  -webkit-mask: url(../../img/icon/file.svg) no-repeat 50% 50%/1em 1em;
+          mask: url(../../img/icon/file.svg) no-repeat 50% 50%/1em 1em;
   padding-left: 6px;
-  vertical-align: -2.5px;
 }
 
 .hidden-elemen-1 {
   content: "";
   width: 0em;
   height: 0em;
-  -webkit-mask: url(arrow.svg) no-repeat 50% 50%;
-          mask: url(arrow.svg) no-repeat 50% 50%;
+  -webkit-mask: url(../../img/icon/arrow.svg) no-repeat 50% 50%/1em 1em;
+          mask: url(../../img/icon/arrow.svg) no-repeat 50% 50%/1em 1em;
 }
 
 .hidden-elemen-2 {
   content: "";
   width: 0em;
   height: 0em;
-  -webkit-mask: url(copied.svg) no-repeat 50% 50%;
-          mask: url(copied.svg) no-repeat 50% 50%;
+  -webkit-mask: url(../../img/icon/copied.svg) no-repeat 50% 50%/1em 1em;
+          mask: url(../../img/icon/copied.svg) no-repeat 50% 50%/1em 1em;
 }
 
 .hidden-elemen-3 {
   content: "";
   width: 0em;
   height: 0em;
-  -webkit-mask: url(file.svg) no-repeat 50% 50%;
-          mask: url(file.svg) no-repeat 50% 50%;
+  -webkit-mask: url(../../img/icon/file.svg) no-repeat 50% 50%/1em 1em;
+          mask: url(../../img/icon/file.svg) no-repeat 50% 50%/1em 1em;
 }
 /*# sourceMappingURL=main.css.map */

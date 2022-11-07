@@ -81,7 +81,6 @@ $ipad: 1200px;
 
 html{
   font-size: 18px;
-  scroll-behavior: smooth;
   -webkit-tap-highlight-color: transparent; //移除 iOS 按下时灰色
   @include mobile() {
     font-size: 18px;
@@ -90,7 +89,6 @@ html{
 
 body {
   font-family: -apple-system,BlinkMacSystemFont,HarmonyOS Sans,Roboto,Helvetica Neue,Helvetica,Segoe UI,Arial,PingFang SC,Hiragino Sans GB,Microsoft Yahei,sans-serif;
-  word-spacing: -.05rem;
   line-height: 1.7;
   overflow-wrap: break-word;
   color: var(--primary-text-color);
@@ -111,6 +109,16 @@ body {
   font-feature-settings: 'case' on;
 }
 
+.general-svg-icon{
+  display: inline-flex;
+  align-self: center;
+  position: relative;
+  height: 1em;
+  width: 1em;
+  background-color: currentColor;
+  vertical-align: -0.125em;
+}
+
 a{
   text-decoration:none;
   color: inherit;
@@ -118,18 +126,19 @@ a{
   &:hover{
     color: var(--link-text-color);
     text-decoration-color: unset;
+    font-weight: 500;
   }
 
   &:active{
     color: var(--link-text-active-color);
-
+    font-weight: 500;
   }
 
   &:focus{
     outline: 3px solid var(--link-text-active-color);
     color: var(--link-text-active-color);
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
   }
  
   &:focus:not(:focus-visible){ //鼠标点击不出现描边
@@ -137,17 +146,14 @@ a{
     font-weight: inherit;
     text-decoration: 1px underline var(--underline-color-hover);
     text-decoration: none;
+    font-weight: 500;
   }
 
   &[target="_blank"]:hover::after, &[target="_blank"]:focus::after{ //外链加符号示意
     content: "";
-    width: 1em;
-    height: 1em;
-    display: inline-block;
-    mask: url(arrow.svg) no-repeat 50% 50%;
-    background-color: currentColor;
+    @extend .general-svg-icon;
     padding-left: 6px;
-    vertical-align: -2.5px;
+    mask: url(../../img/icon/arrow.svg) no-repeat 50% 50%/1em 1em;
   }
 }
 
@@ -269,19 +275,16 @@ p{
   #number:hover::after,
   #email:hover::after{ //可复制内容加符号示意
     content: "";
-    width: 1em;
-    height: 1em;
-    display: inline-block;
-    mask: url(copied.svg) no-repeat 50% 50%;
-    background-color: currentColor;
+    @extend .general-svg-icon;
+    mask: url(../../img/icon/copied.svg) no-repeat 50% 50%/1em 1em;
     padding-left: 6px;
-    vertical-align: -3px;
     @include mobile(){
       display: none;
     }
   }
   #number:focus:not(:focus-visible), #email:focus:not(:focus-visible){
     outline: none;
+    font-weight: 500;
   }
   
 
@@ -452,6 +455,7 @@ a{
     &:focus:not(:focus-visible){  // 鼠标点击触发的Focus
       outline: 0;
       box-shadow: none;
+      font-weight: 500;
     }
     &:focus{
       box-shadow: 0 0 0 3px var(--background-color),0 0 0 5px var(--outline-color-focus);
@@ -595,14 +599,15 @@ footer {
   color: var(--tertiary-text-color);
   margin-top: 100px;
   margin-bottom: 2rem;
-  // font-variant-numeric: tabular-nums;
-  // user-select: none;
-  // cursor: default;
   .flex{
     display: flex;
     justify-content: space-between;
     a:hover{
       text-decoration: none;
+      font-weight: 500;
+    }
+    a:active{
+      font-weight: 500;
     }
     .info{
       flex: 1;
@@ -637,13 +642,9 @@ footer {
     }
     .file:hover::after{
       content: "";
-    width: 1em;
-    height: 1em;
-    display: inline-block;
-    mask: url(file.svg) no-repeat 50% 50%;
-    background-color: currentColor;
-    padding-left: 6px;
-    vertical-align: -2.5px;
+      @extend .general-svg-icon;
+      mask: url(../../img/icon/file.svg) no-repeat 50% 50%/1em 1em;
+      padding-left: 6px;
     }
   }
 }
@@ -652,17 +653,17 @@ footer {
   content: "";
   width: 0em;
   height: 0em;
-  mask: url(arrow.svg) no-repeat 50% 50%;
+  mask: url(../../img/icon/arrow.svg) no-repeat 50% 50%/1em 1em;
 }
 .hidden-elemen-2{
   content: "";
   width: 0em;
   height: 0em;
-  mask: url(copied.svg) no-repeat 50% 50%;
+  mask: url(../../img/icon/copied.svg) no-repeat 50% 50%/1em 1em;
 }
 .hidden-elemen-3{
   content: "";
   width: 0em;
   height: 0em;
-  mask: url(file.svg) no-repeat 50% 50%;
+  mask: url(../../img/icon/file.svg) no-repeat 50% 50%/1em 1em;
 }
