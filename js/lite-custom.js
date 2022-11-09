@@ -1,4 +1,4 @@
-//包含深色模式、Viewer.JS、作品内页宽度扩展、滚动到顶部、博客-复制链接、博客-右侧目录、导航栏、联系卡片
+//包含深色模式、导航栏、滚动到顶部、联系卡片
 
 // ▼▼ 深色模式
 const darkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)'); 
@@ -8,6 +8,7 @@ document.body.classList.add('dark');
 } 
 // 监听主题切换事件 
 darkMode && darkMode.addEventListener('change', e => { 
+
 if (e.matches) { 
     document.body.classList.add('dark'); 
 } else { 
@@ -16,106 +17,7 @@ if (e.matches) {
 });
 // ▲▲ 深色模式
 
-// ▼▼ Viewer.js
-window.addEventListener('DOMContentLoaded', function () {
-  var galley = document.getElementById('galley'); // 绑定图片组
-  var viewer = new Viewer(galley, {
-    url: 'data-src',  // 定义图片来源
-    title: function (image) {
-        return (this.index + 1) + ' / ' + this.length; // 显示当前/总数
-    },
-    toolbar: 0,
-    transition: 0,
-    zoomable: 0, // 每次缩放多少
-  });
-});
-// ▲▲ Viewer.js
-
-// ▼▼ 作品内页 - 宽度扩展按钮
-var projectContainer = document.getElementsByClassName('project-container')[0]
-var fullWidthIcon = document.getElementById('fullWidthIcon');
-
-var fullWidthMode = function (){
-  console.log(projectContainer)  
-  console.log('projectContainer')  
-  projectContainer.classList.toggle('extra-width');
-
-  // 判断到宽度被扩展时，切换图标
-  if (projectContainer.classList.contains("extra-width")){
-    console.log('extra-width') 
-    fullWidthIcon.setAttribute( "d", "M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15zM7 10h8v2H7v-2z");
-  } else {
-    console.log('no') 
-    fullWidthIcon.setAttribute( "d", "M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15zM10 10V7h2v3h3v2h-3v3h-2v-3H7v-2h3z");
-  }
-}
-// ▲▲ 作品内页 - 宽度扩展按钮
-
-// ▼▼ 博客 - 右侧导航菜单 // https://www.rainng.com/js-wordpress-catalog/
-
-var div = document.createElement('div');
-div.id = 'blogCatalog';
-div.setAttribute('class','blogCatalog');
-document.body.appendChild(div);
-
-// 目录
-let catalogData = getArticleCatalog();
-if (catalogData != null) {
-    // blogCatalog换成你的目录容器
-    let wrapper = document.getElementById('blogCatalog');
-    wrapper.innerHTML = generateCatalog(catalogData);
-}
-
-function getArticleCatalog(){
-let articleContent = document.getElementsByClassName('section-inner');
-console.log(articleContent)
-
-if (articleContent.length !== 1) {
-  // alert('not found');
-  return null;
-}
-let catalog = [];
-let header = {};
-let elements = articleContent[0].childNodes; // 获取文章容器的子节点
-// 遍历所有元素 
-for (let i = 0; i < elements.length; i++) {
-  if (elements[i].nodeName === 'H3') {
-    elements[i].id = 'h3-' + catalog.length;
-    header = {
-        name: elements[i].innerText,
-        childHeaders: []
-    };
-    catalog.push(header);
-  } else if (elements[i].nodeName === 'H4') {
-    elements[i].id = 'h3-' + (catalog.length - 1) + '-h4-' + header.childHeaders.length;
-    header.childHeaders.push(elements[i].innerText);
-    } 
-  }
-  return catalog;
-}
-
-function generateCatalog(catalogData) { // 添加目录标签
-  let catalog = '<div style="font-weight: 600;font-size: 16px; padding-left: 8px;">文章目录</div>';
-  for (let i = 0; i < catalogData.length; i++) {
-    let target = '#h3-' + i; // 跳转目标
-    // let index = (i + 0) + '. '; // 标题索引
-    let name = catalogData[i].name; // 标题
-    catalog += '<a href="' + target + '">' + name + '</a>';
-
-    for (let i2 = 0; i2 < catalogData[i].childHeaders.length; i2++) {
-      target = '#h3-' + i + '-h4-' + i2; // 跳转目标
-      // index = (i + 0) + '.' + (i2 + 1) + '. '; // 标题索引
-      name = catalogData[i].childHeaders[i2]; // 标题
-      catalog += '  <a href="' + target + '" class="catalog-h4">' + name + '</a>'
-    }
-  }
-  return catalog;
-}
-
-// ▲▲ 博客 - 右侧导航菜单
-
 // ▼▼ 导航栏
-
  var iconMenu = document.getElementById('iconMenu');
  var iconClose = document.getElementById('iconClose');
  var navOpen = document.getElementById('navOpen');
@@ -223,42 +125,6 @@ if (document.documentElement.scrollTop < 150) { // 刚进网页 静止时检测�
   sideButton.classList.remove("hidden");
 }
 // ▲▲ 滚动出现返回顶部
-
-
-
-// ▼▼ 博客 - 复制链接
-var blogLinkTop = document.getElementById('blogLinkTop'); //复制前图标
-var copiedLinkTop = document.getElementById('copiedLinkTop'); //复制成功图标
-var clipboard2 = new ClipboardJS(blogLinkTop);
-var clipboard3 = new ClipboardJS(copiedLinkTop);
-clipboard2.on('success', function (e) { 
-  console.log(e);
-  blogLinkTop.classList.toggle('hide');
-  copiedLinkTop.classList.toggle('hide');
-});
-copiedLinkTop.onclick = function() {
-  blogLinkTop.classList.toggle('hide');
-  copiedLinkTop.classList.toggle('hide');
-}
-
-var blogLink = document.getElementById('blogLink');
-var copyLink = document.getElementById('copyLink');
-var copied = document.getElementById('copied');
-var clipboard = new ClipboardJS(blogLink);
-clipboard.on('success', function (e) { 
-  console.log(e);
-  console.log(copied);
-  copyLink.classList.toggle('hide');
-  copied.classList.toggle('hide');
-});
-
-copied.onclick = function() {
-  copyLink.classList.toggle('hide');
-  copied.classList.toggle('hide');
-}
-// ▲▲ 博客 - 复制链接
-
-
 
 // ▼▼ 创建 DOM
 var popContactPopover = document.createElement('div');
