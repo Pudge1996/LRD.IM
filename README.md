@@ -283,7 +283,8 @@ function showToast(e){  // 定义 showToast 行为
 
 # 其他
 
-域名购买: [Name.com](https://www.name.com/)
+服务器：[阿里云轻量应用服务器](https://www.aliyun.com/product/swas)
 
-托管资源: [阿里云OSS](https://www.aliyun.com/product/oss)
+静态资源托管: [阿里云OSS](https://www.aliyun.com/product/oss)
 
+域名购买: [Name.com(ref)](https://www.name.com/zh-cn/referral/315c9d)
