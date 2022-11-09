@@ -258,6 +258,10 @@ a {
   display: inline-block;
 }
 
+.select-all{
+  user-select: all;
+}
+
 .case{
   font-feature-settings: 'case', 'tnum';
 }
@@ -286,12 +290,63 @@ a.underline{ //需要加下划线的class
 }
 
 .changelog{
-  font-variant-numeric: tabular-nums;
   font-size: var(--font-size-p);
-  margin-top: 10px;
-  li{
-    list-style-type: disc;
+  margin: var(--spacing-xxs) 0 0 0;
+  display: flex;
+  gap: var(--spacing-xs);
+  position: relative;
+
+  .changelog-line{
+    display: block;
+    position: absolute;
+    background-color: var(--divider-color);
+    width: 1.5px;
+    height: 100%;
+    top: .8em;
+    left: 5.25px;
+
   }
+  ul{
+    margin: 0;
+    padding: 0;
+    li{
+      list-style-type: none;
+      margin-block-end: var(--spacing-xs);
+      position: relative;
+      padding-inline-start: var(--spacing-xs);
+
+      // @include sm {
+      // padding-inline-start: var(--spacing-xs);
+      // }
+
+      &:last-child(){
+        margin-block-end: 0;
+      }
+  
+      time{
+        font-size: var(--font-size-sub);
+        line-height: var(--line-height-sm);
+        color: var(--tertiary-text-color);
+        font-weight: 500;
+      }
+
+      p{
+        margin: 0;
+      }
+    }
+    li::before{
+      content: '';
+      width: 12px;
+      height: 12px;
+      border: 2.5px solid var(--divider-color);
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      top: calc(.5em + 2px);
+      background-color: var(--background-color);
+    }
+  }
+  
   }
 // ▲▲ 文字设置
 
@@ -1467,6 +1522,7 @@ article{
       line-height: var(--line-height-sm);
       border-radius: var(--border-radius-md);
       user-select: none;
+      touch-action: none;
       &:hover{  
         background-color: var(--button-hover-color);
       }

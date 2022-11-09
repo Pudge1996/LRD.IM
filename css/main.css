@@ -316,6 +316,13 @@ a {
   display: inline-block;
 }
 
+.select-all {
+  -webkit-user-select: all;
+     -moz-user-select: all;
+      -ms-user-select: all;
+          user-select: all;
+}
+
 .case, .blog h2, article h1, .article-navigation {
   -webkit-font-feature-settings: 'case', 'tnum';
           font-feature-settings: 'case', 'tnum';
@@ -347,13 +354,65 @@ a.underline:active {
 }
 
 .changelog {
-  font-variant-numeric: tabular-nums;
   font-size: var(--font-size-p);
-  margin-top: 10px;
+  margin: var(--spacing-xxs) 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--spacing-xs);
+  position: relative;
 }
 
-.changelog li {
-  list-style-type: disc;
+.changelog .changelog-line {
+  display: block;
+  position: absolute;
+  background-color: var(--divider-color);
+  width: 1.5px;
+  height: 100%;
+  top: .8em;
+  left: 5.25px;
+}
+
+.changelog ul {
+  margin: 0;
+  padding: 0;
+}
+
+.changelog ul li {
+  list-style-type: none;
+  -webkit-margin-after: var(--spacing-xs);
+          margin-block-end: var(--spacing-xs);
+  position: relative;
+  -webkit-padding-start: var(--spacing-xs);
+          padding-inline-start: var(--spacing-xs);
+}
+
+.changelog ul li:last-child {
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+
+.changelog ul li time {
+  font-size: var(--font-size-sub);
+  line-height: var(--line-height-sm);
+  color: var(--tertiary-text-color);
+  font-weight: 500;
+}
+
+.changelog ul li p {
+  margin: 0;
+}
+
+.changelog ul li::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border: 2.5px solid var(--divider-color);
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: calc(.5em + 2px);
+  background-color: var(--background-color);
 }
 
 .container-fluid {
@@ -1900,6 +1959,8 @@ article figure.graf-after--h4 {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  -ms-touch-action: none;
+      touch-action: none;
 }
 
 .project .action a:hover {
