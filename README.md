@@ -1,29 +1,29 @@
 # LRD.IM 背后的故事
 
-2017 年底，大四下学期的时候技术尚未成熟，所以在网上找了一个当时觉得还挺好看的 HTML 模板来做网页，我也没仔细了解，只是简单的替换文字、图片素材，部署在国外的一个平台就一直用了。
+2017 年底我初次捣鼓了我的[个人网站](https://elastic-bassi-02c067.netlify.app/#0)，大四下学期的时候技术尚未成熟，所以在网上找了一个当时觉得还挺好看的 HTML 模板来做网页，我也没仔细了解，只是简单的替换文字、图片素材，部署在 Netify 就一直用了。毫无疑问当时的网站无论是设计、性能、内容都比较的辣眼睛，于是我在密谋一次全面更新...
 
-毕业后在工作中也一点点积累前端知识，而且也会偶尔询问下公司的前端老哥一点技术问题，解决方案。直到在20-21年间读了张鑫旭大神的两本书，也在油管里看了不少 [DesignCourse](https://www.youtube.com/c/DesignCourse/featured) 和 [Kevin Powell](https://www.youtube.com/kepowob/featured) 频道的视频，同时也有 Dribbble Dark 以及 PureTab 这两个项目的实践，觉得技术开始有点像样了，便开始动手重构整个网站。
+毕业后在工作中也一点点积累前端知识，而且也会偶尔询问下公司的前端老哥一点技术问题，解决方案。直到在20-21年间读了[张鑫旭](https://www.zhangxinxu.com/)大神的两本书，也在油管里看了不少 [DesignCourse](https://www.youtube.com/c/DesignCourse/featured) 和 [Kevin Powell](https://www.youtube.com/kepowob/featured) 频道的视频，同时也有 [Dribbble Dark](https://lrd.im/html/dribbbledark.html) 以及 [PureTab](https://github.com/Pudge1996/PureTab) 这两个项目的实践，觉得技术开始有点像样了，便开始动手重构整个网站。
 
-抛弃 Boostrap 框架之后用上了 SaaS，完全使用 JS 代替 jQ，以及大量使用 Flex 和 Grid 布局，起码自己看起来舒服多了。现在不管是访问速度、网站易用性、代码可读性等各方面均比以往更出色。
+抛弃 Boostrap 框架之后用上了 Sass，完全使用 JS 代替 jQ，以及大量使用 Flex 和 Grid 布局，起码自己看起来舒服多了。现在不管是访问速度、网站易用性、可扩展性等各方面均比最初的版本更出色。
 
-现在这个网站用来存放我的博客、设计作品等。下一次技术进步的时候,还会做一个 Playground 页面，放上一些有意思的东西。比如一些动效，DEMO 等，反正是花里胡哨的东西。
+现在 [LRD.IM](https://lrd.im) 用来存放我的博客、设计作品等，不定期也会对网站的基础能力、样式等做一番迭代。
 
 # 时间线
-- 进行中：提供 RSS 服务
-- 2022-10 首页重构，优化信息获取体验。在 [archive.org](https://web.archive.org/web/20221007035203/https://lrd.im/project.html) 中查看旧版；
-- 2022-02 作品页面支持宽屏看图；
-- 2021-12 博客文章支持了目录功能；
-- 2021-06 全面重构，脱离 Bootstrap 和 jQuery，同步所有 Medium 文章内容到本站；
-- 2019-11 博客页支持跳转到 Medium 文章了；
-- 2019-02 重写部分样式以提升视觉体验；
-- 2019-10 适配深色模式；
-- 2018-01 用 HTML 模板 [BOX Theme](https://www.behance.net/gallery/36389511/Box-portfolio-Free-html-template) 建站。在 Netlify 部署，[查看旧版](https://elastic-bassi-02c067.netlify.com/)
+- 2022 年 11 月：新增博客的 RSS 订阅源、丰富了博客详情页的功能、更新了关于页的时间轴样式；
+- 2022 年 10 月：首页重构，优化信息获取体验。在 [archive.org](https://web.archive.org/web/20221007035203/https://lrd.im/project.html) 中查看旧版；
+- 2022 年 2 月：作品页面支持宽屏看图；
+- 2021 年 12 月：博客详情页支持了目录功能；
+- 2021 年 06 月：全面重构，脱离 Bootstrap 和 jQuery，同步所有 Medium 文章；
+- 2019 年 11 月：博客列表页支持跳转到 Medium 文章了；
+- 2019 年 02 月：重写部分样式以提升视觉体验；
+- 2019 年 10 月：适配深色模式；
+- 2018 年 1 月：HTML 模板 [BOX Theme](https://www.behance.net/gallery/36389511/Box-portfolio-Free-html-template) 建站。在 Netlify 部署，[查看旧版](https://elastic-bassi-02c067.netlify.com/)
 
 # To-do
-- 移动端看图片用 Swipe.js
-- 完善键盘可访问性
-- Blog选中可复制链接，复制 H3/H4 标题链接
-- 代码优化
+![PageSpeed 评分](https://i.imgur.com/1yurjcQ.png)
+待办1：按照谷歌建议继续完善网站；
+
+待办2：博客列表页的搜索、排序功能。
 
 # 技术方案
 
