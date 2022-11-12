@@ -133,12 +133,8 @@ html, body {
   scrollbar-width: thin;
 }
 
-// .grow-bg{
-//   background: radial-gradient(ellipse 80% 50% at 50% -15%, #6cb0e017, #FFF0);
-// }
-
 .dark .grow-bg{
-  background: radial-gradient(ellipse 80% 50% at 50% -15%, #777ac636, #FFF0);
+  background: radial-gradient(ellipse 80% 50% at 50% -20%, #777ac636, #FFF0);
 }
 
 .no-padding {
@@ -169,6 +165,18 @@ html, body {
 img{
   width: 100%;
   height: auto;
+}
+
+// ▼▼ 列表页通用分割线
+
+hr.common{
+  margin: var(--spacing-md) auto var(--spacing-xs);
+  background: var(--divider-color);
+  border: none;
+  height: 1px;
+  @include md{
+  margin: var(--spacing-lg) auto var(--spacing-md);
+  }
 }
 
 // ▼▼ 图标
@@ -984,7 +992,7 @@ article{
       display: flex;
       color: var(--tertiary-text-color);
       gap: 20px;
-      touch-action: none;
+      touch-action: pan-y pinch-zoom; // iOS 300延迟问题
       user-select: none;
       @include sm {
         font-size: var(--font-size-p);
@@ -1299,30 +1307,30 @@ article{
 
 .series{
   display: flex;
-  flex-direction: column;
-    @include md {
-    flex-direction: row;
-  }
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--spacing-xxs);
   
   a{
     padding: var(--spacing-xxs) var(--spacing-xs);
     cursor: pointer;
-    flex-grow: 1;
+    flex-grow: 0;
     border-radius: var(--border-radius-md);
     background-color: var(--button-color);
-    // transition: background-color .3s;
     display: flex;
-    flex: 1;
+    flex-direction: column;
+    min-width: calc((100% - 30px) /2);
     @include md {
       padding: var(--spacing-xxs) var(--spacing-xs);
-      flex-direction: column;
+      min-width: calc((100% - 24px) / 3);
     }
     p{
       margin: 0;
       font-weight: bold;
-      display: inline;
+      display: block;
+      font-size: var(--font-size-sub);
       @include md {
-        display: block;
+      font-size: var(--font-size-p);
       }
     }
     p:not(:first-child){ // 选择非标题的文案
@@ -1331,10 +1339,15 @@ article{
       font-size: var(--font-size-sub);
       text-align: right;
       margin-left: auto;
+      display: none;
       @include md {
         text-align: left;
         margin-left: 0;
+        display: block;
       }
+    }
+    .series-title{
+      @extend .elis-1;
     }
   }
   a:hover, a:focus-visible{
@@ -1343,13 +1356,13 @@ article{
   a:active{
     background-color: var(--button-active-color);
   }
-  a:not(:last-child){
-    margin-bottom: var(--spacing-xxs);
-    @include md {
-      margin-right: var(--spacing-xxs);
-      margin-bottom: 0;
-    }
-  }
+  // a:not(:last-child){
+  //   margin-bottom: var(--spacing-xxs);
+  //   @include md {
+  //     margin-right: var(--spacing-xxs);
+  //     margin-bottom: 0;
+  //   }
+  // }
 }
 
 .blog-divider {
@@ -1396,6 +1409,7 @@ article{
   color: var(--tertiary-text-color);
   letter-spacing: .5px;
   user-select: none;
+  margin-block-start: var(--spacing-xs);
   &:hover {
     background-color: var(--button-hover-color);
   }
@@ -1510,7 +1524,7 @@ article{
     margin: 0;
   }
  
-  .action{
+  .action{ //首页行动按钮
     display: flex;
     gap: var(--spacing-xxs);
     font-weight: 500;
@@ -1530,7 +1544,7 @@ article{
       line-height: var(--line-height-sm);
       border-radius: var(--border-radius-md);
       user-select: none;
-      touch-action: none;
+      touch-action: pan-y pinch-zoom; // iOS 300延迟问题
       &:hover{  
         background-color: var(--button-hover-color);
       }
@@ -1566,15 +1580,6 @@ article{
       transform: rotate(15deg);
     }
     
-  }
-  hr{
-    margin: var(--spacing-md) auto var(--spacing-xs);
-    background: var(--divider-color);
-    border: none;
-    height: 1px;
-    @include md{
-    margin: var(--spacing-lg) auto var(--spacing-md);
-    }
   }
   .experience{
     &>*{
