@@ -173,6 +173,10 @@ html, body {
   scrollbar-width: thin;
 }
 
+.dark .grow-bg {
+  background: radial-gradient(ellipse 80% 50% at 50% -15%, #777ac636, #FFF0);
+}
+
 .no-padding {
   padding-left: 0;
   padding-right: 0;
@@ -194,12 +198,14 @@ html, body {
 }
 
 .spacing {
-  margin-top: var(--spacing-sm) !important;
+  -webkit-padding-before: var(--spacing-sm) !important;
+          padding-block-start: var(--spacing-sm) !important;
 }
 
 @media (min-width: 576px) {
   .spacing {
-    margin-top: var(--spacing-lg) !important;
+    -webkit-padding-before: var(--spacing-lg) !important;
+            padding-block-start: var(--spacing-lg) !important;
   }
 }
 

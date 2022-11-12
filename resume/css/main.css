@@ -152,16 +152,19 @@ p {
   white-space: nowrap;
 }
 
+.dark .grow-bg {
+  background: radial-gradient(ellipse 80% 50% at 50% -20%, #9a9eef38, #FFF0);
+}
+
 .wrap {
   max-width: 880px;
-  margin: 5rem auto 0;
-  padding: 18px;
+  margin: 0 auto;
+  padding: 5rem 18px 18px;
 }
 
 @media (max-width: 768px) {
   .wrap {
-    padding: 25px;
-    margin: 1rem auto 0;
+    padding: 1rem 25px 25px;
   }
 }
 

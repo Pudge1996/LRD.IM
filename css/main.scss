@@ -128,11 +128,19 @@ html, body {
   color: var(--primary-text-color);
   line-height: var(--line-height-lg);
   font-style: normal;
-  // scroll-behavior: smooth;
   position: relative;
   scroll-padding-top: 104px;
   scrollbar-width: thin;
 }
+
+// .grow-bg{
+//   background: radial-gradient(ellipse 80% 50% at 50% -15%, #6cb0e017, #FFF0);
+// }
+
+.dark .grow-bg{
+  background: radial-gradient(ellipse 80% 50% at 50% -15%, #777ac636, #FFF0);
+}
+
 .no-padding {
   padding-left: 0;
   padding-right: 0;
@@ -152,9 +160,9 @@ html, body {
 }
 
 .spacing{
-  margin-top: var(--spacing-sm) !important;
+  padding-block-start: var(--spacing-sm) !important;
   @include sm {
-    margin-top: var(--spacing-lg) !important;
+    padding-block-start: var(--spacing-lg) !important;
   }
 }
 
