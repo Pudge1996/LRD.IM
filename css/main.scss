@@ -1310,16 +1310,16 @@ article{
   flex-direction: row;
   flex-wrap: wrap;
   gap: var(--spacing-xxs);
-  
   a{
     padding: var(--spacing-xxs) var(--spacing-xs);
     cursor: pointer;
-    flex-grow: 0;
+    flex: 0;
     border-radius: var(--border-radius-md);
     background-color: var(--button-color);
     display: flex;
     flex-direction: column;
-    min-width: calc((100% - 30px) /2);
+    justify-content: center;
+    min-width: calc((100% - 12px) / 2);
     @include md {
       padding: var(--spacing-xxs) var(--spacing-xs);
       min-width: calc((100% - 24px) / 3);
