@@ -227,20 +227,6 @@ if (document.documentElement.scrollTop < 150) { // 刚进网页 静止时检测�
 
 
 // ▼▼ 博客 - 复制链接
-var blogLinkTop = document.getElementById('blogLinkTop'); //复制前图标
-var copiedLinkTop = document.getElementById('copiedLinkTop'); //复制成功图标
-var clipboard2 = new ClipboardJS(blogLinkTop);
-var clipboard3 = new ClipboardJS(copiedLinkTop);
-clipboard2.on('success', function (e) { 
-  console.log(e);
-  blogLinkTop.classList.toggle('hide');
-  copiedLinkTop.classList.toggle('hide');
-});
-copiedLinkTop.onclick = function() {
-  blogLinkTop.classList.toggle('hide');
-  copiedLinkTop.classList.toggle('hide');
-}
-
 var blogLink = document.getElementById('blogLink');
 var copyLink = document.getElementById('copyLink');
 var copied = document.getElementById('copied');
@@ -256,6 +242,21 @@ copied.onclick = function() {
   copyLink.classList.toggle('hide');
   copied.classList.toggle('hide');
 }
+
+var blogLinkTop = document.getElementById('blogLinkTop'); //复制前图标
+var copiedLinkTop = document.getElementById('copiedLinkTop'); //复制成功图标
+var clipboard2 = new ClipboardJS(blogLinkTop);
+var clipboard3 = new ClipboardJS(copiedLinkTop);
+clipboard2.on('success', function (e) { 
+  console.log(e);
+  blogLinkTop.classList.toggle('hide');
+  copiedLinkTop.classList.toggle('hide');
+});
+copiedLinkTop.onclick = function() {
+  blogLinkTop.classList.toggle('hide');
+  copiedLinkTop.classList.toggle('hide');
+}
+
 // ▲▲ 博客 - 复制链接
 
 
