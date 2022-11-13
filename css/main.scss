@@ -131,10 +131,14 @@ html, body {
   position: relative;
   scroll-padding-top: 104px;
   scrollbar-width: thin;
+  cursor: default !important;
 }
 
 .dark .grow-bg{
-  background: radial-gradient(ellipse 80% 50% at 50% -20%, #777ac636, #FFF0);
+  background: radial-gradient(ellipse 70% 50% at 50% -20%, #777ac636, transparent);
+  @include sm {
+    background: radial-gradient(ellipse 70% 50% at 50% -20%, #777ac636, transparent);
+}
 }
 
 .no-padding {
@@ -165,6 +169,10 @@ html, body {
 img{
   width: 100%;
   height: auto;
+}
+
+.dark img{
+  filter: brightness(.96);
 }
 
 // ▼▼ 列表页通用分割线
@@ -298,11 +306,9 @@ a.underline{ //需要加下划线的class
   
 }
 
-
 .vpn:hover::after,
 .vpn:focus::after{
   content: ' (需要科学上网)';
-  // font-size: var(--font-size-footer);
 }
 
 .changelog{
@@ -653,15 +659,9 @@ footer {
   }
   section a:hover > h2{
     color: var(--link-text-color);
-    text-decoration: underline;
-    @include sm {
-    text-underline-position: under;
-    text-underline-offset: -0.8px;
-    }
   }
   section a:active > h2{
     color: var(--link-text-active-color);
-    text-decoration: none;
   }
 }
   // 博客页顶部 Banner
@@ -1517,7 +1517,7 @@ article{
     top: 64px;
     background: var(--background-color);
     @include md{
-    top: 56px;
+      top: 56px;
     }
   }
   h2{
@@ -1559,7 +1559,6 @@ article{
         background-color: var(--secondary-text-color);
       }
       &:active{
-        // background-color: var(--negative-color);
         opacity: .6;
       }
       &::after{
@@ -1591,11 +1590,11 @@ article{
     .info{
       display: flex;
       gap: 8px;
-      padding: var(--spacing-xxs) 0 0;
+      padding: var(--spacing-xxs) 0 var(--spacing-xxs);
+      z-index: 1;
       @include sm{
-      gap: var(--spacing-xxs);
-
-      }      
+        gap: var(--spacing-xxs);
+    }      
     }
     .company{
       display: flex;
@@ -1608,9 +1607,6 @@ article{
       }
       a:hover, a:focus{
         color: var(--link-text-color);
-        text-underline-position: under;
-        text-underline-offset: -0.8px;
-        text-decoration: underline ;
       }
       a:active{
         color: var(--link-text-active-color);
@@ -1622,8 +1618,7 @@ article{
       width: 24px; height: 24px;
 
       @include sm{
-      width: 28px; height: 28px;
-
+        width: 28px; height: 28px;
       }
     }
     .qlchat .icon{
@@ -1644,9 +1639,10 @@ article{
       font-size: var(--font-size-p);
       font-weight: 500;
       line-height: 24px;
+      padding-block-end: 4px;
       @include sm{
-      font-size: var(--font-size-h4);
-      line-height: 26px;
+        font-size: var(--font-size-h4);
+        line-height: 26px;
       }
     }
     .year{
@@ -1654,57 +1650,50 @@ article{
       font-weight: 600;
       color: var(--tertiary-text-color);
       cursor: default;
+      line-height: var(--line-height-sm);
     }
   }
   .showcase{
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-xs);
-
+    row-gap: var(--spacing-sm);
+    column-gap: var(--spacing-xs);
+    @include md {
+      gap: var(--spacing-sm);
+    }
     margin-block-end: var(--spacing-xs);
-    // padding-inline-start: 0;
     flex-wrap: wrap;
     padding: var(--spacing-xxs) 0;
-    @include md{
-    padding-inline-start: 40px;
-    }
     @include sm{
     margin-block-end: var(--spacing-md);
     flex-direction: row;
-    
-
     }
-    a{
-      max-width: 100%;
+    .item{
       border-radius: var(--border-radius-sm);
+      max-width: 100%;
       @include sm {
         max-width: calc((100% - 24px) / 2);
+      }
+      @include sm {
+        max-width: calc((100% - 32px) / 2);
+      }
+      a{
+        border-radius: var(--border-radius-md);
       }
       .desc{
         font-size: var(--font-size-sub);
         color: var(--secondary-text-color);
         line-height: var(--line-height-md);
-        display: none;
       }
-      &:hover > h3, &:focus > h3{
+      &:hover h3, &:focus-within h3{
         color: var(--link-text-color);
-        text-decoration: underline;
-  
-        @include sm {
-        text-underline-position: under;
-        text-underline-offset: -0.8px;
-        }
       }
-      &:active > h3{
+      &:active h3{
         color: var(--link-text-active-color);
         text-decoration: none; 
       }
       h3{
         font-size: var(--font-size-p);
-        line-height: var(--line-height-md);
-        font-feature-settings: 'case';
-        @include sm{
-        }
       }
       .divider{ 
         display: inline-block;
@@ -1718,13 +1707,15 @@ article{
     }
     img{
       width: 100%;
-      aspect-ratio: 16 / 9;
-      // min-height: 152px;
+      aspect-ratio: 16 / 8;
       object-fit: cover;
       background-position: 50% 50%;
       margin-block-end: var(--spacing-xxs);
-      border-radius: var(--border-radius-sm);
+      border-radius: var(--border-radius-md);
       background-color: var(--button-color);
+      @include md {
+        aspect-ratio: 16 / 9;
+      }
     }
   }
 }
