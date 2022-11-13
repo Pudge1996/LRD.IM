@@ -171,7 +171,6 @@ html, body {
   position: relative;
   scroll-padding-top: 104px;
   scrollbar-width: thin;
-  cursor: default !important;
 }
 
 .dark .grow-bg {
@@ -947,6 +946,7 @@ footer .footer-rss .icon-rss {
   top: 112px;
   left: calc(50% + 380px);
   max-width: 300px;
+  min-width: 240px;
   font-size: var(--font-size-footer);
   padding: var(--spacing-xxs) var(--spacing-xxs) 0 0;
   border-radius: var(--border-radius-sm);
@@ -1808,22 +1808,115 @@ article figure.graf-after--h4 {
 }
 
 .top-bar {
-  padding: 88px 0 88px;
+  padding: var(--spacing-lg) 0 var(--spacing-md);
   text-align: center;
-  margin: 0px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: var(--spacing-xxs);
+  overflow: visible;
+}
+
+.top-bar h1 {
+  margin: 0;
 }
 
 @media (min-width: 576px) {
   .top-bar {
-    padding: 160px 0 160px;
-    margin: 0 auto;
+    padding: 120px var(--spacing-md) var(--spacing-md);
+  }
+}
+
+@media (min-width: 992px) {
+  .top-bar {
+    padding: 120px 104px var(--spacing-md);
   }
 }
 
 .top-bar p {
   color: var(--secondary-text-color);
-  letter-spacing: .5px;
-  margin-bottom: 0;
+  margin: 0;
+  font-size: var(--font-size-sub);
+  line-height: var(--line-height-md);
+}
+
+@media (min-width: 576px) {
+  .top-bar p {
+    font-size: var(--font-size-p);
+    line-height: var(--line-height-md);
+    word-break: keep-all;
+  }
+}
+
+.project-nav {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 72px;
+  z-index: 1;
+  -webkit-margin-after: var(--spacing-lg);
+          margin-block-end: var(--spacing-lg);
+}
+
+@media (min-width: 576px) {
+  .project-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.project-nav .project-catalog {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--button-color);
+  padding: 8px var(--spacing-xxs);
+  border-radius: var(--border-radius-md);
+}
+
+.project-nav .project-catalog a {
+  padding: 8px var(--spacing-xxs);
+  background-color: var(--button-color);
+  line-height: var(--line-height-sm);
+  border-radius: var(--border-radius-sm);
+  font-weight: 500;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: var(--font-size-sub);
+  color: var(--tertiary-text-color);
+}
+
+.project-nav .project-catalog a:hover, .project-nav .project-catalog a:focus-within {
+  background-color: var(--button-hover-color);
+  color: var(--primary-text-color);
+}
+
+.project-nav .project-catalog a:active {
+  background-color: var(--button-active-color);
+}
+
+.project-nav .project-catalog .project-catalog-divider {
+  width: 2px;
+  height: .8em;
+  background-color: var(--divider-color);
+  border-radius: 1px;
 }
 
 .heroimg {
@@ -2195,6 +2288,9 @@ article figure.graf-after--h4 {
 
 .project .showcase .item h3 {
   font-size: var(--font-size-p);
+  line-height: var(--line-height-sm);
+  -webkit-margin-after: 4px;
+          margin-block-end: 4px;
 }
 
 .project .showcase .item .divider {
@@ -2304,6 +2400,7 @@ article figure.graf-after--h4 {
 
 .project-container img, .project-container picture {
   margin-bottom: var(--spacing-xxs);
+  border-radius: var(--border-radius-md);
 }
 
 .extra-width {
@@ -2433,6 +2530,10 @@ img.zoom-img {
 .viewer-canvas {
   cursor: -webkit-zoom-out;
   cursor: zoom-out;
+}
+
+.viewer-canvas img {
+  border-radius: var(--border-radius-md);
 }
 
 .elis-1, article .graf--mixtapeEmbed strong, article .graf--mixtapeEmbed em, .project-navigation .title, .project-navigation .desc, .article-navigation .title, .series a .series-title {

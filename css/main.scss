@@ -131,7 +131,6 @@ html, body {
   position: relative;
   scroll-padding-top: 104px;
   scrollbar-width: thin;
-  cursor: default !important;
 }
 
 .dark .grow-bg{
@@ -184,6 +183,7 @@ hr.common{
   height: 1px;
   @include md{
   margin: var(--spacing-lg) auto var(--spacing-md);
+
   }
 }
 
@@ -742,10 +742,12 @@ footer {
   top: 112px;
   left: calc(50% + 380px);
   max-width: 300px;
+  min-width: 240px;
   font-size: var(--font-size-footer);
   padding: var(--spacing-xxs) var(--spacing-xxs) 0 0;
   border-radius: var(--border-radius-sm);
   font-variant-numeric: tabular-nums;
+  
   a{
     display: block;
     padding: 2px 8px;
@@ -1426,19 +1428,85 @@ article{
 
 // ▼▼ 单个项目页 
 .top-bar {
-  padding: 88px 0 88px;
+  padding: var(--spacing-lg) 0 var(--spacing-md);
   text-align: center;
-  margin: 0px 10px;
-  @include sm {
-      padding: 160px 0 160px;
-      margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xxs);
+  overflow: visible;
+  h1{
+    margin: 0;
   }
+  @include sm {
+      padding: 120px var(--spacing-md) var(--spacing-md);
+  }
+  @include lg {
+    padding: 120px 104px var(--spacing-md);
+}
   p {
     color: var(--secondary-text-color);
-    letter-spacing: .5px;
-    margin-bottom: 0;
+    margin: 0;
+    font-size: var(--font-size-sub);
+    line-height: var(--line-height-md);
+    @include sm {
+      font-size: var(--font-size-p);
+      line-height: var(--line-height-md);
+      word-break: keep-all;
+    }
   }
 }
+
+// ▼▼ Project 目录
+.project-nav{
+  display: none;
+  justify-content: center;
+  position: sticky;
+  top: 72px;
+  z-index: 1;
+  margin-block-end: var(--spacing-lg);
+  // opacity: .2;
+  // transition: opacity .3s ease-in-out;
+  // &:hover{
+  //   opacity: 1;
+  // }
+  @include sm {
+    display:  flex;
+  }
+  .project-catalog{
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--button-color);
+    padding: 8px var(--spacing-xxs);
+    border-radius: var(--border-radius-md);
+    a{
+      padding: 8px var(--spacing-xxs);
+      background-color: var(--button-color);
+      line-height: var(--line-height-sm);
+      border-radius: var(--border-radius-sm);
+      font-weight: 500;
+      user-select: none;
+      font-size: var(--font-size-sub);
+      color: var(--tertiary-text-color);
+      &:hover, &:focus-within{
+        background-color: var(--button-hover-color);
+        color: var(--primary-text-color);
+      }
+      &:active{
+        background-color: var(--button-active-color);
+      }
+    }
+
+    .project-catalog-divider{
+      width: 2px;
+      height: .8em;
+      background-color: var(--divider-color);
+      border-radius: 1px;
+    }
+  }
+}
+
 
 .heroimg {
   max-width: var(--container-width-xl);
@@ -1658,15 +1726,16 @@ article{
     flex-direction: column;
     row-gap: var(--spacing-sm);
     column-gap: var(--spacing-xs);
-    @include md {
-      gap: var(--spacing-sm);
-    }
     margin-block-end: var(--spacing-xs);
     flex-wrap: wrap;
     padding: var(--spacing-xxs) 0;
+
+    @include md {
+      gap: var(--spacing-sm);
+    }
     @include sm{
-    margin-block-end: var(--spacing-md);
-    flex-direction: row;
+      margin-block-end: var(--spacing-md);
+      flex-direction: row;
     }
     .item{
       border-radius: var(--border-radius-sm);
@@ -1694,6 +1763,8 @@ article{
       }
       h3{
         font-size: var(--font-size-p);
+        line-height: var(--line-height-sm);
+        margin-block-end: 4px;
       }
       .divider{ 
         display: inline-block;
@@ -1763,6 +1834,7 @@ article{
   transition: max-width .3s cubic-bezier(0.45, 0, 0.55, 1); //放大图片的过渡动画
   img, picture{
     margin-bottom: var(--spacing-xxs);
+    border-radius: var(--border-radius-md);
   }
 }
 
@@ -1874,6 +1946,9 @@ img.zoom-img {
 
 .viewer-canvas{
   cursor: zoom-out;
+  img{
+    border-radius: var(--border-radius-md);
+  }
 }
 
 // 可通过 @extend 复用的样式
