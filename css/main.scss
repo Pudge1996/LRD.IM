@@ -18,6 +18,8 @@ button{
 @mixin lg {@media (min-width: 992px) {@content;}} //desktops
 @mixin xl {@media (min-width: 1200px) {@content;}} //large desktops
 @mixin xxl {@media (min-width: 1400px) {@content;}} //larger desktops
+
+
 :root {
   //颜色
   --primary-text-color: #222222;
@@ -886,7 +888,7 @@ article{
       }
     }
     &:hover{
-      background-color: var(--button-hover-color);
+      background-color: var(--button-color);
     }
     &:active{
       background-color: var(--button-active-color);
@@ -954,7 +956,8 @@ article{
       font-size: var(--font-size-h2);
       padding-top: var(--spacing-lg);
       line-height: var(--line-height-sm);
-    }
+      margin-bottom: var(--spacing-xs);
+  }
     @include md{
       font-size: var(--font-size-blog-title);
     }
@@ -1096,11 +1099,10 @@ article{
     padding: 6px;
     border-radius: var(--border-radius-sm);
     @include sm {
-    padding: var(--spacing-xxs);
-
+      padding: var(--spacing-xxs);
     }
     &:hover{
-      background-color: var(--button-hover-color);
+      background-color: var(--button-color);
     }
     &:active{
       background-color: var(--button-active-color);
@@ -1190,7 +1192,7 @@ article{
       border-radius: var(--border-radius-md);
       transition: all .2s;
       &:hover{
-          background-color: var(--button-hover-color);
+          background-color: var(--button-color);
         }
       &:active{
           background-color: var(--button-active-color);
@@ -1477,8 +1479,10 @@ article .top-bar{
   padding-inline-start: 0;
   padding-inline-end: 0;
 }
-
 // ▼▼ Project 目录
+
+
+
 .project-nav{
   display: none;
   justify-content: center;
@@ -1499,13 +1503,14 @@ article .top-bar{
     gap: 4px;
     justify-content: center;
     align-items: center;
-    background-color: var(--button-color);
     padding: 4px;
     border-radius: var(--border-radius-md);
     border: 1px solid var(--divider-color);
+    background-color: var(--button-color);
+    
     a{
       padding: 8px var(--spacing-xxs);
-      background-color: var(--button-color);
+      background-color: transparent;
       line-height: var(--line-height-sm);
       border-radius: var(--border-radius-sm);
       font-weight: 500;

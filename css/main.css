@@ -1106,7 +1106,7 @@ article .graf--mixtapeEmbed a:nth-child(2) {
 }
 
 article .graf--mixtapeEmbed:hover {
-  background-color: var(--button-hover-color);
+  background-color: var(--button-color);
 }
 
 article .graf--mixtapeEmbed:active {
@@ -1183,6 +1183,7 @@ article h1 {
     font-size: var(--font-size-h2);
     padding-top: var(--spacing-lg);
     line-height: var(--line-height-sm);
+    margin-bottom: var(--spacing-xs);
   }
 }
 
@@ -1378,7 +1379,7 @@ article figure img {
 }
 
 .project-navigation:hover {
-  background-color: var(--button-hover-color);
+  background-color: var(--button-color);
 }
 
 .project-navigation:active {
@@ -1515,7 +1516,7 @@ article figure img {
 }
 
 .article-navigation a:hover {
-  background-color: var(--button-hover-color);
+  background-color: var(--button-color);
 }
 
 .article-navigation a:active {
@@ -1919,15 +1920,15 @@ article .top-bar {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: var(--button-color);
   padding: 4px;
   border-radius: var(--border-radius-md);
   border: 1px solid var(--divider-color);
+  background-color: var(--button-color);
 }
 
 .project-nav .project-catalog a {
   padding: 8px var(--spacing-xxs);
-  background-color: var(--button-color);
+  background-color: transparent;
   line-height: var(--line-height-sm);
   border-radius: var(--border-radius-sm);
   font-weight: 500;
