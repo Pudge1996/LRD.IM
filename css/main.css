@@ -2459,6 +2459,17 @@ article.project-container iframe {
   background-color: var(--button-color);
 }
 
+article.project-container iframe.iframe-figma, article.project-container iframe.iframe-miro {
+  width: 100%;
+  height: 300px;
+}
+
+@media (min-width: 576px) {
+  article.project-container iframe.iframe-figma, article.project-container iframe.iframe-miro {
+    height: 600px;
+  }
+}
+
 .lazyload,
 .lazyloading {
   opacity: .5;

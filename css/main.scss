@@ -1879,6 +1879,13 @@ article.project-container{ //文档型作品，文本宽度控制
     display: block;
     border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: var(--button-color);
+    &.iframe-figma, &.iframe-miro{
+      width: 100%;
+      height: 300px;
+      @include sm {
+        height: 600px;
+      }
+    }
   }
 }
 
