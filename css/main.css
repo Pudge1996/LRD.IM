@@ -238,7 +238,7 @@ hr.common {
   }
 }
 
-.general-svg-icon, .icon-back, .icon-link, .icon-top, .icon-rss, .icon-contact, .icon-check, .blog-notification p::before, .project .action .resume a::after, .project .experience .company a:hover::after, .project .experience .company a:active::after, .project .experience .company a:focus::after {
+.general-svg-icon, .icon-back, .icon-link, .icon-top, .icon-rss, .icon-contact, .icon-check, .icon-download, .icon-folder, .blog-notification p::before, .project .action .resume a::after, .project .experience .company a:hover::after, .project .experience .company a:active::after, .project .experience .company a:focus::after {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -279,6 +279,16 @@ hr.common {
 .icon-check {
   -webkit-mask: url(../img/icon/check.svg) no-repeat 50% 50%/1em 1em;
           mask: url(../img/icon/check.svg) no-repeat 50% 50%/1em 1em;
+}
+
+.icon-download {
+  -webkit-mask: url(../img/icon/download.svg) no-repeat 50% 50%/1em 1em;
+          mask: url(../img/icon/download.svg) no-repeat 50% 50%/1em 1em;
+}
+
+.icon-folder {
+  -webkit-mask: url(../img/icon/folder.svg) no-repeat 50% 50%/1em 1em;
+          mask: url(../img/icon/folder.svg) no-repeat 50% 50%/1em 1em;
 }
 
 h1 {
@@ -1147,6 +1157,72 @@ article .graf--mixtapeEmbed em {
 
 article .graf--mixtapeEmbed br {
   display: none;
+}
+
+article .graf--resources {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  line-height: var(--line-height-md);
+  font-size: var(--font-size-sub);
+  border: 1px solid var(--divider-color);
+  padding: 16px 20px;
+  text-decoration: none;
+  border-radius: var(--border-radius-sm);
+}
+
+article .graf--resources .resources-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--spacing-xxs);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-block: var(--spacing-xxs);
+}
+
+article .graf--resources .resources-item:not(:last-child) {
+  border-bottom: 1px solid var(--divider-color);
+}
+
+article .graf--resources .resources-item:first-child {
+  -webkit-padding-before: 0;
+          padding-block-start: 0;
+}
+
+article .graf--resources .resources-item:last-child {
+  -webkit-padding-after: 0;
+          padding-block-end: 0;
+}
+
+article .graf--resources .icon {
+  -webkit-margin-end: 6px;
+          margin-inline-end: 6px;
+}
+
+article .graf--resources .resources-name {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  line-height: var(--line-height-lg);
+}
+
+article .graf--resources .resources-size {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  font-size: var(--font-size-footer);
+  color: var(--secondary-text-color);
+  font-family: SF Mono, monospace, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,Helvetica Neue, Arial, sans-serif;
+}
+
+article .graf--resources p {
+  font-size: var(--font-size-sub);
+  margin: 0;
 }
 
 article a {
@@ -2600,7 +2676,7 @@ img.zoom-img {
   border-radius: var(--border-radius-md);
 }
 
-.elis-1, article .graf--mixtapeEmbed strong, article .graf--mixtapeEmbed em, .project-navigation .title, .project-navigation .desc, .article-navigation .title, .series a .series-title, .project-nav .project-catalog a {
+.elis-1, article .graf--mixtapeEmbed strong, article .graf--mixtapeEmbed em, article .graf--resources .resources-name, .project-navigation .title, .project-navigation .desc, .article-navigation .title, .series a .series-title, .project-nav .project-catalog a {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;

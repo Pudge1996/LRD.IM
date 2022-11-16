@@ -230,6 +230,16 @@ hr.common{
   mask: url(../img/icon/check.svg) no-repeat 50% 50%/1em 1em;
 }
 
+.icon-download{
+  @extend .general-svg-icon;
+  mask: url(../img/icon/download.svg) no-repeat 50% 50%/1em 1em;
+}
+
+.icon-folder{
+  @extend .general-svg-icon;
+  mask: url(../img/icon/folder.svg) no-repeat 50% 50%/1em 1em;
+}
+
 // ▼▼ 文字设置
 h1 {
   margin: 20px auto 20px;
@@ -876,7 +886,6 @@ article{
     justify-content: space-between;
     font-size: var(--font-size-footer); // 选择到最下面的网址
     border: 1px solid var(--divider-color);
-    // transition: all .2s;
     touch-action: pan-y pinch-zoom;
     @include sm {
       margin: var(--article-margin-md) 0;
@@ -926,6 +935,52 @@ article{
     br{
       display: none;
     }   
+  }
+  // ▲ 引用外链 ▲
+
+  // ▼ 资源下载 ▼
+  .graf--resources{
+    display: flex;
+    flex-direction: column;
+    line-height: var(--line-height-md);
+    font-size: var(--font-size-sub);
+    border: 1px solid var(--divider-color);
+    padding: 16px 20px;
+    text-decoration: none;
+    border-radius: var(--border-radius-sm);
+    .resources-item{
+      display: flex;
+      gap: var(--spacing-xxs);
+      align-items: center;
+      padding-block: var(--spacing-xxs);
+    }
+    .resources-item:not(:last-child){
+      border-bottom: 1px solid var(--divider-color);
+    }
+    .resources-item:first-child{
+      padding-block-start: 0;
+    }
+    .resources-item:last-child{
+      padding-block-end: 0;
+    }
+    .icon{
+      margin-inline-end: 6px;
+    }
+    .resources-name{
+      flex-grow: 1;
+      line-height: var(--line-height-lg);
+      @extend .elis-1;
+    }
+    .resources-size{
+      flex-shrink: 0;
+      font-size: var(--font-size-footer);
+      color: var(--secondary-text-color);
+      font-family: SF Mono, monospace, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,Helvetica Neue, Arial, sans-serif;
+    }
+    p{
+    font-size: var(--font-size-sub);
+    margin: 0;
+    }
   }
   // ▲ 引用外链 ▲
 
