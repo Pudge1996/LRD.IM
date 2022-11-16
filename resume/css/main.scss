@@ -647,7 +647,7 @@ footer {
     .file:hover::after{
       content: "";
       @extend .general-svg-icon;
-      mask: url(../../img/icon/file.svg) no-repeat 50% 50%/1em 1em;
+      mask: url(../../img/icon/download.svg) no-repeat 50% 50%/1em 1em;
       padding-left: 6px;
     }
   }
