@@ -986,7 +986,11 @@ article .section--first > .section-divider {
   display: none;
 }
 
-article li {
+article ul {
+  margin: 0;
+}
+
+article ul li {
   list-style: decimal;
   font-size: var(--font-size-p);
 }
@@ -1283,6 +1287,7 @@ article figure .imageCaption {
   font-size: var(--font-size-footer);
   margin-top: var(--article-margin-sm);
   color: var(--secondary-text-color);
+  line-height: var(--line-height-md);
 }
 
 article figure .imageCaption a {
@@ -1300,6 +1305,10 @@ article figure .imageCaption a:hover {
 
 article figure.graf-after--h4 {
   margin: var(--article-margin-md) auto;
+}
+
+article figure img {
+  background-color: var(--button-color);
 }
 
 .end-dividers {
@@ -1358,8 +1367,14 @@ article figure.graf-after--h4 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: var(--spacing-xxs);
+  padding: 6px;
   border-radius: var(--border-radius-sm);
+}
+
+@media (min-width: 576px) {
+  .project-navigation {
+    padding: var(--spacing-xxs);
+  }
 }
 
 .project-navigation:hover {
@@ -1374,6 +1389,9 @@ article figure.graf-after--h4 {
   font-weight: 600;
   margin: 0;
   font-size: var(--font-size-sub);
+  line-height: var(--line-height-md);
+  -webkit-padding-after: 4px;
+          padding-block-end: 4px;
 }
 
 @media (min-width: 576px) {
@@ -1386,6 +1404,7 @@ article figure.graf-after--h4 {
   margin: 0;
   font-size: 13px;
   color: var(--secondary-text-color);
+  line-height: var(--line-height-md);
 }
 
 @media (min-width: 576px) {
@@ -1426,12 +1445,17 @@ article figure.graf-after--h4 {
 .project-navigation .project-navigation-img {
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  width: 88.88px;
-  height: 56px;
+  aspect-ratio: 16 / 9;
+  height: 40px;
+}
+
+@media (min-width: 576px) {
+  .project-navigation .project-navigation-img {
+    height: 56px;
+  }
 }
 
 .project-navigation img {
-  height: 56px;
   -o-object-fit: cover;
      object-fit: cover;
   background-color: var(--divider-color);
@@ -1818,11 +1842,15 @@ article figure.graf-after--h4 {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: var(--spacing-xxs);
-  overflow: visible;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .top-bar h1 {
   margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 @media (min-width: 576px) {
@@ -1850,6 +1878,13 @@ article figure.graf-after--h4 {
     line-height: var(--line-height-md);
     word-break: keep-all;
   }
+}
+
+article .top-bar {
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+  -webkit-padding-end: 0;
+          padding-inline-end: 0;
 }
 
 .project-nav {
@@ -1885,8 +1920,9 @@ article figure.graf-after--h4 {
       -ms-flex-align: center;
           align-items: center;
   background-color: var(--button-color);
-  padding: 8px var(--spacing-xxs);
+  padding: 4px;
   border-radius: var(--border-radius-md);
+  border: 1px solid var(--divider-color);
 }
 
 .project-nav .project-catalog a {
@@ -1901,6 +1937,7 @@ article figure.graf-after--h4 {
           user-select: none;
   font-size: var(--font-size-sub);
   color: var(--tertiary-text-color);
+  text-decoration: none;
 }
 
 .project-nav .project-catalog a:hover, .project-nav .project-catalog a:focus-within {
@@ -2407,6 +2444,21 @@ article figure.graf-after--h4 {
   max-width: 1720px;
 }
 
+article.project-container h2, article.project-container h3, article.project-container p, article.project-container hr, article.project-container .min-media, article.project-container ul {
+  max-width: 672px;
+  -webkit-margin-start: auto;
+          margin-inline-start: auto;
+  -webkit-margin-end: auto;
+          margin-inline-end: auto;
+}
+
+article.project-container iframe {
+  border-radius: var(--border-radius-md);
+  display: block;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--button-color);
+}
+
 .lazyload,
 .lazyloading {
   opacity: .5;
@@ -2536,7 +2588,7 @@ img.zoom-img {
   border-radius: var(--border-radius-md);
 }
 
-.elis-1, article .graf--mixtapeEmbed strong, article .graf--mixtapeEmbed em, .project-navigation .title, .project-navigation .desc, .article-navigation .title, .series a .series-title {
+.elis-1, article .graf--mixtapeEmbed strong, article .graf--mixtapeEmbed em, .project-navigation .title, .project-navigation .desc, .article-navigation .title, .series a .series-title, .project-nav .project-catalog a {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;

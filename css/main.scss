@@ -781,12 +781,15 @@ article{
   // ▲ 隐藏不必要 ▲
 
   // ▼ 格式文本 ▼
-  // ol{ // 2022-01-02
+  ul{
+    margin: 0;
     li{
       list-style: decimal;
       font-size: var(--font-size-p);
     }
-  // }
+  }
+    
+    
   blockquote{
     font-size: var(--font-size-p);
     margin: var(--article-margin-md) 0;
@@ -1029,6 +1032,7 @@ article{
       font-size: var(--font-size-footer);
       margin-top: var(--article-margin-sm);
       color: var(--secondary-text-color);
+      line-height: var(--line-height-md);
       a{
         box-shadow: none;
         text-decoration: none;
@@ -1046,6 +1050,9 @@ article{
   figure{
     &.graf-after--h4{
       margin: var(--article-margin-md) auto;
+    }
+    img{
+      background-color: var(--button-color);
     }
   }
   // ▲ 媒体处理 ▲
@@ -1087,9 +1094,12 @@ article{
     display: flex;
     gap: var(--spacing-xxs);
     align-items: center;
-    padding: var(--spacing-xxs);
+    padding: 6px;
     border-radius: var(--border-radius-sm);
-    // transition: all .2s;
+    @include sm {
+    padding: var(--spacing-xxs);
+
+    }
     &:hover{
       background-color: var(--button-hover-color);
     }
@@ -1100,6 +1110,8 @@ article{
       font-weight: 600;
       margin: 0;
       font-size: var(--font-size-sub);
+      line-height: var(--line-height-md);
+      padding-block-end: 4px;
       @extend .elis-1;
       @include sm {
         font-size: var(--font-size-p);
@@ -1109,6 +1121,7 @@ article{
       margin: 0;
       font-size: 13px;
       color: var(--secondary-text-color);
+      line-height: var(--line-height-md);
       @extend .elis-1;
       @include sm {
         font-size: var(--font-size-sub);
@@ -1136,11 +1149,14 @@ article{
     }
     .project-navigation-img{
       flex-shrink: 0;
-      width: 88.88px;
-      height: 56px;
+      aspect-ratio: 16 / 9;
+      height: 40px;
+      @include sm {
+        height: 56px;
+      }
+
     }
     img{
-      height: 56px;
       object-fit: cover;
       background-color: var(--divider-color);
       border-radius: var(--border-radius-sm);
@@ -1433,9 +1449,11 @@ article{
   display: flex;
   flex-direction: column;
   gap: var(--spacing-xxs);
-  overflow: visible;
+  align-items: center;
   h1{
     margin: 0;
+    padding: 0;
+    text-align: center;
   }
   @include sm {
       padding: 120px var(--spacing-md) var(--spacing-md);
@@ -1454,6 +1472,11 @@ article{
       word-break: keep-all;
     }
   }
+}
+
+article .top-bar{
+  padding-inline-start: 0;
+  padding-inline-end: 0;
 }
 
 // ▼▼ Project 目录
@@ -1478,8 +1501,9 @@ article{
     justify-content: center;
     align-items: center;
     background-color: var(--button-color);
-    padding: 8px var(--spacing-xxs);
+    padding: 4px;
     border-radius: var(--border-radius-md);
+    border: 1px solid var(--divider-color);
     a{
       padding: 8px var(--spacing-xxs);
       background-color: var(--button-color);
@@ -1489,6 +1513,8 @@ article{
       user-select: none;
       font-size: var(--font-size-sub);
       color: var(--tertiary-text-color);
+      text-decoration: none;
+      @extend .elis-1;
       &:hover, &:focus-within{
         background-color: var(--button-hover-color);
         color: var(--primary-text-color);
@@ -1841,6 +1867,21 @@ article{
 .extra-width{
   max-width: 1720px;
 }
+
+article.project-container{ //文档型作品，文本宽度控制
+  h2, h3, p, hr, .min-media, ul{
+    max-width: 672px;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+  }
+  iframe{
+    border-radius: var(--border-radius-md);
+    display: block;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: var(--button-color);
+  }
+}
+
 
 // ▲▲ 作品详情页
 

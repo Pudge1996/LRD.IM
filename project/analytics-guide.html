@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=devUIice-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <meta name="keywords" content="李瑞东 Pudge 广州 设计 design UI设计 体验设计 B端设计 设计作品 作品集"> 
+    <meta name="author" content="李瑞东" />
+    <meta name="robots" content="index,follow" />
+    <meta name="google" content="index,follow" />
+    <meta name="googlebot" content="index,follow" />
+    <meta name="verify" content="index,follow" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <!-- It may be good for SEO -->
+
+    <link rel="alternate" type="application/atom+xml" title="李瑞东的设计博客" href="https://lrd.im/feed" />
+    <!-- rss -->
+
+    <title>数据体验标准化实践 · 李瑞东 LRD.IM</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
+
+    
+    <!-- main css -->
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!-- clipboard js -->
+    <script src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/js/clipboard.min.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112191540-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112191540-2');
+</script>
+
+</head>
+  <body>
+    <!-- 导航栏-->
+    <div class="container-fluid"> 
+      <header class="box-header">
+          <div class="vw">
+          <a href="../index.html" alt="lrd.im 是设计师李瑞东的个人网站。">
+              <div class="box-logo"></div>
+          </a>
+          <!-- nav-text -->
+          <div class="nav-text-box">
+              <p><a href="../project.html" class="nav-text">作品</a></p>
+              <p><a href="../blog.html" class="nav-text">博客</a></p>
+              <p><a href="../archive.html" class="nav-text">归档</a></p>
+              <p><a href="../about.html" class="nav-text">关于我</a></p>
+          </div>
+          <div class="icon-menu" id="iconMenu"></div>
+          <div class="icon-close hide" id="iconClose"></div>
+      </div>
+      </header>
+  </div>
+  <div class="nav-open hidden nav-transform" id="navOpen">
+      <a href="../project.html">作品</a>
+      <a href="../blog.html">博客</a>
+      <a href="../archive.html">归档</a>
+      <a href="../about.html">关于我</a>
+  </div>
+  <div class="nav-mask hidden" id="navMask"></div>
+  <!-- end 导航栏-->
+
+  <div class="grow-bg">
+    <article class="project-container">
+      <!-- project title -->
+      <div class="top-bar">
+       <h1>数据体验标准化<span class="nowrap">实践</span></h1>
+       <p class="subtitle">详细了解指导站内数十条个业务域的数据规范探索的过程，以及最终<span class="nowrap">呈现。</span></p>  
+     </div>
+     <div class="project-nav">
+       <div class="project-catalog">
+           <a href="#background" class="project-anchor">背景</a>
+           <div class="project-catalog-divider"></div>
+           <a href="#research" class="project-anchor">调研阶段</a>
+           <div class="project-catalog-divider"></div>
+           <a href="#content" class="project-anchor">初稿阶段</a>
+           <div class="project-catalog-divider"></div>
+           <a href="#final" class="project-anchor">最终文档</a>
+       </div>
+     </div>
+     <!-- end project-title -->
+      <h3 id="background">背景</h3>
+      <p class="graf-after--h3">随着 SHOPLINE 数据基建和业务逐步发展，站内越来越多业务需要有数据概览和分析的能力。</p>
+      <p class="graf-after--p">但<b>大多数业务设计师并没有相关设计经验</b>，团队内也没有相关的设计规范引导和规范设计师的产出，<b>无法保证各业务线数据模块的设计效率、质量和整体体验的一致性。</b></p>
+      <p class="graf-after--p">所以团队希望能沉淀出一套数据场景的设计规范文档，供各业务设计师使用时参考。</p>
+      <h3 class="graf-after--p">时间线</h3>
+      <figure class="min-media">
+        <picture>
+          <source media="(max-width: 576px)" data-srcset="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/analytics-guide/w_960/01.png">
+          <img data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/analytics-guide/w_1920/01.png" class="graf-image lazyload" data-action="zoom" width="765" height="430" alt="时间线" />
+        </picture>
+      </figure>
+      <hr class="common"/>
+      <h3 class="graf-after--figure" id="research">调研阶段</h3>
+      <p class="graf-after--h3"><b>1. 收集主站所有业务线的数据场景：</b><br>了解各业务线里面，数据模块的业务目标、需要支持的功能，以及页面层级情况。尝试去归纳同类型业务场景以及找到典型问题，并预判本次专项能覆盖的范围。</p>
+      <figure class="min-media">
+        <iframe class="iframe-googledocs" width="100%" height="450" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRJLBl22hnVJF6_iyOanz3FNJJRjPc_eU7-HXMjypStaVk9m1WhlnyWEMimLUe-95QJQ2v8gNBfRvFW/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+        <figcaption class="imageCaption">Google&nbsp;表格：收集到所有数据场景后整理出来的表格，可滚动查看。</figcaption>
+      </figure>
+      <figure>
+        <picture>
+          <source media="(max-width: 576px)" data-srcset="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/analytics-guide/w_960/02.png">
+          <img data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/analytics-guide/w_1920/02.png" class="graf-image lazyload" data-action="zoom" width="765" height="430" alt="页面归类" />
+        </picture>
+        <figcaption class="imageCaption">页面归类，抽象成模版。</figcaption>
+      </figure>
+      <p class="graf-after--figure"><b>2. 查阅数据展示的行业标准：</b><br>了解数据各组成部分的行业标准。由于公司业务面向国际化，所以需要了解到特定地区的标准。</p>
+      <p class="graf-after--h3"><b>3. 搜集同类型产品的数据业务规范：</b><br>了解竞品设计解法，结合自身产品受众和场景，对比不同做法之间的差异。</p>
+      <figure>
+        <picture>
+          <source media="(max-width: 576px)" data-srcset="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/analytics-guide/w_960/03.png">
+          <img data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/analytics-guide/w_1920/03.png" class="graf-image lazyload" data-action="zoom" width="765" height="430" alt="调研外部资料" />
+        </picture>
+      </figure>
+      <hr class="common">
+      <h3 class="graf-after--p" id="content">初稿阶段</h3>
+      <p class="graf-after--h3">基于当前站内的现状以及竞品资料分析，我希望文档能够帮助设计师了解：数据展示的通用规则、高频组件的使用方式、常见页面如何布局和适配等。确保数据模块的展示能够准确和一致。所以，该专项会由两个模块组成：</p>
+      <p class="graf-after--p"><b>1. 数据规范：</b><br>从数据业务出发，归纳出数据域本身的设计规范。如文案、货币单位、涨跌、表格样式、可交互组件等。</p>
+      <p class="graf-after--p"><b>2. 设计模式：</b><br>赋能到其他业务，针对常见业务场景和典型问题提供解决方案（包括场景枚举、通用布局、文本适配等），为各业务设计师提供指导建议和参考。</p>
+      <p class="graf-after--p">执行<b>初稿阶段</b>我先确定文档结构和内容，枚举出所有涉及到的设计点，并找出一至两个核心内容进行细化。</p>
+      <figure>
+        <iframe class="iframe-miro" width="100%" height="600" src="https://miro.com/app/live-embed/uXjVPD5u9YQ=/?moveToViewport=-2353,-1063,3905,2124&embedId=92133469278" frameborder="0" scrolling="no" allowfullscreen></iframe>
+      </figure>
+      <figure>
+        <picture>
+          <source media="(max-width: 576px)" data-srcset="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/analytics-guide/w_960/04.png">
+          <img data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/analytics-guide/w_1920/04.png" class="graf-image lazyload" data-action="zoom" width="765" height="430" alt="细化核心内容" />
+        </picture>
+      </figure>
+      <p class="graf-after--figure">到了这一步，我先与组长和关键业务设计师同步当前进度，沟通中了解是否有遗漏或未覆盖到的内容。</p>
+      
+      <h3 class="graf-after--h3" id="final">最终文档</h3>
+      <p class="graf-after--h3">最终的产出物包括：</p>
+      <ul>
+        <li>指导全站的数据展示规范；</li>
+        <li>数据业务场景下的设计模式；</li>
+        <li>交付给前端的组件文档；</li>
+        <li>通用数据报告页的设计模版（面向设计实习生，用于支援日常数据需求）。</li>
+      </ul>
+      <figure>
+        <picture>
+          <source media="(max-width: 576px)" data-srcset="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/analytics-guide/w_960/05.png">
+          <img data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/analytics-guide/w_1920/05.png" class="graf-image lazyload" data-action="zoom" width="765" height="430" alt="指导全站的数据展示规范" />
+        </picture>
+      </figure>
+      <figure>
+        <picture>
+          <source media="(max-width: 576px)" data-srcset="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/analytics-guide/w_960/06.png">
+          <img data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/analytics-guide/w_1920/06.png" class="graf-image lazyload" data-action="zoom" width="765" height="430" alt="数据业务场景下的设计模式" />
+        </picture>
+      </figure>
+      <p class="graf-after--h3">该专项的内容较多，这里嵌入一份 Figma 设计稿供浏览参考。</p>
+      <figure>
+        <iframe class="iframe-figma" width="100%" height="600" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FRX3f6EugxSUEKX34qRpWOu%2F%25E6%2595%25B0%25E6%258D%25AE%25E8%25A7%2584%25E8%258C%2583%25E6%2596%2587%25E6%25A1%25A3%3Fnode-id%3D302%253A383%26t%3DPV8DetL9je9KwPIC-1" allowfullscreen></iframe>
+      </figure>
+      </article>
+  </div>
+
+  <!-- ▼▼ 底部导航 ▼▼ -->
+  <div class="container">
+    <hr class="end-dividers hr-1" data-content="分隔线">
+    <div class="project-suggestion">
+        <div class="project-suggestion-title">看看其他项目</div>
+            <div class="project-suggestion-list">
+            <a href="analytics.html">
+                <div class="project-navigation">
+                    <div class="project-navigation-img">
+                        <img src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/analytics/analytics-thumbnail.png" alt="">
+                    </div>
+                    <div>
+                        <div class="project-navigation-recent"><p class="title">数据中心改版方案</p></div>
+                        <p class="desc">我在屏效布局优化中的设计策略，解决难题的过程和用到的方法。及后续数据的反馈。</p>
+                    </div>
+                </div>
+            </a>
+            <a href="ytscrm.html">
+                <div class="project-navigation">
+                    <div class="project-navigation-img">
+                        <img src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/ytscrm/ytscrm-thumbnail.png" alt="">
+                    </div>
+                    <div>
+                        <p class="title">鱼棠 SCRM 官网设计、海报改版</p>
+                        <p class="desc">运用定量分析方法来驱动视觉设计改版。并积累了 Ant Design 生态的后台设计</p>
+                    </div>
+                </div>
+            </a>
+            <a href="ytscrm.html">
+              <div class="project-navigation">
+                  <div class="project-navigation-img">
+                      <img src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/qlchat/qlchat-thumbnail.png" alt="">
+                  </div>
+                  <div>
+                      <p class="title">讲师建课工具改版方案和组件库构建</p>
+                      <p class="desc">本篇展示了改版方案和后续的数据反馈，以及我在千聊构建组件交付流程的经历</p>
+                  </div>
+              </div>
+          </a>
+        </div>
+    </div>
+    <hr class="end-dividers hr-2" data-content="分隔线">
+
+  <div class="footer-action">
+  <div class="back-to-article"><a href="../project.html"><span class="icon-back"></span>作品首页</a></div>
+  <div class="copy-link" id="copyLink"><a href="javascript:" id="blogLink" data-clipboard-text="数据体验标准化实践 · 李瑞东作品 https://lrd.im/project/analytics-guide.html" ><span class="icon-link"></span>复制链接</a></div>
+  <div class="copied hide" id="copied"><a href="javascript:" data-clipboard-text="数据体验标准化实践 · 李瑞东作品 https://lrd.im/project/analytics-guide.html"><span class="icon-success"></span>复制成功!</a></div>
+  <div class="mobile-top"><a href="#" onclick="backToTop(4)"><span class="icon-top"></span>回到顶部</a></div>
+  </div>
+  </div>
+  <!-- ▲▲ 底部导航 ▲▲ -->
+
+  <!-- footer -->
+  <footer>
+      <span>© 李瑞东 2017-<script>document.write(new Date().getFullYear());</script></span>
+  </footer>
+  <!-- end footer -->
+  
+  <!-- back to top -->
+  <div id="sideButton">
+      <div class="side-button to-top" id="toTop" onclick="backToTop(4)">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#232323">
+              <path d="M277.375 427V167.296l119.702 119.702L427 256 256 85 85 256l29.924 29.922 119.701-118.626V427h42.75z"/>
+          </svg>
+      </div>
+  </div>
+  
+  <!-- end back to top -->
+
+  <script src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/js/lazysizes.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/zoom-vanilla.js/dist/zoom-vanilla.min.js"></script>
+  
+  <!--  custom script -->
+  <script src="../js/custom.js"></script>
+
+
+</body>
+
+</html>
