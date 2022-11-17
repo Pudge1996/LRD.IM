@@ -240,6 +240,11 @@ hr.common{
   mask: url(../img/icon/folder.svg) no-repeat 50% 50%/1em 1em;
 }
 
+.icon-attachment{
+  @extend .general-svg-icon;
+  mask: url(../img/icon/attachment.svg) no-repeat 50% 50%/1em 1em;
+}
+
 // ▼▼ 文字设置
 h1 {
   margin: 20px auto 20px;
@@ -496,7 +501,7 @@ a.underline{ //需要加下划线的class
 
       &:hover{
         color: var(--secondary-text-color);
-        background-color: var(--button-hover-color);
+        background-color: var(--button-color);
         font-weight: 500;
       }
       &:active{
@@ -872,13 +877,12 @@ article{
   }
 
   img{
-    border-radius: var(--border-radius-sm);
+    border-radius: var(--border-radius-md);
   }
   // ▲ 代码块 ▲
 
   // ▼ 引用外链 ▼
   .graf--mixtapeEmbed{
-    border-radius: var(--border-radius-sm);
     font-size: var(--font-size-sub);
     border: 1px solid var(--divider-color);
     margin: var(--article-margin-sm) 0;
@@ -886,6 +890,8 @@ article{
     justify-content: space-between;
     font-size: var(--font-size-footer); // 选择到最下面的网址
     border: 1px solid var(--divider-color);
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
     touch-action: pan-y pinch-zoom;
     @include sm {
       margin: var(--article-margin-md) 0;
@@ -1152,7 +1158,7 @@ article{
     gap: var(--spacing-xxs);
     align-items: center;
     padding: 6px;
-    border-radius: var(--border-radius-sm);
+    border-radius: var(--border-radius-md);
     @include sm {
       padding: var(--spacing-xxs);
     }
@@ -1245,7 +1251,6 @@ article{
     a{
       box-shadow: none;
       border-radius: var(--border-radius-md);
-      transition: all .2s;
       &:hover{
           background-color: var(--button-color);
         }
@@ -1351,7 +1356,7 @@ article{
     height: 200px;
     object-fit: cover;
     margin-bottom: var(--spacing-xs);
-    border-radius: var(--border-radius-sm);
+    border-radius: var(--border-radius-md);
     background-color: var(--divider-color);
     @include sm {
       height: 280px;
