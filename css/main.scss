@@ -245,6 +245,11 @@ hr.common{
   mask: url(../img/icon/attachment.svg) no-repeat 50% 50%/1em 1em;
 }
 
+.icon-arrow{
+  @extend .general-svg-icon;
+  mask: url(../img/icon/arrow.svg) no-repeat 50% 50%/1em 1em;
+}
+
 // ▼▼ 文字设置
 h1 {
   margin: 20px auto 20px;
@@ -798,10 +803,17 @@ article{
   // ▲ 隐藏不必要 ▲
 
   // ▼ 格式文本 ▼
-  ul, ol{
+  ol{
     margin: 0;
     li{
       list-style: decimal;
+      font-size: var(--font-size-p);
+    }
+  }
+  ul{
+    margin: 0;
+    li{
+      list-style: disc;
       font-size: var(--font-size-p);
     }
   }
@@ -1090,20 +1102,23 @@ article{
   
   figure{ // 媒体
     margin: var(--article-margin-md) auto;
-    .imageCaption{
-      text-align: center;
-      font-size: var(--font-size-footer);
-      margin-top: var(--article-margin-sm);
+    &.graf-before-figcaption{
+      margin-block-end: 0;
+    }
+  }
+  .imageCaption{
+    text-align: center;
+    font-size: var(--font-size-footer);
+    margin-top: var(--article-margin-sm);
+    color: var(--secondary-text-color);
+    line-height: var(--line-height-md);
+    a{
+      box-shadow: none;
+      text-decoration: none;
       color: var(--secondary-text-color);
-      line-height: var(--line-height-md);
-      a{
-        box-shadow: none;
-        text-decoration: none;
-        color: var(--secondary-text-color);
-        &:hover{
-          color: var(--primary-text-color);
-          box-shadow: 0 1px;
-        }
+      &:hover{
+        color: var(--primary-text-color);
+        box-shadow: 0 1px;
       }
     }
   }
@@ -1213,6 +1228,9 @@ article{
       flex-shrink: 0;
       aspect-ratio: 16 / 9;
       height: 40px;
+      background-color: var(--button-color);
+      border-radius: var(--border-radius-sm);
+      overflow: hidden;
       @include sm {
         height: 56px;
       }
@@ -1221,7 +1239,6 @@ article{
     img{
       object-fit: cover;
       background-color: var(--divider-color);
-      border-radius: var(--border-radius-sm);
     }
   }
   .article-navigation{
@@ -1358,19 +1375,20 @@ article{
     margin-bottom: var(--spacing-xs);
     border-radius: var(--border-radius-md);
     background-color: var(--divider-color);
+    border-top: 0.5px solid var(--divider-color);
     @include sm {
       height: 280px;
       margin-bottom: var(--spacing-xs);
   }
 }
 
-.blog-author {
+.blog-author, .recommend {
     color: var(--tertiary-text-color);
     font-size: var(--font-size-footer);
     letter-spacing: .5px;
     margin-bottom: var(--spacing-sm);
-    cursor: text;
     line-height: var(--line-height-sm);
+    display: inline;
     @include sm {
       font-size: var(--font-size-sub);
       margin-bottom: var(--spacing-lg);
@@ -1380,8 +1398,30 @@ article{
 .blog-subtitle {
   @extend .elis-2;
   color: var(--secondary-text-color);
-  // line-height: var(--line-height-md);
   font-size: var(--font-size-sub);
+}
+
+a.recommend{ //推荐文章的超链接样式
+  color: var(--tertiary-text-color);
+  .icon{ 
+    margin-inline-start: 4px;
+  }
+  &:hover, &:focus-visible{
+    color: var(--link-text-color);
+  }
+  &:active{
+    color: var(--link-text-active-color);
+  }
+}
+
+.dot{
+  width: 3px;
+  height: 3px;
+  background-color: var(--tertiary-text-color);
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-inline: 8px;
 }
 
 .series{
@@ -1681,6 +1721,10 @@ article .top-bar{
   h2{
     margin: 0;
   }
+
+  .intro p:first-of-type{
+    margin-block-end: var(--spacing-xxs);
+  }
  
   .action{ //首页行动按钮
     display: flex;
@@ -1874,6 +1918,7 @@ article .top-bar{
       margin-block-end: var(--spacing-xxs);
       border-radius: var(--border-radius-md);
       background-color: var(--button-color);
+      border-top: .5px solid var(--divider-color);
       @include md {
         aspect-ratio: 16 / 9;
       }
@@ -1933,7 +1978,7 @@ article .top-bar{
 }
 
 article.project-container{ //文档型作品，文本宽度控制
-  h2, h3, p, hr, .min-media, ul{
+  h2, h3, p, hr, .min-media, ul, ol, .imageCaption{
     max-width: 672px;
     margin-inline-start: auto;
     margin-inline-end: auto;
@@ -1943,12 +1988,26 @@ article.project-container{ //文档型作品，文本宽度控制
     display: block;
     border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: var(--button-color);
+    
     &.iframe-figma, &.iframe-miro{
       width: 100%;
       height: 300px;
       @include sm {
-        height: 600px;
+        height: 585px;
       }
+    }
+  }
+  .scroll-img{ //可滚动的图片容器，用在长图上。案例：/project/slapp-components.html
+    border-radius: var(--border-radius-md);
+    overflow: scroll;
+    height: 450px;
+    max-height: 50vh;
+    @include sm {
+      height: 585px;
+      max-height: 70vh;
+    }
+    img, picture{
+      margin-block: 0;
     }
   }
 }

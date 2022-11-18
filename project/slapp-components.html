@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=devUIice-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <meta name="keywords" content="李瑞东 Pudge 广州 设计 design UI设计 体验设计 B端设计 设计作品 作品集"> 
+    <meta name="author" content="李瑞东" />
+    <meta name="robots" content="index,follow" />
+    <meta name="google" content="index,follow" />
+    <meta name="googlebot" content="index,follow" />
+    <meta name="verify" content="index,follow" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <!-- It may be good for SEO -->
+
+    <link rel="alternate" type="application/atom+xml" title="李瑞东的设计博客" href="https://lrd.im/feed" />
+    <!-- rss -->
+
+    <title>SHOPLINE app 组件库构建 · 李瑞东 LRD.IM</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
+
+    
+    <!-- main css -->
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!-- clipboard js -->
+    <script src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/js/clipboard.min.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112191540-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-112191540-2');
+    </script>
+
+</head>
+  <body>
+    <!-- 导航栏-->
+    <div class="container-fluid"> 
+      <header class="box-header">
+          <div class="vw">
+          <a href="../index.html" alt="lrd.im 是设计师李瑞东的个人网站。">
+              <div class="box-logo"></div>
+          </a>
+          <!-- nav-text -->
+          <div class="nav-text-box">
+              <p><a href="../project.html" class="nav-text">作品</a></p>
+              <p><a href="../blog.html" class="nav-text">博客</a></p>
+              <p><a href="../archive.html" class="nav-text">归档</a></p>
+              <p><a href="../about.html" class="nav-text">关于我</a></p>
+          </div>
+          <div class="icon-menu" id="iconMenu"></div>
+          <div class="icon-close hide" id="iconClose"></div>
+      </div>
+      </header>
+  </div>
+  <div class="nav-open hidden nav-transform" id="navOpen">
+      <a href="../project.html">作品</a>
+      <a href="../blog.html">博客</a>
+      <a href="../archive.html">归档</a>
+      <a href="../about.html">关于我</a>
+  </div>
+  <div class="nav-mask hidden" id="navMask"></div>
+  <!-- end 导航栏-->
+
+  <div class="grow-bg">
+    <article class="project-container">
+      <!-- project title -->
+      <div class="top-bar">
+       <h1>SHOPLINE app 组件库<span class="nowrap">构建</span></h1>
+       <p class="subtitle">在我职业生涯中第 4 次主导构建设计规范/组件时，我加入了国际化、设计模式、协作等考量<span class="nowrap">维度。</span></p>  
+     </div>
+     <div class="project-nav">
+       <div class="project-catalog">
+           <a href="#background" class="project-anchor">背景</a>
+           <div class="project-catalog-divider"></div>
+           <a href="#framework" class="project-anchor">文档结构</a>
+           <!-- <div class="project-catalog-divider"></div>
+           <a href="#scale" class="project-anchor">缩放支持</a> -->
+           <div class="project-catalog-divider"></div>
+           <a href="#i18n" class="project-anchor">国际化适配</a>
+           <div class="project-catalog-divider"></div>
+           <a href="#patterns" class="project-anchor">设计模式</a>
+           <div class="project-catalog-divider"></div>
+           <a href="#final" class="project-anchor">最终产出</a>
+       </div>
+     </div>
+     <!-- end project-title -->
+      <h3 id="background" class="graf graf--h3">背景</h3>
+      <p class="graf-after--h3">SHOPLINE app 从今年 Q2 开始投入资源发展。定位是为东南亚中小型商家提供轻量高效的移动端网站管理工具。这意味着里面会承载经过简化的 Web 端功能，比如快速创建订单、商品、营销策略等功能。以及面向东南亚地区的扫描 Barcode 盘点库存、商品/订单串接到 WhatsApp、Messenger 等功能。</p>
+      <p class="graf-after--p">需求量暴增的同时，在工作和协作中暴露了现有组件数量较少，且存在较多明显体验和视觉等问题。我认为需要花点时间根据产品定位来重新构建一套组件库。<b>用于指导业务设计，保障设计输出一致性，产研侧降本提效，以支持高速迭代的业务需求。</b></p>
+      <p class="graf-after--h3">在该项目中，我独立负责所有组件设计及组件文档撰写。过程中发起与其他业务设计师的对接沟通会议，研讨能同时满足各自业务需要的的设计方案。并持续跟踪组件开发、验收直至上线。</p>
+      <figure class="min-media"><picture>
+          <source media="(max-width: 576px)" data-srcset="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/slapp-components/w_960/1-1.png">
+          <img data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/slapp-components/w_1920/1-1.png" class="graf-image lazyload" data-action="zoom" width="765" height="430" alt="我接手之前的组件库文档" /></picture>
+          <figcaption class="imageCaption">我接手之前的组件库文档</figcaption>
+      </figure>
+
+      <h3 id="framework" class="graf graf--h3 graf-after--figure">文档结构</h3>
+      <p class="graf-after--h3">为了确保组件库足够可靠和好用，不能够简单地罗列 Components，而是需要有清晰和完整的设计说明、用法指引等内容。</p>
+      <p class="graf-after--p">所以我将组件文档结构分为<b>样式枚举</b>、<b>适配方案</b>、<b>交互描述</b>、<b>扩展用法</b>。基本上每个组件都会有以上的内容，以满足文档使用者的要求：</p>
+      <ul>
+        <li>设计侧：清晰了解组件的能力，判断某组件是否能支持当前需要；</li>
+        <li>研发侧：了解组件的所有变式，代码中预留相应的可扩展性。明确适配和极端情况时的处理方式。</li>
+      </ul>
+      <figure class="scroll-img graf-before-figcaption"><picture>
+        <source media="(max-width: 576px)" data-srcset="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/slapp-components/w_960/2-1.png">
+        <img data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/slapp-components/w_1920/2-1.png" class="graf-image lazyload" data-action="zoom" width="765" height="430" alt="组件文档结构" /></picture>
+      </figure>
+      <figcaption class="imageCaption">组件文档结构示例，可上下滚动查看。</figcaption>
+
+      <!-- <h3 id="scale" class="graf graf--h3 graf-after--figure">缩放支持</h3>
+      <p class="graf graf--p graf-after--h3">东南亚 Local&nbsp;PM 了解到在东南亚当地的中小商家，用 Android 手机的占比特别高，而且他们会修改手机的系统字体大小（通常是放大），所以需要设计侧作出对应的适配规则。</p>
+      <p class="graf graf--p graf-after--p">需求流转到我手上时，除了走查现有问题以外，我还尝试探索组件层面的适配方式，预期是用户在调整系统字体大小，或 iPhone 上设置「放大模式」时，app 整体也能够有较好的使用体验。</p>
+      <p class="graf graf--p graf-after--p">所以我在设计组件时，很多地方明确是要做到动态宽高，而不是做固定尺寸。以外没有这样额外要求，在研发的自由发挥之下，总是会出现一些意料之外的样式。</p>
+      <figure class="graf graf--figure graf-after--p"><picture>
+        <source media="(max-width: 576px)" data-srcset="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/slapp-components/w_960/01.png">
+        <img data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/slapp-components/w_1920/01.png1" class="graf-image lazyload" data-action="zoom" width="765" height="430" alt="针对字体缩放时做的样式策略" /></picture>
+      </figure> -->
+
+      <h3 id="i18n" class="graf graf--h3 graf-after--figure">国际化适配</h3>
+      <p class="graf graf--p graf-after--h3">App 在东南亚市场投放，会支持到七种语言的切换。在年初的一次部门分享「<a href="https://lrd.im/blog/2022-01-02-e09640baf33b.html" target="_blank">多语言设计分享</a>」中我也探索过，国际化适配中第一个要处理的问题是文本扩展。所以在需要花更多时间在适配策略上面，尽可能确保在任何语言上都能较好地展示信息。</p>
+      <figure class="graf graf--figure graf-after--p"><picture>
+        <source media="(max-width: 576px)" data-srcset="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/slapp-components/w_960/3-1.png">
+        <img data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/slapp-components/w_1920/3-1.png" class="graf-image lazyload" data-action="zoom" width="765" height="430" alt="标题组件针对多语言时的适配方式" /></picture>
+      </figure>
+      <p class="graf graf--p graf-after--figure">除了布局设计上需要花心思，有时候也需要一些设计方案或策略上的取舍。比如在 App 中很常用的底部弹窗标题组件，我在多个方案的对比中，做出了决定。</p>
+      <p class="graf graf--p graf-after--p">在最初没有组件库规范设计的时候，底部弹窗的做法五花八门，对于弹窗内的提交、退出等做法模糊不清。</p>
+      <figure class="graf graf--figure graf-after--p min-media"><picture>
+        <source media="(max-width: 576px)" data-srcset="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/slapp-components/w_960/3-2.png">
+        <img data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/slapp-components/w_1920/3-2.png" class="graf-image lazyload" data-action="zoom" width="765" height="430" alt="原本底部弹窗的做法" /></picture>
+      </figure>
+      <p class="graf graf--p graf-after--figure">设计师在工作中也常常犯难：「到底该按以往做法，当时重新做一个？」两种方式都有各自的困难。由于这个组件特别高频，所以我在组件库专项里专门对此进行探索。尝试找到一个能满足<b>产品特点</b>和<b>设计目标</b>的做法，之后作为标准去执行。</p>
+
+      <figure class="graf graf--figure graf-after--p"><picture>
+        <source media="(max-width: 576px)" data-srcset="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/slapp-components/w_960/3-3.png">
+        <img data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/slapp-components/w_1920/3-3.png" class="graf-image lazyload" data-action="zoom" width="765" height="430" alt="底部弹窗组件受质疑的地方" /></picture>
+      </figure>
+
+      <h3 id="patterns" class="graf graf--h3 graf-after--figure">设计模式</h3>
+      <p class="graf graf--p graf-after--h3">与前几次做组件库不同，这次我对「设计模式」展开了探索。</p>
+      <p class="graf graf--p graf-after--p">App 有一段时间需求量极多，在做业务需求的同时我逐渐发现有几种模式是特别常用的，比如从用<b>底部弹窗承载的列表</b>、<b>添加标签</b>、<b>离开&提交编辑</b>等等。这些在业务中频繁出现的场景，我认为抽象成各自的设计模式后，对降本提效和保障一致性都大有裨益。</p>
+      <figure class="scroll-img graf-before-figcaption"><picture>
+        <source media="(max-width: 576px)" data-srcset="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/slapp-components/w_960/4-1.png">
+        <img data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/slapp-components/w_1920/4-1.png" class="graf-image lazyload" data-action="zoom" width="765" height="430" alt="部分设计模式展示" /></picture>
+      </figure>
+      <figcaption class="imageCaption">设计模式文档示例，可上下滚动查看。</figcaption>
+      <p class="graf graf--p graf-after--h3">B 端业务表单比较多，我当时在做到输入框组件时发现了对「校验时机」这个课题的知识储备还比较缺乏，无法提供到相对有说服力的方案，于是我便对「App 表单校验时机」进行了相对理性的探索。</p>
+      <figure class="graf graf--figure graf-after--p"><picture>
+        <source media="(max-width: 576px)" data-srcset="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/slapp-components/w_960/4-2.png">
+        <img data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/slapp-components/w_1920/4-2.png" class="graf-image lazyload" data-action="zoom" width="765" height="430" alt="App 表单校验时机的探索过程" /></picture>
+      </figure>
+      <p class="graf graf--p graf-after--figure">在得出结论后将其作为「使用建议」添加进组件库内，同时也将完整过程记录到我的<a href="../blog/2022-08-17-f2c1f5bfbb8d.html">设计博客</a>里面。</p>
+      <figure class="graf graf--figure graf-after--p"><picture>
+        <source media="(max-width: 576px)" data-srcset="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/slapp-components/w_960/4-3.png">
+        <img data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/slapp-components/w_1920/4-3.png" class="graf-image lazyload" data-action="zoom" width="765" height="430" alt="App 表单校验时机探索后的结果" /></picture>
+      </figure>
+      <h3 id="final">最终产出</h3>
+      <p class="graf graf--p graf-after--h3">最终这一阶段的组件库包含六大类，共18个组件和4个设计模式。由于内容较多，附上 Figma 供参考查看。</p>
+      <figure>
+        <iframe class="iframe-figma" width="100%" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2Fdk6CP78rnE0g9bq1xo5RIp%2F%25E5%25B7%25A5%25E4%25BD%259C%25E5%25A4%2587%25E4%25BB%25BD%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
+      </figure>
+      <p class="graf graf--p graf-after--figure">在设计侧完成，且与其他业务设计师同步过后，也需要跟研发侧同步。当时在做 app 需求时，设计师与研发侧合作的现状是这样的：</p>
+      <ol>
+        <li><b>设计师对 app 内已有的组件模糊不清。</b>不清楚现在有什么样的组件。经常会问到「XX 功能有做成组件吗？」、「在哪里能看到？」等问题。</li>
+        <li><b>方案中复用某个组件时交流成本较大。</b>设计师计划使用一个组件时，给到的描述时「复用 XX 功能下 XX 页面的 XX 组件」。同一个业务内复用时或许还能勉强沟通，没有参与到组件的设计和研发用这种方式沟通效率较低。</li>
+        <li><b>验收中需要重复标注问题，开发也要重复修复样式问题。</b>样式相同的控件却需要花额外的时间去验收和标注，设计师和研发双方都耗费了时间和精力。</li>
+      </ol>
+      <p class="graf graf--p graf-after--ol">为了改善现状，我推动客户端的研发在测试包里做一个组件库的 Demo 入口，里面会按照类型聚合所有组件。对研发来说工作量是将组件复制多一份。但由于很现实的原因，做这个事情需要工时和排期，所以只能在每个版本节奏中抽空实现，所以我也列了一份优先级清单，先做高频、重要的组件。</p>
+      <figure class="graf graf--figure graf-after--p"><picture>
+        <source media="(max-width: 576px)" data-srcset="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/slapp-components/w_960/5-1.png">
+        <img data-src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/slapp-components/w_1920/5-1.png" class="graf-image lazyload" data-action="zoom" width="765" height="430" alt="组件库 Demo 和优先级清单示意" /></picture>
+      </figure>
+    </article>
+  </div>
+
+  <!-- ▼▼ 底部导航 ▼▼ -->
+  <div class="container">
+    <hr class="end-dividers hr-1" data-content="分隔线">
+    <div class="project-suggestion">
+        <div class="project-suggestion-title">看看其他项目</div>
+            <div class="project-suggestion-list">
+            <a href="analytics.html">
+                <div class="project-navigation">
+                    <div class="project-navigation-img">
+                        <img src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/analytics/analytics-thumbnail.png" alt="">
+                    </div>
+                    <div>
+                        <div class="project-navigation-recent"><p class="title">数据中心改版方案</p></div>
+                        <p class="desc">我在屏效布局优化中的设计策略，解决难题的过程和用到的方法。及后续数据的反馈</p>
+                    </div>
+                </div>
+            </a>
+            <a href="analytics-guide.html">
+                <div class="project-navigation">
+                    <div class="project-navigation-img">
+                        <img src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/analytics-guide/analytics-guide-thumbnail.png" alt="">
+                    </div>
+                    <div>
+                        <p class="title">数据体验标准化实践</p>
+                        <p class="desc">了解指导站内数十条个业务域的数据规范探索的过程，以及最终呈现</p>
+                    </div>
+                </div>
+            </a>
+            <a href="ytscrm.html">
+              <div class="project-navigation">
+                  <div class="project-navigation-img">
+                      <img src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/projectimg/qlchat/qlchat-thumbnail.png" alt="">
+                  </div>
+                  <div>
+                      <p class="title">讲师建课工具改版方案和组件库构建</p>
+                      <p class="desc">本篇展示了改版方案和后续的数据反馈，以及我在千聊构建组件交付流程的经历</p>
+                  </div>
+              </div>
+          </a>
+        </div>
+    </div>
+    <hr class="end-dividers hr-2" data-content="分隔线">
+
+  <div class="footer-action">
+  <div class="back-to-article"><a href="../project.html"><span class="icon-back"></span>作品首页</a></div>
+  <div class="copy-link" id="copyLink"><a href="javascript:" id="blogLink" data-clipboard-text="SHOPLINE app 组件库构建 · 李瑞东作品 https://lrd.im/project/slapp-components.html" ><span class="icon-link"></span>复制链接</a></div>
+  <div class="copied hide" id="copied"><a href="javascript:" data-clipboard-text="SHOPLINE app 组件库构建 · 李瑞东作品 https://lrd.im/project/slapp-components.html"><span class="icon-success"></span>复制成功!</a></div>
+  <div class="mobile-top"><a href="#" onclick="backToTop(4)"><span class="icon-top"></span>回到顶部</a></div>
+  </div>
+  </div>
+  <!-- ▲▲ 底部导航 ▲▲ -->
+
+  <!-- footer -->
+  <footer>
+      <span>© 李瑞东 2017-<script>document.write(new Date().getFullYear());</script></span>
+  </footer>
+  <!-- end footer -->
+  
+  <!-- back to top -->
+  <div id="sideButton">
+      <div class="side-button to-top" id="toTop" onclick="backToTop(4)">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#232323">
+              <path d="M277.375 427V167.296l119.702 119.702L427 256 256 85 85 256l29.924 29.922 119.701-118.626V427h42.75z"/>
+          </svg>
+      </div>
+  </div>
+  
+  <!-- end back to top -->
+
+  <script src="https://lrdim.oss-cn-shenzhen.aliyuncs.com/js/lazysizes.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/zoom-vanilla.js/dist/zoom-vanilla.min.js"></script>
+  
+  <!--  custom script -->
+  <script src="../js/custom.js"></script>
+
+
+</body>
+
+</html>
