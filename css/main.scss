@@ -43,6 +43,11 @@ button{
   --banner-text-color: #FFF;
   --banner-bg-color-faded: #EEEEEE;
   --banner-text-color-faded: #444444;
+  
+  //用于blog页面的推荐文章的颜色
+  --recommend-text-color: #E41541;
+  --recommend-text-active-color: #C8113D;
+
 
   //字体相关
   --font-size-h1: 48px;
@@ -56,6 +61,8 @@ button{
   --line-height-sm: 1.2;
   --line-height-md: 1.4;
   --line-height-lg: 1.8;
+
+  
   
   //布局
   --container-width-md: 702px;
@@ -100,6 +107,10 @@ button{
   --banner-text-color: #FFF;
   --banner-bg-color-faded: #1A1A1A;
   --banner-text-color-faded: #FFF;
+
+  //用于blog页面的推荐文章的颜色
+  --recommend-text-color: #E22A62;
+  --recommend-text-active-color: #CA184D;
 
   //样式
   --nav-shadow: rgba(255,255,255,.15);
@@ -250,10 +261,20 @@ hr.common{
   mask: url(../img/icon/arrow.svg) no-repeat 50% 50%/1em 1em;
 }
 
+.icon-favorite{
+  @extend .general-svg-icon;
+  mask: url(../img/icon/favorite.svg) no-repeat 50% 50%/1em 1em;
+}
+
+.icon-thumbs-up{
+  @extend .general-svg-icon;
+  mask: url(../img/icon/thumbs-up.svg) no-repeat 50% 50%/1em 1em;
+}
+
 // ▼▼ 文字设置
 h1 {
   margin: 20px auto 20px;
-  font-weight: 700;
+  font-weight: 600;
   font-size: var(--font-size-h2);
   margin-top: 0;
   line-height: var(--line-height-sm);
@@ -262,14 +283,11 @@ h1 {
   }
 }
 h2 { 
-  font-weight: 700;
+  font-weight: 600;
   line-height: var(--line-height-md);
-  font-size: 24px;
+  font-size: var(--font-size-h4);
   color: var(--primary-text-color);
-  margin-top: var(--spacing-sm);
-  @include sm {
-    font-size: var(--font-size-h3);
-  }
+  margin-top: var(--spacing-sm); 
 }
 
 section {
@@ -282,9 +300,9 @@ section {
 p {
   font-size: var(--font-size-p);
   font-weight: 400;
-  margin: 5px 0 20px;
+  margin: 4px 0 20px;
   @include sm {
-    margin: 10px 0 30px;
+    margin: 6px 0 30px;
   }
 }
 a {
@@ -678,6 +696,7 @@ footer {
   h2{
     @extend .elis-2;
     @extend .case;
+    margin: 0; 
   }
   section a:hover > h2{
     color: var(--link-text-color);
@@ -1388,11 +1407,17 @@ article{
     letter-spacing: .5px;
     margin-bottom: var(--spacing-sm);
     line-height: var(--line-height-sm);
-    display: inline;
+    display: inline-block;
     @include sm {
       font-size: var(--font-size-sub);
       margin-bottom: var(--spacing-lg);
     }
+}
+
+.blog-list, .earlyblogs{
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
 }
 
 .blog-subtitle {
@@ -1402,15 +1427,17 @@ article{
 }
 
 a.recommend{ //推荐文章的超链接样式
-  color: var(--tertiary-text-color);
+  color: var(--recommend-text-color);
+  margin-block-end: 6px;
+  font-weight: 500;
   .icon{ 
-    margin-inline-start: 4px;
+    margin-inline-end: 4px;
   }
   &:hover, &:focus-visible{
-    color: var(--link-text-color);
+    color: var(--recommend-text-color);
   }
   &:active{
-    color: var(--link-text-active-color);
+    color: var(--recommend-text-active-color);
   }
 }
 
