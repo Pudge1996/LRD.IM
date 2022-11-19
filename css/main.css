@@ -2062,7 +2062,7 @@ article .top-bar {
   background-color: transparent;
   line-height: var(--line-height-sm);
   border-radius: var(--border-radius-sm);
-  font-weight: 500;
+  font-weight: 400;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -2075,10 +2075,17 @@ article .top-bar {
 .project-nav .project-catalog a:hover, .project-nav .project-catalog a:focus-within {
   background-color: var(--button-hover-color);
   color: var(--primary-text-color);
+  font-weight: 500;
 }
 
 .project-nav .project-catalog a:active {
   background-color: var(--button-active-color);
+  font-weight: 500;
+}
+
+.project-nav .project-catalog a.active {
+  color: var(--primary-text-color);
+  font-weight: 500;
 }
 
 .project-nav .project-catalog .project-catalog-divider {
@@ -2582,7 +2589,7 @@ article .top-bar {
   max-width: 1720px;
 }
 
-article.project-container h2, article.project-container h3, article.project-container p, article.project-container hr, article.project-container .min-media, article.project-container ul, article.project-container ol, article.project-container .imageCaption {
+article.project-container h2, article.project-container h3, article.project-container h4, article.project-container p, article.project-container hr, article.project-container .min-media, article.project-container ul, article.project-container ol, article.project-container .imageCaption {
   max-width: 672px;
   -webkit-margin-start: auto;
           margin-inline-start: auto;

@@ -1638,7 +1638,7 @@ article .top-bar{
       background-color: transparent;
       line-height: var(--line-height-sm);
       border-radius: var(--border-radius-sm);
-      font-weight: 500;
+      font-weight: 400;
       user-select: none;
       font-size: var(--font-size-sub);
       color: var(--tertiary-text-color);
@@ -1647,9 +1647,15 @@ article .top-bar{
       &:hover, &:focus-within{
         background-color: var(--button-hover-color);
         color: var(--primary-text-color);
+        font-weight: 500;
       }
       &:active{
         background-color: var(--button-active-color);
+        font-weight: 500;
+      }
+      &.active{
+        color: var(--primary-text-color);
+        font-weight: 500;
       }
     }
 
@@ -1746,10 +1752,12 @@ article .top-bar{
   h2{
     margin: 0;
   }
-
-  .intro p:first-of-type{
-    margin-block-end: var(--spacing-xxs);
+  .intro{
+    & p:first-of-type{
+      margin-block-end: var(--spacing-xxs);
+    }
   }
+  
  
   .action{ //首页行动按钮
     display: flex;
@@ -2003,7 +2011,7 @@ article .top-bar{
 }
 
 article.project-container{ //文档型作品，文本宽度控制
-  h2, h3, p, hr, .min-media, ul, ol, .imageCaption{
+  h2, h3, h4, p, hr, .min-media, ul, ol, .imageCaption{
     max-width: 672px;
     margin-inline-start: auto;
     margin-inline-end: auto;

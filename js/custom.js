@@ -16,6 +16,32 @@ if (e.matches) {
 });
 // ▲▲ 深色模式
 
+// ▼▼ 目录随滚动高亮
+const h3 = document.querySelectorAll('h3');
+const anchor = document.querySelectorAll('.project-anchor');
+window.addEventListener('scroll', ()=> {
+  let current = ''; //定义在页面上半部分的锚点，默认无
+
+  h3.forEach( h3 => { //查找在页面上半部分的锚点是什么
+    const sectionTop = h3.offsetTop;
+    const sectionHeight = h3.clientHeight;
+    if( document.documentElement.scrollTop >= 180){ //滚动距离超过 180 后开始查找
+      if(pageYOffset >= sectionTop - (document.documentElement.clientHeight - 112) / 2){
+        current = h3.getAttribute('id');
+      }
+    }
+  })
+  anchor.forEach( a => {
+    a.classList.remove('active');
+    if (a.classList.contains(current)) { //判断目录按钮的class是否包含当前页面中的的锚点id
+      a.classList.add("active");
+    }
+  })
+  console.log(current)
+})
+// ▲▲ 目录随滚动高亮
+
+
 // ▼▼ Viewer.js
 window.addEventListener('DOMContentLoaded', function () {
   var galley = document.getElementById('galley'); // 绑定图片组
