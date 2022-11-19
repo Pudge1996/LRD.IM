@@ -9,15 +9,15 @@
 现在 [LRD.IM](https://lrd.im) 用来存放我的博客、设计作品等，不定期也会对网站的基础能力、样式等做一番迭代。
 
 # 时间线
-- 2022 年 11 月：新增博客的 RSS 订阅源，并完善了博客详情页的功能。作品详情页支持快速定位至关键位置；
-- 2022 年 10 月：首页重构，优化信息获取体验。在 [archive.org](https://web.archive.org/web/20221007035203/https://lrd.im/project.html) 中查看旧版；
-- 2022 年 2 月：作品页面支持宽屏看图；
-- 2021 年 12 月：博客详情页支持了目录功能；
-- 2021 年 06 月：全面重构，脱离 Bootstrap 和 jQuery，同步所有 Medium 文章；
-- 2019 年 11 月：博客列表页支持跳转到 Medium 文章了；
-- 2019 年 02 月：重写部分样式以提升视觉体验；
-- 2019 年 10 月：适配深色模式；
-- 2018 年 1 月：HTML 模板 [BOX Theme](https://www.behance.net/gallery/36389511/Box-portfolio-Free-html-template) 建站。在 Netlify 部署，[查看旧版](https://elastic-bassi-02c067.netlify.com/)
+- 2022-11：新增博客的 RSS 订阅源，并完善了博客详情页的功能。作品详情页支持快速定位至关键位置；
+- 2022-10：首页重构，优化信息获取体验。在 [archive.org](https://web.archive.org/web/20221007035203/https://lrd.im/project.html) 中查看旧版；
+- 2022-02：作品页面支持宽屏看图；
+- 2021-12：博客详情页支持了目录功能；
+- 2021-06：全面重构，脱离 Bootstrap 和 jQuery，同步所有 Medium 文章；
+- 2019-11：博客列表页支持跳转到 Medium 文章了；
+- 2019-02：重写部分样式以提升视觉体验；
+- 2019-10：适配深色模式；
+- 2018-01：HTML 模板 [BOX Theme](https://www.behance.net/gallery/36389511/Box-portfolio-Free-html-template) 建站。在 Netlify 部署，[查看旧版](https://elastic-bassi-02c067.netlify.com/)
 
 # To-do
 ![PageSpeed 评分](https://i.imgur.com/1yurjcQ.png)
@@ -280,6 +280,46 @@ function showToast(e){  // 定义 showToast 行为
   }, 1000);
 };
 ```
+
+### 十四、作品详情页目录随滚动高亮效果（2022-11-19）
+```HTML
+<div class="project-catalog"> //目录结构，确保样式中包含锚点链接，project-anchor 用于后续 JS 轮询
+   <a href="#background" class="project-anchor background">背景</a>
+   <a href="#final" class="project-anchor final">最终文档</a>
+</div>
+
+<h3 id="background">背景</h3> //内容
+...
+<h3 id="final">最终文档</h3>
+...
+
+```
+
+```JavaScript
+const h3 = document.querySelectorAll('h3'); //定义文档内的 h3, 用于定位到具体的内容
+const anchor = document.querySelectorAll('.project-anchor'); 
+window.addEventListener('scroll', ()=> {
+  let current = ''; //定义在页面上半部分的锚点名称，默认无
+
+  h3.forEach( h3 => { //查找在页面上半部分的锚点是什么
+    const sectionTop = h3.offsetTop;
+    const sectionHeight = h3.clientHeight;
+    if( document.documentElement.scrollTop >= 180){ //滚动距离超过 180 后开始查找
+      if(pageYOffset >= sectionTop - document.documentElement.clientHeight / 2){ //元素在屏幕上半部分则视为是 current
+        current = h3.getAttribute('id');
+      }
+    }
+  })
+  anchor.forEach( a => {
+    a.classList.remove('active');
+    if (a.classList.contains(current)) { //判断目录按钮的class是否包含当前页面中的的锚点id
+      a.classList.add("active"); //如果是，则添加 active 样式
+    }
+  })
+  console.log(current)
+})
+```
+
 
 # 其他
 
