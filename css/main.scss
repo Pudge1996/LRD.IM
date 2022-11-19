@@ -144,6 +144,7 @@ html, body {
   position: relative;
   scroll-padding-top: 104px;
   scrollbar-width: thin;
+  font-feature-settings: 'case';
 }
 
 .dark .grow-bg{
@@ -710,45 +711,37 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: var(--spacing-xxs);
-    background-color: var(--banner-bg-color);
-    animation: 1s bannerFadeOut forwards 1s cubic-bezier(0.22, 1, 0.36, 1);
-    @keyframes bannerFadeOut {
-      from { background: var(--banner-bg-color); }
-      to { background: var(--banner-bg-color-faded); }
-    }
+    background-color: var(--banner-bg-color-faded);
     
-    p{
+    &:hover a, &:focus-within a{
+      color: var(--link-text-color);
+    }
+
+    &:active a{
+      color: var(--link-text-active-color);
+    }
+
+    a{
       font-size: var(--font-size-footer);
       line-height: var(--line-height-md);
       margin: 0;
-      color: var(--banner-text-color);
+      color: var(--secondary-text-color);
       text-align: center;
-      animation: 1s bannerTextFadeOut forwards 1s cubic-bezier(0.22, 1, 0.36, 1);
       width: 100%;
-      @keyframes bannerTextFadeOut {
-        from { color: var(--banner-text-color); }
-        to { color: var(--banner-text-color-faded); }
+      font-weight: 500;
+      padding: 8px 15px;
+      @include sm {
+        padding: var(--spacing-xxs);
       }
       @include md{
-      line-height: var(--line-height-sm);
-      font-size: var(--font-size-sub);
-
+        line-height: var(--line-height-sm);
+        font-size: var(--font-size-sub);
       }
-      &::before{
-        content: "";
-        @extend .general-svg-icon;
-        margin-inline-end: 4px;
-        mask: url(../img/icon/rss.svg) no-repeat 50% 50%/1em 1em;
-      }
-      a{
-        color: inherit;
-        border-bottom: 1px solid;
-        &:hover{
-          border: none;
-        }
-      }
-  }
+      
+    }
+    .icon{
+      margin-inline-end: 4px;
+    }
   }
 
 .blog-post{
@@ -894,6 +887,7 @@ article{
     display: inline-block;
     border-radius: var(--border-radius-sm);
     color: var(--code-text-color);
+    user-select: all;
   }
   pre code{
     padding: 0;
@@ -1423,7 +1417,11 @@ article{
 .blog-subtitle {
   @extend .elis-2;
   color: var(--secondary-text-color);
+  line-height: var(--line-height-md);
   font-size: var(--font-size-sub);
+  @include sm {
+    line-height: var(--line-height-lg);
+  }
 }
 
 a.recommend{ //推荐文章的超链接样式
