@@ -319,6 +319,7 @@ window.addEventListener('scroll', ()=> {
   console.log(current)
 })
 ```
+[参考此教程](https://www.youtube.com/watch?v=RsPWEmfOQdU)
 
 
 # 其他
