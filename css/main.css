@@ -1250,7 +1250,7 @@ article a:active {
 article h1 {
   text-align: left;
   padding-top: var(--spacing-sm);
-  font-size: var(--font-size-h3);
+  font-size: var(--font-size-h2);
   margin-bottom: var(--spacing-xxs);
   line-height: var(--line-height-md);
 }
@@ -1964,7 +1964,7 @@ a.recommend:active {
 }
 
 .top-bar {
-  padding: var(--spacing-lg) 0 var(--spacing-md);
+  padding: var(--spacing-lg) 0 var(--spacing-xs);
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
