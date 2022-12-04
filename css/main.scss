@@ -85,12 +85,11 @@ button{
 }
 :root .dark {
   //颜色
-  // --strong-text-color: #FFFFFF;
   --primary-text-color: #FFFFFF;
   --secondary-text-color: #D9D9D9;
   --tertiary-text-color: #999999;
   --code-text-color: #f05656;
-  --divider-color: #333333;
+  --divider-color: #1a1a1a;
   --button-color: #1A1A1A;
   --button-hover-color: #333333;
   --button-active-color: #121212;
@@ -148,10 +147,7 @@ html, body {
 }
 
 .dark .grow-bg{
-  background: radial-gradient(ellipse 70% 50% at 50% -20%, #777ac636, transparent);
-  @include sm {
-    background: radial-gradient(ellipse 70% 50% at 50% -20%, #777ac636, transparent);
-}
+  background: radial-gradient(ellipse 70% 36% at 50% -22%, #777ac636, #0000);
 }
 
 .no-padding {
@@ -1630,7 +1626,7 @@ article .top-bar{
     align-items: center;
     padding: 4px;
     border-radius: var(--border-radius-md);
-    border: 1px solid var(--divider-color);
+    border: 1px solid var(--button-hover-color);
     background-color: var(--button-color);
     
     a{
