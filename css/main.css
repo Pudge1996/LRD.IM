@@ -2497,6 +2497,37 @@ article .top-bar {
   }
 }
 
+.notice {
+  background-color: var(--button-color);
+  padding: var(--spacing-xxs) 16px;
+  border-radius: var(--border-radius-md);
+  -webkit-margin-before: var(--spacing-xxs);
+          margin-block-start: var(--spacing-xxs);
+}
+
+@media (min-width: 576px) {
+  .notice {
+    padding: 20px var(--spacing-xs);
+  }
+}
+
+.notice svg {
+  width: 20px;
+  vertical-align: -0.125em;
+  display: none;
+}
+
+.notice .message {
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.notice p {
+  margin-top: 0;
+  line-height: var(--line-height-md);
+  font-size: var(--font-size-sub);
+}
+
 .toast {
   position: fixed;
   margin: auto;

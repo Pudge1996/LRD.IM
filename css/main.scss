@@ -1957,6 +1957,31 @@ article .top-bar{
 
 // ▲▲ Project 首页
 
+// Notice 卡片
+
+.notice{
+  background-color: var(--button-color);
+  padding: var(--spacing-xxs) 16px;
+  border-radius: var(--border-radius-md);
+  margin-block-start: var(--spacing-xxs);
+  @include sm {
+    padding: 20px var(--spacing-xs);
+  }
+  svg{
+    width: 20px;
+    vertical-align: -0.125em;
+    display: none;
+  }
+  .message{
+    margin-bottom: 4px;
+    font-weight: 500;
+  }
+  p{
+    margin-top: 0;
+    line-height: var(--line-height-md);
+    font-size: var(--font-size-sub);
+  }
+}
 
 .toast{
   position: fixed;
