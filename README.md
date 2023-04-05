@@ -1,6 +1,6 @@
 > 2023 年初用 Next.js 重构了个人网站，所以这个项目不会再更新了，原有内容留作纪念。
 > 
-> 重构后的个人网站域名没变，同样是 [LRD.IM](https://lrd.im/)。而且也会继续在 Github 上更新，新的仓库是 [NEXT.LRD.IM](https://github.com/Pudge1996/NEXT.LRD.IM)，欢迎大家继续来玩。
+> 重构后的个人网站域名没变，同样是 [LRD.IM](https://lrd.im/)，欢迎大家继续来玩。
 
 # LRD.IM 背后的故事
 
